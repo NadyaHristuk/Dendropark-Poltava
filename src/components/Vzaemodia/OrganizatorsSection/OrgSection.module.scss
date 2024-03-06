@@ -42,13 +42,12 @@
   color: $pine-depths;
   margin-bottom: 32px;
   @include media-rules(tablet) {
-    font-size: 14px;
+    font-size: 20px;
     line-height: 214%;
     margin-bottom: 48px;
   }
 
   @include media-rules(desktop) {
-    font-size: 20px;
     line-height: 150%;
   }
 }
