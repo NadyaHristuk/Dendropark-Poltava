@@ -1,22 +1,36 @@
 @import '/src/styles/colors';
 @import '/src/styles/mixins';
 
+.organizationTextContainer {
+  width: 358px;
+  margin: 0 auto;
+
+  @include media-rules(tablet) {
+    width: 880px;
+  }
+
+  @include media-rules(desktop) {
+    width: 1280px;
+  }
+}
+
 .title {
-  font-family: 'Ermilov', sans-serif;
+  font-family: 'Ermilov', Arial, sans-serif;
   font-weight: 700;
   font-size: 24px;
   line-height: 183%;
-  margin-bottom: 12px;
+  margin-bottom: 32px;
 
   @include media-rules(tablet) {
     font-size: 32px;
     line-height: 137%;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
   }
 
   @include media-rules(desktop) {
     font-size: 44px;
     line-height: 100%;
+    margin-bottom: 12px;
   }
 }
 
@@ -26,10 +40,11 @@
   font-size: 14px;
   line-height: 214%;
   color: $pine-depths;
-  margin: 0;
+  margin-bottom: 32px;
   @include media-rules(tablet) {
     font-size: 14px;
     line-height: 214%;
+    margin-bottom: 48px;
   }
 
   @include media-rules(desktop) {
@@ -38,36 +53,19 @@
   }
 }
 
-.rulesTextContainer {
-  width: 358px;
-  margin: 0 auto;
+.organizationTextTwo {
+  font-family: 'Ermilov', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
   margin-bottom: 32px;
-
   @include media-rules(tablet) {
-    width: 880px;
-    margin: 20px auto;
+    text-align: center;
+    margin-bottom: 48px;
   }
-
   @include media-rules(desktop) {
-    width: 1280px;
-    margin-bottom: 64px;
-  }
-}
-
-.goodLuckText {
-  font-family: 'Innerspace', serif;
-  text-align: center;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 167%;
-
-  @include media-rules(tablet) {
-    font-size: 24px;
-    line-height: 125%;
-  }
-
-  @include media-rules(desktop) {
-    font-size: 24px;
-    line-height: 125%;
+    font-size: 28px;
+    line-height: 107%;
+    text-align: start;
   }
 }

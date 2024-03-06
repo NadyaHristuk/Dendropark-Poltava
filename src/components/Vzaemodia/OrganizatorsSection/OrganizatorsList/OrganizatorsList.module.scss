@@ -4,26 +4,23 @@
 
 .list {
   width: 358px;
-  display: grid;
-  grid-template-columns: 1fr;
   gap: 32px;
   margin: 0 auto;
   margin-bottom: 24px;
 
   @include media-rules(tablet) {
-    grid-template-columns: repeat(2, 1fr);
     width: 960px;
-    padding: 0 40px;
     gap: 52px;
     row-gap: 32px;
     margin-bottom: 64px;
   }
 
   @include media-rules(desktop) {
-    grid-template-columns: repeat(3, 1fr);
-    width: 1440px;
+    width: 923px;
     gap: 32;
-    padding: 0 80px;
-    margin-bottom: 64px;
+  }
+
+  li:last-child {
+    padding-bottom: 0;
   }
 }

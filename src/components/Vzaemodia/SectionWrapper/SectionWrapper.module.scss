@@ -3,16 +3,16 @@
 @import '/src/styles/colors';
 
 .container {
-  width: 390px;
+  width: $mobile;
   margin: 0 auto;
   background-color: $snowdrift;
   color: $pine-depths;
 
   @include media-rules(tablet) {
-    width: 960px;
+    width: $tablet;
   }
 
   @include media-rules(desktop) {
-    width: 1440px;
+    width: $desktop;
   }
 }
