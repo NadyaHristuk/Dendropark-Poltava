@@ -1,6 +1,17 @@
 export const en = {
   translation: {
     title: 'Research Trails',
+    header: {
+      logoTitle: 'Poltava city park',
+      navigation: {
+        main: 'Main',
+        about: 'About park',
+        interaction: 'Interaction',
+        materials: 'Materials',
+        services: 'Services',
+        contacts: 'Contacts',
+      },
+    },
     parkInfo: {
       attentionVisitors: 'Attention Visitors',
       parkPurpose:
