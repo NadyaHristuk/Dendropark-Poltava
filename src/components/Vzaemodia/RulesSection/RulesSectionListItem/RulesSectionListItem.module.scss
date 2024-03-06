@@ -1,0 +1,24 @@
+@import '/src/styles/breakpoints';
+@import '/src/styles/mixins';
+@import '/src/styles/colors';
+
+.icon {
+  background-color: $pine-depths;
+  border-radius: 10px;
+
+  @include media-rules(tablet) {
+    margin-bottom: 57px;
+  }
+}
+
+.listItem {
+  padding: 24px;
+  border-radius: 20px;
+  background-color: $lilac-haze;
+
+  @include media-rules(tablet) {
+    padding: 32px;
+    width: 405px;
+    height: 310px;
+  }
+}
