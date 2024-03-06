@@ -1,0 +1,17 @@
+@import '../../../styles/_colors.scss';
+
+.title {
+	font-family: 'Ermilov', sans-serif;
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 1.0625;
+	letter-spacing: -0.02em;
+	color: $pine-depths;
+	padding-bottom: 32px;
+	padding-top: 63px;
+}
+
+.services-list {
+	display: flex;
+	font-size: 123px;
+}

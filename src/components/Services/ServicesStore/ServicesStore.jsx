@@ -1,4 +1,4 @@
-import css from './services-store.module.css';
+import css from './services-store.module.scss';
 import { useState } from 'react';
 export const ServicesStore = ({ items }) => {
 	const pageSize = 6;

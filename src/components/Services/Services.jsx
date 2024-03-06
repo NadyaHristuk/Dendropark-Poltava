@@ -2,7 +2,7 @@ import infoData from './servicesInfo.json';
 import storeData from './servicesStore.json';
 import { ServicesInfo } from './ServicesInfo/ServicesInfo';
 import { ServicesStore } from './ServicesStore/ServicesStore';
-import css from './ServicesInfo/ServicesInfo.module.css';
+import css from './ServicesInfo/ServicesInfo.module.scss';
 export const Services = () => {
 	return (
 		<>
