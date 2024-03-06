@@ -1,21 +1,29 @@
 export const en = {
   translation: {
     title: 'Research Trails',
-    // header: {
-    //   products: 'Товари',
-    //   about: 'Про GoIT',
-    //   feedbacks: 'Відгуки',
-    //   contacts: 'Контакти',
-    // },
-    // footer: {
-    //   phoneNumbers: ['(050) 366 17 77', '(067) 326 95 92'],
-    //   about: 'Про нас',
-    //   social: {
-    //     followUs: 'Слідкуйте за нами',
-    //   },
-    //   rights: 'Всі права захищені',
-    //   copyright: '© GoIT Store © 2014 – 2024',
-    // },
+    parkInfo: {
+      attentionVisitors: 'Attention Visitors',
+      parkPurpose:
+        'Our park serves not only as a place for relaxation but also for scientific purposes and biodiversity conservation. Therefore, please respect its inhabitants: plants and animals.',
+      behaviorRules: 'Behavior Rules',
+      mainRule:
+        'The main rule: respect others, including people, animals, and plants.',
+      learnMore: 'Learn More',
+      researchTrails: 'Research Trails',
+      researchTrailsDescription:
+        'Want to learn more about the value of the park and the interconnections in nature?',
+      chronicles: 'Chronicles',
+      chroniclesDescription:
+        'Learn about the events and materials regarding the park.',
+      eventOrganizers: 'For Event Organizers',
+      eventOrganizersDescription:
+        'Want to hold an event in the Park? Follow the link.',
+      ourServices: 'Our Services',
+      servicesDescription:
+        'Services of the Municipal Enterprise “Decorative Cultures.”',
+      administration: 'Administration',
+      administrationDescription: 'Park administration.',
+    },
     vzaemodia: {
       title: 'Research Trails',
       heroInfo:

@@ -1,0 +1,21 @@
+@import 'src/styles/_colors.scss'; 
+@import 'src/styles/mixins';
+
+.container {
+  max-width: 375px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include media-rules(tablet) {
+    padding: 0 32px;
+    max-width: 768px;
+  }
+
+  @include media-rules(desktop) {
+    padding: 32px 128px 0;
+    max-width: 1440px;
+  }
+}
