@@ -17,7 +17,7 @@ i18n
     debug: false,
     returnObjects: true,
     whitelist: ['ua', 'en'],
-    keySeparator: false,
+    keySeparator: '.',
     interpolation: {
       escapeValue: false,
       formatSeparator: ',',
