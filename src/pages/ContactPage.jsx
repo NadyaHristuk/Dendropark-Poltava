@@ -1,11 +1,12 @@
-import Container from "../components/Container/Container"
+import Contacts from '../components/Contacts/Contacts';
+import Container from '../components/Container/Container';
 
 const ContactPage = () => {
   return (
     <Container>
-        Hello
+      <Contacts />
     </Container>
-  )
-}
+  );
+};
 
-export default ContactPage
+export default ContactPage;

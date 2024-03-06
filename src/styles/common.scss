@@ -7,7 +7,9 @@ html {
   scroll-behavior: smooth;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -20,13 +22,20 @@ body {
   background-color: $snowdrift;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-family: 'Innerspace', serif;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -60,11 +69,13 @@ button {
   }
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
 [hidden] {
   display: none;
 }
-
