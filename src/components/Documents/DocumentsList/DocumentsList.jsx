@@ -1,15 +1,24 @@
+import DocumentsItem from '../DocumentsItem/DocumentsItem';
+import css from './DocumentsList.module.scss';
+
 const DocumentsList = ({ items }) => {
-  // return (
-  //   <ul>
-  //     {items.map(({ id, title, description, link }) => (
-  //       <li key={id}>
-  //         <h3>{title}</h3>
-  //         <p>{description}</p>
-  //         <p>{link}</p>
-  //       </li>
-  //     ))}
-  //   </ul>
-  // );
+  return (
+    <>
+      <h3 className={css.title}>Документи</h3>
+      <ul className={css.list}>
+        {items.map(({ id, title, subtitle, description, link }) => (
+          <li key={id} className={css.item}>
+            <DocumentsItem
+              title={title}
+              subtitle={subtitle}
+              description={description}
+              link={link}
+            />
+          </li>
+        ))}
+      </ul>
+    </>
+  );
 };
 
 export default DocumentsList;
