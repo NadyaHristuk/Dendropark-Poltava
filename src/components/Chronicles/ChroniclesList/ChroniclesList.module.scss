@@ -1,0 +1,33 @@
+@import '/src/styles/breakpoints';
+@import '/src/styles/colors';
+
+.title {
+  color: $pine-depths;
+  font-weight: 700;
+  font-family: 'Ermilov', serif;
+
+  font-size: 44px;
+  line-height: 44px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 32px;
+  padding: 15px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .item {
+    flex-direction: row;
+  }
+}

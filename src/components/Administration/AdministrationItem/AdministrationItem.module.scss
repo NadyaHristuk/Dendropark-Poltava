@@ -1,0 +1,71 @@
+@import "../../../styles/colors";
+@import "../../../styles/mixins";
+
+.item {
+    background-color: $lilac-haze;
+    border-radius: 20px;
+    padding: 25px 20px 64px;
+
+    @include media-rules(tablet) {
+        flex-basis: calc((100% - 34px) / 3);
+        padding: 26px 18px 34px;
+    }
+
+    @include media-rules(desktop) {
+        flex-basis: calc((100% - 74px) / 3);
+        background-color: transparent;
+        padding: 0;
+    }
+}
+
+.photo {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    margin-bottom: 12px;
+
+    @include media-rules(desktop) {
+        margin-bottom: 22px;
+    }
+}
+
+.info {
+    max-width: 242px;
+
+    @include media-rules(desktop) {
+        max-width: 100%;
+        min-height: 195px;
+        border-radius: 20px;
+        background-color: $lilac-haze;
+        padding: 24px 32px;
+    }
+}
+
+.name {
+    height: 60px;
+    font-family: 'Ermilov', sans-serif;
+    font-size: 16px;
+    line-height: 1.87;
+    text-transform: uppercase;
+    color: $pine-depths;
+
+    @include media-rules(desktop) {
+        max-width: 230px;
+        height: auto;
+        font-size: 20px;
+        line-height: 1.50;
+    }
+}
+
+.text {
+    font-family: 'Innerspace', sans-serif;
+    font-size: 14px;
+    color: #45b288;
+    line-height: 2.14;
+
+    @include media-rules(desktop) {
+        font-size: 20px;
+        line-height: 1.5;
+    }
+}

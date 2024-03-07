@@ -1,6 +1,17 @@
-.container {
-    max-width: 390px;
-    margin: 0 auto;
-    padding: 0 16px;
-}
+@import '../../styles/mixins';
 
+.container {
+  max-width: 390px;
+  margin: 0 auto;
+  padding: 0 16px;
+
+  @include media-rules(tablet) {
+    padding: 0 40px;
+    max-width: $tablet;
+  }
+
+  @include media-rules(desktop) {
+    padding: 0 80px;
+    max-width: $desktop;
+  }
+}
