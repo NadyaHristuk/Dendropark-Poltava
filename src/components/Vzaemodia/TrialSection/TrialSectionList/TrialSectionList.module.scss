@@ -1,0 +1,21 @@
+@import '/src/styles/colors';
+@import '../../../../styles/mixins';
+
+.list {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @include media-rules(tablet) {
+    gap: 32px;
+  }
+
+  @include media-rules(desktop) {
+  }
+}
+
+.list:nth-child(odd) {
+  background-color: red;
+  width: 10px;
+}

@@ -68,10 +68,11 @@ export const en = {
         heroInfo:
           'We encourage you to learn more about the park and nature by following the trails',
 
+        trialTitle: 'Our trials',
         cardOneTitle: 'Trail No.1 Ecological',
         cardOneText:
           "Learn more about the park's nature and ecological principles.",
-        cardLincText: 'View on Map',
+        cardButtonText: 'View on Map',
         cardTwoTitle: 'Trail No.2 Historical',
         cardTwoText:
           'Learn more about the events that took place in this area in the past, and artifacts from ancient times.',
@@ -116,6 +117,43 @@ export const en = {
         rulesSixText: 'Clean up after yourself and your four-legged friends.',
         goodLuckText: 'Have a good rest!',
       },
+    },
+    about: {
+      title: 'Poltava City Park',
+      description:
+        'A dendrological park, a park-monument of garden and park art of national importance in Ukraine. Located in the northern part of the city of Poltava. The peculiarity of the park is its relief: many scenic areas from which interesting perspectives open up, bright clearings.The main thoroughfare is the path that starts from the entrance on Yakivchanska Street, passes through the western ridge, through the valley to the east, and ends at the entrance from Luhova Street. All scenic areas, cascade of ponds, meadow system, groups of decorative plants are concentrated on this line. When developing the park, the existing network of paths was taken into account, which had positive results.The roads were graded, but then they were allowed to overgrow, creating a natural look. The park is rich in sources; on all ridges, sleeves of the river called Tarnovschanska Tarapunka flow, which flows into the Vorskla River near the village of Voronina.The luxurious carpet of various grasses combined with water, reed thickets, trees of different shapes and colors create an unforgettable effect',
+      readMore: 'Read more about the park',
+      locationsTitle: 'Park Locations',
+      locationsDivision:
+        'The park territory is divided into separate sections:',
+    },
+    contacts: {
+      title: 'Контакти',
+      address: 'Адреса',
+      office:
+        'Офіс Комунального підприємства “Декоративні культури” що опікується парком:',
+      street:
+        'вулиця Української Центральної Ради (9-го Січня) 2, Полтава, Полтавська, 36000',
+      location:
+        'Парк знаходиться в північній частині міста. Найлегше дібратися до центрального входу з боку вулиці Яківчанської, від училища Зв’язку.',
+      phone: 'Телефон',
+      socialMedia: 'Слідкуйте за нами в соцмережах',
+      person1: 'Ляшко Ігор Іванович',
+      person1Position:
+        'Директор Комунального підприємства "Декоративні Культури"',
+      person2: 'Макуха Максим Григорович',
+      person2Position: 'Начальник відділу "Полтавський міський парк"',
+      person3: 'Ринковий Григорій Анатолійович',
+      person3Position: 'Майстер відділу "Полтавський міський парк"',
+    },
+    chronicles: {
+      chroniclesTitle: 'Chronicles',
+      documentsTitle: 'Documents',
+    },
+    calendar: {
+      title: 'Calendar of events',
+      description:
+        'Find out about planned activities, as well as time restrictions on the use of the park.',
     },
   },
 };

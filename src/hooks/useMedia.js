@@ -3,8 +3,7 @@ import { useMediaQuery } from 'react-responsive';
 
 export const useMedia = () => {
   const isDesktop = useMediaQuery({ query: '(min-width: 1440px)' });
-  const isTablet =
-    useMediaQuery({ query: '(min-width: 768px)' }) && !isDesktop;
+  const isTablet = useMediaQuery({ query: '(min-width: 960px)' }) && !isDesktop;
   const isMobile = !isTablet && !isDesktop;
 
   return useMemo(
