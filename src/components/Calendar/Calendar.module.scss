@@ -2,7 +2,6 @@
 @import '../../styles/mixins';
 
 .title {
-  font-family: 'Innerspace', sans-serif;
   font-size: 24px;
   line-height: 1.33;
   letter-spacing: -0.02em;
@@ -10,7 +9,8 @@
 }
 
 .describe {
-  font-family: 'Innerspace', sans-serif;
+  font-family: 'Innerspace';
+  font-weight: 400;
   font-size: 14px;
   line-height: 2.14;
   letter-spacing: -0.01em;
