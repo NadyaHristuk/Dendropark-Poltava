@@ -3,20 +3,18 @@
 @import '/src/styles/colors';
 
 .list {
-  width: 358px;
   gap: 32px;
+
   margin: 0 auto;
   margin-bottom: 24px;
 
   @include media-rules(tablet) {
-    width: 960px;
     gap: 52px;
     row-gap: 32px;
     margin-bottom: 64px;
   }
 
   @include media-rules(desktop) {
-    width: 923px;
     gap: 32;
   }
 

@@ -3,19 +3,23 @@
 @import '/src/styles/colors';
 
 .container {
-  width: $mobile;
+  width: 100%;
+  max-width: $mobile;
   margin: 0 auto;
   background-color: $snowdrift;
   color: $pine-depths;
   padding: 0 16px;
+  padding-bottom: 50px;
 
   @include media-rules(tablet) {
-    width: $tablet;
+    max-width: $tablet;
     padding: 0 32px;
+    padding-bottom: 80px;
   }
 
   @include media-rules(desktop) {
-    width: $desktop;
+    max-width: $desktop;
     padding: 0 80px;
+    padding-bottom: 120px;
   }
 }

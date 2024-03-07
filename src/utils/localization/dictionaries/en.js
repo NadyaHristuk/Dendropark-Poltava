@@ -21,10 +21,11 @@ export const en = {
       heroInfo:
         'We encourage you to learn more about the park and nature by following the trails',
 
+      trialTitle: 'Our trials',
       cardOneTitle: 'Trail No.1 Ecological',
       cardOneText:
         "Learn more about the park's nature and ecological principles.",
-      cardLincText: 'View on Map',
+      cardButtonText: 'View on Map',
       cardTwoTitle: 'Trail No.2 Historical',
       cardTwoText:
         'Learn more about the events that took place in this area in the past, and artifacts from ancient times.',

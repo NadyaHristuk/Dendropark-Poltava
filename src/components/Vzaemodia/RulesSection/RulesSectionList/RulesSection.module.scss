@@ -4,9 +4,9 @@
 
 .list {
   display: grid;
+  width: 100%;
   grid-template-columns: 1fr;
   gap: 32px;
-  margin: 0 auto;
   margin-bottom: 24px;
 
   @include media-rules(tablet) {
@@ -18,7 +18,8 @@
 
   @include media-rules(desktop) {
     grid-template-columns: repeat(3, 1fr);
-    gap: 32;
+    row-gap: 32px;
+    gap: 32px;
     margin-bottom: 64px;
   }
 }

@@ -1,9 +1,12 @@
-import mobileImg_x1 from '../../../../assets/images/Vzaemodia/mobile-ecotrials_x1.webp';
-import mobileImg_x2 from '../../../../assets/images/Vzaemodia/mobile-ecotrials_x2.webp';
-import tabletImg_x1 from '../../../../assets/images/Vzaemodia/tablet-ecotrials_x1.webp';
-import tabletImg_x2 from '../../../../assets/images/Vzaemodia/tablet-ecotrials_x2.webp';
-import desctopImg_x1 from '../../../../assets/images/Vzaemodia/desctop-ecotrials_x1.webp';
-import desctopImg_x2 from '../../../../assets/images/Vzaemodia/desctop-ecotrials_x2.webp';
+import {
+  mobileImg_x1,
+  mobileImg_x2,
+  tabletImg_x1,
+  tabletImg_x2,
+  desctopImg_x1,
+  desctopImg_x2,
+} from '/src/assets/images/Vzaemodia';
+
 import styles from './Picture.module.scss';
 
 export const Picture = () => {
@@ -18,7 +21,7 @@ export const Picture = () => {
         media="(min-width: 1440px)"
         width="1440"
         height="567"
-        type="image/jpg"
+        type="image/webp"
       />
       <source
         className={styles.picture}
@@ -45,7 +48,7 @@ export const Picture = () => {
       <img
         className={styles.picture}
         src="/img/desctopHero/desctopHero-x1.jpg"
-        alt="Sunshine weather, man holding box of fresh and juicy vegetables and in frame hands of women sprinking vegetables with water"
+        alt="White swan on the lake. Sunny weather and calm atmosphere"
         width="1440"
         height="776"
         aria-label="hero-image"
