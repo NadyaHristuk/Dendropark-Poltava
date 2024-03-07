@@ -1,26 +1,33 @@
+import { useTranslation } from 'react-i18next';
+import css from './ParkDescription.module.scss';
+import { useState } from 'react';
+import { HistoryCreation } from '../HistoryCreation';
+import { Picture } from '../Picture/Picture';
+import { heroPicture } from '../Picture/heroPicture';
+import Container from '../../Container/Container';
+
 export const ParkDescription = () => {
+  const { t } = useTranslation();
+  const [showMore, setShowMore] = useState(false);
+
   return (
     <>
-      <img src="" alt="" />
-      <p>
-        Полтавський міський парк — дендропарк, парк-пам'ятка садово-паркового
-        мистецтва загальнодержавного значення в Україні. Розташований у
-        північній частині міста Полтави.Особливість парку — його рельєф: багато
-        видових майданчиків, з яких відкриваються цікаві перспективи, світлі
-        галявини. Основною магістраллю є стежка, що починається від входу з боку
-        вул. Яківчанської, проходить по західній балці, через долину на схід і
-        закінчується при вході зі сторони вулиці Лугової. Усі видові майданчики,
-        каскад ставків, система галявин, групи декоративних рослин
-        концентруються на цій лінії. При розбудові парку враховувалась вже
-        існуюча мережа стежок, що дало свої позитивні наслідки. Дороги
-        грейдувалися, але потім їм давали можливість заростати, що створювало
-        природний вигляд.Парк багатий джерелами, по усіх балках течуть рукава
-        річечки під назвою Тарновщанська Тарапунька, яка впадає у Ворсклу
-        поблизу сел. Вороніна. Розкішний килим різнотрав'я в поєднанні з водою,
-        заростями очерету, деревами різної форми і кольору, створюють незабутній
-        ефект.
-      </p>
-      <button>Читати більше про парк</button>
+      <Picture pictures={heroPicture} />
+      <Container>
+        <p className={css.parkDesription}>
+          {t('about.descriptionFirstParagraph')}
+        </p>
+        {!showMore ? (
+          <button
+            onClick={() => setShowMore(true)}
+            className={css.readMoreButton}
+          >
+            {t('about.readMore')}
+          </button>
+        ) : (
+          <HistoryCreation onClick={() => setShowMore(false)} />
+        )}
+      </Container>
     </>
   );
 };
