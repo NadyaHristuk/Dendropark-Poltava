@@ -80,7 +80,11 @@ export const ServicesStore = ({ items }) => {
 							<p className={css.store_subtitle}>{title}</p>
 							<p className={css.store_descr}>{text}</p>
 							<p className={css.store_price}>Ціна: {price}</p>
-							<a className={css.store_btn} href="#">
+							<a
+								className={css.store_btn}
+								target="_blank"
+								href="https://t.me/alyonaplants"
+							>
 								Купити
 							</a>
 						</li>

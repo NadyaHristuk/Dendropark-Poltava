@@ -1,10 +1,37 @@
-// eslint-disable-next-line react/prop-types
-const AdministrationItem = ({ name, photo, photoRetina, text }) => {
+import scss from './AdministrationItem.module.scss';
+
+const AdministrationItem = ({
+  name,
+  text,
+  photoMob,
+  photoMobRetina,
+  photoTab,
+  photoTabRetina,
+  photoDesk,
+  photoDeskRetina,
+}) => {
   return (
-    <li>
-      <img src={photo} alt={name} srcSet={`${photo} 1x, ${photoRetina} 2x`} />
-      <p>{name}</p>
-      <p>{text}</p>
+    <li className={scss.item}>
+      <picture>
+        <source
+          media="(min-width: 1440px)"
+          srcSet={`${photoDesk} 1x, ${photoDeskRetina} 2x`}
+        />
+        <source
+          media="(min-width: 960px )"
+          srcSet={`${photoTab} 1x, ${photoTabRetina} 2x`}
+        />
+        <source
+          media="(min-width: 320px)"
+          srcSet={`${photoMob} 1x, ${photoMobRetina} 2x`}
+        />
+        <img className={scss.photo} src={photoMob} alt={name} />
+      </picture>
+
+      <div className={scss.info}>
+        <h3 className={scss.name}>{name}</h3>
+        <p className={scss.text}>{text}</p>
+      </div>
     </li>
   );
 };

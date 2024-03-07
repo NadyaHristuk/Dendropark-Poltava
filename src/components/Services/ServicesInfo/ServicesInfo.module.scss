@@ -11,7 +11,37 @@
 	padding-top: 63px;
 }
 
-.services-list {
+.services_item {
 	display: flex;
-	font-size: 123px;
+	justify-content: space-between;
+	gap: 16px;
+	padding-bottom: 32px;
+	// width: 298px;
+	margin: 0 auto;
+}
+.item_icon {
+	// padding-top: 11px;
+}
+.item_icon_svg {
+	border: 8px solid #edfaf6;
+	border-radius: 28px;
+	width: 44px;
+	height: 44px;
+	fill: $tropical-wave;
+	background: #e1f4ee;
+}
+.item_title {
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 1.6;
+	letter-spacing: -0.02em;
+	color: $pine-depths;
+}
+
+.item_description {
+	font-family: 'Innerspace', sans-serif;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 2;
+	color: $forest-shadow;
 }
