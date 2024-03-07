@@ -1,20 +1,57 @@
 @import '../../styles/colors';
 @import '../../styles/mixins';
+@import '../../styles/breakpoints';
+
+.section {
+  padding-bottom: 64px;
+
+  @include media-rules(tablet) {
+    padding-bottom: 80px;
+  }
+
+  @include media-rules(desktop) {
+    padding-bottom: 120px;
+  }
+}
 
 .title {
   font-size: 24px;
   line-height: 1.33;
   letter-spacing: -0.02em;
   color: $pine-depths;
+  text-align: left;
+  margin-bottom: 32px;
+
+  @include media-rules(tablet) {
+    font-size: 28px;
+    line-height: 1.57;
+  }
+
+  @include media-rules(desktop) {
+    font-size: 44px;
+    line-height: 1;
+    margin-bottom: 48px;
+  }
 }
 
 .describe {
   font-family: 'Innerspace';
-  font-weight: 400;
   font-size: 14px;
   line-height: 2.14;
   letter-spacing: -0.01em;
   color: #265543;
+  text-align: left;
+  margin-bottom: 32px;
+
+  @include media-rules(tablet) {
+    max-width: 652px;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  @include media-rules(desktop) {
+    margin-bottom: 48px;
+  }
 }
 
 .iframe {
@@ -23,5 +60,17 @@
   width: 100%;
   border: none;
   outline: none;
-  border-radius: 15px;
+  border-radius: 16px;
+  margin: 0 auto;
+  display: block;
+
+  @include media-rules(tablet) {
+    height: 344px;
+    width: 440px;
+  }
+
+  @include media-rules(desktop) {
+    width: 758px;
+    height: 592px;
+  }
 }
