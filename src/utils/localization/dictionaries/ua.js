@@ -2,7 +2,10 @@ export const ua = {
   translation: {
     title: 'Дослідницькі стежки',
     header: {
-      logoTitle: 'Полтавський міський парк',
+      logo: {
+        title: 'Полтавський міський парк',
+        alt: 'Полтавський міський парк',
+      },
       navigation: {
         main: 'Головна',
         about: 'Про парк',

@@ -1,11 +1,9 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { useMedia } from '../../hooks/useMedia';
 
-import { logo1x } from '../../assets';
-import { logo2x } from '../../assets';
-
-// import { logo1x, logo2x } from '../../assets';
+import { logo1x, logo2x } from '../../assets';
 
 const LanguageSelector = ({ value, onChange }) => {
   return (
@@ -17,6 +15,8 @@ const LanguageSelector = ({ value, onChange }) => {
 };
 
 export const Header = () => {
+  const { isMobile, isTablet, isDesktop } = useMedia(); // Визначаємо тип пристрою користувача
+
   const [language, setLanguage] = useState('ua'); // Початкова мова - українська
   const { t, i18n } = useTranslation();
 
@@ -24,19 +24,16 @@ export const Header = () => {
     i18n.changeLanguage(lng);
     setLanguage(lng);
   };
+
   return (
     <header>
-      <div>
-        <Link to="/">
-          <picture>
-            <source srcSet="../../assets/images/header/logo@1x.png 1x, ../../assets/images/header/logo@2x.png 1 2x" />
-            <img
-              src="../../assets/images/header/"
-              alt="Portrait of the client"
-            />
-          </picture>
-        </Link>
-      </div>
+      <Link to="/">
+        <picture>
+          <source srcSet={`${logo1x} 1x, ${logo2x} 2x`} />
+          <img src={`${logo1x} 1x}`} alt={t('header.logo.alt')} />
+        </picture>
+        <p>{t('header.logo.title')}</p>
+      </Link>
       <nav>
         <ul>
           <li>
@@ -64,8 +61,16 @@ export const Header = () => {
             <NavLink to="/contact">{t('header.navigation.contacts')}</NavLink>
           </li>
         </ul>
-        <LanguageSelector value={language} onChange={changeLanguage} />
       </nav>
+      <address>
+        {(isDesktop || isTablet) && (
+          <a href="https://t.me/MaxMakukha" target="_blank">
+            +38 (050) 289-41-33
+          </a>
+        )}
+        {isMobile && <a href="tel:+380502894133">+38 (050) 289-41-33</a>}
+      </address>
+      <LanguageSelector value={language} onChange={changeLanguage} />
     </header>
   );
 };
