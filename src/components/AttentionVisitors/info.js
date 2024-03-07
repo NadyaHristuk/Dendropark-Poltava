@@ -1,6 +1,5 @@
-export const en = {
+export const ua = {
   translation: {
-    title: 'До уваги відвідувачів',
     attentionVisitors: {
       title: 'До уваги відвідувачів',
       description:
