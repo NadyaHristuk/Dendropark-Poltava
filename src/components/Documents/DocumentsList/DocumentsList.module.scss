@@ -1,0 +1,43 @@
+@import '/src/styles/breakpoints';
+@import '/src/styles/colors';
+
+.title {
+  color: $pine-depths;
+  font-weight: 700;
+  font-family: 'Ermilov', serif;
+
+  font-size: 44px;
+  line-height: 44px;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  padding: 15px;
+}
+
+.item {
+  width: calc(50% - 16px);
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: center;
+}
+
+@media (max-width: $mobile) {
+  .item {
+    width: calc(100% - 16px);
+    align-items: center;
+  }
+}
+
+@media (min-width: $to-tablet) and (max-width: $tablet) {
+  .item {
+    width: calc(50% - 16px);
+  }
+}
