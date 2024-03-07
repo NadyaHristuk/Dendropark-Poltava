@@ -1,8 +1,9 @@
+import { useTranslation } from 'react-i18next';
 import scss from './AdministrationItem.module.scss';
 
 const AdministrationItem = ({
+  id,
   name,
-  text,
   photoMob,
   photoMobRetina,
   photoTab,
@@ -10,6 +11,8 @@ const AdministrationItem = ({
   photoDesk,
   photoDeskRetina,
 }) => {
+  const { t } = useTranslation();
+
   return (
     <li className={scss.item}>
       <picture>
@@ -29,8 +32,8 @@ const AdministrationItem = ({
       </picture>
 
       <div className={scss.info}>
-        <h3 className={scss.name}>{name}</h3>
-        <p className={scss.text}>{text}</p>
+        <h3 className={scss.name}>{t(`contacts.person${id}`)}</h3>
+        <p className={scss.text}>{t(`contacts.person${id}Position`)}</p>
       </div>
     </li>
   );
