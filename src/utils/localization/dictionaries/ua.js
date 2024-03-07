@@ -1,27 +1,6 @@
 export const ua = {
   translation: {
     title: 'Дослідницькі стежки',
-    parkInfo: {
-      attentionVisitors: 'До уваги відвідувачів',
-      parkPurpose:
-        'Наш парк слугує не тільки для відпочинку, а й для наукових цілей та для збереження біорізноманіття, тому поважайте його мешканців: рослини і тварин.',
-      behaviorRules: 'Правила поведінки',
-      mainRule:
-        'Ключове правило: поважайте інших, і людей, і тварин, і рослини.',
-      learnMore: 'Дізнатися більше',
-      researchTrails: 'Дослідницькі стежки',
-      researchTrailsDescription:
-        'Хочете більше дізнатися про цінність парку і взаємозв’язки в природі?',
-      chronicles: 'Літопис',
-      chroniclesDescription: 'Дізнатися про події і матеріали щодо парку.',
-      eventOrganizers: 'Організаторам заходів',
-      eventOrganizersDescription:
-        'Хочете провести захід в Парку? Переходьте за посиланням.',
-      ourServices: 'Наші послуги',
-      servicesDescription: 'Послуги КП “Декоративні культури.”',
-      administration: 'Адміністрація',
-      administrationDescription: 'Адміністрація парку.',
-    },
     vzaemodia: {
       title: 'Дослідницькі стежки',
       heroInfo:

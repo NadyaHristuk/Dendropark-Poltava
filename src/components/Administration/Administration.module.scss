@@ -1,0 +1,19 @@
+@import "../../styles/colors";
+
+.section {
+    padding-bottom: 64px;
+}
+
+.title {
+    font-family: 'Ermilov', sans-serif;
+    font-size: 28px;
+    line-height: 1.14;
+    color: $pine-depths;
+    margin-bottom: 32px;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
