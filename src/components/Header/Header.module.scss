@@ -54,7 +54,8 @@
   width: 159px;
   padding: 13px 0;
   margin-bottom: 0;
-}
-.logoTitleSpan {
-  color: $tropical-wave;
+
+  & span {
+    color: $tropical-wave;
+  }
 }

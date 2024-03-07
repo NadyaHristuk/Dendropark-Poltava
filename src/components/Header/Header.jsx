@@ -47,7 +47,7 @@ const Header = () => {
           </picture>
           <p className={s.logoTitle}>
             {logoTitleFirstWord}
-            <span className={s.logoTitleSpan}> {logoTitleSpan} </span>
+            <span> {logoTitleSpan} </span>
             {logoTitleLastWord}
           </p>
         </Link>
