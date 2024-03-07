@@ -51,7 +51,7 @@
     color: $pine-depths;
 
     @include media-rules(desktop) {
-        max-width: 230px;
+        max-width: 250px;
         height: auto;
         font-size: 20px;
         line-height: 1.50;
@@ -63,8 +63,10 @@
     font-size: 14px;
     color: #45b288;
     line-height: 2.14;
+    margin-bottom: 0;
 
     @include media-rules(desktop) {
+        min-height: 90px;
         font-size: 20px;
         line-height: 1.5;
     }
