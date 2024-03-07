@@ -1,5 +1,5 @@
 import infoData from './servicesInfo.json';
-import storeData from './servicesStore.json';
+import storeData from './servicesStore.js';
 import { ServicesInfo } from './ServicesInfo/ServicesInfo';
 import { ServicesStore } from './ServicesStore/ServicesStore';
 import css from './ServicesInfo/ServicesInfo.module.scss';
