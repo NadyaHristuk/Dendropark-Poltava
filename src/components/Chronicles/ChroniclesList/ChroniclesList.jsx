@@ -29,7 +29,7 @@ const сhronicles = [
 const ChroniclesList = () => {
   const { t } = useTranslation();
   return (
-    <>
+    <section>
       <h3 className={css.title}>{t('chronicles.chroniclesTitle')}</h3>
       <ul className={css.list}>
         {сhronicles.map(({ id, photo, title, description }) => (
@@ -42,9 +42,8 @@ const ChroniclesList = () => {
           </li>
         ))}
       </ul>
-    </>
+    </section>
   );
 };
 
 export default ChroniclesList;
-
