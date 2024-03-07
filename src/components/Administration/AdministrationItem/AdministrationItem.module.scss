@@ -1,0 +1,32 @@
+@import "../../../styles/colors";
+
+.item {
+    background-color: $lilac-haze;
+    border-radius: 20px;
+    padding: 25px 20px 64px;
+}
+
+.photo {
+    display: block;
+    border-radius: 20px;
+    margin-bottom: 26px;
+}
+
+.info {
+    max-width: 242px;
+}
+
+.name {
+    font-family: 'Ermilov', sans-serif;
+    font-size: 16px;
+    line-height: 1.87;
+    text-transform: uppercase;
+    color: $pine-depths;
+}
+
+.text {
+    font-family: 'Innerspace', sans-serif;
+    font-size: 14px;
+    color: #45b288;
+    line-height: 2.14;
+}
