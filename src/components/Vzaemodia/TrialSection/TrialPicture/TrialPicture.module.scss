@@ -1,0 +1,13 @@
+@import '/src/styles/colors';
+@import '../../../../styles/mixins';
+
+.picture {
+  background-color: $lilac-haze;
+  margin: 0;
+  padding: 0;
+  border-radius: 20px;
+
+  @include media-rules(desktop) {
+    object-fit: cover;
+  }
+}

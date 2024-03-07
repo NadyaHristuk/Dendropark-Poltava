@@ -1,0 +1,7 @@
+@import '/src/styles/breakpoints';
+@import '../../../styles/mixins';
+@import '/src/styles/colors';
+
+.hidden {
+  @include visually-hidden;
+}

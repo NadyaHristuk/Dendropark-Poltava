@@ -1,38 +1,16 @@
 export const en = {
   translation: {
     title: 'Research Trails',
-    parkInfo: {
-      attentionVisitors: 'Attention Visitors',
-      parkPurpose:
-        'Our park serves not only as a place for relaxation but also for scientific purposes and biodiversity conservation. Therefore, please respect its inhabitants: plants and animals.',
-      behaviorRules: 'Behavior Rules',
-      mainRule:
-        'The main rule: respect others, including people, animals, and plants.',
-      learnMore: 'Learn More',
-      researchTrails: 'Research Trails',
-      researchTrailsDescription:
-        'Want to learn more about the value of the park and the interconnections in nature?',
-      chronicles: 'Chronicles',
-      chroniclesDescription:
-        'Learn about the events and materials regarding the park.',
-      eventOrganizers: 'For Event Organizers',
-      eventOrganizersDescription:
-        'Want to hold an event in the Park? Follow the link.',
-      ourServices: 'Our Services',
-      servicesDescription:
-        'Services of the Municipal Enterprise “Decorative Cultures.”',
-      administration: 'Administration',
-      administrationDescription: 'Park administration.',
-    },
     vzaemodia: {
       title: 'Research Trails',
       heroInfo:
         'We encourage you to learn more about the park and nature by following the trails',
 
+      trialTitle: 'Our trials',
       cardOneTitle: 'Trail No.1 Ecological',
       cardOneText:
         "Learn more about the park's nature and ecological principles.",
-      cardLincText: 'View on Map',
+      cardButtonText: 'View on Map',
       cardTwoTitle: 'Trail No.2 Historical',
       cardTwoText:
         'Learn more about the events that took place in this area in the past, and artifacts from ancient times.',

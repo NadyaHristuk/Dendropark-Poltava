@@ -1,5 +1,4 @@
 import React from 'react';
-import { SectionWrapper } from '../Vzaemodia/SectionWrapper/SectionWrapper';
 
 export const Notification = ({ message, type = 'info' }) => {
   // Тип може бути 'info', 'success', 'warning' або 'error', що впливатиме на стиль сповіщення.
@@ -17,10 +16,8 @@ export const Notification = ({ message, type = 'info' }) => {
   };
 
   return (
-    <SectionWrapper>
-      <div className={`notification ${type}`}>
-        <p style={{ color: getNotificationStyle(type) }}>{message}</p>
-      </div>
-    </SectionWrapper>
+    <div className={`notification ${type}`}>
+      <p style={{ color: getNotificationStyle(type) }}>{message}</p>
+    </div>
   );
 };

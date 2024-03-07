@@ -18,7 +18,26 @@
 
   @include media-rules(tablet) {
     padding: 32px;
-    width: 405px;
+    width: 100%;
     height: 310px;
   }
+}
+
+.title {
+  font-family: 'Ermilov', sans-serif;
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 111%;
+  @include media-rules(tablet) {
+    font-size: 20px;
+    line-height: 150%;
+  }
+}
+
+.text {
+  font-family: 'Innerspace', serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
 }
