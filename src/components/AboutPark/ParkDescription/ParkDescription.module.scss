@@ -1,0 +1,20 @@
+@import '/src/styles/breakpoints';
+@import '../../../styles/mixins';
+@import '/src/styles/colors';
+
+.readMoreButton {
+  background-color: $pine-depths;
+}
+
+.parkDesription {
+  font-family: 'Innerspace', sans-serif;
+  max-height: 321px;
+  font-weight: 400;
+  font-size: 16px;
+  max-width: 358px;
+  overflow: hidden;
+  color: #265543;
+  text-align: left;
+  outline: 1px solid teal;
+  line-height: 24px;
+}
