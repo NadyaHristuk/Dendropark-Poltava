@@ -1,4 +1,5 @@
 import ChroniclesItem from '../ChroniclesItem/ChroniclesItem';
+import { useTranslation } from 'react-i18next';
 import css from './ChroniclesList.module.scss';
 
 const сhronicles = [
@@ -26,9 +27,10 @@ const сhronicles = [
 ];
 
 const ChroniclesList = () => {
+  const { t } = useTranslation();
   return (
     <>
-      <h3 className={css.title}>Літопис</h3>
+      <h3 className={css.title}>{t('chronicles.chroniclesTitle')}</h3>
       <ul className={css.list}>
         {сhronicles.map(({ id, photo, title, description }) => (
           <li key={id} className={css.item}>
@@ -45,3 +47,4 @@ const ChroniclesList = () => {
 };
 
 export default ChroniclesList;
+
