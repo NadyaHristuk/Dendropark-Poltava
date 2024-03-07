@@ -7,15 +7,15 @@ import desktop2x from '../../../assets/images/About/Rectangle-desktop-2x.jpg';
 
 export const heroPicture = {
   mobile: {
-    sizes: { height: 372, width: 390 },
+    sizes: { height: 372, width: '100%' },
     images: { oneX: mobile1x, twoX: mobile2x },
   },
   tablet: {
-    sizes: { height: 552, width: 960 },
+    sizes: { height: 552, width: '100%' },
     images: { oneX: tablet1x, twoX: tablet2x },
   },
   desktop: {
-    sizes: { height: 881, width: 1440 },
+    sizes: { height: 881, width: '100%' },
     images: { oneX: desktop1x, twoX: desktop2x },
   },
 };

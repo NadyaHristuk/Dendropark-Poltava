@@ -4,10 +4,20 @@
 
 .locationItem {
   background-color: $lilac-haze;
+  padding: 24px 20px 24px 24px;
+  border-radius: 20px;
 }
 
 .locationItemDescr {
-  max-height: 80px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  font-family: 'Innerspace', sans-serif;
+  font-size: 12px;
+  overflow: scroll;
+  line-height: 24.16px;
+  text-align: left;
 }
 
 .locationItemButton {
