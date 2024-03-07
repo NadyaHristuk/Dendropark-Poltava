@@ -10,7 +10,7 @@ export const modalWrapper = (WrappedComponent) => {
         <WrappedComponent />
         <Modal
           isOpen={props.isOpen}
-          onRequestClose={() => props.isClose()}
+          onRequestClose={props.isClose}
           style={customStyles}
           contentLabel="Example Modal"
         >

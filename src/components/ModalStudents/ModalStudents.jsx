@@ -1,5 +1,5 @@
 import { useState } from 'react';
-// import scss from './ModalStudents.module.scss';
+import scss from './ModalStudents.module.scss';
 import ComponentWithModal from '../ModalWrapper/ModalWrapper';
 
 const ModalStudents = () => {
@@ -17,15 +17,13 @@ const ModalStudents = () => {
         OPEN
       </button>
       <ComponentWithModal isOpen={modalIsOpen} isClose={closeModal}>
-        {/* {({ closeModal }) => ( */}
         <>
-          <p>Hello</p>
+          <p className={scss.text}>Hello</p>
           <h2>crrcrec</h2>
           <button type="button" onClick={closeModal}>
             close Modal
           </button>
         </>
-        // )}
       </ComponentWithModal>
     </>
   );

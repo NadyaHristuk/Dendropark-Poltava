@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Student 1",
+    "role": "Developer",
+    "linkedin": "test@gmail.com"
+  },
+  {
+    "name": "Student 2",
+    "role": "Developer",
+    "linkedin": "test@gmail.com"
+  },
+  {
+    "name": "Student 3",
+    "role": "Developer",
+    "linkedin": "test@gmail.com"
+  },
+  {
+    "name": "Student 4",
+    "role": "Developer",
+    "linkedin": "test@gmail.com"
+  },
+  {
+    "name": "Student 5",
+    "role": "Developer",
+    "linkedin": "test@gmail.com"
+  }
+]
