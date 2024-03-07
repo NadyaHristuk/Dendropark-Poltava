@@ -1,4 +1,5 @@
 @import '/src/styles/breakpoints';
+@import '/src/styles/mixins';
 @import '/src/styles/colors';
 
 .container {
@@ -11,14 +12,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
 
-@include media-rules(tablet) {
-  padding: 0 40px;
-  max-width: $tablet;
-}
+  @include media-rules(tablet) {
+    padding: 0 40px;
+    max-width: $tablet;
+  }
 
-@include media-rules(desktop) {
-  padding: 0 80px;
-  max-width: $desktop;
+  @include media-rules(desktop) {
+    padding: 0 80px;
+    max-width: $desktop;
+  }
 }
