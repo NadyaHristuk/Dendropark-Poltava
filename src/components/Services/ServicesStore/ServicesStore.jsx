@@ -59,27 +59,31 @@ export const ServicesStore = ({ items }) => {
 						price,
 					}) => (
 						<li key={id} className={css.store_item}>
-							<picture className={css.itemImage} alt={title}>
-								<source
-									srcSet={`${imgTab} 1x, ${imgTabRetina} 2x`}
-									type="image/webp"
-									media="(min-width: 960px)"
-								/>
-								<source
-									srcSet={`${imgMob} 1x, ${imbMobRetina} 2x`}
-									type="image/webp"
-									media="(min-width: 320px)"
-								/>
-								<img
-									className={css.img}
-									src={imgTab}
-									alt="Team GoIT"
-									width="312"
-								/>
-							</picture>
-							<p className={css.store_subtitle}>{title}</p>
-							<p className={css.store_descr}>{text}</p>
-							<p className={css.store_price}>Ціна: {price}</p>
+							<div className={css.store_subitem}>
+								<picture className={css.itemImage} alt={title}>
+									<source
+										srcSet={`${imgTab} 1x, ${imgTabRetina} 2x`}
+										type="image/webp"
+										media="(min-width: 960px)"
+									/>
+									<source
+										srcSet={`${imgMob} 1x, ${imbMobRetina} 2x`}
+										type="image/webp"
+										media="(min-width: 320px)"
+									/>
+									<img
+										className={css.img}
+										src={imgTab}
+										alt="Team GoIT"
+										width="312"
+									/>
+								</picture>
+								<div className={css.store_scroll_wrapper}>
+									<p className={css.store_subtitle}>{title}</p>
+									<p className={css.store_descr}>{text}</p>
+								</div>
+								<p className={css.store_price}>Ціна: {price}</p>
+							</div>
 							<a
 								className={css.store_btn}
 								target="_blank"

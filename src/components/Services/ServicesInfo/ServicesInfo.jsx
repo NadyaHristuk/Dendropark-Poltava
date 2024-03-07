@@ -51,8 +51,13 @@ export const ServicesInfo = ({ items }) => {
 				{currentItems.map(({ text, title, id }) => (
 					<li key={id} className={css.services_item}>
 						<div className={css.item_icon}>
-							<svg className={css.item_icon_svg} width="20" height="19">
-								<use href={`${icons}#icon-services`}></use>
+							<svg
+								className={css.icon}
+								width="32"
+								height="32"
+								aria-label="arrow-forward"
+							>
+								<use href={`${icons}#icon-services-heart`}></use>
 							</svg>
 						</div>
 						<div className={css.item_wrapper}>
@@ -62,10 +67,18 @@ export const ServicesInfo = ({ items }) => {
 					</li>
 				))}
 			</ul>
-			<button onClick={handlePrevPage} disabled={currentPage === 1}>
+			<button
+				className={css.btn_prevpage}
+				onClick={handlePrevPage}
+				disabled={currentPage === 1}
+			>
 				Попередня
 			</button>
-			<button onClick={handleNextPage} disabled={currentPage === totalPages}>
+			<button
+				className={css.btn_nextpage}
+				onClick={handleNextPage}
+				disabled={currentPage === totalPages}
+			>
 				Наступна
 			</button>
 		</div>
