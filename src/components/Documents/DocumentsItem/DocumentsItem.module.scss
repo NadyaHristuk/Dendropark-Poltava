@@ -1,0 +1,27 @@
+@import '/src/styles/colors';
+
+.title {
+  color: $pine-depths;
+  font-weight: 400;
+  font-size: 16px;
+  font-family: 'Ermilov', serif;
+  line-height: 24px;
+}
+.description {
+  color: $pine-depths;
+  font-weight: 400;
+  font-size: 16px;
+  font-family: 'Innerspace', serif;
+  line-height: 24px;
+}
+.link {
+  color: $pine-depths;
+  font-weight: 700;
+  font-size: 20px;
+  font-family: 'Innerspace', serif;
+  line-height: 32px;
+  letter-spacing: -0.02em;
+}
+.link:hover {
+  color: $tropical-wave;
+}
