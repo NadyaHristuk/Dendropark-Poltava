@@ -3,23 +3,22 @@
 @import '/src/styles/colors';
 
 .list {
-  display: grid;
-  width: 100%;
-  grid-template-columns: 1fr;
   gap: 32px;
+
+  margin: 0 auto;
   margin-bottom: 24px;
 
   @include media-rules(tablet) {
-    grid-template-columns: repeat(2, 1fr);
     gap: 52px;
     row-gap: 32px;
     margin-bottom: 64px;
   }
 
   @include media-rules(desktop) {
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: 32px;
-    gap: 32px;
-    margin-bottom: 64px;
+    gap: 32;
+  }
+
+  li:last-child {
+    padding-bottom: 0;
   }
 }
