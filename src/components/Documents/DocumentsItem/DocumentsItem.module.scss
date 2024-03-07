@@ -43,9 +43,6 @@
     line-height: 1.6;
   }
 }
-.link:hover {
-  color: $tropical-wave;
-}
 
 .documentsIcon {
   background-color: $stroke;
@@ -62,16 +59,17 @@
   }
 }
 
-.wraper:hover .documentsIcon {
+.wraper:hover .documentsIcon,
+.wraper:hover .arrowUpIcon {
   fill: $tropical-wave;
+}
+
+.wraper:hover .link {
+  color: $tropical-wave;
 }
 
 .arrowUpIcon {
   width: 16px;
   height: 16px;
   fill: $pine-depths;
-}
-
-.link:hover .arrowUpIcon {
-  fill: $tropical-wave;
 }

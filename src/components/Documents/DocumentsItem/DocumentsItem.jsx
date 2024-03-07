@@ -10,10 +10,10 @@ export default function DocumentsItem({ title, subtitle, description, link }) {
         </svg>
         <a className={css.link} href={link} target="_blank">
           {subtitle}
+        </a>
           <svg className={css.arrowUpIcon}>
             <use href={`${icons}#icon-arrow-up`}></use>
           </svg>
-        </a>
       </div>
       <div className={css.description}>
         <p className={css.text}>{title}</p>
