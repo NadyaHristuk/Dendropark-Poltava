@@ -1,16 +1,17 @@
+import { useTranslation } from 'react-i18next';
+
 import Container from '../Container/Container';
-import s from './Calendar.module.scss';
 import CalendarIframe from './CalendarIframe';
+import s from './Calendar.module.scss';
 
 const Calendar = () => {
+  const { t } = useTranslation();
+
   return (
     <section className={s.section}>
       <Container>
-        <h2 className={s.title}>Календар подій</h2>
-        <p className={s.describe}>
-          Дізнайтеся про заплановані заходи, а також часові обмеження щодо
-          використання парку.
-        </p>
+        <h2 className={s.title}>{t('calendar.title')}</h2>
+        <p className={s.description}>{t('calendar.description')}</p>
         <CalendarIframe />
       </Container>
     </section>
