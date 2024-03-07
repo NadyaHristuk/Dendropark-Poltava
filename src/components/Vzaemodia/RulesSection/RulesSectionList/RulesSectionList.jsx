@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import { RulesSectionListItem } from '../RulesSectionListItem/RulesSectionListItem';
 import style from './RulesSection.module.scss';
 
@@ -10,8 +9,4 @@ export const RulesSectionList = ({ data }) => {
       ))}
     </div>
   );
-};
-
-RulesSectionList.propTypes = {
-  data: PropTypes.array,
 };

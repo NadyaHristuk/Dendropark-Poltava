@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
 import styles from './RulesSectionListItem.module.scss';
 
@@ -20,9 +19,4 @@ export const RulesSectionListItem = ({ rule, index }) => {
       <p>{t(`vzaemodia.${rule.text}`)}</p>
     </div>
   );
-};
-
-RulesSectionListItem.propTypes = {
-  rule: PropTypes.string.isRequired,
-  index: PropTypes.number,
 };

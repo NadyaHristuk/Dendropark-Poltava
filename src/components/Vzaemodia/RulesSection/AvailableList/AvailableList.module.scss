@@ -1,0 +1,42 @@
+@import '/src/styles/colors';
+@import '/src/styles/mixins';
+
+.list {
+  padding-left: 28px;
+  margin-top: 12px;
+
+  @include media-rules(tablet) {
+    margin-top: 20px;
+  }
+}
+
+.listItem {
+  position: relative;
+  font-family: 'Innerspace', serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 214%;
+  color: $pine-depths;
+
+  @include media-rules(tablet) {
+    font-size: 14px;
+    line-height: 214%;
+  }
+
+  @include media-rules(desktop) {
+    font-size: 20px;
+    line-height: 150%;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -16px;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: $pine-depths;
+  }
+}
