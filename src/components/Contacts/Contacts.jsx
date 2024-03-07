@@ -14,16 +14,10 @@ const Contacts = () => {
         <div className={scss.address}>
           <h3 className={scss.addressTitle}>{t('contacts.address')}</h3>
           <div className={scss.info}>
-            <p className={scss.text}>
-            {t('contacts.office')}
-            </p>
-            <p className={scss.text}>
-            {t('contacts.street')}
-            </p>
+            <p className={scss.text}>{t('contacts.office')}</p>
+            <p className={scss.text}>{t('contacts.street')}</p>
           </div>
-          <p className={scss.textDescription}>
-          {t('contacts.location')}
-          </p>
+          <p className={scss.textDescription}>{t('contacts.location')}</p>
           <address>
             <ul className={scss.contacts}>
               <li>
