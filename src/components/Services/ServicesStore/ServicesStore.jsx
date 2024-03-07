@@ -47,21 +47,45 @@ export const ServicesStore = ({ items }) => {
 	return (
 		<div>
 			<ul className={css.store_list}>
-				{currentItems.map(({ id, img, imgRetina, title, text, price }) => (
-					<li key={id} className={css.store_item}>
-						<img
-							className={css.store_img}
-							srcSet={`${img} 1x, ${imgRetina} 2x`}
-							alt={title}
-						/>
-						<p className={css.store_subtitle}>{title}</p>
-						<p className={css.store_descr}>{text}</p>
-						<p className={css.store_price}>Ціна: {price}</p>
-						<a className={css.store_btn} href="#">
-							Купити
-						</a>
-					</li>
-				))}
+				{currentItems.map(
+					({
+						id,
+						imgMob,
+						imbMobRetina,
+						imgTab,
+						imgTabRetina,
+						title,
+						text,
+						price,
+					}) => (
+						<li key={id} className={css.store_item}>
+							<picture className={css.itemImage} alt={title}>
+								<source
+									srcSet={`${imgTab} 1x, ${imgTabRetina} 2x`}
+									type="image/webp"
+									media="(min-width: 960px)"
+								/>
+								<source
+									srcSet={`${imgMob} 1x, ${imbMobRetina} 2x`}
+									type="image/webp"
+									media="(min-width: 320px)"
+								/>
+								<img
+									className={css.img}
+									src={imgTab}
+									alt="Team GoIT"
+									width="312"
+								/>
+							</picture>
+							<p className={css.store_subtitle}>{title}</p>
+							<p className={css.store_descr}>{text}</p>
+							<p className={css.store_price}>Ціна: {price}</p>
+							<a className={css.store_btn} href="#">
+								Купити
+							</a>
+						</li>
+					)
+				)}
 			</ul>
 			<button onClick={handlePrevPage} disabled={currentPage === 1}>
 				Попередня
@@ -72,7 +96,7 @@ export const ServicesStore = ({ items }) => {
 		</div>
 	);
 };
-
+//! 1
 // import css from './services-store.module.scss';
 // import { useState } from 'react';
 
