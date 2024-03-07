@@ -1,5 +1,77 @@
 @import 'src/styles/_colors.scss';
 @import '../../styles/mixins';
+@import '../../styles/breakpoints';
 
 .container {
+  font-family: 'Ermilov', sans-serif;
+}
+
+.title {
+  margin-bottom: 16px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 133%;
+  color: $pine-depths;
+}
+
+.paragraph {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: $pine-depths;
+  max-width: 358px;
+  margin-bottom: 32px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.item {
+  border-radius: 20px;
+  padding: 24px;
+  max-width: 358px;
+  height: 228px;
+  background-color: $lilac-haze;
+  display: flex;
+  flex-direction: column;
+}
+
+.iconBox {
+  width: 44px;
+  height: 44px;
+  margin-bottom: 32px;
+  background-color: $pine-depths;
+  border-radius: 10px;
+}
+
+.point {
+  color: $pine-depths;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 111%;
+  margin-bottom: 8px;
+}
+
+.description {
+  color: $pine-depths;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  margin-bottom: 16px;
+}
+
+.moreInfo {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  color: $tropical-wave;
+}
+
+.iconArrow {
+  width: 32px;
+  height: 32px;
+  fill: black;
 }
