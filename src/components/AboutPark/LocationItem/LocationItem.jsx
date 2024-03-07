@@ -6,9 +6,9 @@ export const LocationItem = ({ image, title, description }) => {
     <li className={css.locationItem}>
       <h3>{title}</h3>
       <p className={css.locationItemDescr}>{description}</p>
-      <a className={css.locationItemButton} href="">
+      <button className={css.locationItemButton} type="button">
         Подивитися на карті
-      </a>
+      </button>
     </li>
   );
 };

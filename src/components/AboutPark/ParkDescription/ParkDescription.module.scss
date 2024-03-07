@@ -2,19 +2,37 @@
 @import '../../../styles/mixins';
 @import '/src/styles/colors';
 
+.descriptionTitle {
+  color: $pine-depths;
+  padding: 0 16px;
+  margin-bottom: 16px;
+  line-height: 1.06;
+}
+
+.heroPictureContainer {
+  margin-bottom: 32px;
+}
+
 .readMoreButton {
   background-color: $pine-depths;
+  padding: 18px 95.5px;
+  border-radius: 200px;
+  font-size: 14px;
+  font-family: 'Innerspace', sans-serif;
+  line-height: 1.3;
+  color: $snowdrift;
+  white-space: nowrap;
 }
 
 .parkDesription {
   font-family: 'Innerspace', sans-serif;
   max-height: 321px;
-  font-weight: 400;
-  font-size: 16px;
-  max-width: 358px;
   overflow: hidden;
-  color: #265543;
-  text-align: left;
-  outline: 1px solid teal;
+  color: $city-park;
   line-height: 24px;
+  display: -webkit-box;
+  -webkit-line-clamp: 13;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  margin-bottom: 32px;
 }
