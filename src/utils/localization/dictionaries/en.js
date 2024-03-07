@@ -75,5 +75,9 @@ export const en = {
       person3: 'Ринковий Григорій Анатолійович',
       person3Position: 'Майстер відділу "Полтавський міський парк"',
     },
+    chronicles: {
+      chroniclesTitle: 'Chronicles',
+      documentsTitle: 'Documents',
+    },
   },
 };
