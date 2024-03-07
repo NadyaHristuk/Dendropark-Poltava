@@ -1,7 +1,16 @@
 @import "../../styles/colors";
+@import "../../styles/mixins";
 
 .section {
     padding-bottom: 64px;
+
+    @include media-rules(tablet) {
+        padding-bottom: 98px;
+    }
+
+    @include media-rules(desktop) {
+        padding-bottom: 120px;
+    }
 }
 
 .title {
@@ -10,10 +19,30 @@
     line-height: 1.14;
     color: $pine-depths;
     margin-bottom: 32px;
+
+    @include media-rules(tablet) {
+        font-size: 32px;
+        line-height: 1.37;
+    }
+
+    @include media-rules(desktop) {
+        font-size: 44px;
+        line-height: 1;
+        margin-bottom: 48px;
+    }
 }
 
 .list {
     display: flex;
     flex-direction: column;
     gap: 12px;
+
+    @include media-rules(tablet) {
+        flex-direction: row;
+        gap: 17px;
+    }
+
+    @include media-rules(desktop) {
+        gap: 37px;
+    }
 }
