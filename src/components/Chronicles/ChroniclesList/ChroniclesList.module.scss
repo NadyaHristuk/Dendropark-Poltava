@@ -1,6 +1,10 @@
 @import '/src/styles/breakpoints';
 @import '/src/styles/colors';
 
+.chroniclesSection{
+  margin-bottom: 120px;
+}
+
 .title {
   color: $pine-depths;
   font-weight: 700;

@@ -5,7 +5,7 @@ import css from './DocumentsList.module.scss';
 const DocumentsList = ({ items }) => {
   const { t } = useTranslation();
   return (
-    <>
+    <section className={css.documentsSection}>
       <h3 className={css.title}>{t('chronicles.documentsTitle')}</h3>
       <ul className={css.list}>
         {items.map(({ id, title, subtitle, description, link }) => (
@@ -19,7 +19,7 @@ const DocumentsList = ({ items }) => {
           </li>
         ))}
       </ul>
-    </>
+      </section>
   );
 };
 
