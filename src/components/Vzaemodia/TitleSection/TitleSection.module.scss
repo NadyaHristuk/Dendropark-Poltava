@@ -2,35 +2,56 @@
 @import '../../../styles/mixins';
 @import '/src/styles/colors';
 
+.section {
+  width: $mobile;
+  margin: 0 auto;
+  background-color: $snowdrift;
+  color: $pine-depths;
+
+  @include media-rules(tablet) {
+    width: $tablet;
+  }
+
+  @include media-rules(desktop) {
+    width: $desktop;
+  }
+}
+
 .titleSectionContainer {
   color: $pine-depths;
   background-color: $lilac-haze;
   width: 100%;
+  padding: 0 16px;
+
+  @include media-rules(tablet) {
+    padding: 0 32px;
+  }
+
+  @include media-rules(desktop) {
+    padding: 0 80px;
+  }
 }
 
 .titleSectionTextContainer {
   flex-direction: column;
   margin: 0 auto;
   overflow-wrap: break-word;
-  width: 358px;
   padding: 64px 0px;
   @include media-rules(tablet) {
-    width: 880px;
     height: 290px;
     padding: 80px 0px;
   }
 
   @include media-rules(desktop) {
-    width: 1280px;
-    padding: 80px;
+    padding: 80 0px;
     height: 272px;
     margin: 0;
   }
 }
 
 .title {
+  font-family: 'Ermilov', Arial, sans-serif;
   max-width: 250px;
-  font-family: 'Innerspace', serif;
   font-weight: 700;
   font-size: 32px;
   line-height: 106%;
@@ -48,7 +69,7 @@
 }
 
 .text {
-  font-family: 'Ermilov', sans-serif;
+  font-family: 'Innerspace', serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
