@@ -83,7 +83,6 @@
 
 @mixin mapContainerClose {
   top: 60px;
-  left: -14px;
   transform: translateX(-120%);
   @include media-rules(tablet) {
     top: 0px;
@@ -96,9 +95,11 @@
   transform: translateX(0%);
   z-index: 9999;
   top: 60px;
-  left: -14px;
   @include media-rules(tablet) {
     top: 0px;
+    left: 6px;
+  }
+  @include media-rules(desktop) {
     left: 0px;
   }
   @include mapContainer;

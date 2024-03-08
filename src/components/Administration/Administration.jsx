@@ -4,7 +4,7 @@ import data from './data';
 
 const Administration = () => {
   return (
-    <section className={scss.section}>
+    <section id="administration-section" className={scss.section}>
       <h2 className={scss.title}>Адміністрація</h2>
       <ul className={scss.list}>
         {data.map((person) => (

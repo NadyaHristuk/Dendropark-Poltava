@@ -10,7 +10,7 @@ export const ua = {
           description:
             'Ключове правило: поважайте інших, і людей, і тварин, і рослини.',
           moreInfo: 'Дізнатися більше',
-          link: 'vzaemodia',
+          link: '/vzaemodia/#rules-section',
           iconId: '#icon-attention',
         },
         {
@@ -18,7 +18,7 @@ export const ua = {
           description:
             'Хочете більше дізнатися про цінність парку і взаємозв’язки в природі?',
           moreInfo: 'Дізнатися більше',
-          link: 'vzaemodia',
+          link: '/vzaemodia/#trials-section',
           iconId: '#icon-tracks',
         },
         {
@@ -33,7 +33,7 @@ export const ua = {
           description:
             'Хочете провести захід в Парку? Переходьте за посиланням.',
           moreInfo: 'Дізнатися більше',
-          link: 'vzaemodia',
+          link: '/vzaemodia/#organizators-section',
           iconId: '#icon-event',
         },
         {
@@ -47,7 +47,7 @@ export const ua = {
           title: 'Адміністрація',
           description: 'Адміністрація парку.',
           moreInfo: 'Дізнатися більше',
-          link: 'contact',
+          link: '/contact/#administration-section',
           iconId: '#icon-administration',
         },
       ],
