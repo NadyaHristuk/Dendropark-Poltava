@@ -18,6 +18,7 @@ export const AttentionVisitors = () => {
             description={point.description}
             moreInfo={point.moreInfo}
             link={point.link}
+            iconId={point.iconId}
           />
         ))}
       </ul>
