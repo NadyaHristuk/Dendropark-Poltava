@@ -11,7 +11,7 @@ export const ParkLocations = () => {
       <Container>
         <h2>{t('about.locationsTitle')}</h2>
         <p>{t('about.locationsDivision')} </p>
-        <ul className={css.parkLocationsList}>
+{/*         <ul className={css.parkLocationsList}>
           {ParkLocationsData.map((location, index) => (
             <LocationItem
               key={index}
@@ -20,7 +20,7 @@ export const ParkLocations = () => {
               description={location.description}
             />
           ))}
-        </ul>
+        </ul> */}
       </Container>
     </SectionWrapper>
   );
