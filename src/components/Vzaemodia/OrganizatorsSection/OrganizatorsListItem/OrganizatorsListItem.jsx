@@ -8,11 +8,11 @@ export const OrganizatorsListItem = ({ rule }) => {
       <div className={styles.iconContainer}>
         <svg
           className={styles.icon}
-          width="44"
-          height="44"
+          width="32"
+          height="32"
           aria-label="arrow-forward"
         >
-          <use href=""></use>
+          <use href="/src/assets/icons/sprite.svg#icon-attention"></use>
         </svg>
       </div>
 

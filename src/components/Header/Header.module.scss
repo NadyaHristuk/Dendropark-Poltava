@@ -1,2 +1,60 @@
-@import 'src/styles/_colors.scss'; 
-@import '../../styles/mixins'; 
+@import 'src/styles/common.scss';
+@import 'src/styles/_colors.scss';
+@import '../../styles/mixins';
+
+.header {
+  display: flex;
+  padding: 16px 0;
+}
+.nav {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  padding: 27px 0;
+
+  & li {
+    height: 33px;
+
+    & a {
+      font-family: 'Innerspace', serif;
+      font-weight: normal;
+      line-height: 1.5; // line-height: 24px;
+      color: $pine-depths;
+      padding: 8.5px;
+    }
+
+    & a:hover,
+    & a:focus {
+      color: $tropical-wave;
+    }
+  }
+}
+.logo {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin-right: 40px;
+  width: 220px;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+.logoImg {
+  width: 54px;
+  height: 54px;
+}
+.logoTitle {
+  font-weight: bold;
+  line-height: 0.875; // line-height: 14px;
+  letter-spacing: -0.02em;
+  color: $pine-depths;
+  width: 159px;
+  padding: 13px 0;
+  margin-bottom: 0;
+
+  & span {
+    color: $tropical-wave;
+  }
+}

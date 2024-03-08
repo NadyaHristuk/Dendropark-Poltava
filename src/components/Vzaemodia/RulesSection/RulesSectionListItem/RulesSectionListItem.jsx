@@ -11,7 +11,7 @@ export const RulesSectionListItem = ({ rule, index }) => {
         height="44"
         aria-label="arrow-forward"
       >
-        <use href=""></use>
+        <use href="/src/assets/icons/sprite.svg#icon-attention1"></use>
       </svg>
       <h3>
         {t(`vzaemodia.${rule.title}`)} {index + 1}

@@ -1,4 +1,3 @@
-import React from 'react';
 import { useTranslation } from 'react-i18next';
 import css from './AttentionVisitors.module.scss';
 import { AttentionItem } from './AttentionItem.jsx';
@@ -6,6 +5,7 @@ import { AttentionItem } from './AttentionItem.jsx';
 export const AttentionVisitors = () => {
   const { t } = useTranslation();
   const points = t('attentionVisitors.points', { returnObjects: true });
+
   return (
     <section className={css.container}>
       <h2 className={css.title}>{t('attentionVisitors.title')}</h2>
