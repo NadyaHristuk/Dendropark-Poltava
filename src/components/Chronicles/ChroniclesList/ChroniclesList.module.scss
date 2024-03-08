@@ -3,6 +3,9 @@
 
 .chroniclesSection {
   margin-bottom: 120px;
+  overflow-y: auto;
+  max-height: 1150px;
+  scrollbar-color: #45b288 #edfaf6;
 }
 
 .title {
