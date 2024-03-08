@@ -13,10 +13,10 @@ export const RulesSectionListItem = ({ rule, index }) => {
       >
         <use href="/src/assets/icons/sprite.svg#icon-attention1"></use>
       </svg>
-      <h3>
+      <h3 className={styles.title}>
         {t(`vzaemodia.${rule.title}`)} {index + 1}
       </h3>
-      <p>{t(`vzaemodia.${rule.text}`)}</p>
+      <p className={styles.text}>{t(`vzaemodia.${rule.text}`)}</p>
     </div>
   );
 };

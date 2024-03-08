@@ -3,8 +3,10 @@
 
 .pictureMap {
   border-radius: 10px;
-
+  width: 100%;
+  max-width: 310px;
   @include media-rules(tablet) {
+    max-width: none;
     border-radius: 20px;
   }
 }
@@ -13,7 +15,7 @@
   padding: 10px;
   display: block;
   margin: 0 auto;
-
+  width: 100%;
   @include media-rules(tablet) {
     border-radius: 20px;
     padding: 26px 30px;

@@ -11,8 +11,6 @@ export const TrialPicture = ({ tab_x2, imgAlt }) => {
       className={styles.picture}
       src={`${tab_x2}`}
       alt={`${imgAlt}`}
-      width="470"
-      height="450"
       aria-label="hero-image"
     />
     // <picture>
