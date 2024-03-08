@@ -12,7 +12,7 @@ export const AttentionItem = ({
 }) => {
   return (
     <li className={css.item}>
-      <svg width="44" height="44">
+      <svg width="44" height="44" className={css.itemIcon}>
         <use href={`${icons}${iconId}`}></use>
       </svg>
       <p className={css.point}>{title}</p>
