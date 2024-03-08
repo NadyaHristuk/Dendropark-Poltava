@@ -7,7 +7,6 @@ import { useMedia } from '../../../../hooks/useMedia';
 export const CardContent = ({ card, handleClick, isMapOpen }) => {
   const { t } = useTranslation();
   const { isMobile } = useMedia();
-  console.log(isMapOpen, isMobile);
   return (
     <div className={styles.father}>
       <div
