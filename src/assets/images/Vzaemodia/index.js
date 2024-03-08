@@ -16,6 +16,15 @@ import card2Tab_x1 from './card2Tab_1x.webp';
 import card2Tab_x2 from './card2Tab_2x.webp';
 import card3Tab_x1 from './card3Tab_1x.webp';
 import card3Tab_x2 from './card3Tab_2x.webp';
+import firstCardMapMob from './firstCardMapMob.png';
+import secondCardMapMob from './secondCardMapMob.png';
+import thirdCardMapMob from './thirdCardMapMob.png';
+import firstCardMapTab from './firstCardMapTab.png';
+import secondCardMapTab from './secondCardMapTab.png';
+import thirdCardMapTab from './thirdCardMapTab.png';
+import firstCardMapDesc from './firstCardMapDesc.png';
+import secondCardMapDesc from './secondCardMapDesc.png';
+import thirdCardMapDesc from './thirdCardMapDesc.png';
 
 export {
   mobileImg_x1,
@@ -36,4 +45,13 @@ export {
   card2Tab_x2,
   card3Tab_x1,
   card3Tab_x2,
+  firstCardMapMob,
+  secondCardMapMob,
+  thirdCardMapMob,
+  firstCardMapTab,
+  secondCardMapTab,
+  thirdCardMapTab,
+  firstCardMapDesc,
+  secondCardMapDesc,
+  thirdCardMapDesc,
 };
