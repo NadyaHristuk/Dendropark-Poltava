@@ -7,6 +7,7 @@ const ChroniclesItem = ({ url, title, description }) => {
       <div className={css.info}>
         <h4 className={css.title}>{title}</h4>
         <p className={css.description}>{description}</p>
+        <button className={css.button}>Читати далі</button>
       </div>
     </>
   );
