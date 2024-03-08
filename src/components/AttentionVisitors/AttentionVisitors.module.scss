@@ -3,7 +3,6 @@
 @import '../../styles/breakpoints';
 
 .container {
-  font-family: 'Ermilov', sans-serif;
 }
 
 .title {
@@ -12,6 +11,7 @@
   font-size: 24px;
   line-height: 133%;
   color: $pine-depths;
+  font-family: 'Ermilov', sans-serif;
 }
 
 .paragraph {
@@ -19,6 +19,7 @@
   font-size: 16px;
   line-height: 150%;
   color: $pine-depths;
+  font-family: 'Innerspace', serif;
   max-width: 358px;
   margin-bottom: 32px;
 }
@@ -33,30 +34,23 @@
   border-radius: 20px;
   padding: 24px;
   max-width: 358px;
-  height: 228px;
   background-color: $lilac-haze;
   display: flex;
   flex-direction: column;
 }
 
-.iconBox {
-  width: 44px;
-  height: 44px;
-  margin-bottom: 32px;
-  background-color: $pine-depths;
-  border-radius: 10px;
-}
-
 .point {
+  font-family: 'Ermilov', sans-serif;
   color: $pine-depths;
   font-weight: 700;
   font-size: 18px;
   line-height: 111%;
-  margin-bottom: 8px;
+  margin: 32px 0 8px;
 }
 
 .description {
   color: $pine-depths;
+  font-family: 'Innerspace', serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 143%;
@@ -68,10 +62,14 @@
   font-size: 14px;
   line-height: 143%;
   color: $tropical-wave;
+  font-family: 'Innerspace', serif;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .iconArrow {
-  width: 32px;
-  height: 32px;
-  fill: black;
+  fill: currentColor;
+  transform: translateY(-10%);
 }
