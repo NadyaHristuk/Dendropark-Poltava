@@ -1,31 +1,35 @@
 @import 'src/styles/common.scss';
 @import 'src/styles/_colors.scss';
-@import '../../styles/mixins';
+@import 'src/styles/_mixins.scss';
 
 .header {
   display: flex;
+  align-items: center;
   padding: 16px 0;
 }
 .nav {
   display: flex;
   gap: 32px;
   align-items: center;
-  padding: 27px 0;
+  padding: 11px 0;
+  margin-right: 162px;
 
   & li {
+    padding: 4px 0px;
     height: 33px;
 
     & a {
-      font-family: 'Innerspace', serif;
+      height: 25px;
       font-weight: normal;
       line-height: 1.5; // line-height: 24px;
       color: $pine-depths;
-      padding: 8.5px;
+      @include transition(color);
+      white-space: nowrap;
     }
 
     & a:hover,
     & a:focus {
-      color: $tropical-wave;
+      color: $osnovniy;
     }
   }
 }
@@ -35,11 +39,6 @@
   align-items: center;
   margin-right: 40px;
   width: 220px;
-
-  &:hover,
-  &:focus {
-    text-decoration: none;
-  }
 }
 .logoImg {
   width: 54px;
@@ -55,6 +54,22 @@
   margin-bottom: 0;
 
   & span {
-    color: $tropical-wave;
+    color: $osnovniy;
+  }
+}
+address {
+  & a {
+    border: 1px solid rgba(43, 42, 41, 0.2);
+    border-radius: 201px;
+    padding: 16px 11px;
+    height: 51px;
+    font-weight: normal;
+    color: $pine-depths;
+    @include transition(color);
+  }
+
+  & a:hover,
+  & a:focus {
+    color: $osnovniy;
   }
 }
