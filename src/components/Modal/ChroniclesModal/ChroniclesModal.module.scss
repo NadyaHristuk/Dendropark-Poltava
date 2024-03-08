@@ -1,0 +1,55 @@
+@import '/src/styles/colors';
+@import '/src/styles/mixins';
+
+.container{
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 358px;
+    
+    @include media-rules(tablet) {
+      flex-direction: row;
+      width: 960px;
+    }
+  
+    @include media-rules(desktop) {
+        width: 1250px;
+    }
+}
+
+.photo {
+    width: 358px;
+    height: 362px;
+    border-radius: 20px;
+    object-fit: cover;
+    margin-bottom: 24px;
+  
+    @include media-rules(tablet) {
+      width: 390px;
+      height: 348px;
+      margin-bottom: 0px;
+      margin-right: 28px;
+    }
+  
+    @include media-rules(desktop) {
+      width: 589px;
+      height: 348px;
+    }
+  }
+  
+  .title {
+    color: $pine-depths;
+    margin-bottom: 32px;
+  }
+  
+  .description {
+    color: $pine-depths;
+    margin-bottom: 12px;
+  }
+  .button {
+    color: $pine-depths;
+  }
+  .button:hover {
+    color: $tropical-wave;
+  }
