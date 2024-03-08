@@ -7,7 +7,9 @@ export const TrialSection = () => {
   const { t } = useTranslation();
   return (
     <SectionWrapper>
-      <h2 className={styles.hidden}>{t('vzaemodia.trialTitle')}</h2>
+      <h2 id="trials-section" className={styles.hidden}>
+        {t('vzaemodia.trialTitle')}
+      </h2>
       <TrialSectionList />
     </SectionWrapper>
   );

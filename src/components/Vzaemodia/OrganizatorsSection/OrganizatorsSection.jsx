@@ -8,7 +8,7 @@ export const OrganizatorsSection = () => {
   const { t } = useTranslation();
   return (
     <SectionWrapper>
-      <div className={styles.organizatorsWrapper}>
+      <div id="organizators-section" className={styles.organizatorsWrapper}>
         <div className={styles.organizationTextContainer}>
           <h2 className={styles.title}>
             {t('vzaemodia.organizationSectionTitle')}

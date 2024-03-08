@@ -9,7 +9,7 @@ export const RulesSection = () => {
   const { t } = useTranslation();
   return (
     <SectionWrapper>
-      <div className={styles.rulesContainer}>
+      <div id="rules-section" className={styles.rulesContainer}>
         <div className={styles.rulesTextContainer}>
           <h2 className={styles.title}>{t('vzaemodia.rulesTitle')}</h2>
           <p className={styles.text}>{t('vzaemodia.rulesTextOne')}</p>
