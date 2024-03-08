@@ -1,12 +1,15 @@
 import { useState } from 'react';
 import { icons } from '../../../assets';
 import ChroniclesModal from '../../Modal/ChroniclesModal/ChroniclesModal';
+import { useMedia } from '../../../hooks/useMedia';
 import css from './ChroniclesItem.module.scss';
 
 const ChroniclesItem = ({ url, title, description }) => {
   const [modalIsOpen, setIsOpen] = useState(false);
 
-  const shortDescription = description.slice(0, 300) + '...';
+  const { isMobile } = useMedia();
+
+  const shortDescription = description.slice(0, isMobile ? 80 : 300) + '...';
 
   const openModal = () => {
     setIsOpen(true);
