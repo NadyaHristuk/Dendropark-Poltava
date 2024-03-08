@@ -1,6 +1,17 @@
 @import '/src/styles/colors';
 @import '/src/styles/mixins';
 
+// .rulesContainer {
+//   padding-top: 50px;
+//   @include media-rules(tablet) {
+//     padding-top: 80px;
+//   }
+
+//   @include media-rules(desktop) {
+//     padding-top: 120px;
+//   }
+// }
+
 .title {
   font-family: 'Ermilov', sans-serif;
   font-weight: 700;

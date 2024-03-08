@@ -1,3 +1,6 @@
+// for header
+export { default as logo1x } from './images/header/logo@1x.png';
+export { default as logo2x } from './images/header/logo@2x.png';
 //Мобільні зображення адміністрації
 export { default as person1_mob_1x } from './images/Administration/person-mob-1.jpg';
 export { default as person1_mob_2x } from './images/Administration/person-mob-1@2x.jpg';
@@ -19,14 +22,5 @@ export { default as person2_desk_1x } from './images/Administration/person-desk-
 export { default as person2_desk_2x } from './images/Administration/person-desk-2@2x.jpg';
 export { default as person3_desk_1x } from './images/Administration/person-desk-3.jpg';
 export { default as person3_desk_2x } from './images/Administration/person-desk-3@2x.jpg';
-
-export { default as notfound_mob_1x } from './images/NotFound/notfound-mob.jpg';
-export { default as notfound_mob_2x } from './images/NotFound/notfound-mob@2x.jpg';
-
-export { default as notfound_tab_1x } from './images/NotFound/notfound-tab.jpg';
-export { default as notfound_tab_2x } from './images/NotFound/notfound-tab@2x.jpg';
-
-export { default as notfound_desk_1x } from './images/NotFound/notfound-desk.jpg';
-export { default as notfound_desk_2x } from './images/NotFound/notfound-desk@2x.jpg';
 
 export { default as icons } from './icons/sprite.svg';

@@ -7,6 +7,14 @@
   padding: 0 16px;
   margin-bottom: 16px;
   line-height: 1.06;
+  font-size: 32px;
+  letter-spacing: -2%;
+}
+
+.descriptionTitleShowMore {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 48px;
 }
 
 .heroPictureContainer {
@@ -29,7 +37,7 @@
   max-height: 321px;
   overflow: hidden;
   color: $city-park;
-  line-height: 24px;
+  line-height: 1.5;
   display: -webkit-box;
   -webkit-line-clamp: 13;
   text-overflow: ellipsis;

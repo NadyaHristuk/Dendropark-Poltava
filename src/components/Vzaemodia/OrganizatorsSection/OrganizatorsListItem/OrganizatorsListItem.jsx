@@ -8,18 +8,18 @@ export const OrganizatorsListItem = ({ rule }) => {
       <div className={styles.iconContainer}>
         <svg
           className={styles.icon}
-          width="44"
-          height="44"
+          width="32"
+          height="32"
           aria-label="arrow-forward"
         >
-          <use href=""></use>
+          <use href="/src/assets/icons/sprite.svg#icon-attention"></use>
         </svg>
       </div>
 
       <div className={styles.textContainer}>
         {' '}
-        <h3>{t(`vzaemodia.${rule.title}`)}</h3>
-        <p>{t(`vzaemodia.${rule.text}`)}</p>
+        <h3 className={styles.title}>{t(`vzaemodia.${rule.title}`)}</h3>
+        <p className={styles.text}>{t(`vzaemodia.${rule.text}`)}</p>
       </div>
     </div>
   );

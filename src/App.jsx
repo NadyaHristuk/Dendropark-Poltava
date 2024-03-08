@@ -6,6 +6,7 @@ import NotificationsProvider from './context/NotificationsProvider';
 import VzaemodiaPage from './components/Vzaemodia/VzaemodiaPage';
 import ContactPage from './pages/ContactPage';
 import AboutPage from './pages/AboutPage';
+import ServicePage from './pages/ServicePage';
 import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
@@ -14,10 +15,11 @@ function App() {
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<HomePage />} />
-          <Route path="/vzaemodia" element={<VzaemodiaPage />} />
+          <Route path="vzaemodia" element={<VzaemodiaPage />} />
           <Route path="chronicles" element={<ChroniclesPage />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="contact" element={<ContactPage />} />
+          <Route path="servise" element={<ServicePage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
