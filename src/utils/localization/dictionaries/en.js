@@ -39,7 +39,6 @@ export const en = {
           moreInfo: 'Дізнатися більше',
         },
       ],
-      title: 'Research Trails',
       parkInfo: {
         attentionVisitors: 'Attention Visitors',
         parkPurpose:
