@@ -1,7 +1,7 @@
 @import '/src/styles/mixins';
 @import '/src/styles/colors';
 
-.chroniclesSection{
+.chroniclesSection {
   margin-bottom: 120px;
 }
 
@@ -24,16 +24,13 @@
 .item {
   display: flex;
   flex-direction: column;
-  border: 1px solid #ccc;
   border-radius: 20px;
   overflow: hidden;
-  
+
   @include media-rules(tablet) {
     flex-direction: row;
   }
 
   @include media-rules(desktop) {
-
   }
 }
-
