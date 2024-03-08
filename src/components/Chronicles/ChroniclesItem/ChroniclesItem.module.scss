@@ -24,15 +24,42 @@
 .title {
   color: $pine-depths;
   margin-bottom: 32px;
+  font-family: 'Ermilov', serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #014631;
 }
 
 .description {
   color: $pine-depths;
   margin-bottom: 12px;
+  font-family: 'Innerspace', serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #265543;
+  text-align: justify;
 }
 .button {
+  font-family: 'Innerspace', serif;
+  font-weight: 400;
+  font-size: 16px;
+
+  line-height: 1.5;
+  color: #45b288;
   color: $pine-depths;
 }
 .button:hover {
   color: $tropical-wave;
+}
+
+.arrowUpIcon {
+  width: 16px;
+  height: 16px;
+  fill: $pine-depths;
+}
+
+.button:hover .arrowUpIcon {
+  fill: $tropical-wave;
 }

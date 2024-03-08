@@ -1,4 +1,6 @@
 import Modal from 'react-modal';
+import { icons } from '../../../assets';
+// import closeIcon from "../../../assets/icons/mi_close.svg";
 import css from './ChroniclesModal.module.scss';
 
 Modal.setAppElement('#root');
@@ -24,13 +26,20 @@ const ChroniclesModal = ({ url, title, description, onRequestClose }) => {
       style={customStyles}
     >
       <div className={css.container}>
-        <img className={css.photo} src={url} alt={title} loading="lazy" />
+        <div className={css.thumb}>
+          <img className={css.photo} src={url} alt={title} loading="lazy" />
+        </div>
         <div className={css.info}>
           <h4 className={css.title}>{title}</h4>
           <p className={css.description}>{description}</p>
         </div>
       </div>
-      <button onClick={onRequestClose}>Close</button>
+      <button onClick={onRequestClose}>
+        <svg className={css.closeIcon}>
+          <use href={`${icons}#icon-close`}></use>
+        </svg>
+        {/* <img className={css.closeIcon} src={closeIcon} alt="Close Icon" /> */}
+      </button>
     </Modal>
   );
 };

@@ -3,40 +3,40 @@ const сhronicles = [
       id: 1,
       photo:
         'https://ua.igotoworld.com/frontend/webcontent/images/tours/2742945_800x600_poltava-ya-lyublyu-tebe.jpg',
-      title: 'Назва події №1',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, beatae! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, beatae!.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, beatae!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, beatae! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, beatae!.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, beatae!',
+      title: 'I LOVE POLTAVA',
+      description: 'У центрі Полтави встановили арт-об’єкт «I love Poltava». Металевий знак розташований на Соборному майдані і має вигляд серця із квітками.',
       date: new Date('2024-01-08'), 
     },
     {
       id: 2,
       photo:
         'https://ua.igotoworld.com/frontend/webcontent/images/tours/2743940_800x600_1082px-Bila_altanka_%28rotonda%29%2C_Poltava_%284%29.jpg',
-      title: 'Назва події №2',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, beatae! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, beatae!.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, beatae!',
+      title: 'Біла альтанка',
+      description: 'Полтавська Біла альтанка являє собою напівкруглу в плані колонаду з 8 колон доричного ордера на стилобаті, які несуть розвинутий антаблемент, завершений атіком. Загальна висота памятки — 9 метрів. Споруда дещо нагадує підкову, зігнуту своїми краями до Успенського Собору, що розміщена на колонах. Такий «підковоподібний» зовнішній вигляд альтанки обумовлений, згідно з легендою, тим, що саме на Соборному майдані міста на другий день після Полтавської битви відбулась зустріч ремісників-полтавців з російським царем Петром І, і, начебто, місцевий коваль тут майстерно підкував царського коня, що втратив підкову під час Полтавського бою.',
       date: new Date('2024-03-06'), 
     },
     {
       id: 3,
       photo:
         'https://www.ukraine-is.com/wp-content/uploads/2017/04/%D0%9A%D1%80%D0%B0%D0%B5%D0%B2%D0%B5%D0%B4%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9-%D0%BC%D1%83%D0%B7%D0%B5%D0%B9..jpeg',
-      title: 'Назва події №3',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, beatae! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, beatae!.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, beatae!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, beatae!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, beatae! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, beatae!.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, beatae!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, beatae!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, beatae! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, beatae!.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, beatae!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, beatae!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, beatae! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, beatae!.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, beatae!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, beatae!',
+      title: 'Полтавський краєзнавчий музей',
+      description: 'Музей засновано 1891 року за ініціативою професора Василя Докучаєва, який 1890 року запропонував створити у Полтаві природничий музей. На пропозицію В. Докучаєва план музею розробив Михайло Олеховський. Музей був заснований як Природничо-історичний музей Полтавського губернського земства. Основу першої експозиції склали колекції зібрані експедицією професора Докучаєва: зразки ґрунтів — 4 тисяч одиниць; зразки гірських порід — 500 одиниць; гербарій — до 800 аркушів. Спочатку експозиція музею займала три кімнати флігеля у дворі земства. 1902 року частину експонатів перевезли до спорудженого міською управою будинку Просвітительського товариства імені М. В. Гоголя, а 1908 року йому відвели третій поверх у новому будинку губернського земства. Краєвид із Будинком губернського земства та храмом Воскресіння. І. Хмелевський (1915). Вхід до музею, початок XX століття. Головні східці із другого поверху, початок XX століття. 1906 року Полтавському губернському земству Катериною Скаржинською були подаровані значна колекція (20 тисяч експонатів) та наукова бібліотека, зібрані нею у своєму маєтку на хуторі Круглики на Лубенщині. На початку XX століття (1907) до Музею Полтавського земства надійшла колекція Павла Бобровського. До свого десятиріччя музей вже мав відділи: природничий, сільськогосподарський, етнографічний та археологічний.',
       date: new Date('2024-03-10'), 
     },
     {
       id: 4,
       photo:
         'https://cdn.segodnya.ua/i/original/media/image/5d7/f35/efd/5d7f35efd839d.jpg',
-      title: 'Назва події №4',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, beatae! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, beatae!.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, beatae!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, beatae!',
+      title: 'Музей-садиба Івана Котляревського',
+      description: 'Музей-садиба Івана Котляровського знаходиться на Соборній площі неподалік Свято-Успенського Кафедрального Собору та памятника Полтавській галушці. На території музею, крім садиби, розмістилася господарська споруда, колодязь, фруктовий сад та памятник видатному письменнику. Музей буде цікавий як для поціновувачів творчості Котляревського (не забудьте взяти екскурсовода), так і бажаючих подивитися на побут досить багатої української родини та реліквій того часу. Цікаво та пізнавально.',
       date: new Date('2024-03-01'), 
     },
     {
       id: 5,
       photo:
-        'https://www.tripandtrep.com/Images/world/ukraine/ukraine-172/big/b-poltava-kruglaya-square-1.jpg',
-      title: 'Назва події №5',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, beatae! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, beatae!.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, beatae!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, beatae!',
+        'https://ua.igotoworld.com/frontend/webcontent/websites/1/images/gallery/5652_800x600_korpusniy_park.jpg',
+      title: 'Корпусний сад',
+      description: 'Корпусний сад — парк круглої форми на Круглій площі, має вісім радіальних алей. Тут налічується близько 70 видів дерев і кущів, розбито клумби півоній і троянд, інших квітів. Чимало рідкісних видів дерев. Композиційним центром парку є споруджений у 1805–1811 роках монумент Слави, встановлений на честь перемоги російської армії над військами шведського короля Карла ХІІ в Полтавській битві. З історії парку. Корпусний сад, 1941 рік. У 1840 році навколо Монумента Слави розбито парк. Але офіційно Корпусний сад відкритий у 1909 році з нагоди святкування 200-річчя Полтавської битви. Тривалий час парк перебував у віданні Петровського Полтавського кадетського корпусу, тому його ще називали Корпусним. Ця назва неофіційно збереглася до наших днів. До 1917 року також називався Олександрівський сад. 1964 року парку надано статусу памятки садово-паркового мистецтв',
       date: new Date('2024-03-10'), 
     },
 ];
