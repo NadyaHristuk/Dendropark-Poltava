@@ -1,4 +1,4 @@
-@import '/src/styles/breakpoints';
+@import '/src/styles/mixins';
 @import '/src/styles/colors';
 
 .chroniclesSection{
@@ -27,10 +27,13 @@
   border: 1px solid #ccc;
   border-radius: 20px;
   overflow: hidden;
-}
-
-@media (min-width: 768px) {
-  .item {
+  
+  @include media-rules(tablet) {
     flex-direction: row;
   }
+
+  @include media-rules(desktop) {
+
+  }
 }
+
