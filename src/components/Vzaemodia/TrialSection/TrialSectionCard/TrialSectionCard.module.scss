@@ -1,27 +1,89 @@
 @import '/src/styles/colors';
 @import '../../../../styles/mixins';
+@import './CardMap/CardMap.module.scss';
 
 .listItem {
-  position: relative;
   background-color: $lilac-haze;
   padding: 24px;
   border: 1px solid $stroke;
   border-radius: 20px;
+  overflow: hidden;
+  z-index: 0;
   @include media-rules(tablet) {
     padding: 0px;
   }
+}
 
+.listItem:nth-child(odd) .textWrapper {
+  @include media-rules(tablet) {
+    z-index: 9999;
+    width: 455px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+  }
   @include media-rules(desktop) {
+    width: 850px;
   }
 }
 
-.listItemWrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+.listItem:nth-child(even) .imgContainer {
+  z-index: 0;
+  @include media-rules(tablet) {
+    z-index: 100;
+    flex-direction: row-reverse;
+  }
+}
+
+.listItem:nth-child(even) .listItemWrapper {
   @include media-rules(tablet) {
     gap: 0px;
+    flex-direction: row-reverse;
+    z-index: 100;
   }
+}
+
+.listItem:nth-child(even) .listItemWrapperClose {
+  @include media-rules(tablet) {
+    gap: 0px;
+    flex-direction: row-reverse;
+    z-index: 100;
+  }
+}
+
+.father {
+  position: relative;
+  height: 100%;
+}
+
+.mapContainerInContent {
+  @include mapContainerClose;
+}
+
+.mapContainerInContentOpen {
+  @include media-rules(tablet) {
+    right: 8px;
+  }
+  @include media-rules(desktop) {
+    right: 0px;
+  }
+  @include mapContainerOpen;
+}
+
+// Appear animation
+.listItemWrapper {
+  @include animationMixin;
+}
+.listItemWrapperClose {
+  @include closeAnimationMixin;
+}
+.listItemWrapperMobile {
+  @include mobileAnimationMixin;
+}
+.listItemWrapperCloseMobile {
+  @include closeMobileAnimationMixin;
 }
 
 .trialLengthText,
@@ -32,6 +94,7 @@
   border-radius: 100px;
   width: 100px;
   font-family: 'Gilroy', sans-serif;
+  text-align: center;
   font-weight: 700;
   font-size: 16px;
   line-height: 100%;
@@ -45,17 +108,13 @@
 .trialLengthText {
   display: none;
   @include media-rules(tablet) {
-    width: 106px;
+    width: 120px;
     font-weight: 700;
     font-size: 18px;
     line-height: 100%;
     letter-spacing: -0.01em;
     display: block;
     margin-bottom: 44px;
-  }
-
-  @include media-rules(desktop) {
-    width: 120px;
   }
 }
 
@@ -68,23 +127,20 @@
 
   @include media-rules(tablet) {
     gap: 32px;
-    position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
-    width: 455px;
     padding: 32px;
   }
 
   @include media-rules(desktop) {
-    width: 851px;
+    width: 808px;
     gap: 20px;
   }
 
   ::-webkit-scrollbar {
-    // background-color: $stroke;
+    background-color: $stroke;
     width: 4px;
-    margin-right: -4px;
   }
 
   ::-webkit-scrollbar-thumb {
@@ -98,6 +154,7 @@
 }
 
 .cardTitle {
+  font-family: 'Ermilov', Arial, sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 167%;
@@ -113,16 +170,20 @@
 }
 
 .cardText {
+  font-family: 'Innerspace', serif;
   font-weight: 400;
   font-size: 12px;
   line-height: 250%;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  overflow: scroll;
+  overflow-y: auto;
   text-overflow: ellipsis;
+
   margin: 0;
   padding: 0;
+  padding-right: 4px;
+
   @include media-rules(tablet) {
     width: 362px;
     -webkit-line-clamp: 6;
@@ -139,39 +200,70 @@
 }
 
 .button {
+  position: relative;
+  font-family: 'Innerspace', serif;
+  display: flex;
+  align-items: center;
   font-weight: 400;
   font-size: 14px;
   line-height: 143%;
   color: $osnovniy;
   background-color: transparent;
   border: none;
-
+  margin-top: 16px;
+  transition: color 300ms ease-in-out;
+  cursor: pointer;
   @include media-rules(tablet) {
+    margin-top: 20px;
     font-size: 16px;
     line-height: 150%;
   }
 }
 
-.listItem:nth-child(even) .textWrapper {
+.button:hover {
+  color: $tropical-wave;
+}
+
+.button:hover .iconArrow {
+  fill: $tropical-wave;
+}
+
+.iconArrow {
+  fill: $osnovniy;
+  width: 16px;
+  height: 16px;
+  margin-left: 2px;
+  transition: all 300ms ease-in-out;
   @include media-rules(tablet) {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    z-index: 0;
+    width: 24px;
+    height: 24px;
+    margin-left: 0px;
   }
 }
 
-.listItem:nth-child(even) .imgContainer {
-  z-index: 0;
+.imgContainer {
+  border-radius: 20px;
+  width: 100%;
+  margin: 0 auto;
+  width: 310px;
+  height: 200px;
+  transition: transform 1400ms ease-in-out;
   @include media-rules(tablet) {
-    z-index: 100;
+    width: 100%;
+    height: 100%;
   }
 }
 
-.listItem:nth-child(even) .listItemWrapper {
+.imgContainerMobile {
+  border-radius: 20px;
+  width: 100%;
+  margin: 0 auto;
+  width: 310px;
+  height: 200px;
+  transform: translateX(200%);
+  transition: transform 1400ms ease-in-out;
   @include media-rules(tablet) {
-    gap: 0px;
-    flex-direction: row-reverse;
+    width: 100%;
+    height: 100%;
   }
 }
