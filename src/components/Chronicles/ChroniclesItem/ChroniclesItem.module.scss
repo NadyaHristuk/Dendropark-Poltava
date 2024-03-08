@@ -28,7 +28,7 @@
   font-weight: 700;
   font-size: 20px;
   line-height: 1.5;
-  color: #014631;
+  color: $pine-depths;
 }
 
 .description {
@@ -38,7 +38,7 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
-  color: #265543;
+  color:$city-park;
   text-align: justify;
 }
 .button {
@@ -47,7 +47,6 @@
   font-size: 16px;
 
   line-height: 1.5;
-  color: #45b288;
   color: $pine-depths;
 }
 .button:hover {
@@ -63,3 +62,4 @@
 .button:hover .arrowUpIcon {
   fill: $tropical-wave;
 }
+
