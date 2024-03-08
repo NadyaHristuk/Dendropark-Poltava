@@ -132,22 +132,18 @@
     bottom: 0;
     padding: 32px;
   }
-
   @include media-rules(desktop) {
     width: 808px;
     gap: 20px;
   }
-
   ::-webkit-scrollbar {
     background-color: $stroke;
     width: 4px;
   }
-
   ::-webkit-scrollbar-thumb {
     background: $osnovniy;
     border-radius: 2px;
   }
-
   ::-webkit-scrollbar-thumb:hover {
     background: $emerald-field;
   }
