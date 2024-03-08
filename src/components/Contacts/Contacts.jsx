@@ -25,7 +25,7 @@ const Contacts = () => {
                 {(isDesktop || isTablet) && (
                   <a
                     className={scss.contactsLink}
-                    href="https://t.me/MaxMakukha"
+                    href="https://t.me/DekorKultur"
                     target="_blank"
                   >
                     +38 (050) 289-41-33
