@@ -1,10 +1,12 @@
 import DocumentsItem from '../DocumentsItem/DocumentsItem';
+import { useTranslation } from 'react-i18next';
 import css from './DocumentsList.module.scss';
 
 const DocumentsList = ({ items }) => {
+  const { t } = useTranslation();
   return (
-    <>
-      <h3 className={css.title}>Документи</h3>
+    <section className={css.documentsSection}>
+      <h3 className={css.title}>{t('chronicles.documentsTitle')}</h3>
       <ul className={css.list}>
         {items.map(({ id, title, subtitle, description, link }) => (
           <li key={id} className={css.item}>
@@ -17,7 +19,7 @@ const DocumentsList = ({ items }) => {
           </li>
         ))}
       </ul>
-    </>
+      </section>
   );
 };
 

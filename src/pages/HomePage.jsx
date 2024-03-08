@@ -1,11 +1,19 @@
-
+import { AttentionVisitors } from '../components/AttentionVisitors/AttentionVisitors';
+import s from './Home.module.scss';
+import Calendar from '../components/Calendar/Calendar';
+import ChroniclesList from '../components/Chronicles/ChroniclesList/ChroniclesList';
+import Container from '../components/Container/Container';
 
 const HomePage = () => {
   return (
-    <div >
-    
-      </div>
-  )
+    <div className={s.container}>
+      <Container>
+        <AttentionVisitors></AttentionVisitors>
+        <Calendar />
+        <ChroniclesList />
+      </Container>
+    </div>
+  );
 };
 
 export default HomePage;

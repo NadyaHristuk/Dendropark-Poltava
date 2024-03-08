@@ -1,5 +1,6 @@
 import DocumentsList from '../components/Documents/DocumentsList/DocumentsList';
 import ChroniclesList from '../components/Chronicles/ChroniclesList/ChroniclesList';
+import Container from '../components/Container/Container';
 
 const documents = [
   {
@@ -36,10 +37,10 @@ const documents = [
 
 const ChroniclesPage = () => {
   return (
-    <>
+    <Container>
       <ChroniclesList />
       <DocumentsList items={documents} />
-    </>
+    </Container>
   );
 };
 
