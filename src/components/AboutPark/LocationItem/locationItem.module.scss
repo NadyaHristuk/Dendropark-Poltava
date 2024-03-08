@@ -8,6 +8,22 @@
   border-radius: 20px;
 }
 
+.numberSign {
+  background-color: $pine-depths;
+  width: 40px;
+  height: 41px;
+  border-radius: 201.33px;
+  padding: 12.08px;
+  font-family: 'Ermilov', sans-serif;
+  font-weight: 700;
+  line-height: 1.5;
+  color: $snowdrift;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
 .locationItemDescr {
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -21,4 +37,21 @@
 }
 
 .locationItemButton {
+  font-family: 'Innerspace', sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  color: $osnovniy;
 }
+
+.vectorIcon {
+  width: 10px;
+  height: 12px;
+  margin-left: 8px;
+}
+
+// font-family: Innerspace;
+// font-size: 14px;
+// font-weight: 400;
+// line-height: 20px;
+// letter-spacing: 0em;
+// text-align: left;
