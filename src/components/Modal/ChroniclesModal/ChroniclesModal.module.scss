@@ -8,6 +8,7 @@
   border-radius: 20px;
   overflow: hidden;
   width: 358px;
+  align-items: center;
 
   @include media-rules(tablet) {
     flex-direction: row;
@@ -58,7 +59,12 @@
   line-height: 1.5;
   color: #265543;
   text-align: justify;
+  overflow-y: auto; 
+  max-height: 350px;
+  scrollbar-color: #45b288 #EDFAF6;
 }
+
+
 .button {
   font-family: 'Innerspace', serif;
   font-weight: 400;
