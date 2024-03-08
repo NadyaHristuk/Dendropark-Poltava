@@ -3,15 +3,9 @@
 @import '/src/styles/colors';
 
 .container {
-  max-width: $mobile;
+  max-width: 390px;
   margin: 0 auto;
   padding: 0 16px;
-  background-color: $snowdrift;
-  color: $pine-depths;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 
   @include media-rules(tablet) {
     padding: 0 40px;

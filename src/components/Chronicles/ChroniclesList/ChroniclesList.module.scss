@@ -1,6 +1,10 @@
 @import '/src/styles/breakpoints';
 @import '/src/styles/colors';
 
+.chroniclesSection{
+  margin-bottom: 120px;
+}
+
 .title {
   color: $pine-depths;
   font-weight: 700;
@@ -15,7 +19,6 @@
   flex-direction: column;
   flex-wrap: wrap;
   gap: 32px;
-  padding: 15px;
 }
 
 .item {

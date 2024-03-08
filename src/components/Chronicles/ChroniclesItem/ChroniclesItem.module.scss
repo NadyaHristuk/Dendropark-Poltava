@@ -1,14 +1,19 @@
+@import '/src/styles/colors';
+
 .photo {
   width: 358px;
   height: 362px;
   border-radius: 20px;
   object-fit: cover;
+  margin-bottom: 24px;
 }
 
 @media (min-width: 768px) {
   .photo {
     width: 390px;
     height: 348px;
+    margin-bottom: 0px;
+    margin-right: 28px;
   }
 }
 
@@ -19,6 +24,18 @@
   }
 }
 
-.info {
-  margin-left: 28px;
+.title {
+  color: $pine-depths;
+  margin-bottom: 32px;
+}
+
+.description {
+  color: $pine-depths;
+  margin-bottom: 12px;
+}
+.button {
+  color: $pine-depths;
+}
+.button:hover {
+  color: $tropical-wave;
 }
