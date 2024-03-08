@@ -3,10 +3,14 @@
 
 .picture {
   background-color: $snowdrift;
+  width: 100%;
+  max-width: none;
+  height: auto;
   margin: 0;
   padding: 0;
 
   @include media-rules(desktop) {
+    max-width: none;
     object-fit: cover;
     object-position: bottom;
   }
