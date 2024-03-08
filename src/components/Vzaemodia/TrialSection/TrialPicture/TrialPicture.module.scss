@@ -6,7 +6,14 @@
   margin: 0;
   padding: 0;
   border-radius: 20px;
+  width: 310px;
+  height: 200px;
 
+  @include media-rules(tablet) {
+    width: 470px;
+    height: 450px;
+    object-fit: cover;
+  }
   @include media-rules(desktop) {
     object-fit: cover;
   }

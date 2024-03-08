@@ -1,6 +1,5 @@
 export const ua = {
   translation: {
-    title: 'Дослідницькі стежки',
     vzaemodia: {
       title: 'Дослідницькі стежки',
       heroInfo:
