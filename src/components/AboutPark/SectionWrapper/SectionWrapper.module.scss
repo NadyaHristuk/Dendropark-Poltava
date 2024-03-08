@@ -8,7 +8,7 @@
   background-color: $snowdrift;
   color: $pine-depths;
 
-  padding-bottom: 64px;
+  padding-top: 64px;
 
   @include media-rules(tablet) {
     padding-bottom: 80px;
@@ -17,4 +17,8 @@
   @include media-rules(desktop) {
     padding-bottom: 120px;
   }
+}
+
+.lowPadding {
+  padding-bottom: 64px;
 }
