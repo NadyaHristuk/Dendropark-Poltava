@@ -1,0 +1,73 @@
+@import '/src/styles/breakpoints';
+@import '../../../styles/mixins';
+@import '/src/styles/colors';
+
+.historyCreationSection {
+  padding-top: 48px;
+}
+.historyCreationContainer {
+  padding: 0 40px;
+  max-width: 390px;
+  margin: 0 auto;
+}
+
+.historyCreationTitle {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 2.75;
+  margin-bottom: 20px;
+}
+
+.historyCreationText {
+  font-size: 12px;
+  font-family: 'Innerspace', sans-serif;
+  line-height: 2.5;
+  margin-bottom: 0;
+}
+
+.picturesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.picturesContainer li {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pictureDescription {
+  font-family: 'Innerspace', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.66;
+  margin: 0;
+}
+
+.reduceButton {
+  padding: 23px 101.5px;
+  background-color: $pine-depths;
+  border-radius: 200px;
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  font-family: 'Innerspace', sans-serif;
+  color: $snowdrift;
+  font-weight: 400;
+  display: flex;
+  gap: 10px;
+}
+
+.vectorIcon {
+  color: $snowdrift;
+  width: 16px;
+  height: 16px;
+}
+
+// font-family: Innerspace;
+// font-size: 18px;
+// font-weight: 400;
+// line-height: 18px;
+
+// text-align: left;

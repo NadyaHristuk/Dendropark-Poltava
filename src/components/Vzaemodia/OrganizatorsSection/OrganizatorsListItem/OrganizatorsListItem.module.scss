@@ -5,7 +5,6 @@
 .icon {
   background-color: $stroke;
   fill: $stroke;
-  stroke: $pine-depths;
   border: 8px solid $lilac-haze;
   border-radius: 100%;
   width: 52px;
@@ -27,6 +26,11 @@
 
   @include media-rules(tablet) {
     padding-bottom: 32px;
+  }
+
+  &:last-child {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
   }
 }
 

@@ -3,17 +3,18 @@
 @import '/src/styles/colors';
 
 .section {
-  width: $mobile;
+  width: 100%;
+  max-width: $mobile;
   margin: 0 auto;
   background-color: $snowdrift;
   color: $pine-depths;
 
   @include media-rules(tablet) {
-    width: $tablet;
+    max-width: $tablet;
   }
 
   @include media-rules(desktop) {
-    width: $desktop;
+    max-width: $desktop;
   }
 }
 
