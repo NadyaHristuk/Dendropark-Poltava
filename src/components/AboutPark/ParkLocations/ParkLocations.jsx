@@ -1,4 +1,4 @@
-import { LocationItem } from '../LocationItem/LocationItem';
+// import { LocationItem } from '../LocationItem/LocationItem';
 import ParkLocationsData from './locations.json';
 import { useTranslation } from 'react-i18next';
 import css from './ParkLocations.module.scss';
