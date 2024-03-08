@@ -100,33 +100,45 @@ export const en = {
           description:
             'Ключове правило: поважайте інших, і людей, і тварин, і рослини.',
           moreInfo: 'Дізнатися більше',
+          link: 'vzaemodia',
+          iconId: '#icon-attention',
         },
         {
           title: 'Дослідницькі стежки',
           description:
             'Хочете більше дізнатися про цінність парку і взаємозв’язки в природі?',
           moreInfo: 'Дізнатися більше',
+          link: 'vzaemodia',
+          iconId: '#icon-tracks',
         },
         {
           title: 'Літопис',
           description: 'Дізнатися про події і матеріали щодо парку.',
           moreInfo: 'Дізнатися більше',
+          link: 'chronicles',
+          iconId: '#icon-news',
         },
         {
           title: 'Організаторам заходів',
           description:
             'Хочете провести захід в Парку? Переходьте за посиланням.',
           moreInfo: 'Дізнатися більше',
+          link: 'vzaemodia',
+          iconId: '#icon-event',
         },
         {
           title: 'Наші послуги',
           description: 'Послуги КП “Декоративні культури.”',
           moreInfo: 'Дізнатися більше',
+          link: 'services',
+          iconId: '#icon-services',
         },
         {
           title: 'Адміністрація',
           description: 'Адміністрація парку.',
           moreInfo: 'Дізнатися більше',
+          link: 'contact',
+          iconId: '#icon-administration',
         },
       ],
       parkInfo: {
