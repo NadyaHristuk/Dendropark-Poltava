@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import css from './HelpPark.module.scss';
 import { HelpParkItem } from './HelpParkItem';
 import icons from '../../assets/icons/sprite.svg';
+import { Visual } from './Visual/Visual';
 
 export const HelpPark = () => {
   const { t } = useTranslation();
@@ -47,6 +48,8 @@ export const HelpPark = () => {
           </a>
         </div>
       </div>
+
+      <Visual />
     </section>
   );
 };

@@ -35,15 +35,18 @@
 .flexWrap {
   display: flex;
   flex-direction: column;
+  margin-bottom: 64px;
 
   @include media-rules(tablet) {
     flex-direction: row;
     gap: 47px;
+    margin-bottom: 80px;
   }
 
   @include media-rules(desktop) {
     gap: 91px;
     width: 1280px;
+    margin-bottom: 120px;
   }
 }
 .description {
