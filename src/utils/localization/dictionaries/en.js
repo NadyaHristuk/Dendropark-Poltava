@@ -260,5 +260,9 @@ export const en = {
       description:
         'Find out about planned activities, as well as time restrictions on the use of the park.',
     },
+    studentModals: {
+      title: 'Розробили наш сайт',
+      subTitle: 'Люди, що забезпечують нашу онлайн присутність',
+    },
   },
 };

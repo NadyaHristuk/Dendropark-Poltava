@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+// export { default as logo1x } from './images/header/full.logo@1x.png';
+// export { default as logo2x } from './images/header/full.logo@2x.png';
+export { default as photo1 } from './images/ModalStudents/photo1.jpeg';
+=======
 // for header
 export { default as logo1x } from './images/header/logo@1x.png';
 export { default as logo2x } from './images/header/logo@2x.png';
@@ -22,5 +27,6 @@ export { default as person2_desk_1x } from './images/Administration/person-desk-
 export { default as person2_desk_2x } from './images/Administration/person-desk-2@2x.jpg';
 export { default as person3_desk_1x } from './images/Administration/person-desk-3.jpg';
 export { default as person3_desk_2x } from './images/Administration/person-desk-3@2x.jpg';
+>>>>>>> main
 
 export { default as icons } from './icons/sprite.svg';
