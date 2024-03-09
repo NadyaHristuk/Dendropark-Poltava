@@ -3,12 +3,14 @@ import { AttentionVisitors } from '../components/AttentionVisitors/AttentionVisi
 import Calendar from '../components/Calendar/Calendar';
 import ChroniclesList from '../components/Chronicles/ChroniclesList/ChroniclesList';
 import Container from '../components/Container/Container';
+import { HelpPark } from '../components/HelpPark/HelpPark';
 
 const HomePage = () => {
   return (
     // <div className={s.container}>
     <Container>
-      <AttentionVisitors></AttentionVisitors>
+      <AttentionVisitors />
+      <HelpPark />
       <Calendar />
       <ChroniclesList />
     </Container>
