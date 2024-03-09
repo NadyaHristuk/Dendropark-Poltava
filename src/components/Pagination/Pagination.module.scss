@@ -1,0 +1,64 @@
+@import '/src/styles/colors';
+@import '../../styles/mixins';
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include media-rules(tablet) {
+    gap: 48px;
+  }
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.button {
+  display: none;
+  cursor: pointer;
+  @include media-rules(tablet) {
+    display: block;
+  }
+}
+
+.arrow {
+  width: 13px;
+  height: 13px;
+  fill: $osnovniy;
+}
+
+.btn {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  cursor: pointer;
+
+  @include media-rules(tablet) {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+.circle {
+  border-radius: 50%;
+  background-color: $stroke;
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  @include media-rules(tablet) {
+    background-color: $osnovniy;
+  }
+}
+
+.active {
+  background-color: $osnovniy;
+
+  @include media-rules(tablet) {
+    background-color: $pine-depths;
+  }
+}
