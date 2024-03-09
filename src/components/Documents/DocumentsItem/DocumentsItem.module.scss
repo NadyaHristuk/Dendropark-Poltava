@@ -1,0 +1,75 @@
+@import '/src/styles/colors';
+@import '/src/styles/mixins';
+
+.wraper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 22px;
+
+  @include media-rules(tablet) {
+    margin-bottom: 1px;
+  }
+}
+
+.text {
+  color: $pine-depths;
+  font-weight: 400;
+  font-size: 12px;
+  font-family: 'Innerspace', serif;
+  line-height: 2.01;
+
+  @include media-rules(tablet) {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+.description {
+  @include media-rules(tablet) {
+    margin-left: 56px;
+  }
+}
+.link {
+  color: $pine-depths;
+  font-weight: 700;
+  font-size: 18px;
+  font-family: 'Ermilov', serif;
+  line-height: 1.11111;
+  letter-spacing: -0.02em;
+  color: #014631;
+
+  @include media-rules(tablet) {
+    font-size: 20px;
+    line-height: 1.6;
+  }
+}
+
+.documentsIcon {
+  background-color: $stroke;
+  border: 6px solid $lilac-haze;
+  fill: $pine-depths;
+  border-radius: 40%;
+  width: 37px;
+  height: 37px;
+  margin-right: 16px;
+
+  @include media-rules(tablet) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.wraper:hover .documentsIcon,
+.wraper:hover .arrowUpIcon {
+  fill: $tropical-wave;
+}
+
+.wraper:hover .link {
+  color: $tropical-wave;
+}
+
+.arrowUpIcon {
+  width: 16px;
+  height: 16px;
+  fill: $pine-depths;
+}

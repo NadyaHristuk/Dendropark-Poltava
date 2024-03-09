@@ -1,0 +1,64 @@
+@import '/src/styles/mixins';
+@import '/src/styles/colors';
+
+.photo {
+  width: 358px;
+  height: 362px;
+  border-radius: 20px;
+  object-fit: cover;
+  margin-bottom: 24px;
+
+  @include media-rules(tablet) {
+    width: 390px;
+    height: 348px;
+    margin-bottom: 0px;
+    margin-right: 28px;
+  }
+
+  @include media-rules(desktop) {
+    width: 589px;
+    height: 348px;
+  }
+}
+
+.title {
+  color: $pine-depths;
+  margin-bottom: 32px;
+  font-family: 'Ermilov', serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.5;
+  color: $pine-depths;
+}
+
+.description {
+  color: $pine-depths;
+  margin-bottom: 12px;
+  font-family: 'Innerspace', serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: $city-park;
+  text-align: justify;
+}
+.button {
+  font-family: 'Innerspace', serif;
+  font-weight: 400;
+  font-size: 16px;
+
+  line-height: 1.5;
+  color: $pine-depths;
+}
+.button:hover {
+  color: $tropical-wave;
+}
+
+.arrowUpIcon {
+  width: 16px;
+  height: 16px;
+  fill: $pine-depths;
+}
+
+.button:hover .arrowUpIcon {
+  fill: $tropical-wave;
+}
