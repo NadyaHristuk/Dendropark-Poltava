@@ -1,5 +1,5 @@
 import Modal from 'react-modal';
-import customStyles from './stylesModal';
+import scss from './ModalWrapper.module.scss';
 
 export const modalWrapper = (WrappedComponent) => {
   return function ModalWrapper(props) {
@@ -11,8 +11,8 @@ export const modalWrapper = (WrappedComponent) => {
         <Modal
           isOpen={props.isOpen}
           onRequestClose={props.isClose}
-          style={customStyles}
           contentLabel="Example Modal"
+          className={scss.modal}
         >
           {props.children}
         </Modal>

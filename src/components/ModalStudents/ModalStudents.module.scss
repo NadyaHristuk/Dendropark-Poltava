@@ -1,5 +1,72 @@
 @import '../../styles/colors';
+@import '../../styles/mixins';
 
-.text {
+@include media-rules(tablet) {
+}
+
+.modal_wrapper {
+  width: 358px;
+  @include media-rules(tablet) {
+    width: 784px;
+    padding: 0 40px;
+  }
+}
+
+.list_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  overflow: auto;
+  height: calc(64px + 154px * 3);
+  padding-bottom: 30px;
+}
+
+.list_wrapper::-webkit-scrollbar {
+  position: absolute;
+  left: -30px;
+  width: 3px;
+}
+
+.list_wrapper::-webkit-scrollbar-track {
+  background: $snowdrift;
+  border-radius: 4px;
+}
+
+.list_wrapper::-webkit-scrollbar-thumb {
+  background: $light-color;
+  border-radius: 4px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1;
+  margin-top: 50px;
   color: $pine-depths;
+  text-align: center;
+  @include media-rules(tablet) {
+    font-size: 29px;
+  }
+}
+
+.subtitle {
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 2.2;
+  color: $pine-depths;
+  text-align: center;
+  margin-top: 7px;
+  margin-bottom: 26px;
+}
+
+.btn_close {
+  position: absolute;
+  right: 21px;
+  top: 26px;
+  cursor: pointer;
+}
+
+.btn_close svg {
+  fill: $pine-depths;
 }

@@ -1,25 +1,21 @@
-const StudentsItems = () => {
+import { photo1 } from '../../../assets';
+import scss from './StudentsItems.module.scss';
+import { icons } from '../../../assets';
+
+const StudentsItems = ({ name, role, linkedin }) => {
   return (
-    <div>
-      <ul>
-        <li>
-          1
-          <img src="" alt="" />
-        </li>
-        <li>
-          2
-          <img src="" alt="" />
-        </li>
-        <li>
-          3
-          <img src="" alt="" />
-        </li>
-        <li>
-          1
-          <img src="" alt="" />
-        </li>
-      </ul>
-    </div>
+    <li className={scss.list_item}>
+      <a className={scss.link} href={linkedin}>
+        <img className={scss.img} src={photo1} alt="photo-student" />
+        <div className={scss.wrapper}>
+          <p className={scss.name}>{name}</p>
+          <p className={scss.role}>{role}</p>
+          <svg className={scss.linkedin_icon}>
+            <use href={`${icons}#icon-linkedin`}></use>
+          </svg>
+        </div>
+      </a>
+    </li>
   );
 };
 

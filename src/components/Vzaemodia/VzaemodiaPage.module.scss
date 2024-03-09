@@ -1,0 +1,9 @@
+@import 'src/styles/_colors.scss';
+@import '../../styles/mixins';
+
+.vzaemodiaWrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: $snowdrift;
+  color: $pine-depths;
+}

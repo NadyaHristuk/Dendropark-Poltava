@@ -1,0 +1,67 @@
+@import '/src/styles/breakpoints';
+@import '../../../styles/mixins';
+@import '/src/styles/colors';
+
+.titleSectionContainer {
+  color: $pine-depths;
+  background-color: $lilac-haze;
+  width: 100%;
+}
+
+.titleSectionTextContainer {
+  flex-direction: column;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  width: 358px;
+  padding: 64px 0px;
+  @include media-rules(tablet) {
+    width: 880px;
+    height: 290px;
+    padding: 80px 0px;
+  }
+
+  @include media-rules(desktop) {
+    width: 1280px;
+    padding: 80px;
+    height: 272px;
+    margin: 0;
+  }
+}
+
+.title {
+  max-width: 250px;
+  font-family: 'Innerspace', serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 106%;
+  letter-spacing: -0.02em;
+
+  @include media-rules(tablet) {
+    max-width: none;
+    font-size: 40px;
+    line-height: 145%;
+  }
+  @include media-rules(desktop) {
+    font-size: 56px;
+    line-height: 104%;
+  }
+}
+
+.text {
+  font-family: 'Ermilov', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  margin-top: 16px;
+
+  @include media-rules(tablet) {
+    font-size: 20px;
+    line-height: 146%;
+    margin-top: 32px;
+  }
+  @include media-rules(desktop) {
+    font-size: 20px;
+    margin-top: 46px;
+  }
+}
