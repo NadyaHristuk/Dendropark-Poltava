@@ -11,7 +11,7 @@ export const ParkLocations = () => {
     <SectionWrapper isLowPadding>
       <Container>
         <p className={css.locationsDivision}>{t('about.locationsDivision')} </p>
-        <h2 className={css.locationsTitle}>{t('about.locationsTitle')}</h2>
+        <h2 className={css.locationsTitle} id="parkLocation">{t('about.locationsTitle')}</h2>
         <p>{t('about.locationsDivision')} </p>
         <ul className={css.parkLocationsList}>
           {ParkLocationsData.map((location, index) => (
