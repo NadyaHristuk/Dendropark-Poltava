@@ -3,9 +3,16 @@
 
 .chroniclesSection {
   margin-bottom: 120px;
-  overflow-y: auto;
-  max-height: 1150px;
   scrollbar-color: #45b288 #edfaf6;
+  padding-right: 28px;
+
+  @include media-rules(tablet) {
+    overflow-y: auto;
+    max-height: 1180px;
+  }
+
+  @include media-rules(desktop) {
+  }
 }
 
 .title {
