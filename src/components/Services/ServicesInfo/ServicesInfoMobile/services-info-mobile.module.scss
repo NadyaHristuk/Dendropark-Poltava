@@ -1,5 +1,5 @@
-@import '../../../styles/_colors.scss';
-@import '../../../styles/mixins';
+@import '../../../../styles/colors';
+@import '../../../../styles/mixins';
 .title {
 	font-family: 'Ermilov', sans-serif;
 	font-weight: 700;
@@ -10,10 +10,7 @@
 	padding-bottom: 32px;
 	padding-top: 63px;
 }
-.title_store {
-	padding-top: 64px;
-	padding-bottom: 32px;
-}
+
 .services_item {
 	display: flex;
 	justify-content: space-between;
@@ -67,16 +64,10 @@
 	color: $forest-shadow;
 }
 @media screen and (min-width: 960px) {
-	.title_store {
-		padding-top: 80px;
-		padding-bottom: 32px;
-	}
 	.services_list {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
-		max-height: 430px;
-		overflow: auto;
 	}
 	.services_item {
 		flex-basis: calc((100% - 46px) / 2);
@@ -119,7 +110,6 @@
 		height: 50px;
 	}
 	.title_store {
-		padding-top: 120px;
 		font-size: 44px;
 		line-height: 1;
 		padding-bottom: 64px;

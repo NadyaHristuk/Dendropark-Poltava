@@ -11,7 +11,7 @@ export const ServicesStore = ({ items }) => {
 		Math.ceil(items.length / pageSize)
 	);
 	const { currentPosts, ...options } = usePagination({
-		postPerPage: 3,
+		postPerPage: 6,
 		data,
 	});
 
@@ -81,7 +81,7 @@ export const ServicesStore = ({ items }) => {
 									<img
 										className={css.img}
 										src={imgTab}
-										alt="Team GoIT"
+										alt={title}
 										width="312"
 									/>
 								</picture>
@@ -96,7 +96,7 @@ export const ServicesStore = ({ items }) => {
 								target="_blank"
 								href="https://t.me/alyonaplants"
 							>
-								Купити
+								<span>Купити</span>
 							</a>
 						</li>
 					)
