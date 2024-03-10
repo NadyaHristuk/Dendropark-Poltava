@@ -3,6 +3,7 @@ import { AttentionVisitors } from '../components/AttentionVisitors/AttentionVisi
 import Calendar from '../components/Calendar/Calendar';
 import ChroniclesList from '../components/Chronicles/ChroniclesList/ChroniclesList';
 import Container from '../components/Container/Container';
+import { HelpPark } from '../components/HelpPark/HelpPark/HelpPark';
 import Hero from '../components/Hero/Hero';
 
 const HomePage = () => {
@@ -10,7 +11,8 @@ const HomePage = () => {
 		// <div className={s.container}>
 		<Container>
 			<Hero />
-			<AttentionVisitors></AttentionVisitors>
+			<AttentionVisitors />
+			<HelpPark />
 			<Calendar />
 			<ChroniclesList />
 		</Container>
