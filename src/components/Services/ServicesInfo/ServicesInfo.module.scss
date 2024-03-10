@@ -68,6 +68,8 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
+		max-height: 430px;
+		overflow: auto;
 	}
 	.services_item {
 		flex-basis: calc((100% - 46px) / 2);

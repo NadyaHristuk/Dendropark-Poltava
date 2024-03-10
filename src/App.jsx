@@ -6,7 +6,7 @@ import NotificationsProvider from './context/NotificationsProvider';
 import VzaemodiaPage from './components/Vzaemodia/VzaemodiaPage';
 import ContactPage from './pages/ContactPage';
 import AboutPage from './pages/AboutPage';
-import ServicesPage from './pages/ServicesPage';
+import { ServicesPage } from './pages/ServicesPage';
 import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
 					<Route path="chronicles" element={<ChroniclesPage />} />
 					<Route path="about" element={<AboutPage />} />
 					<Route path="contact" element={<ContactPage />} />
-					<Route path="servises" element={<ServicesPage />} />
+					<Route path="services" element={<ServicesPage />} />
 					<Route path="*" element={<NotFoundPage />} />
 				</Route>
 			</Routes>

@@ -1,14 +1,13 @@
-import s from './Pagination.module.scss';
-import sprite from '../../assets/icons/sprite.svg';
+import s from '../../Pagination/Pagination.module.scss';
+import sprite from '../../../assets/icons/sprite.svg';
 
-const Pagination = ({ props }) => {
-	const {
-		totalPages,
-		setCurrentPage,
-		currentPage,
-		goToNextPage,
-		goToPrevPage,
-	} = props;
+const ServicePagination = ({
+	totalPages,
+	setCurrentPage,
+	currentPage,
+	goToNextPage,
+	goToPrevPage,
+}) => {
 	const visiblePages = 4;
 	const pages = [];
 
@@ -54,4 +53,4 @@ const Pagination = ({ props }) => {
 	);
 };
 
-export default Pagination;
+export default ServicePagination;

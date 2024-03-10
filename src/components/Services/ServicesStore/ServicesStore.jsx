@@ -1,5 +1,8 @@
 import css from './services-store.module.scss';
 import { useState, useEffect } from 'react';
+import { usePagination } from '../../../hooks/usePagination';
+import ServicePagination from '../ServicesInfo/ServicePagination';
+import data from '../servicesStore';
 
 export const ServicesStore = ({ items }) => {
 	const [pageSize, setPageSize] = useState(3); // Початковий розмір сторінки - 3
@@ -7,6 +10,10 @@ export const ServicesStore = ({ items }) => {
 	const [totalPages, setTotalPages] = useState(
 		Math.ceil(items.length / pageSize)
 	);
+	const { currentPosts, ...options } = usePagination({
+		postPerPage: 3,
+		data,
+	});
 
 	useEffect(() => {
 		function updatePageSize() {
@@ -95,69 +102,14 @@ export const ServicesStore = ({ items }) => {
 					)
 				)}
 			</ul>
-			<button onClick={handlePrevPage} disabled={currentPage === 1}>
-				Попередня
-			</button>
-			<button onClick={handleNextPage} disabled={currentPage === totalPages}>
-				Наступна
-			</button>
+
+			<ServicePagination
+				totalPages={totalPages}
+				setCurrentPage={setCurrentPage}
+				currentPage={currentPage}
+				goToNextPage={handleNextPage}
+				goToPrevPage={handlePrevPage}
+			/>
 		</div>
 	);
 };
-//! 1
-// import css from './services-store.module.scss';
-// import { useState } from 'react';
-
-// export const ServicesStore = ({ items }) => {
-// 	const pageSize = 6;
-// 	const [currentPage, setCurrentPage] = useState(1);
-// 	const [totalPages, setTotalPages] = useState(
-// 		Math.ceil(items.length / pageSize)
-// 	);
-// 	// Визначте бажаний розмір сторінки
-
-// 	const currentItems = items.slice(
-// 		(currentPage - 1) * pageSize,
-// 		currentPage * pageSize
-// 	);
-
-// 	const handlePrevPage = () => {
-// 		if (currentPage > 1) {
-// 			setCurrentPage(currentPage - 1);
-// 		}
-// 	};
-
-// 	const handleNextPage = () => {
-// 		if (currentPage < totalPages) {
-// 			setCurrentPage(currentPage + 1);
-// 		}
-// 	};
-
-// 	return (
-// 		<div>
-// 			<ul className={css.store_list}>
-// 				{currentItems.map(({ id, img, imgRetina, title, text, price }) => (
-// 					<li key={id} className={css.store_item}>
-// 						<img
-// 							className={css.store_img}
-// 							srcSet={`${img} 1x, ${imgRetina} 2x`}
-// 							alt={title}
-// 						/>
-// 						<p className={css.store_subtitle}>{title}</p>
-// 						<p className={css.store_descr}>{text}</p>
-// 						<p className={css.store_price}>Ціна: {price}</p>
-// 						<a className={css.store_btn} href="#">
-// 							Купити
-// 						</a>
-// 					</li>
-// 				))}
-// 			</ul>
-// 			<button onClick={handlePrevPage} disabled={currentPage === 1}>
-// 				Попередня
-// 			</button>
-// 			<button onClick={handleNextPage} disabled={currentPage === totalPages}>
-// 				Наступна
-// 			</button>
-// 		</div>
-// 	);
-// };

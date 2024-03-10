@@ -1,13 +1,22 @@
 import css from './ServicesInfo.module.scss';
 import { icons } from '../../../assets';
 import { useState, useEffect } from 'react';
+import { usePagination } from '../../../hooks/usePagination';
+import ServicePagination from './ServicePagination';
+import data from '../servicesInfo.json';
+import { useMedia } from '../../../hooks/useMedia';
 
 export const ServicesInfo = ({ items }) => {
+	const { isMobile } = useMedia();
 	const [pageSize, setPageSize] = useState(5); // Початковий розмір сторінки - 3
 	const [currentPage, setCurrentPage] = useState(1);
 	const [totalPages, setTotalPages] = useState(
 		Math.ceil(items.length / pageSize)
 	);
+	const { currentPosts, ...options } = usePagination({
+		postPerPage: 5,
+		data,
+	});
 
 	useEffect(() => {
 		function updatePageSize() {
@@ -67,43 +76,15 @@ export const ServicesInfo = ({ items }) => {
 					</li>
 				))}
 			</ul>
-			<button
-				className={css.btn_prevpage}
-				onClick={handlePrevPage}
-				disabled={currentPage === 1}
-			>
-				Попередня
-			</button>
-			<button
-				className={css.btn_nextpage}
-				onClick={handleNextPage}
-				disabled={currentPage === totalPages}
-			>
-				Наступна
-			</button>
+			{isMobile && (
+				<ServicePagination
+					totalPages={totalPages}
+					setCurrentPage={setCurrentPage}
+					currentPage={currentPage}
+					goToNextPage={handleNextPage}
+					goToPrevPage={handlePrevPage}
+				/>
+			)}
 		</div>
 	);
 };
-
-// import css from './ServicesInfo.module.scss';
-// import { icons } from '../../../assets';
-
-// export const ServicesInfo = ({ items }) => {
-// 	return (
-// 		<ul className={css.services_list}>
-// 			{items.map(({ text, title, id }) => (
-// 				<li key={id} className={css.services_item}>
-// 					<div className={css.item_icon}>
-// 						<svg className={css.item_icon_svg} width="26" height="29">
-// 							<use href={`${icons}#icon-services`}></use>
-// 						</svg>
-// 					</div>
-// 					<div className={css.item_wrapper}>
-// 						<h3 className={css.item_title}>{title}</h3>
-// 						<p className={css.item_description}>{text}</p>
-// 					</div>
-// 				</li>
-// 			))}
-// 		</ul>
-// 	);
-// };
