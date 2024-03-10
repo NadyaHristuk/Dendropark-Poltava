@@ -5,11 +5,8 @@ import Container from '../components/Container/Container';
 const AboutPage = () => {
   return (
     <>
-      <h1>Про парк</h1>
       <ParkDescription />
-      <Container>
-        <ParkLocations />
-      </Container>
+      <ParkLocations />
     </>
   );
 };

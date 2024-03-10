@@ -1,4 +1,6 @@
-@import '../../styles/mixins';
+@import '/src/styles/breakpoints';
+@import '/src/styles/mixins';
+@import '/src/styles/colors';
 
 .container {
 	max-width: 390px;

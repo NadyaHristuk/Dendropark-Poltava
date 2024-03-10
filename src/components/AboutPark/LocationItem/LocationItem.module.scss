@@ -1,0 +1,67 @@
+@import '/src/styles/breakpoints';
+@import '../../../styles/mixins';
+@import '/src/styles/colors';
+
+.locationItem {
+  background-color: $lilac-haze;
+  padding: 24px 20px 24px 24px;
+  border-radius: 20px;
+}
+
+.numberSign {
+  background-color: $pine-depths;
+  width: 40px;
+  height: 41px;
+  border-radius: 201.33px;
+  padding: 12.08px;
+  font-family: 'Ermilov', sans-serif;
+  font-weight: 700;
+  line-height: 1.5;
+  color: $snowdrift;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.locationItemDescr {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  font-family: 'Innerspace', sans-serif;
+  font-size: 12px;
+  overflow: scroll;
+  overflow-x: hidden;
+  line-height: 24.16px;
+  text-align: left;
+}
+
+.locationItemButton {
+  font-family: 'Innerspace', sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  color: $osnovniy;
+  cursor: pointer;
+}
+
+.vectorIcon {
+  width: 10px;
+  height: 12px;
+  margin-left: 8px;
+}
+
+.sliderContainer {
+  overflow: hidden;
+}
+
+.pictureContainer {
+  margin-bottom: 24px;
+  display: flex;
+  transform: translateX(0);
+  transition: transform 0.3s ease;
+}
+
+.pictureContainerOpen {
+  transform: translateX(-100%);
+}

@@ -1,6 +1,6 @@
 import { useOutlet } from 'react-router-dom';
 
-import { Header } from '../Header/Header';
+import Header from '../Header';
 import { Footer } from '../Footer/Footer';
 import { Notification } from '../Notification/Notification';
 

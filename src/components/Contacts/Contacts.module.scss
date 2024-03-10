@@ -2,6 +2,7 @@
 @import '../../styles/mixins';
 
 .section {
+  padding-top: 74px;
   padding-bottom: 64px;
 
   @include media-rules(tablet) {
@@ -92,6 +93,7 @@
   font-family: 'Innerspace', sans-serif;
   font-size: 16px;
   color: #265543;
+  line-height: 1.12;
   margin-bottom: 24px;
 
   @include media-rules(desktop) {
@@ -115,6 +117,7 @@
   @include media-rules(desktop) {
     gap: 8px;
     margin-bottom: 48px;
+    padding: 34px 24px;
   }
 }
 
@@ -127,6 +130,10 @@
 
   @include media-rules(tablet) {
     font-size: 16px;
+  }
+
+  @include media-rules(desktop) {
+    line-height: 1.12;
   }
 }
 

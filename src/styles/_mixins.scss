@@ -31,3 +31,76 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+// mixins for card animation at Vzaemodia
+
+@mixin contentWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 1400ms ease-in-out;
+  gap: 24px;
+
+  @include media-rules(tablet) {
+    gap: 0px;
+
+    flex-direction: row;
+  }
+}
+
+@mixin animationMixin {
+  transform: translateX(0%);
+  @include media-rules(tablet) {
+    transform: translateX(120%);
+  }
+  @include contentWrapper;
+}
+
+@mixin closeAnimationMixin {
+  transform: translateX(0%);
+  @include contentWrapper;
+}
+
+@mixin mobileAnimationMixin {
+  transform: translateX(120%);
+  flex-direction: column;
+  @include contentWrapper;
+}
+
+@mixin closeMobileAnimationMixin {
+  transform: translateX(0%);
+  flex-direction: column;
+  @include contentWrapper;
+}
+
+//map animation
+
+@mixin mapContainer {
+  position: absolute;
+  display: flex;
+  transition: transform 1400ms ease-in-out;
+}
+
+@mixin mapContainerClose {
+  top: 60px;
+  transform: translateX(-120%);
+  @include media-rules(tablet) {
+    top: 0px;
+    left: 0px;
+  }
+  @include mapContainer;
+}
+
+@mixin mapContainerOpen {
+  transform: translateX(0%);
+  z-index: 9999;
+  top: 60px;
+  @include media-rules(tablet) {
+    top: 0px;
+    left: 6px;
+  }
+  @include media-rules(desktop) {
+    left: 0px;
+  }
+  @include mapContainer;
+}

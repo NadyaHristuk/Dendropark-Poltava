@@ -1,3 +1,7 @@
+export { default as photo1 } from './images/ModalStudents/photo1.jpeg';
+// for header
+export { default as logo1x } from './images/header/logo@1x.png';
+export { default as logo2x } from './images/header/logo@2x.png';
 //Мобільні зображення адміністрації
 export { default as person1_mob_1x } from './images/Administration/person-mob-1.jpg';
 export { default as person1_mob_2x } from './images/Administration/person-mob-1@2x.jpg';
