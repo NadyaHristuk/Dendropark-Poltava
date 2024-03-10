@@ -1,3 +1,4 @@
+export { default as photo1 } from './images/ModalStudents/photo1.jpeg';
 // for header
 export { default as logo1x } from './images/header/logo@1x.png';
 export { default as logo2x } from './images/header/logo@2x.png';

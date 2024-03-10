@@ -132,22 +132,18 @@
     bottom: 0;
     padding: 32px;
   }
-
   @include media-rules(desktop) {
     width: 808px;
     gap: 20px;
   }
-
   ::-webkit-scrollbar {
     background-color: $stroke;
     width: 4px;
   }
-
   ::-webkit-scrollbar-thumb {
     background: $osnovniy;
     border-radius: 2px;
   }
-
   ::-webkit-scrollbar-thumb:hover {
     background: $emerald-field;
   }
@@ -245,10 +241,11 @@
   border-radius: 20px;
   width: 100%;
   margin: 0 auto;
-  width: 310px;
-  height: 200px;
+  max-width: 310px;
+  height: auto;
   transition: transform 1400ms ease-in-out;
   @include media-rules(tablet) {
+    max-width: none;
     width: 100%;
     height: 100%;
   }
@@ -258,7 +255,7 @@
   border-radius: 20px;
   width: 100%;
   margin: 0 auto;
-  width: 310px;
+  max-width: 310px;
   height: 200px;
   transform: translateX(200%);
   transition: transform 1400ms ease-in-out;

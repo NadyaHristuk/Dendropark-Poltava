@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 import icons from '../../assets/icons/sprite.svg';
 import css from './AttentionVisitors.module.scss';
 
@@ -17,7 +17,7 @@ export const AttentionItem = ({
       </svg>
       <p className={css.point}>{title}</p>
       <p className={css.description}>{description}</p>
-      <Link to={link} className={css.moreInfo}>
+      <Link smooth to={link} className={css.moreInfo}>
         {moreInfo}
         <svg width="25" height="25" className={css.iconArrow}>
           <use href={`${icons}#icon-arrow-up`}></use>

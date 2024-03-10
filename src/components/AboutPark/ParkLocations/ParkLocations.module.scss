@@ -1,4 +1,27 @@
+@import '/src/styles/breakpoints';
+@import '/src/styles/mixins';
+@import '/src/styles/colors';
+
 .parkLocationsList {
   display: grid;
   gap: 20px;
 }
+
+.locationsTitle {
+  margin-bottom: 32px;
+}
+
+.locationsDivision {
+  font-family: 'Innerspace', sans-serif;
+  font-size: 14px;
+  white-space: nowrap;
+  margin-bottom: 32px;
+  color: $pine-depths;
+}
+
+// font-family: Innerspace;
+// font-size: 14px;
+// font-weight: 400;
+// line-height: 30px;
+// letter-spacing: 0em;
+// text-align: left;

@@ -100,7 +100,7 @@ export const en = {
           description:
             'Ключове правило: поважайте інших, і людей, і тварин, і рослини.',
           moreInfo: 'Дізнатися більше',
-          link: 'vzaemodia',
+          link: '/vzaemodia/#rules-section',
           iconId: '#icon-attention',
         },
         {
@@ -108,7 +108,7 @@ export const en = {
           description:
             'Хочете більше дізнатися про цінність парку і взаємозв’язки в природі?',
           moreInfo: 'Дізнатися більше',
-          link: 'vzaemodia',
+          link: '/vzaemodia/#trials-section',
           iconId: '#icon-tracks',
         },
         {
@@ -123,7 +123,7 @@ export const en = {
           description:
             'Хочете провести захід в Парку? Переходьте за посиланням.',
           moreInfo: 'Дізнатися більше',
-          link: 'vzaemodia',
+          link: '/vzaemodia/#organizators-section',
           iconId: '#icon-event',
         },
         {
@@ -137,7 +137,7 @@ export const en = {
           title: 'Адміністрація',
           description: 'Адміністрація парку.',
           moreInfo: 'Дізнатися більше',
-          link: 'contact',
+          link: '/contact/#administration-section',
           iconId: '#icon-administration',
         },
       ],
@@ -289,6 +289,10 @@ export const en = {
       currentGoal: 'Наразі потрібні кошти на будування дитячого майданчика',
       button: 'Допомогти парку',
       btnIcon: '#icon-simplethankyou',
+    },
+    studentModals: {
+      title: 'Розробили наш сайт',
+      subTitle: 'Люди, що забезпечують нашу онлайн присутність',
     },
   },
 };

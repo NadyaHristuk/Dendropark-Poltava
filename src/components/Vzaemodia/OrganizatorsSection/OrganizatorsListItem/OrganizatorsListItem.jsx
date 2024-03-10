@@ -18,8 +18,8 @@ export const OrganizatorsListItem = ({ rule }) => {
 
       <div className={styles.textContainer}>
         {' '}
-        <h3>{t(`vzaemodia.${rule.title}`)}</h3>
-        <p>{t(`vzaemodia.${rule.text}`)}</p>
+        <h3 className={styles.title}>{t(`vzaemodia.${rule.title}`)}</h3>
+        <p className={styles.text}>{t(`vzaemodia.${rule.text}`)}</p>
       </div>
     </div>
   );

@@ -144,6 +144,8 @@
 }
 
 .itemIcon {
+  fill: $lilac-haze;
+
   @include media-rules(tablet) {
     width: 48px;
     height: 48px;

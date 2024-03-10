@@ -3,17 +3,19 @@
 @import '/src/styles/colors';
 
 .section {
-  width: $mobile;
+  width: 100%;
+  max-width: $mobile;
   margin: 0 auto;
   background-color: $snowdrift;
   color: $pine-depths;
+  user-select: none;
 
   @include media-rules(tablet) {
-    width: $tablet;
+    max-width: $tablet;
   }
 
   @include media-rules(desktop) {
-    width: $desktop;
+    max-width: $desktop;
   }
 }
 
@@ -37,6 +39,7 @@
   margin: 0 auto;
   overflow-wrap: break-word;
   padding: 64px 0px;
+
   @include media-rules(tablet) {
     height: 290px;
     padding: 80px 0px;
@@ -62,6 +65,7 @@
     font-size: 40px;
     line-height: 145%;
   }
+
   @include media-rules(desktop) {
     font-size: 56px;
     line-height: 104%;
@@ -81,6 +85,7 @@
     line-height: 146%;
     margin-top: 32px;
   }
+
   @include media-rules(desktop) {
     font-size: 20px;
     margin-top: 46px;

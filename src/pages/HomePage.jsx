@@ -4,11 +4,13 @@ import Calendar from '../components/Calendar/Calendar';
 import ChroniclesList from '../components/Chronicles/ChroniclesList/ChroniclesList';
 import Container from '../components/Container/Container';
 import { HelpPark } from '../components/HelpPark/HelpPark/HelpPark';
+import Hero from '../components/Hero/Hero';
 
 const HomePage = () => {
   return (
     // <div className={s.container}>
     <Container>
+      <Hero />
       <AttentionVisitors />
       <HelpPark />
       <Calendar />
