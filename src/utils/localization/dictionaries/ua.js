@@ -11,7 +11,7 @@ export const ua = {
             'Ключове правило: поважайте інших, і людей, і тварин, і рослини.',
           moreInfo: 'Дізнатися більше',
           link: '/vzaemodia/#rules-section',
-          iconId: '#icon-attention',
+          iconId: '#icon-new-attention',
         },
         {
           title: 'Дослідницькі стежки',
