@@ -10,7 +10,7 @@ const ChroniclesList = () => {
   chronicles.sort((a, b) => b.date - a.date);
 
   return (
-    <section className={css.chroniclesSection}>
+    <section id="litopys" className={css.chroniclesSection}>
       <h3 className={css.title}>{t('chronicles.chroniclesTitle')}</h3>
       {chronicles.length > 0 ? (
         <ul className={css.list}>
