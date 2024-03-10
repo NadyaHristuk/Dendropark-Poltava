@@ -1,6 +1,6 @@
 import React from 'react';
-import icons from '../../assets/icons/sprite.svg';
-import css from './HelpPark.module.scss';
+import icons from '/src/assets/icons/sprite.svg';
+import css from './HelpParkItem.module.scss';
 
 export const HelpParkItem = ({ iconId, title, subtitle }) => {
   return (

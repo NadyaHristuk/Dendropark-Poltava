@@ -3,7 +3,7 @@ import { AttentionVisitors } from '../components/AttentionVisitors/AttentionVisi
 import Calendar from '../components/Calendar/Calendar';
 import ChroniclesList from '../components/Chronicles/ChroniclesList/ChroniclesList';
 import Container from '../components/Container/Container';
-import { HelpPark } from '../components/HelpPark/HelpPark';
+import { HelpPark } from '../components/HelpPark/HelpPark/HelpPark';
 
 const HomePage = () => {
   return (

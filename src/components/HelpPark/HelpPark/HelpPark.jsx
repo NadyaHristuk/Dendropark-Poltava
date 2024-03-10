@@ -1,9 +1,9 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import css from './HelpPark.module.scss';
-import { HelpParkItem } from './HelpParkItem';
-import icons from '../../assets/icons/sprite.svg';
-import { Visual } from './Visual/Visual';
+import { HelpParkItem } from '../HelpParkItem/HelpParkItem';
+import { Visual } from '../Visual/Visual';
+import { QrCode } from '../QrCode/QrCode';
 
 export const HelpPark = () => {
   const { t } = useTranslation();
@@ -29,24 +29,7 @@ export const HelpPark = () => {
             ))}
           </ul>
         </div>
-
-        <div className={css.desktopDiv}>
-          <p className={css.currentGoal}>{t('helpPark.currentGoal')}</p>
-
-          <div className={css.grCodeWrap}>
-            <a className={css.qrCodeLink} href="/">
-              <svg className={css.qrCodeImg} width="196" height="195">
-                <use href={`${icons}#icon-qrCode`}></use>
-              </svg>
-            </a>
-          </div>
-          <a className={css.helpLink} href="/">
-            <svg className={css.heartIcon}>
-              <use href={`${icons}#icon-simplethankyou`}></use>
-            </svg>
-            {t('helpPark.button')}
-          </a>
-        </div>
+        <QrCode />
       </div>
 
       <Visual />
