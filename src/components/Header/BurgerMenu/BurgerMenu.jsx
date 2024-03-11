@@ -25,7 +25,7 @@ const BurgerMenu = () => {
       </button>
       {isOpen && (
         <nav className={s.burgerNav}>
-          <ul>
+          <ul className={s.burgerList}>
             <li>
               <NavLink to="/" end>
                 {t('header.navigation.main')}
@@ -50,10 +50,12 @@ const BurgerMenu = () => {
             <li>
               <NavLink to="/contact">{t('header.navigation.contacts')}</NavLink>
             </li>
-            {isMobile && (
-              <li>{<a href="tel:+380502894133">+38 (050) 289-41-33</a>}</li>
-            )}
           </ul>
+          {isMobile && (
+            <address className={s.address}>
+              <a href="tel:+380502894133">+38 (050) 289-41-33</a>
+            </address>
+          )}
         </nav>
       )}
     </div>
