@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useMedia } from '../../../hooks';
+import { icons } from '../../../assets';
 
 const BurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +16,11 @@ const BurgerMenu = () => {
 
   return (
     <div>
-      <button onClick={toggleMenu}>☰</button>
+      <button onClick={toggleMenu}>
+        <svg className="burgerIcon">
+          <use href={`${icons}#icon-new-life-bar`}></use>
+        </svg>
+      </button>
       {isOpen && (
         <nav>
           <ul>
