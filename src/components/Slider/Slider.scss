@@ -1,0 +1,62 @@
+@import '/src/styles/colors';
+@import '../../styles/mixins';
+
+.slider-controler {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 175px;
+  gap: 48px;
+}
+
+.slider-arrow {
+  display: none;
+  cursor: pointer;
+  width: 13px;
+  height: 13px;
+
+  @include media-rules(tablet) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.arrow-icon {
+  width: 13px;
+  height: 13px;
+  fill: $osnovniy;
+}
+
+.swiper-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  position: static !important;
+  width: auto !important;
+}
+
+.swiper-pagination-bullet {
+  width: 16px !important;
+  height: 16px !important;
+  background-color: $stroke !important;
+  opacity: 1 !important;
+  margin: 0 !important;
+  transform: scale(1) !important;
+
+  @include media-rules(tablet) {
+    background-color: $osnovniy !important;
+    width: 10px !important;
+    height: 10px !important;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $osnovniy !important;
+
+  @include media-rules(tablet) {
+    background-color: $pine-depths !important;
+  }
+}
