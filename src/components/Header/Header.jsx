@@ -54,34 +54,40 @@ const Header = () => {
             {logoTitleLastWord}
           </p>
         </Link>
-        <nav>
-          <ul className={s.nav}>
-            <li>
-              <NavLink to="/" end>
-                {t('header.navigation.main')}
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/about">{t('header.navigation.about')}</NavLink>
-            </li>
-            <li>
-              <NavLink to="/vzaemodia">
-                {t('header.navigation.interaction')}
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/chronicles">
-                {t('header.navigation.materials')}
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/service">{t('header.navigation.services')}</NavLink>
-            </li>
-            <li>
-              <NavLink to="/contact">{t('header.navigation.contacts')}</NavLink>
-            </li>
-          </ul>
-        </nav>
+        {isDesktop && (
+          <nav>
+            <ul className={s.nav}>
+              <li>
+                <NavLink to="/" end>
+                  {t('header.navigation.main')}
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/about">{t('header.navigation.about')}</NavLink>
+              </li>
+              <li>
+                <NavLink to="/vzaemodia">
+                  {t('header.navigation.interaction')}
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/chronicles">
+                  {t('header.navigation.materials')}
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/service">
+                  {t('header.navigation.services')}
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/contact">
+                  {t('header.navigation.contacts')}
+                </NavLink>
+              </li>
+            </ul>
+          </nav>
+        )}
         <address>
           {(isDesktop || isTablet) && (
             <a href="https://t.me/MaxMakukha" target="_blank">

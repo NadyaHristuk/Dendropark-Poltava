@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import { useMedia } from '../../../hooks';
-// import 'src/styles/_colors.scss';
+import '../../../styles/_colors.scss';
 
 export const useSelectStyles = () => {
   const mediaRuls = useMedia();
@@ -9,17 +9,15 @@ export const useSelectStyles = () => {
     () => ({
       control: (baseStyles) => ({
         ...baseStyles,
-        display: 'flex',
-        alignItems: 'center',
-        padding: '0 14px',
+        padding: '0 11.65px',
+        cursor: 'pointer',
         width: 68,
         height: 50,
         borderRadius: 201,
-        borderColor: 'rgba(43, 42, 41, 0.2)',
+        border: '1.01px solid rgba(43, 42, 41, 0.2)',
       }),
       valueContainer: (baseStyles) => ({
         ...baseStyles,
-        // width: 16,
         padding: 0,
         margin: 0,
       }),
@@ -32,13 +30,13 @@ export const useSelectStyles = () => {
         letterSpacing: '-0.01em',
         color: '#014631',
         textTransform: 'uppercase',
+        marginRight: 6,
       }),
       indicatorsContainer: (baseStyles) => ({
         ...baseStyles,
         alignSelf: 'center',
-        width: 18,
-        height: 18,
-        transform: 'translateY(-2px)',
+        width: 17,
+        height: 17,
       }),
       dropdownIndicator: (baseStyles) => ({
         ...baseStyles,
@@ -51,18 +49,23 @@ export const useSelectStyles = () => {
       indicatorSeparator: () => null,
       menuList: (baseStyles) => ({
         ...baseStyles,
-        paddingBottom: 0,
-        paddingTop: 0,
-        borderRadius: 4,
+
+        border: '10.07px solid #e1f4ee',
+        borderRadius: 20,
+        boxShadow: null,
+        background: '$snowdrift',
+        padding: '12px 21px',
+        overflow: 'hidden',
+        width: 194,
+        height: 122,
       }),
       option: (baseStyles) => ({
         ...baseStyles,
-        paddingBottom: 4,
-        paddingTop: 4,
-        font: 'Montserrat',
-        fontWeight: 500,
-        fontSize: 14,
-        lineHeight: '24px',
+        padding: '4px 24px',
+        marginBottom: 12,
+        fontWeight: 'normal',
+        lineHeight: 1.5,
+        backgroundColor: 'none',
         color: '#014631',
         textTransform: 'uppercase',
       }),

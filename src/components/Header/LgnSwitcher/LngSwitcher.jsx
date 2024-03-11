@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
-import Select from 'react-select';
+import Select, { components } from 'react-select';
 import { useTranslation } from 'react-i18next';
 import { LANGUAGE_STORAGE_KEY, LANGUAGES } from '../../../constants';
 import { useSelectStyles } from './LngSwitcher.styles';
+import { icons } from '../../../assets';
 
 const options = LANGUAGES.map((el) => ({ value: el, label: el }));
 
@@ -30,6 +31,30 @@ const LngSwitcher = () => {
     i18n.changeLanguage(option.value);
   };
 
+  // const DropdownIndicator = function (props) {
+  //   return createElement(
+  //     components.DropdownIndicator,
+  //     props,
+  //     createElement('svg', {
+  //       xmlns: 'http://www.w3.org/2000/svg',
+  //       xmlnsXlink: 'http://www.w3.org/1999/xlink',
+  //       dangerouslySetInnerHTML: {
+  //         __html: <use xlink:href="${icons}#icon-select-arrow"></use>,
+  //       },
+  //     })
+  //   );
+  // };
+
+  const DropdownIndicator = (props) => {
+    return (
+      <components.DropdownIndicator {...props}>
+        <svg width="17" height="1">
+          <use href={`${icons}#icon-select-arrow`}></use>
+        </svg>
+      </components.DropdownIndicator>
+    );
+  };
+
   return (
     <Select
       options={options}
@@ -37,6 +62,7 @@ const LngSwitcher = () => {
       value={options.find((el) => el.value === currentLanguage)}
       onChange={handleChangeLng}
       styles={selectStyles}
+      components={{ DropdownIndicator }}
     />
   );
 };

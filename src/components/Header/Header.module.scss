@@ -59,9 +59,13 @@
 }
 address {
   & a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     border: 1px solid rgba(43, 42, 41, 0.2);
     border-radius: 201px;
-    padding: 16px 11px;
+    margin-right: 8px;
+    width: 187px;
     height: 51px;
     font-weight: normal;
     color: $pine-depths;

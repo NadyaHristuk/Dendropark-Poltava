@@ -32,10 +32,13 @@
   overflow: hidden;
 }
 
+//transition
+
 @mixin transition($property: all) {
   $duration: 250ms;
   $timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition: $property $duration $timing-function;
+}
 
 @mixin contentWrapper {
   width: 100%;
@@ -106,5 +109,4 @@
     left: 0px;
   }
   @include mapContainer;
-
 }
