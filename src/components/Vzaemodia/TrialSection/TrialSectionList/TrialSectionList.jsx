@@ -1,23 +1,21 @@
 import { usePagination } from '../../../../hooks/usePagination';
-import Pagination from '../../../Pagination/Pagination';
 import data from '../../json/trialCards.js';
 import { TrialSectionCard } from '../TrialSectionCard/TrialSectionCard';
 import styles from './TrialSectionList.module.scss';
+import Slider from '../../../Slider/Slider.jsx';
 
 export const TrialSectionList = () => {
-  const { currentPosts, ...options } = usePagination({
-    postPerPage: 3,
-    data,
-  });
+  const { chunkedData } = usePagination({ perPage: 3, data });
 
-  return (
-    <>
+  const list = (cards) => {
+    return (
       <ul className={styles.list}>
-        {currentPosts.map((card, i) => (
-          <TrialSectionCard key={i} card={card} />
+        {cards.map((card, idx) => (
+          <TrialSectionCard key={idx} card={card} />
         ))}
       </ul>
-      <Pagination props={options} />
-    </>
-  );
+    );
+  };
+
+  return <Slider currentPage={list} chunkedData={chunkedData} />;
 };
