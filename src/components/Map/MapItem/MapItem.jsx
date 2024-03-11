@@ -2,9 +2,10 @@ import { useRef, useState } from 'react';
 import { icons } from '../../../assets';
 import { CSSTransition } from 'react-transition-group';
 import scss from './MapItem.module.scss';
-import "./transition.scss"
+import './transition.scss';
+import { HashLink } from 'react-router-hash-link';
 
-const MapItem = ({ item, className }) => {
+const MapItem = ({ item, className, locationId }) => {
   const [isVisible, setIsVisible] = useState(false);
   const nodeRef = useRef(null);
 
@@ -37,12 +38,12 @@ const MapItem = ({ item, className }) => {
             <div className={scss.number}>{item.number}</div>
             <h3 className={scss.title}>{item.title}</h3>
             <p className={scss.description}>{item.description}</p>
-            <a className={scss.link} href="">
+            <HashLink smooth to={`/about#${locationId}`} className={scss.link}>
               Детальніше
               <svg className={scss.linkIcon}>
                 <use href={`${icons}#icon-arrow-up`}></use>
               </svg>
-            </a>
+            </HashLink>
           </div>
         </div>
       </CSSTransition>
