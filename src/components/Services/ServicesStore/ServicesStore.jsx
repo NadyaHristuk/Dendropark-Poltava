@@ -1,60 +1,21 @@
 import css from './services-store.module.scss';
-import { useState, useEffect } from 'react';
 import { usePagination } from '../../../hooks/usePagination';
-import ServicePagination from '../ServicesInfo/ServicePagination';
 import data from '../servicesStore';
+import Slider from '../../Slider/Slider';
+import { useMedia } from '../../../hooks/useMedia';
+export const ServicesStore = () => {
+	const { isMobile } = useMedia();
+	const countEl = isMobile ? 3 : 6;
 
-export const ServicesStore = ({ items }) => {
-	const [pageSize, setPageSize] = useState(3); // Початковий розмір сторінки - 3
-	const [currentPage, setCurrentPage] = useState(1);
-	const [totalPages, setTotalPages] = useState(
-		Math.ceil(items.length / pageSize)
-	);
-	const { currentPosts, ...options } = usePagination({
-		postPerPage: 6,
+	const { chunkedData } = usePagination({
+		perPage: countEl,
 		data,
 	});
 
-	useEffect(() => {
-		function updatePageSize() {
-			const windowWidth = window.innerWidth;
-			if (windowWidth >= 960) {
-				setPageSize(6);
-			} else if (windowWidth >= 390) {
-				setPageSize(3);
-			}
-		}
-
-		updatePageSize();
-
-		window.addEventListener('resize', updatePageSize);
-
-		return () => {
-			window.removeEventListener('resize', updatePageSize);
-		};
-	}, []);
-
-	const currentItems = items.slice(
-		(currentPage - 1) * pageSize,
-		currentPage * pageSize
-	);
-
-	const handlePrevPage = () => {
-		if (currentPage > 1) {
-			setCurrentPage(currentPage - 1);
-		}
-	};
-
-	const handleNextPage = () => {
-		if (currentPage < totalPages) {
-			setCurrentPage(currentPage + 1);
-		}
-	};
-
-	return (
-		<div>
+	const list = (cards) => {
+		return (
 			<ul className={css.store_list}>
-				{currentItems.map(
+				{cards.map(
 					({
 						id,
 						imgMob,
@@ -102,14 +63,12 @@ export const ServicesStore = ({ items }) => {
 					)
 				)}
 			</ul>
+		);
+	};
 
-			<ServicePagination
-				totalPages={totalPages}
-				setCurrentPage={setCurrentPage}
-				currentPage={currentPage}
-				goToNextPage={handleNextPage}
-				goToPrevPage={handlePrevPage}
-			/>
+	return (
+		<div>
+			<Slider chunkedData={chunkedData} currentPage={list} />
 		</div>
 	);
 };
