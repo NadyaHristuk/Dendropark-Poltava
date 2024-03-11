@@ -14,6 +14,7 @@
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@esbuild/win32-x64": "^0.20.1",
     "@vitejs/plugin-react-swc": "^3.3.2",
     "clsx": "^2.1.0",
     "i18next": "^23.8.2",
@@ -28,6 +29,7 @@
     "react-router-hash-link": "^2.4.3",
     "react-select": "^5.8.0",
     "swiper": "^11.0.7",
+    "react-transition-group": "^4.4.5",
     "vite-plugin-svgr": "^3.2.0"
   },
   "devDependencies": {

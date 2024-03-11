@@ -9,6 +9,15 @@
   padding: 0 40px;
   max-width: 390px;
   margin: 0 auto;
+
+  @include media-rules(tablet) {
+    padding: 0 40px;
+    max-width: $tablet;
+  }
+
+  @include media-rules(desktop) {
+    max-width: $desktop;
+  }
 }
 
 .historyCreationTitle {
@@ -16,6 +25,12 @@
   font-weight: 700;
   line-height: 2.75;
   margin-bottom: 20px;
+
+  @include media-rules(tablet) {
+    font-size: 44px;
+    line-height: 1;
+    margin-bottom: 48px;
+  }
 }
 
 .historyCreationText {
@@ -23,6 +38,58 @@
   font-family: 'Innerspace', sans-serif;
   line-height: 2.5;
   margin-bottom: 0;
+
+  @include media-rules(tablet) {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+}
+
+.historyCreationPicturesContainer {
+  @include media-rules(tablet) {
+    display: grid;
+    column-gap: 59px;
+    row-gap: 48px;
+    grid-template-areas:
+      'text levVaing'
+      'text ninaYacenko'
+      'subotnik subotnik';
+  }
+}
+
+.poltavBatleText {
+  @include media-rules(tablet) {
+    grid-area: text;
+    min-width: 417px;
+  }
+}
+
+.levVaingortContainer {
+  @include media-rules(tablet) {
+    grid-area: levVaing;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+.ninaYacenkoContainer {
+  @include media-rules(tablet) {
+    display: flex;
+    gap: 26px;
+    flex-direction: column;
+    grid-area: ninaYacenko;
+  }
+}
+
+.subotnikContainer {
+  @include media-rules(tablet) {
+    grid-area: subotnik;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
 }
 
 .picturesContainer {
@@ -31,18 +98,23 @@
   gap: 20px;
 }
 
-.picturesContainer li {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
 .pictureDescription {
   font-family: 'Innerspace', sans-serif;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.66;
   margin: 0;
+
+  @include media-rules(tablet) {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
+
+.subotnikText {
+  @include media-rules(tablet) {
+    line-height: 2.14;
+  }
 }
 
 .reduceButton {
@@ -57,6 +129,10 @@
   font-weight: 400;
   display: flex;
   gap: 10px;
+
+  @include media-rules(tablet) {
+    margin-top: 24px;
+  }
 }
 
 .vectorIcon {

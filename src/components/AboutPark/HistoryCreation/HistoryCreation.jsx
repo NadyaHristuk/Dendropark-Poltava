@@ -17,52 +17,53 @@ export const HistoryCreation = ({ onClick }) => {
         <br />
         {t('about.descriptionThirdParagraph')}
       </p>
+      <div
+        className={`${css.historyCreationPicturesContainer} ${css.historyCreationSection}`}
+      >
+        <div className={` ${css.poltavBatleText}`}>
+          <h2 className={css.historyCreationTitle}>Історія створення</h2>
+          <p className={`${css.historyCreationText}`}>
+            За часів Полтавської баталії ця територія була густою незайманою
+            дібровою. Яківчанський ліс переходив у діброву на Монастирській
+            горі. Під час Другої світової війни зелений масив був вирубаний
+            націонал-соціалістами. Розбудова парку почалася у квітні 1962 р.
+            Рішенням Ради Міністрів України від 4 березня 1962 року «Про
+            закладку 9 показових парків у обласних центрах України» було
+            передбачено створення в Полтаві дендропарку. <br />А вже 13—14
+            квітня було закладено парк площею 17 га. У березні 1963 року його
+            було включено до списку ботанічних садів і дендропарків України.
+            Ініціаторами проєкту були головний архітектор міста Лев Вайнгорт та
+            дендролог Яніна Яценко, яка віддала парку 40 років свого життя.
+          </p>
+        </div>
+
+        <div className={`${css.levVaingortContainer} `}>
+          <Picture pictures={levVaingortPicture} />
+
+          <p className={css.pictureDescription}>
+            Головний архітектор Лев Вайнгорт перед схемою майбутнього парку (16
+            квітня 1962)
+          </p>
+        </div>
+        <div className={`${css.ninaYacenkoContainer}`}>
+          <Picture pictures={yaninaYakivnaPicture} />
+
+          <p className={css.pictureDescription}>
+            Яніна Яківна Яценко (31 травня 1926; Ставище Київської області - 2
+            грудня 2016 р., м. Полтава) — засновник та забудовник Полтавського
+            дендропарку, автор проекту «Парк на полі Полтавської битви».
+          </p>
+        </div>
+        <div className={`${css.subotnikContainer}`}>
+          <Picture pictures={subotnikPicture} />
+          <p className={`${css.pictureDescription} ${css.subotnikText}`}>
+            Суботник з метою лісонасаджень на території майбутнього дендропарку.
+            13-14.04.1962 р.
+          </p>
+        </div>
+      </div>
       <div className={css.historyCreationSection}>
-        <h2 className={css.historyCreationTitle}>Історія створення</h2>
         <p className={css.historyCreationText}>
-          За часів Полтавської баталії ця територія була густою незайманою
-          дібровою. Яківчанський ліс переходив у діброву на Монастирській горі.
-          Під час Другої світової війни зелений масив був вирубаний
-          націонал-соціалістами. Розбудова парку почалася у квітні 1962 р.
-          Рішенням Ради Міністрів України від 4 березня 1962 року «Про закладку
-          9 показових парків у обласних центрах України» було передбачено
-          створення в Полтаві дендропарку. <br />А вже 13—14 квітня було
-          закладено парк площею 17 га. У березні 1963 року його було включено до
-          списку ботанічних садів і дендропарків України. Ініціаторами проєкту
-          були головний архітектор міста Лев Вайнгорт та дендролог Яніна Яценко,
-          яка віддала парку 40 років свого життя.
-        </p>
-      </div>
-      <div className={css.historyCreationSection}>
-        <ul className={css.picturesContainer}>
-          <li className={css.pictureContainer}>
-            <Picture pictures={levVaingortPicture} />
-
-            <p className={css.pictureDescription}>
-              Головний архітектор Лев Вайнгорт перед схемою майбутнього парку
-              (16 квітня 1962)
-            </p>
-          </li>
-          <li className={css.pictureContainer}>
-            <Picture pictures={yaninaYakivnaPicture} />
-
-            <p className={css.pictureDescription}>
-              Яніна Яківна Яценко (31 травня 1926; Ставище Київської області - 2
-              грудня 2016 р., м. Полтава) — засновник та забудовник Полтавського
-              дендропарку, автор проекту «Парк на полі Полтавської битви».
-            </p>
-          </li>
-          <li className={css.pictureContainer}>
-            <Picture pictures={subotnikPicture} />
-            <p className={css.pictureDescription}>
-              Суботник з метою лісонасаджень на території майбутнього
-              дендропарку. 13-14.04.1962 р.
-            </p>
-          </li>
-        </ul>
-      </div>
-      <div className={css.historyCreationSection}>
-        <p className={css.pictureDescription}>
           Схематичний план зон «Лісостепу» та «Української діброви» розробив
           тодішній головний архітектор міста Л.С. Вайнгорт та ландшафтний
           архітектор В. В. Жихарєв. Проект посадок на решті території виконала
@@ -79,14 +80,13 @@ export const HistoryCreation = ({ onClick }) => {
           садово-паркового мистецтва загальнодержавного значення.
         </p>
       </div>
-      <div className={css.historyCreationSection}>
-        <button className={css.reduceButton} onClick={onClick}>
-          Згорнути
-          <svg className={css.vectorIcon}>
-            <use href={`${icons}#icon-Vector-top`}></use>
-          </svg>
-        </button>
-      </div>
+
+      <button className={css.reduceButton} onClick={onClick}>
+        Згорнути
+        <svg className={css.vectorIcon}>
+          <use href={`${icons}#icon-Vector-top`}></use>
+        </svg>
+      </button>
     </div>
   );
 };
