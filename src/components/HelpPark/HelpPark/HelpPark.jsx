@@ -2,7 +2,6 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import css from './HelpPark.module.scss';
 import { HelpParkItem } from '../HelpParkItem/HelpParkItem';
-import { Visual } from '../Visual/Visual';
 import { QrCode } from '../QrCode/QrCode';
 
 export const HelpPark = () => {
@@ -31,8 +30,6 @@ export const HelpPark = () => {
         </div>
         <QrCode />
       </div>
-
-      <Visual />
     </section>
   );
 };
