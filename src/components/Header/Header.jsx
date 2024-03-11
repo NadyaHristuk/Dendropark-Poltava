@@ -90,19 +90,12 @@ const Header = () => {
           </nav>
         )}
         {(isDesktop || isTablet) && (
-          <address>
+          <address className={s.address}>
             <a href="https://t.me/MaxMakukha" target="_blank">
               +38 (050) 289-41-33
             </a>
           </address>
         )}
-        {/* <address>
-          <a href="https://t.me/MaxMakukha" target="_blank">
-            +38 (050) 289-41-33
-          </a>
-          {isMobile && <a href="tel:+380502894133">+38 (050) 289-41-33</a>}
-        </address> */}
-        {/* <LanguageSelector value={language} onChange={changeLanguage} /> */}
         <LngSwitcher />
         {(isTablet || isMobile) && <BurgerMenu />}
       </header>

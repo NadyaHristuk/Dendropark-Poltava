@@ -18,13 +18,13 @@ const BurgerMenu = () => {
 
   return (
     <div>
-      <button onClick={toggleMenu}>
-        <svg>
+      <button onClick={toggleMenu} className={s.burgerBtn}>
+        <svg className={s.burgerBtnIcon}>
           <use href={`${icons}#icon-burger`}></use>
         </svg>
       </button>
       {isOpen && (
-        <nav>
+        <nav className={s.burgerNav}>
           <ul>
             <li>
               <NavLink to="/" end>
