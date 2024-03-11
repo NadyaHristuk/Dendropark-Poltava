@@ -1,4 +1,4 @@
-import s from '../../Pagination/Pagination.module.scss';
+import s from './service-pagination.module.scss';
 import sprite from '../../../assets/icons/sprite.svg';
 
 const ServicePagination = ({
