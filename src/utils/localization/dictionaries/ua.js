@@ -200,7 +200,7 @@ export const ua = {
         {
           title: 'Розвиток парку',
           subtitle: 'Cтворення нових майданчиків, стендів на стежках.',
-          iconId: '#icon-new-gateway',
+          iconId: '#icon-gateway',
         },
         {
           title: 'Збереження життя',
