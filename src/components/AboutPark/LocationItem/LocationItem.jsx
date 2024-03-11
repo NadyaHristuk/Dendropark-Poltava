@@ -60,7 +60,7 @@ export const LocationItem = ({ card, index }) => {
           <div className={css.textCard}>
             <div className={css.numberSign}>{arabicToRoman(card.number)}</div>
             <h3 className={css.cardTitle}>
-              {arabicToRoman(index + 1)}. {card.title}
+              {arabicToRoman(card.number)}. {card.title}
             </h3>
 
             <p className={css.locationItemDescr}>{card.description}</p>
