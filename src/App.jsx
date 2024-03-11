@@ -20,6 +20,7 @@ function App() {
 					<Route path="about" element={<AboutPage />} />
 					<Route path="contact" element={<ContactPage />} />
 					<Route path="services" element={<ServicesPage />} />
+					{/* <Route path="adminPanell" element={<AdminPanell />} /> */}
 					<Route path="*" element={<NotFoundPage />} />
 				</Route>
 			</Routes>
