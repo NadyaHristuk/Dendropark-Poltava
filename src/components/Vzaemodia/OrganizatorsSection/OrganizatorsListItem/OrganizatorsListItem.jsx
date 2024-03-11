@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import styles from './OrganizatorsListItem.module.scss';
+import icons from '../../../../assets/icons/sprite.svg';
 
 export const OrganizatorsListItem = ({ rule }) => {
   const { t } = useTranslation();
@@ -12,7 +13,7 @@ export const OrganizatorsListItem = ({ rule }) => {
           height="32"
           aria-label="arrow-forward"
         >
-          <use href="/src/assets/icons/sprite.svg#icon-attention"></use>
+          <use href={`${icons}#icon-attention`}></use>
         </svg>
       </div>
 

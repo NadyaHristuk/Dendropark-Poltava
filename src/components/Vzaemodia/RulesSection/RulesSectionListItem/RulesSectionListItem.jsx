@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import styles from './RulesSectionListItem.module.scss';
+import icons from '../../../../assets/icons/sprite.svg';
 
 export const RulesSectionListItem = ({ rule, index }) => {
   const { t } = useTranslation();
@@ -11,7 +12,7 @@ export const RulesSectionListItem = ({ rule, index }) => {
         height="44"
         aria-label="arrow-forward"
       >
-        <use href="/src/assets/icons/sprite.svg#icon-attention1"></use>
+        <use href={`${icons}#icon-attention1`}></use>
       </svg>
       <h3 className={styles.title}>
         {t(`vzaemodia.${rule.title}`)} {index + 1}
