@@ -1,5 +1,6 @@
 import styles from './TrialSectionCard.module.scss';
 import { TrialPicture } from '../TrialPicture/TrialPicture';
+import icons from '../../../../assets/icons/sprite.svg';
 import { useTranslation } from 'react-i18next';
 import { CardMap } from './CardMap/CardMap';
 import { useMedia } from '../../../../hooks/useMedia';
@@ -65,7 +66,7 @@ export const CardContent = ({ card, handleClick, isMapOpen }) => {
                 height="20"
                 aria-label="arrow-forward"
               >
-                <use href="/src/assets/icons/sprite.svg#icon-arrow-up"></use>
+                <use href={`${icons}#icon-arrow-up`}></use>
               </svg>
             </button>
           </div>
