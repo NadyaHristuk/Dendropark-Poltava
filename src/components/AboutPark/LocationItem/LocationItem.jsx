@@ -14,10 +14,10 @@ export const LocationItem = ({ card, index }) => {
   };
 
   return (
-    <li className={css.locationItem}>
+    <li className={css.locationItem} id={card.locationID}>
       {isMobile ? (
         <>
-          <div className={css.numberSign}>{arabicToRoman(index + 1)}</div>
+          <div className={css.numberSign}>{arabicToRoman(card.number)}</div>
           <div className={css.sliderContainer}>
             <div
               className={`${css.pictureContainer} ${
@@ -28,14 +28,19 @@ export const LocationItem = ({ card, index }) => {
             </div>
 
             <div
-              className={`${css.pictureContainer} ${
+              className={`${css.pictureContainer} ${css.mapPictureContainer} ${
                 isMapOpen && css.pictureContainerOpen
               }`}
             >
+              <button onClick={toggleMap}>
+                <svg className={css.crossIcon}>
+                  <use href={`${icons}#icon-mi_close`}></use>
+                </svg>
+              </button>
               <Picture pictures={card.pictureMap} />
             </div>
           </div>
-          <h3>
+          <h3 className={css.cardTitle}>
             {arabicToRoman(index + 1)}. {card.title}
           </h3>
           <p className={css.locationItemDescr}>{card.description}</p>
@@ -53,14 +58,13 @@ export const LocationItem = ({ card, index }) => {
       ) : (
         <>
           <div className={css.textCard}>
-            <div className={css.justDiv}>
-              <div className={css.numberSign}>{arabicToRoman(index + 1)}</div>
-              <h3 className={css.cardTitle}>
-                {arabicToRoman(index + 1)}. {card.title}
-              </h3>
+            <div className={css.numberSign}>{arabicToRoman(card.number)}</div>
+            <h3 className={css.cardTitle}>
+              {arabicToRoman(index + 1)}. {card.title}
+            </h3>
 
-              <p className={css.locationItemDescr}>{card.description}</p>
-            </div>
+            <p className={css.locationItemDescr}>{card.description}</p>
+
             <button
               onClick={toggleMap}
               className={css.locationItemButton}
