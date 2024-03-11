@@ -5,14 +5,25 @@ import Container from '../../Container/Container';
 import { SectionWrapper } from '../SectionWrapper/SectionWrapper';
 import { LocationItem } from '../LocationItem/LocationItem';
 import { usePagination } from '../../../hooks/usePagination.js';
-import Pagination from '../../Pagination/Pagination.jsx';
+import Slider from '../../Slider/Slider.jsx';
 
 export const ParkLocations = () => {
   const { t } = useTranslation();
-  const { currentPosts, ...options } = usePagination({
-    postPerPage: 3,
+  const { chunkedData } = usePagination({
+    perPage: 3,
     data: ParkLocationsData,
   });
+
+  const list = (cards) => {
+    return (
+      <ul className={css.parkLocationsList}>
+        {cards.map((card, idx) => (
+          <LocationItem key={idx} index={idx} card={card} />
+        ))}
+      </ul>
+    );
+  };
+
   return (
     <SectionWrapper isLowPadding>
       <Container>
@@ -20,13 +31,7 @@ export const ParkLocations = () => {
           {t('about.locationsTitle')}
         </h2>
         <p className={css.locationsDivision}>{t('about.locationsDivision')} </p>
-
-        <ul className={css.parkLocationsList}>
-          {currentPosts.map((location, index) => (
-            <LocationItem key={index} index={index} card={location} />
-          ))}
-        </ul>
-        <Pagination props={options} />
+        <Slider currentPage={list} chunkedData={chunkedData} />
       </Container>
     </SectionWrapper>
   );
