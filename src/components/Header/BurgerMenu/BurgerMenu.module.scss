@@ -3,74 +3,90 @@
 @import 'src/styles/_breakpoints.scss';
 
 .burgerBtn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .burgerBtnIcon {
-  stroke: $pine-depths;
-  width: 38px;
-  height: 38px;
-  margin-left: 8px;
+	stroke: $pine-depths;
+	width: 38px;
+	height: 38px;
+	margin-left: 8px;
 
-  @include media-rules(tablet) {
-    width: 48px;
-    height: 48px;
-  }
+	@include media-rules(tablet) {
+		width: 48px;
+		height: 48px;
+	}
 }
 
 .burgerNav {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 10.07px solid $stroke;
-  border-radius: 20px;
-  padding: 16px 0px;
-  width: 194px;
-  height: 330px;
-  top: 0;
-  right: 0;
-  box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.05);
-  background: $snowdrift;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 10.07px solid $stroke;
+	border-radius: 20px;
+	padding: 16px 0px;
+	width: 194px;
+	top: 0;
+	right: 0;
+	box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.05);
+	background: $snowdrift;
+
+	@include media-rules(tablet) {
+		top: 70px;
+		right: 0;
+	}
 }
 
 .burgerList {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  padding: 0px 24px;
-  width: 131px;
-  height: 241px;
-  margin-bottom: 12px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-between;
+	padding: 0px 24px;
+	width: 131px;
+	gap: 12px;
+	margin-bottom: 12px;
 
-  & a {
-    font-weight: 'normal';
-    font-size: 16px;
-    line-height: 1.5; // line-height: 24px;
-    color: $pine-depths;
-  }
+	& a {
+		font-weight: 'normal';
+		font-size: 16px;
+		line-height: 1.5; // line-height: 24px;
+		color: $pine-depths;
+		@include transition(color);
+	}
 
-  @include media-rules(tablet) {
-    margin-bottom: 0;
-  }
+	& a:hover,
+	& a:focus {
+		color: $osnovniy;
+	}
+
+	@include media-rules(tablet) {
+		margin-bottom: 0;
+	}
 }
 
 .address {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  border: 1.01px solid rgba(18, 18, 18, 0.2);
-  border-radius: 201px;
-  width: 131px;
-  height: 36px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+	border: 1.01px solid rgba(18, 18, 18, 0.2);
+	border-radius: 201px;
+	width: 131px;
+	height: 36px;
 
-  & a {
-    font-weight: 'normal';
-    font-size: 10px;
-    color: $pine-depths;
-  }
+	& a {
+		font-weight: 'normal';
+		font-size: 10px;
+		color: $pine-depths;
+		@include transition(color);
+	}
+
+	& a:hover,
+	& a:focus {
+		color: $osnovniy;
+	}
 }

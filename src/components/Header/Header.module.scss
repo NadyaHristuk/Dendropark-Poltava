@@ -2,82 +2,83 @@
 @import 'src/styles/_mixins.scss';
 
 .header {
-  display: flex;
-  align-items: center;
-  padding: 16px 0;
+	display: flex;
+	position: relative;
+	align-items: center;
+	padding: 16px 0;
 }
 
 .nav {
-  display: flex;
-  gap: 32px;
-  align-items: center;
-  padding: 11px 0;
-  margin-right: 162px;
+	display: flex;
+	gap: 32px;
+	align-items: center;
+	padding: 11px 0;
+	margin-right: 162px;
 
-  & li {
-    padding: 4px 0px;
-    height: 33px;
+	& li {
+		padding: 4px 0px;
+		height: 33px;
 
-    & a {
-      height: 25px;
-      font-weight: normal;
-      line-height: 1.5; // line-height: 24px;
-      color: $pine-depths;
-      @include transition(color);
-      white-space: nowrap;
-    }
+		& a {
+			height: 25px;
+			font-weight: normal;
+			line-height: 1.5; // line-height: 24px;
+			color: $pine-depths;
+			@include transition(color);
+			white-space: nowrap;
+		}
 
-    & a:hover,
-    & a:focus {
-      color: $osnovniy;
-    }
-  }
+		& a:hover,
+		& a:focus {
+			color: $osnovniy;
+		}
+	}
 }
 
 .logo {
-  display: flex;
-  gap: 6px;
-  align-items: center;
-  margin-right: auto;
-  width: 219px;
+	display: flex;
+	gap: 6px;
+	align-items: center;
+	margin-right: auto;
+	width: 219px;
 }
 
 .logoImg {
-  width: 54px;
-  height: 54px;
+	width: 54px;
+	height: 54px;
 }
 
 .logoTitle {
-  font-weight: bold;
-  line-height: 0.875; // line-height: 14px;
-  letter-spacing: -0.02em;
-  color: $pine-depths;
-  width: 159px;
-  padding: 13px 0;
-  margin-bottom: 0;
+	font-weight: bold;
+	line-height: 0.875; // line-height: 14px;
+	letter-spacing: -0.02em;
+	color: $pine-depths;
+	width: 159px;
+	padding: 13px 0;
+	margin-bottom: 0;
 
-  & span {
-    color: $osnovniy;
-  }
+	& span {
+		color: $osnovniy;
+	}
 }
 
 .address {
-  & a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid rgba(43, 42, 41, 0.2);
-    border-radius: 201px;
-    margin-right: 8px;
-    width: 187px;
-    height: 51px;
-    font-weight: normal;
-    color: $pine-depths;
-    @include transition(color);
-  }
+	& a {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		border: 1px solid rgba(43, 42, 41, 0.2);
+		border-radius: 201px;
+		margin-right: 8px;
+		width: 187px;
+		height: 51px;
+		font-weight: normal;
+		color: $pine-depths;
+		@include transition(color);
+	}
 
-  & a:hover,
-  & a:focus {
-    color: $osnovniy;
-  }
+	& a:hover,
+	& a:focus {
+		color: $osnovniy;
+	}
 }

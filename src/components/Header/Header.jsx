@@ -10,43 +10,10 @@ import { logo1x, logo2x } from '../../assets';
 import LngSwitcher from './LgnSwitcher/LngSwitcher';
 import BurgerMenu from './BurgerMenu';
 
-// const LanguageSelector = ({ value, onChange }) => {
-//   return (
-//     <select value={value} onChange={(e) => onChange(e.target.value)}>
-//       <option value="ua">UA</option>
-//       <option value="en">EN</option>
-//     </select>
-//   );
-// };
-
-const LanguageSelector = ({ value, onChange }) => {
-	return (
-		<select value={value} onChange={(e) => onChange(e.target.value)}>
-			<option value="ua">UA</option>
-			<option value="en">EN</option>
-		</select>
-	);
-};
-
 const Header = () => {
 	const { isMobile, isTablet, isDesktop } = useMedia(); // Визначаємо тип пристрою користувача
 
-	// const [language, setLanguage] = useState('ua'); // Початкова мова - українська
-	// const { t, i18n } = useTranslation();
-	//   const { t } = useTranslation();
-
-	// const changeLanguage = (lng) => {
-	//   i18n.changeLanguage(lng);
-	//   setLanguage(lng);
-	// };
-
-	const [language, setLanguage] = useState('ua'); // Початкова мова - українська
-	const { t, i18n } = useTranslation();
-
-	const changeLanguage = (lng) => {
-		i18n.changeLanguage(lng);
-		setLanguage(lng);
-	};
+	const { t } = useTranslation();
 
 	const titleArr = t('header.logo.title').split(' ');
 	const logoTitleSpan = titleArr.splice(1, 1).toString();
