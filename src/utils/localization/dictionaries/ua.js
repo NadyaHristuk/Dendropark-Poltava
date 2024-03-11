@@ -221,5 +221,12 @@ export const ua = {
 			button: 'Допомогти парку',
 			btnIcon: '#icon-simplethankyou',
 		},
+		hero: {
+			textFirst: 'Пам’ятка',
+			textColor: ' садово-паркового мистецтва ',
+			textLast: 'загальнодержавного значення',
+			title: 'Запрошуємо до Полтавського міського парку!',
+			link: 'Локації парку',
+		},
 	},
 };

@@ -4,8 +4,21 @@
 
 .locationItem {
   background-color: $lilac-haze;
-  padding: 24px 20px;
+  padding: 24px;
   border-radius: 20px;
+
+  ::-webkit-scrollbar {
+    background-color: $stroke;
+    width: 3px;
+    height: 1px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: $osnovniy;
+    border-radius: 1px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: $emerald-field;
+  }
 
   @include media-rules(tablet) {
     display: flex;
@@ -20,6 +33,12 @@
   max-width: 420px;
   background-color: $lilac-haze;
   padding: 30px 18px 15px 30px;
+  display: flex;
+  flex-direction: column;
+
+  @include media-rules(desktop) {
+    max-width: 669px;
+  }
 }
 
 .numberSign {
@@ -41,32 +60,27 @@
     font-size: 28px;
     margin-bottom: 16px;
   }
+
+  @include media-rules(desktop) {
+    margin-bottom: 64px;
+  }
 }
 
-.justDiv {
-  position: relative;
-  overflow-y: auto;
-  max-height: 242px;
-  scrollbar-color: #60b245 #edfaf6;
-  text-overflow: ellipsis;
+.cardTitle {
+  font-size: 28px;
+  line-height: 1.1;
+  font-weight: 700;
+  margin-bottom: 8px;
 
-  ::-webkit-scrollbar {
-    background-color: $stroke;
-    width: 2px;
-    height: 1px;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: $osnovniy;
-    border-radius: 2px;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background: $emerald-field;
+  @include media-rules(desktop) {
+    max-width: 590px;
   }
 }
 
 .locationItemDescr {
   max-width: 356px;
-
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
   font-family: 'Innerspace', sans-serif;
   font-size: 12px;
 
@@ -74,10 +88,15 @@
   text-align: left;
 
   -webkit-box-orient: vertical;
-  overflow-y: auto;
-  margin-right: 10px;
-  @include media-rules(tablet) {
-    // -webkit-line-clamp: 6;
+  overflow: auto;
+  
+  @include media-rules(desktop) {
+    max-width: 590px;
+    min-width: 590px;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 52px;
+    -webkit-line-clamp: 7;
   }
 }
 
@@ -98,24 +117,36 @@
 }
 
 .crossIcon {
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   position: absolute;
-  right: 8px;
-  top: 7px;
+  right: 7px;
+  top: 4px;
+
+  @include media-rules(desktop) {
+    width: 20px;
+    height: 20px;
+    right: 18px;
+    top: 12px;
+  }
 }
 
 .sliderContainer {
   position: relative;
   display: flex;
-  max-width: 434px;
+  max-width: 310px;
   overflow: hidden;
+  align-items: baseline;
 
   @include media-rules(tablet) {
-    border-radius: 11px;
+    border-radius: 20px;
 
     max-width: 434px;
     background-color: $lilac-haze;
+  }
+
+  @include media-rules(desktop) {
+    max-width: 579px;
   }
 }
 
@@ -125,7 +156,10 @@
 }
 
 .mapPictureContainer {
-  padding: 24px 24px 11px 24px;
+  padding: 14px 18px 17px 16px;
+  @include media-rules(desktop) {
+    padding: 30px 30px 20px 30px;
+  }
 }
 
 .pictureContainer img {

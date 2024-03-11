@@ -11,12 +11,12 @@
   margin: 0 auto;
 
   @include media-rules(tablet) {
-    padding: 0 40px;
     max-width: $tablet;
   }
 
   @include media-rules(desktop) {
     max-width: $desktop;
+    padding: 0 80px;
   }
 }
 
@@ -44,6 +44,13 @@
     font-weight: 400;
     line-height: 1.5;
   }
+
+  @include media-rules(desktop) {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+    max-width: 893px;
+  }
 }
 
 .historyCreationPicturesContainer {
@@ -56,12 +63,52 @@
       'text ninaYacenko'
       'subotnik subotnik';
   }
+
+  @include media-rules(desktop) {
+    gap: 80px;
+    grid-template-areas:
+      'text levVaing'
+      'container container';
+  }
+}
+
+.secondLayerContainer {
+  grid-area: container;
+  display: grid;
+  row-gap: 40px;
+  column-gap: 23px;
+  grid-template-areas:
+    'subotnik ninaYacenko'
+    'description ninaYacenko';
+}
+
+.pictureDescription.pictureDescriptionNinaYacenko {
+  @include media-rules(desktop) {
+    line-height: 2.14;
+  }
+}
+
+.historyDescriptionText {
+  @include media-rules(desktop) {
+    grid-area: description;
+    max-width: 1029px;
+    padding-top: 0;
+  }
+}
+
+.historyDescriptionText .historyCreationText {
+  max-width: 100%;
 }
 
 .poltavBatleText {
   @include media-rules(tablet) {
     grid-area: text;
     min-width: 417px;
+  }
+  @include media-rules(desktop) {
+    column-gap: 606px;
+    margin-bottom: 40px;
+    max-width: 606px;
   }
 }
 
@@ -80,6 +127,10 @@
     gap: 26px;
     flex-direction: column;
     grid-area: ninaYacenko;
+  }
+  @include media-rules(tablet) {
+    max-width: 243px;
+    margin-left: auto;
   }
 }
 
@@ -140,10 +191,3 @@
   width: 16px;
   height: 16px;
 }
-
-// font-family: Innerspace;
-// font-size: 18px;
-// font-weight: 400;
-// line-height: 18px;
-
-// text-align: left;
