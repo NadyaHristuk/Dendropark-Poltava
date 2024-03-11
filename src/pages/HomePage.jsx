@@ -7,17 +7,17 @@ import { HelpPark } from '../components/HelpPark/HelpPark/HelpPark';
 import Hero from '../components/Hero/Hero';
 
 const HomePage = () => {
-  return (
-    // <div className={s.container}>
-    <Container>
-      <Hero />
-      <AttentionVisitors />
-      <HelpPark />
-      <Calendar />
-      <ChroniclesList />
-    </Container>
-    // </div>
-  );
+	return (
+		// <div className={s.container}>
+		<Container>
+			<Hero />
+			<AttentionVisitors />
+			<HelpPark />
+			<Calendar />
+			<ChroniclesList />
+		</Container>
+		// </div>
+	);
 };
 
 export default HomePage;
