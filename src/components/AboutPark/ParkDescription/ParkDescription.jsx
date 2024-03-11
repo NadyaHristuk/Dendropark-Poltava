@@ -6,10 +6,12 @@ import { Picture } from '../Picture/Picture';
 import { heroPicture } from '../Picture/heroPicture';
 import Container from '../../Container/Container';
 import { SectionWrapper } from '../SectionWrapper/SectionWrapper';
+import { useMedia } from '../../../hooks/useMedia';
 
 export const ParkDescription = () => {
   const { t } = useTranslation();
   const [showMore, setShowMore] = useState(false);
+  const { isTablet } = useMedia();
 
   const ParkDescriptionClass = `${css.descriptionTitle} ${
     showMore && css.descriptionTitleShowMore
@@ -17,7 +19,9 @@ export const ParkDescription = () => {
 
   return (
     <SectionWrapper>
-      <h1 className={ParkDescriptionClass}>Про парк</h1>
+      <Container>
+        <h1 className={ParkDescriptionClass}>Про парк</h1>
+      </Container>
       <div className={css.heroPictureContainer}>
         <Picture pictures={heroPicture} />
       </div>
@@ -30,6 +34,7 @@ export const ParkDescription = () => {
             <br />
             {t('about.descriptionThirdParagraph')}
           </p>
+
           <button
             onClick={() => setShowMore(true)}
             className={css.readMoreButton}

@@ -260,6 +260,36 @@ export const en = {
       description:
         'Find out about planned activities, as well as time restrictions on the use of the park.',
     },
+    helpPark: {
+      title: 'Допомога парку',
+      description:
+        'Загалом парк фінансується із місцевого бюджету. Але якщо ви бажаєте мати більше залученості то Ви можете зробити благодійний внесок, або долучитися до толоки.',
+      goals: 'Кошти будуть використані на:',
+      list: [
+        {
+          title: 'Розвиток парку',
+          subtitle: 'Cтворення нових майданчиків, стендів на стежках.',
+          iconId: '#icon-gateway',
+        },
+        {
+          title: 'Збереження життя',
+          subtitle: 'Cтворення оселищ для птахів і інших тварин.',
+          iconId: '#icon-lifebar',
+        },
+        {
+          title: 'Біорізноманіття',
+          subtitle: 'Закупівля і посадка цікавих саджанців.',
+          iconId: '#icon-plant',
+        },
+        {
+          title: 'Підтримання і ремонт інфраструктури парку',
+          iconId: '#icon-repair',
+        },
+      ],
+      currentGoal: 'Наразі потрібні кошти на будування дитячого майданчика',
+      button: 'Допомогти парку',
+      btnIcon: '#icon-simplethankyou',
+    },
     studentModals: {
       title: 'Розробили наш сайт',
       subTitle: 'Люди, що забезпечують нашу онлайн присутність',

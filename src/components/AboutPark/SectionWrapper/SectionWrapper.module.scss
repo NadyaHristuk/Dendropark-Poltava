@@ -11,11 +11,11 @@
   padding-top: 64px;
 
   @include media-rules(tablet) {
-    padding-bottom: 80px;
+    padding-top: 80px;
   }
 
   @include media-rules(desktop) {
-    padding-bottom: 120px;
+    padding-top: 120px;
   }
 }
 
