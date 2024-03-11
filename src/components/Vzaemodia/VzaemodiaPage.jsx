@@ -4,11 +4,15 @@ import { OrganizatorsSection } from './OrganizatorsSection/OrganizatorsSection';
 import { RulesSection } from './RulesSection/RulesSection';
 import CalendarIframe from '../Calendar/CalendarIframe';
 import { SectionWrapper } from './SectionWrapper/SectionWrapper';
+import Map from '../Map/Map';
 
 const VzaemodiaPage = () => {
   return (
     <>
       <TitleSection />
+      <SectionWrapper>
+        <Map />
+      </SectionWrapper>
       <TrialSection />
       <OrganizatorsSection />
       <SectionWrapper>

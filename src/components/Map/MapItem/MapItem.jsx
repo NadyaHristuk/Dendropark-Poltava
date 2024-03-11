@@ -4,8 +4,9 @@ import { CSSTransition } from 'react-transition-group';
 import scss from './MapItem.module.scss';
 import './transition.scss';
 import { HashLink } from 'react-router-hash-link';
+import { arabicToRoman } from '../../AboutPark/LocationItem/romanNumerals';
 
-const MapItem = ({ item, className, locationId }) => {
+const MapItem = ({ item, className }) => {
   const [isVisible, setIsVisible] = useState(false);
   const nodeRef = useRef(null);
 
@@ -19,7 +20,7 @@ const MapItem = ({ item, className, locationId }) => {
       onMouseEnter={handleChange}
       onMouseLeave={handleChange}
     >
-      {item.number}
+      {arabicToRoman(item.number)}
 
       <CSSTransition
         in={isVisible}
@@ -35,10 +36,14 @@ const MapItem = ({ item, className, locationId }) => {
                 <use href={`${icons}#icon-close`}></use>
               </svg>
             </button>
-            <div className={scss.number}>{item.number}</div>
+            <div className={scss.number}>{arabicToRoman(item.number)}</div>
             <h3 className={scss.title}>{item.title}</h3>
             <p className={scss.description}>{item.description}</p>
-            <HashLink smooth to={`/about#${locationId}`} className={scss.link}>
+            <HashLink
+              smooth
+              to={`/about#${item.locationID}`}
+              className={scss.link}
+            >
               Детальніше
               <svg className={scss.linkIcon}>
                 <use href={`${icons}#icon-arrow-up`}></use>

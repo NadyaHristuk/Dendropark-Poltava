@@ -7,31 +7,31 @@ import Hero from '../components/Hero/Hero';
 import { Visual } from '../components/HelpPark/Visual/Visual';
 
 const HomePage = () => {
-  return (
-    <>
-      <Container>
-        <Hero />
-      </Container>
+	return (
+		<>
+			<Container>
+				<Hero />
+			</Container>
 
-      <Container>
-        <AttentionVisitors />
-      </Container>
+			<Container>
+				<AttentionVisitors />
+			</Container>
 
-      <Container>
-        <HelpPark />
-      </Container>
+			<Container>
+				<HelpPark />
+			</Container>
 
-      <Visual />
+			<Visual />
 
-      <Container>
-        <Calendar />
-      </Container>
+			<Container>
+				<Calendar />
+			</Container>
 
-      <Container>
-        <ChroniclesList />
-      </Container>
-    </>
-  );
+			<Container>
+				<ChroniclesList />
+			</Container>
+		</>
+	);
 };
 
 export default HomePage;

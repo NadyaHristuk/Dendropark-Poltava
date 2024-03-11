@@ -3646,7 +3646,11 @@ svg-parser@^2.0.4:
 
 swiper@^11.0.7:
   version "11.0.7"
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/swiper/-/swiper-11.0.7.tgz"
+=======
+  resolved "https://registry.yarnpkg.com/swiper/-/swiper-11.0.7.tgz#fe51bb64546c2c21a1ec6914e7764af953443ded"
+>>>>>>> e56a1f8c5655acb1fb858c21e13348006a521610
   integrity sha512-cDfglW1B6uSmB6eB6pNmzDTNLmZtu5bWWa1vak0RU7fOI9qHjMzl7gVBvYSl34b0RU2N11HxxETJqQ5LeqI1cA==
 
 text-table@^0.2.0:
