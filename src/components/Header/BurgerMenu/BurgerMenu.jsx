@@ -4,6 +4,8 @@ import { useTranslation } from 'react-i18next';
 import { useMedia } from '../../../hooks';
 import { icons } from '../../../assets';
 
+import s from './BurgerMenu.module.scss';
+
 const BurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { isMobile } = useMedia();
@@ -17,8 +19,8 @@ const BurgerMenu = () => {
   return (
     <div>
       <button onClick={toggleMenu}>
-        <svg className="burgerIcon">
-          <use href={`${icons}#icon-new-life-bar`}></use>
+        <svg>
+          <use href={`${icons}#icon-burger`}></use>
         </svg>
       </button>
       {isOpen && (
