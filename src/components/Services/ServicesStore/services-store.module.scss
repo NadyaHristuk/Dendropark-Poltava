@@ -11,7 +11,9 @@
 ::-webkit-scrollbar-thumb {
 	background-color: #45b288; /* Колір скролла */
 }
-
+.store_list {
+	box-sizing: border-box;
+}
 .store_btn {
 	outline: none;
 	cursor: pointer;
