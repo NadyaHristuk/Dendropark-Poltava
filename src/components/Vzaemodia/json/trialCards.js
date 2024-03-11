@@ -221,42 +221,6 @@ const json = [
       desctop: `${secondCardMapDesc}`,
     },
   },
-  {
-    distance: '1400 м',
-    title: 'Стежка №3 Філософська',
-    text: 'Ця стежка не має маршруту. Гуляйте парком, і поруч із красивими місцями ви можете знайти невеличку табличку із красивою цитатою. ',
-    image: {
-      mobile: `${card3_x1}`,
-      mobile_x2: `${card3_x2}`,
-      tablet: `${card3Tab_x1}`,
-      tablet_x2: `${card3Tab_x2}`,
-    },
-    imgAlt:
-      'Соняшна весняна погода навколо квітнуть дерева, свіже повітря, легкий вітерець',
-    trialMap: {
-      mobile: `${thirdCardMapMob}`,
-      tablet: `${thirdCardMapTab}`,
-      desctop: `${thirdCardMapDesc}`,
-    },
-  },
-  {
-    distance: '1400 м',
-    title: 'Стежка №3 Філософська',
-    text: 'Ця стежка не має маршруту. Гуляйте парком, і поруч із красивими місцями ви можете знайти невеличку табличку із красивою цитатою. ',
-    image: {
-      mobile: `${card3_x1}`,
-      mobile_x2: `${card3_x2}`,
-      tablet: `${card3Tab_x1}`,
-      tablet_x2: `${card3Tab_x2}`,
-    },
-    imgAlt:
-      'Соняшна весняна погода навколо квітнуть дерева, свіже повітря, легкий вітерець',
-    trialMap: {
-      mobile: `${thirdCardMapMob}`,
-      tablet: `${thirdCardMapTab}`,
-      desctop: `${thirdCardMapDesc}`,
-    },
-  },
 ];
 
 export default json;

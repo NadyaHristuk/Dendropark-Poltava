@@ -14,8 +14,3 @@
   @include media-rules(desktop) {
   }
 }
-
-.list:nth-child(odd) {
-  background-color: red;
-  width: 10px;
-}

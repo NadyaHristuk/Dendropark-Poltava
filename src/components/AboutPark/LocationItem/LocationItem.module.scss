@@ -4,37 +4,81 @@
 
 .locationItem {
   background-color: $lilac-haze;
-  padding: 24px 20px 24px 24px;
+  padding: 24px 20px;
   border-radius: 20px;
+
+  @include media-rules(tablet) {
+    display: flex;
+    background-color: transparent;
+    padding: 0;
+    gap: 30px;
+  }
+}
+
+.textCard {
+  border-radius: 20px;
+  max-width: 420px;
+  background-color: $lilac-haze;
+  padding: 30px 18px 15px 30px;
 }
 
 .numberSign {
   background-color: $pine-depths;
   width: 40px;
   height: 41px;
-  border-radius: 201.33px;
-  padding: 12.08px;
+  border-radius: 50%;
+
   font-family: 'Ermilov', sans-serif;
   font-weight: 700;
-  line-height: 1.5;
+  line-height: 1.1;
   color: $snowdrift;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 24px;
+
+  @include media-rules(tablet) {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+}
+
+.justDiv {
+  position: relative;
+  overflow-y: auto;
+  max-height: 242px;
+  scrollbar-color: #60b245 #edfaf6;
+  text-overflow: ellipsis;
+
+  ::-webkit-scrollbar {
+    background-color: $stroke;
+    width: 2px;
+    height: 1px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: $osnovniy;
+    border-radius: 2px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: $emerald-field;
+  }
 }
 
 .locationItemDescr {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  text-overflow: ellipsis;
-  -webkit-box-orient: vertical;
+  max-width: 356px;
+
   font-family: 'Innerspace', sans-serif;
   font-size: 12px;
-  overflow: scroll;
-  overflow-x: hidden;
-  line-height: 24.16px;
+
+  line-height: 2;
   text-align: left;
+
+  -webkit-box-orient: vertical;
+  overflow-y: auto;
+  margin-right: 10px;
+  @include media-rules(tablet) {
+    // -webkit-line-clamp: 6;
+  }
 }
 
 .locationItemButton {
@@ -43,25 +87,51 @@
   line-height: 1.4;
   color: $osnovniy;
   cursor: pointer;
+  display: flex;
+  gap: 3px;
+  align-items: center;
 }
 
 .vectorIcon {
   width: 10px;
   height: 12px;
-  margin-left: 8px;
+}
+
+.crossIcon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 8px;
+  top: 7px;
 }
 
 .sliderContainer {
+  position: relative;
+  display: flex;
+  max-width: 434px;
   overflow: hidden;
+
+  @include media-rules(tablet) {
+    border-radius: 11px;
+
+    max-width: 434px;
+    background-color: $lilac-haze;
+  }
 }
 
 .pictureContainer {
-  margin-bottom: 24px;
-  display: flex;
   transform: translateX(0);
-  transition: transform 0.3s ease;
+  transition: transform 1s ease;
 }
 
-.pictureContainerOpen {
+.mapPictureContainer {
+  padding: 24px 24px 11px 24px;
+}
+
+.pictureContainer img {
+  border-radius: 19px;
+}
+
+.pictureContainer.pictureContainerOpen {
   transform: translateX(-100%);
 }
