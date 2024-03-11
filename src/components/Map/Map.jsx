@@ -40,12 +40,11 @@ const Map = () => {
           />
 
           <ul>
-            {data.map((item, index) => (
+            {ParkLocationsData.map((item, index) => (
               <MapItem
-                key={item.id}
+                key={item.number}
                 className={`item-${index + 1}`}
                 item={item}
-                locationId={ParkLocationsData[index]?.locationId}
               />
             ))}
           </ul>
