@@ -31,24 +31,10 @@ const LngSwitcher = () => {
     i18n.changeLanguage(option.value);
   };
 
-  // const DropdownIndicator = function (props) {
-  //   return createElement(
-  //     components.DropdownIndicator,
-  //     props,
-  //     createElement('svg', {
-  //       xmlns: 'http://www.w3.org/2000/svg',
-  //       xmlnsXlink: 'http://www.w3.org/1999/xlink',
-  //       dangerouslySetInnerHTML: {
-  //         __html: <use xlink:href="${icons}#icon-select-arrow"></use>,
-  //       },
-  //     })
-  //   );
-  // };
-
   const DropdownIndicator = (props) => {
     return (
       <components.DropdownIndicator {...props}>
-        <svg width="17" height="1">
+        <svg width="17" height="17">
           <use href={`${icons}#icon-select-arrow`}></use>
         </svg>
       </components.DropdownIndicator>

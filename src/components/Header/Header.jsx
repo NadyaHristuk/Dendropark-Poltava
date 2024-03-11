@@ -8,6 +8,7 @@ import s from './Header.module.scss';
 
 import { logo1x, logo2x } from '../../assets';
 import LngSwitcher from './LgnSwitcher/LngSwitcher';
+import BurgerMenu from './BurgerMenu';
 
 // const LanguageSelector = ({ value, onChange }) => {
 //   return (
@@ -88,16 +89,22 @@ const Header = () => {
             </ul>
           </nav>
         )}
-        <address>
-          {(isDesktop || isTablet) && (
+        {(isDesktop || isTablet) && (
+          <address>
             <a href="https://t.me/MaxMakukha" target="_blank">
               +38 (050) 289-41-33
             </a>
-          )}
+          </address>
+        )}
+        {/* <address>
+          <a href="https://t.me/MaxMakukha" target="_blank">
+            +38 (050) 289-41-33
+          </a>
           {isMobile && <a href="tel:+380502894133">+38 (050) 289-41-33</a>}
-        </address>
+        </address> */}
         {/* <LanguageSelector value={language} onChange={changeLanguage} /> */}
         <LngSwitcher />
+        {(isTablet || isMobile) && <BurgerMenu />}
       </header>
     </Container>
   );

@@ -1,6 +1,5 @@
 import { useMemo } from 'react';
 import { useMedia } from '../../../hooks';
-import '../../../styles/_colors.scss';
 
 export const useSelectStyles = () => {
   const mediaRuls = useMedia();
@@ -52,8 +51,7 @@ export const useSelectStyles = () => {
 
         border: '10.07px solid #e1f4ee',
         borderRadius: 20,
-        boxShadow: null,
-        background: '$snowdrift',
+        background: '#fefefe',
         padding: '12px 21px',
         overflow: 'hidden',
         width: 194,
