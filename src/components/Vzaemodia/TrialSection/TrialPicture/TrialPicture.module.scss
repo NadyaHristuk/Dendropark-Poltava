@@ -6,7 +6,17 @@
   margin: 0;
   padding: 0;
   border-radius: 20px;
+  width: 100%;
+  max-width: 310px;
+  max-height: 200px;
 
+  @include media-rules(tablet) {
+    max-width: none;
+    max-height: none;
+    width: 470px;
+    height: 450px;
+    object-fit: cover;
+  }
   @include media-rules(desktop) {
     object-fit: cover;
   }

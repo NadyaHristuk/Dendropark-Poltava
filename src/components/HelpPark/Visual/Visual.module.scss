@@ -1,0 +1,12 @@
+@import '/src/styles/colors';
+@import '/src/styles/mixins';
+
+.picture {
+  background-color: $osnovniy;
+  margin: 0;
+  padding: 0;
+  @include media-rules(desktop) {
+    object-fit: cover;
+    object-position: bottom;
+  }
+}

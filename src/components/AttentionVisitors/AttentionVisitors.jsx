@@ -1,4 +1,3 @@
-import React from 'react';
 import { useTranslation } from 'react-i18next';
 import css from './AttentionVisitors.module.scss';
 import { AttentionItem } from './AttentionItem.jsx';
@@ -18,6 +17,8 @@ export const AttentionVisitors = () => {
             description={point.description}
             moreInfo={point.moreInfo}
             link={point.link}
+            iconId={point.iconId}
+            itemId={point.itemId}
           />
         ))}
       </ul>

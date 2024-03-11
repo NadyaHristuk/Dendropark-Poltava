@@ -4,11 +4,11 @@
 
 .list {
   gap: 32px;
-
   margin: 0 auto;
   margin-bottom: 24px;
 
   @include media-rules(tablet) {
+    width: 923px;
     gap: 52px;
     row-gap: 32px;
     margin-bottom: 64px;
@@ -16,9 +16,5 @@
 
   @include media-rules(desktop) {
     gap: 32;
-  }
-
-  li:last-child {
-    padding-bottom: 0;
   }
 }

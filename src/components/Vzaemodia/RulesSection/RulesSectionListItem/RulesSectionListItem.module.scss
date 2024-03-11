@@ -4,10 +4,14 @@
 
 .icon {
   background-color: $pine-depths;
+  fill: $pine-depths;
   border-radius: 10px;
+  padding: 5px;
 
   @include media-rules(tablet) {
     margin-bottom: 57px;
+    width: 48px;
+    height: 48px;
   }
 }
 

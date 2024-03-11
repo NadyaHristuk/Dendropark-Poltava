@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "deploy": "gh-pages -d dist",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "format": "prettier --write ./src"
@@ -13,6 +14,7 @@
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@esbuild/win32-x64": "^0.20.1",
     "@vitejs/plugin-react-swc": "^3.3.2",
     "clsx": "^2.1.0",
     "i18next": "^23.8.2",
@@ -20,10 +22,14 @@
     "modern-normalize": "^2.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-i18next": "^14.0.5",
+    "react-i18next": "^14.1.0",
+    "react-modal": "^3.16.1",
     "react-responsive": "^9.0.2",
     "react-router-dom": "^6.15.0",
+    "react-router-hash-link": "^2.4.3",
     "react-select": "^5.8.0",
+    "swiper": "^11.0.7",
+    "react-transition-group": "^4.4.5",
     "vite-plugin-svgr": "^3.2.0"
   },
   "devDependencies": {
@@ -37,6 +43,7 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
+    "gh-pages": "^6.1.1",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
     "prettier": "3.0.3",
