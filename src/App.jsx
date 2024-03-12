@@ -6,24 +6,26 @@ import NotificationsProvider from './context/NotificationsProvider';
 import VzaemodiaPage from './components/Vzaemodia/VzaemodiaPage';
 import ContactPage from './pages/ContactPage';
 import AboutPage from './pages/AboutPage';
-import ServicePage from './pages/ServicePage';
+import { ServicesPage } from './pages/ServicesPage';
 import NotFoundPage from './pages/NotFoundPage';
+import Login from './___adminPanel/pages/login/Login';
 
 function App() {
-  return (
-    <NotificationsProvider>
-      <Routes>
-        <Route path="/" element={<SharedLayout />}>
-          <Route index element={<HomePage />} />
-          <Route path="vzaemodia" element={<VzaemodiaPage />} />
-          <Route path="chronicles" element={<ChroniclesPage />} />
-          <Route path="about" element={<AboutPage />} />
-          <Route path="contact" element={<ContactPage />} />
-          <Route path="servise" element={<ServicePage />} />
-          <Route path="*" element={<NotFoundPage />} />
-        </Route>
-      </Routes>
-    </NotificationsProvider>
-  );
+	return (
+		<NotificationsProvider>
+			<Routes>
+				<Route path="/" element={<SharedLayout />}>
+					<Route index element={<HomePage />} />
+					<Route path="vzaemodia" element={<VzaemodiaPage />} />
+					<Route path="chronicles" element={<ChroniclesPage />} />
+					<Route path="about" element={<AboutPage />} />
+					<Route path="contact" element={<ContactPage />} />
+					<Route path="services" element={<ServicesPage />} />
+					<Route path="adminPanell" element={<Login />} />
+					<Route path="*" element={<NotFoundPage />} />
+				</Route>
+			</Routes>
+		</NotificationsProvider>
+	);
 }
 export default App;

@@ -3,10 +3,14 @@
 
 .picture {
   background-color: $osnovniy;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+  margin-bottom: 64px;
+  object-fit: cover;
+  @include media-rules(tablet) {
+    margin-bottom: 80px;
+  }
   @include media-rules(desktop) {
-    object-fit: cover;
-    object-position: bottom;
+    margin-bottom: 120px;
   }
 }
