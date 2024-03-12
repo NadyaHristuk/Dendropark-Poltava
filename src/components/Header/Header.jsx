@@ -61,7 +61,7 @@ const Header = () => {
 								</NavLink>
 							</li>
 							<li>
-								<NavLink to="/service">
+								<NavLink to="/services">
 									{t('header.navigation.services')}
 								</NavLink>
 							</li>
