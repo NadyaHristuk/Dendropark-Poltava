@@ -14,8 +14,9 @@
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
-    "@esbuild/win32-x64": "^0.20.1",
     "@vitejs/plugin-react-swc": "^3.3.2",
+    "antd": "^5.15.2",
+    "axios": "^1.6.7",
     "clsx": "^2.1.0",
     "i18next": "^23.8.2",
     "i18next-browser-languagedetector": "^7.2.0",
