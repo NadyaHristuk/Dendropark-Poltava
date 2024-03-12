@@ -5,6 +5,8 @@ import {
 	ThunderboltOutlined,
 	CalendarOutlined,
 	ShopOutlined,
+	HeartOutlined,
+	SunOutlined,
 } from '@ant-design/icons';
 
 import { Layout, Menu, theme } from 'antd';
@@ -13,7 +15,14 @@ import { Link, Outlet } from 'react-router-dom';
 const { Header, Content, Sider } = Layout;
 
 function getItemLabel(index) {
-	const labels = ['Product', 'Trials', 'Events', 'Documents', 'Donation'];
+	const labels = [
+		'Product',
+		'Trials',
+		'Events',
+		'Documents',
+		'Donation',
+		'Services',
+	];
 	const currentItem = labels[index];
 
 	return <Link to={currentItem.toLowerCase()}>{currentItem}</Link>;
@@ -24,6 +33,8 @@ const items = [
 	ThunderboltOutlined,
 	CalendarOutlined,
 	FileOutlined,
+	HeartOutlined,
+	SunOutlined,
 ].map((icon, index) => ({
 	key: String(index + 1),
 	icon: React.createElement(icon),
