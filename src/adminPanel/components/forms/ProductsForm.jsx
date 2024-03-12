@@ -9,13 +9,13 @@ const ProductsForm = () => {
 				title: values.title,
 				description: values.description,
 				imgAlt: values.imgAlt,
-				price: values.price,
 			},
 			en: {
 				title: values.titleEn,
 				description: values.descriptionEn,
 				imgAlt: values.imgAltEn,
 			},
+			price: values.price,
 		});
 		console.log(' response:', response);
 	};
@@ -34,7 +34,6 @@ const ProductsForm = () => {
 	//   "uk": {
 	//     "title": "Назва продукту",
 	//     "description": "Опис продукту",
-	//     "price": 10.99,
 	//     "imgAlt": "Альтернативний текст для зображення"
 	//   },
 	//   "en": {
@@ -42,6 +41,7 @@ const ProductsForm = () => {
 	//     "description": "Product Description",
 	//     "imgAlt": "Image Alt Text"
 	//   },
+	//   "price": 10.99,
 	//   "image": "Прикріпленний файл"
 	// }
 	return (

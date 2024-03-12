@@ -6,17 +6,16 @@ const LocationsForm = () => {
 	const onFinish = async (values) => {
 		const response = await postLocation({
 			uk: {
-				distance: values.distance,
 				title: values.title,
 				subtitle: values.subtitle,
 				description: values.description,
 			},
 			en: {
-				distance: values.distanceEn,
 				title: values.titleEn,
 				subtitle: values.subtitleEn,
 				description: values.descriptionEn,
 			},
+			number: values.number,
 			locationId: values.locationId,
 		});
 		console.log(' response:', response);
@@ -34,17 +33,16 @@ const LocationsForm = () => {
 	};
 	// {
 	//   "uk": {
-	//     "number": "Номер",
 	//     "title": "Назва місця",
 	//     "description": "Опис місця",
 	//     "imgAlt": "Альтернативний текст для зображення"
 	//   },
 	//   "en": {
-	//     "number": "Location Number",
 	//     "title": "Location Title",
 	//     "description": "Location Description",
 	//     "imgAlt": "Image Alt Text"
 	//   },
+	//     "number": "Номер",
 	//   "locationId": "locationId",
 	//   "image": "Прикріпленний файл"
 	//    "mapImage": "Прикріпленний файл"

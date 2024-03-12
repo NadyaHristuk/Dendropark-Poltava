@@ -6,7 +6,6 @@ const TrialsForm = () => {
 	const onFinish = async (values) => {
 		const response = await postTrial({
 			uk: {
-				distance: values.distance,
 				title: values.title,
 				imgAlt: values.subtitle,
 				text: values.text,
@@ -16,6 +15,7 @@ const TrialsForm = () => {
 				imgAlt: values.imgAltEn,
 				text: values.textEn,
 			},
+			distance: values.distance,
 		});
 		console.log(' response:', response);
 	};
@@ -32,17 +32,16 @@ const TrialsForm = () => {
 	};
 	// {
 	//   "uk": {
-	//     "distance": 10,
 	//     "title": "Прогулянка в парку",
 	//     "text": "Це опис прогулянки в парку.",
 	//     "imgAlt": "Зображення парку"
 	//   },
 	//   "en": {
-	//     "distance": 10,
 	//     "title": "Park Walk",
 	//     "text": "This is a description of a walk in the park.",
 	//     "imgAlt": "Park Image"
 	//   },
+	//     "distance": 10,
 	//   "image": "Прикріпленний файл",
 	//   "mapImage": "Прикріпленний файл"
 	// }
