@@ -72,14 +72,6 @@ export const ua = {
 				title: 'Полтавський міський парк',
 				alt: 'Полтавський міський парк',
 			},
-			navigation: {
-				main: 'Головна',
-				about: 'Про парк',
-				interaction: 'Взаємодія',
-				materials: 'Матеріали',
-				services: 'Послуги',
-				contacts: 'Контакти',
-			},
 			sections: {
 				interaction: {
 					title: 'Взаємодія:',

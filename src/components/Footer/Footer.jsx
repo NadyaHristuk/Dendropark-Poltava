@@ -1,4 +1,3 @@
-import { NavLink } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
@@ -7,17 +6,16 @@ import s from './Footer.module.scss';
 import { logo1x, logo2x } from '../../assets';
 import FooterSection from './FooterSection/FooterSection';
 import FooterSectionsWrapper from './FooterSectionsWrapper/FooterSectionsWrapper';
+import { useMedia } from '../../hooks';
 
 const Footer = () => {
+	const { isMobile, isTablet, isDesktop } = useMedia(); // Визначаємо тип пристрою користувача
 	const { t } = useTranslation();
 
 	const titleArr = t('footer.logo.title').split(' ');
 	const logoTitleSpan = titleArr.splice(1, 1).toString();
 	const logoTitleFirstWord = titleArr.splice(0, 1).toString();
 	const logoTitleLastWord = titleArr.toString();
-	console.log(logoTitleFirstWord);
-	console.log(logoTitleSpan);
-	console.log(logoTitleLastWord);
 
 	return (
 		<Container className={s.footer_container}>
@@ -46,13 +44,19 @@ const Footer = () => {
 						</p>
 						<ul>
 							<li className={s.section_option}>
-								{t('footer.sections.interaction.options.researchTrails')}
+								<Link to="/vzaemodia">
+									{t('footer.sections.interaction.options.researchTrails')}
+								</Link>
 							</li>
 							<li className={s.section_option}>
-								{t('footer.sections.interaction.options.activities')}
+								<Link to="/vzaemodia">
+									{t('footer.sections.interaction.options.activities')}
+								</Link>
 							</li>
 							<li className={s.section_option}>
-								{t('footer.sections.interaction.options.rulesOfConduct')}
+								<Link to="/vzaemodia">
+									{t('footer.sections.interaction.options.rulesOfConduct')}
+								</Link>
 							</li>
 						</ul>
 					</FooterSection>
@@ -63,27 +67,37 @@ const Footer = () => {
 						</p>
 						<ul>
 							<li className={s.section_option}>
-								{t('footer.sections.materials.options.chronicle')}
+								<Link to="/chronicles">
+									{t('footer.sections.materials.options.chronicle')}
+								</Link>
 							</li>
 							<li className={s.section_option}>
-								{t('footer.sections.materials.options.documents')}
+								<Link to="/chronicles">
+									{t('footer.sections.materials.options.documents')}
+								</Link>
 							</li>
 							<li className={s.section_option}>
-								{t('footer.sections.materials.options.help')}
+								<Link to="/">
+									{t('footer.sections.materials.options.help')}
+								</Link>
 							</li>
 						</ul>
 					</FooterSection>
 					{/* Послуги */}
-					<FooterSection>
+					<FooterSection className={s.section_159px}>
 						<p className={s.section_title}>
 							{t('footer.sections.services.title')}
 						</p>
 						<ul>
 							<li className={s.section_option}>
-								{t('footer.sections.services.options.ourServices')}
+								<Link to="/services">
+									{t('footer.sections.services.options.ourServices')}
+								</Link>
 							</li>
 							<li className={s.section_option}>
-								{t('footer.sections.services.options.seedlings')}
+								<Link to="/services">
+									{t('footer.sections.services.options.seedlings')}
+								</Link>
 							</li>
 						</ul>
 					</FooterSection>
@@ -94,10 +108,19 @@ const Footer = () => {
 						</p>
 						<ul>
 							<li className={s.section_option}>
-								{t('footer.sections.contacts.options.tel')}
+								{(isDesktop || isTablet) && (
+									<a href="https://t.me/MaxMakukha" target="_blank">
+										{t('footer.sections.contacts.options.tel')}
+									</a>
+								)}
+								{isMobile && (
+									<a href="tel:+380502894133">
+										{t('footer.sections.contacts.options.tel')}
+									</a>
+								)}
 							</li>
 							<li className={s.section_option}>
-								{t('footer.sections.contacts.options.email')}
+								<a href="mailto:{t('footer.sections.contacts.options.email')}"></a>
 							</li>
 						</ul>
 					</FooterSection>

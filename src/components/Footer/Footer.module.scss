@@ -45,13 +45,20 @@
 	margin-bottom: 16px;
 }
 
-// .section_interaction {
-// 	width: 159px;
-// }
+.section_159px {
+	width: 159px;
+}
 
 .section_option {
-	font-family: 'Innerspace', sans-serif;
-	font-weight: normal;
-	font-size: 14px;
-	color: #fefefe;
+	& a {
+		font-family: 'Innerspace', sans-serif;
+		font-weight: normal;
+		font-size: 14px;
+		color: $snowdrift;
+	}
+
+	& a:hover,
+	& a:focus {
+		color: $light-color;
+	}
 }
