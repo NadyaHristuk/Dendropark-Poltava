@@ -1,0 +1,17 @@
+@import '../../../styles/colors';
+@import '../../../styles/mixins';
+@import '../../../styles/breakpoints';
+
+.father {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+}
+.container1 {
+	width: 35%;
+}
+.container2 {
+	width: 65%;
+	background-color: black;
+}
