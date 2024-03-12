@@ -1,18 +1,24 @@
 import { Button, Form, Input } from 'antd';
-import { login } from '../../srviceApiAuth';
+import { postDocument } from '../../serviceApiDocuments';
 
 const DocumentsForm = () => {
 	const onFinish = async (values) => {
-		try {
-			const response = await login({
-				email: values.email,
-				password: values.password,
-			});
-			console.log('Login response:', response);
-		} catch (error) {
-			throw new Error(error.message);
-		}
+		const response = await postDocument({
+			uk: {
+				title: values.title,
+				subtitle: values.subtitle,
+				description: values.description,
+			},
+			en: {
+				title: values.titleEn,
+				subtitle: values.subtitleEn,
+				description: values.descriptionEn,
+			},
+			document: values.document,
+		});
+		console.log('Login response:', response);
 	};
+
 	const onFinishFailed = (errorInfo) => {
 		console.log('Failed:', errorInfo);
 	};
@@ -41,6 +47,7 @@ const DocumentsForm = () => {
 			autoComplete="off"
 		>
 			{/* uk */}
+			<p>Заповніть Українською</p>
 			<Form.Item
 				label="Title"
 				name="title"
@@ -54,7 +61,7 @@ const DocumentsForm = () => {
 				name="subtitle"
 				rules={[{ required: true, message: 'Please input subtitle' }]}
 			>
-				<Input.Password />
+				<Input />
 			</Form.Item>
 
 			<Form.Item
@@ -62,9 +69,10 @@ const DocumentsForm = () => {
 				name="description"
 				rules={[{ required: true, message: 'Please input description' }]}
 			>
-				<Input.Password />
+				<Input />
 			</Form.Item>
 			{/* en */}
+			<p>Заповніть Англійською</p>
 			<Form.Item
 				label="TitleEn"
 				name="titleEn"
@@ -78,7 +86,7 @@ const DocumentsForm = () => {
 				name="subtitleEn"
 				rules={[{ required: true, message: 'Please input subtitle' }]}
 			>
-				<Input.Password />
+				<Input />
 			</Form.Item>
 
 			<Form.Item
@@ -86,15 +94,15 @@ const DocumentsForm = () => {
 				name="descriptionEn"
 				rules={[{ required: true, message: 'Please input description' }]}
 			>
-				<Input.Password />
+				<Input />
 			</Form.Item>
-
+			<p>Додайте посилання на документ</p>
 			<Form.Item
 				label="Document"
 				name="document"
 				rules={[{ required: true, message: 'Please input document link' }]}
 			>
-				<Input.Password />
+				<Input />
 			</Form.Item>
 
 			<Form.Item wrapperCol={{ offset: 8, span: 16 }}>
