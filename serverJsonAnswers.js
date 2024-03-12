@@ -1,6 +1,6 @@
 //DOCUMENTS
 
-// const BASE_URL = null;
+// const BASE_URL = https://dendropark-poltava-back.onrender.com/api;
 
 // const DOCUMENTS_ENDPOINT = "/documents";
 //getById = /events/:id
