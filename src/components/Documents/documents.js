@@ -29,6 +29,21 @@ const documents = [
       description: 'Опису до релізу не буде.',
       link: 'Посилання - поки рік не кінчився його немає))',
     },
+    {
+      id: 5,
+      title: 'III. Дендроплан шведський ліс.',
+      subtitle: 'Документ 5',
+      description:
+        'Нанесені всі великі дерева ділянки шведського лісу. Дипломна робота студентки.',
+      link: 'https://drive.google.com/file/d/1DxvBxmhit5-P9eKEeoWjIAFa2eJ6zcKS/view?usp=drive_link',
+    },
+    {
+      id: 6,
+      title: 'IV. Фінансовий звіт про благодійні внески 2024.',
+      subtitle: 'Документ 6',
+      description: 'Опису до релізу не буде.',
+      link: 'Посилання - поки рік не кінчився його немає))',
+    },
   ];
 
   export default documents;
