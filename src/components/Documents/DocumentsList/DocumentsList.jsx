@@ -20,6 +20,7 @@ const DocumentsList = () => {
 			try {
 				setLoading(true);
 				const response = await fetchDocuments();
+				console.log(response);
 				if (response) {
 					setDocuments(response);
 				}
@@ -45,13 +46,13 @@ const DocumentsList = () => {
 					<DocumentsListUI items={documents} />
 				) : (
 					<ul className={css.list}>
-						{documents.map(({ id, title, subtitle, description, link }) => (
+						{documents.map(({ id, title, subtitle, description, document }) => (
 							<li key={id} className={css.item}>
 								<DocumentsItem
 									title={title}
 									subtitle={subtitle}
 									description={description}
-									link={link}
+									link={document}
 								/>
 							</li>
 						))}

@@ -9,13 +9,13 @@ const DocumentsListUI = ({ items }) => {
 	const list = (items) => {
 		return (
 			<ul className={css.list}>
-				{items.map(({ id, title, subtitle, description, link }) => (
+				{items.map(({ id, title, subtitle, description, document }) => (
 					<li key={id} className={css.item}>
 						<DocumentsItem
 							title={title}
 							subtitle={subtitle}
 							description={description}
-							link={link}
+							link={document}
 						/>
 					</li>
 				))}
