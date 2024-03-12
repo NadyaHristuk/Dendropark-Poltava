@@ -120,7 +120,9 @@ const Footer = () => {
 								)}
 							</li>
 							<li className={s.section_option}>
-								<a href="mailto:{t('footer.sections.contacts.options.email')}"></a>
+								<a href="mailTo:{t('footer.sections.contacts.options.email')}">
+									{t('footer.sections.contacts.options.email')}
+								</a>
 							</li>
 						</ul>
 					</FooterSection>
