@@ -13,7 +13,7 @@ import { Link, Outlet } from 'react-router-dom';
 const { Header, Content, Sider } = Layout;
 
 function getItemLabel(index) {
-	const labels = ['Product', 'Trials', 'Events', 'Documents'];
+	const labels = ['Product', 'Trials', 'Events', 'Documents', 'Donation'];
 	const currentItem = labels[index];
 
 	return <Link to={currentItem.toLowerCase()}>{currentItem}</Link>;
