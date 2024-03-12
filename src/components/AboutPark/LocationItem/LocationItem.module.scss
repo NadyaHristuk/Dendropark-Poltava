@@ -3,169 +3,207 @@
 @import '/src/styles/colors';
 
 .locationItem {
-  background-color: $lilac-haze;
-  padding: 24px;
-  border-radius: 20px;
+	background-color: $lilac-haze;
+	padding: 24px 20px 24px 24px;
+	border-radius: 20px;
 
-  ::-webkit-scrollbar {
-    background-color: $stroke;
-    width: 3px;
-    height: 1px;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: $osnovniy;
-    border-radius: 1px;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background: $emerald-field;
-  }
+	::-webkit-scrollbar {
+		background-color: $stroke;
+		width: 4px;
+	}
+	::-webkit-scrollbar-thumb {
+		background: $osnovniy;
+		border-radius: 8px;
+		width: 4px;
+		height: 9px;
+	}
+	::-webkit-scrollbar-thumb:hover {
+		background: $emerald-field;
+	}
 
-  @include media-rules(tablet) {
-    display: flex;
-    background-color: transparent;
-    padding: 0;
-    gap: 30px;
-  }
+	@include media-rules(tablet) {
+		display: flex;
+		background-color: transparent;
+		padding: 0;
+		gap: 30px;
+	}
+}
+
+.scrollable {
+	margin-bottom: 5px;
 }
 
 .textCard {
-  border-radius: 20px;
-  max-width: 420px;
-  background-color: $lilac-haze;
-  padding: 30px 18px 15px 30px;
-  display: flex;
-  flex-direction: column;
+	border-radius: 20px;
+	max-width: 420px;
+	background-color: $lilac-haze;
+	padding: 30px 25px 15px 30px;
+	display: flex;
+	flex-direction: column;
 
-  @include media-rules(desktop) {
-    max-width: 669px;
-  }
+	@include media-rules(desktop) {
+		max-width: 669px;
+	}
 }
 
 .numberSign {
-  background-color: $pine-depths;
-  width: 40px;
-  height: 41px;
-  border-radius: 50%;
+	background-color: $pine-depths;
+	width: 48px;
+	height: 47px;
+	border-radius: 50%;
 
-  font-family: 'Ermilov', sans-serif;
-  font-weight: 700;
-  line-height: 1.1;
-  color: $snowdrift;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 24px;
+	font-family: 'Ermilov', sans-serif;
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 1.5;
+	color: $snowdrift;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 24px;
 
-  @include media-rules(tablet) {
-    font-size: 28px;
-    margin-bottom: 16px;
-  }
+	@include media-rules(tablet) {
+		font-size: 28px;
+		line-height: 1.1;
+		margin-bottom: 16px;
+		padding: 4px;
+	}
 
-  @include media-rules(desktop) {
-    margin-bottom: 64px;
-  }
+	@include media-rules(desktop) {
+		margin-bottom: 64px;
+	}
+}
+
+.numberSign.isOpen {
+	margin-bottom: 4px;
 }
 
 .cardTitle {
-  font-size: 28px;
-  line-height: 1.1;
-  font-weight: 700;
-  margin-bottom: 8px;
+	font-size: 18px;
+	line-height: 1.1;
+	font-weight: 700;
+	margin-bottom: 8px;
 
-  @include media-rules(desktop) {
-    max-width: 590px;
-  }
+	@include media-rules(tablet) {
+		font-size: 20px;
+	}
+
+	@include media-rules(desktop) {
+		max-width: 590px;
+		font-size: 28px;
+	}
 }
 
 .locationItemDescr {
-  max-width: 356px;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  font-family: 'Innerspace', sans-serif;
-  font-size: 12px;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 2;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	overflow-y: auto;
+	font-family: 'Innerspace', sans-serif;
+	-webkit-box-orient: vertical;
 
-  line-height: 2;
-  text-align: left;
+	margin-bottom: 16px;
 
-  -webkit-box-orient: vertical;
-  overflow: auto;
-  
-  @include media-rules(desktop) {
-    max-width: 590px;
-    min-width: 590px;
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 52px;
-    -webkit-line-clamp: 7;
-  }
+	@include media-rules(tablet) {
+		-webkit-line-clamp: 6;
+	}
+
+	@include media-rules(desktop) {
+		max-width: 590px;
+		min-width: 590px;
+		font-size: 16px;
+		line-height: 1.5;
+		margin-bottom: 52px;
+		-webkit-line-clamp: 7;
+		padding-right: 20px;
+	}
 }
 
 .locationItemButton {
-  font-family: 'Innerspace', sans-serif;
-  font-size: 14px;
-  line-height: 1.4;
-  color: $osnovniy;
-  cursor: pointer;
-  display: flex;
-  gap: 3px;
-  align-items: center;
+	font-family: 'Innerspace', sans-serif;
+	font-size: 14px;
+	line-height: 1.4;
+	color: $osnovniy;
+	cursor: pointer;
+	display: flex;
+	gap: 8px;
+	align-items: center;
+	transition: color 500ms ease-in;
+
+	@include media-rules(desktop) {
+		font-size: 16px;
+		line-height: 1.5;
+	}
+}
+
+.locationItemButton:hover,
+.locationItemButton:active {
+	color: $city-park;
 }
 
 .vectorIcon {
-  width: 10px;
-  height: 12px;
+	width: 10px;
+	height: 12px;
+}
+
+.crossIconButton {
+	position: absolute;
+	right: 7px;
+	top: 4px;
+
+	@include media-rules(desktop) {
+		right: 18px;
+		top: 12px;
+	}
 }
 
 .crossIcon {
-  width: 15px;
-  height: 15px;
-  position: absolute;
-  right: 7px;
-  top: 4px;
+	width: 15px;
+	height: 15px;
 
-  @include media-rules(desktop) {
-    width: 20px;
-    height: 20px;
-    right: 18px;
-    top: 12px;
-  }
+	@include media-rules(desktop) {
+		width: 20px;
+		height: 20px;
+	}
 }
 
 .sliderContainer {
-  position: relative;
-  display: flex;
-  max-width: 310px;
-  overflow: hidden;
-  align-items: baseline;
+	position: relative;
+	display: flex;
+	max-width: 310px;
+	overflow: hidden;
+	align-items: center;
 
-  @include media-rules(tablet) {
-    border-radius: 20px;
+	@include media-rules(tablet) {
+		border-radius: 20px;
 
-    max-width: 434px;
-    background-color: $lilac-haze;
-  }
+		max-width: 434px;
+		background-color: $lilac-haze;
+	}
 
-  @include media-rules(desktop) {
-    max-width: 579px;
-  }
+	@include media-rules(desktop) {
+		max-width: 579px;
+	}
 }
 
 .pictureContainer {
-  transform: translateX(0);
-  transition: transform 1s ease;
+	transform: translateX(0);
+	transition: transform 1s ease;
 }
 
 .mapPictureContainer {
-  padding: 14px 18px 17px 16px;
-  @include media-rules(desktop) {
-    padding: 30px 30px 20px 30px;
-  }
+	padding: 14px 18px 17px 16px;
+	@include media-rules(desktop) {
+		padding: 30px 30px 20px 30px;
+	}
 }
 
 .pictureContainer img {
-  border-radius: 19px;
+	border-radius: 19px;
 }
 
 .pictureContainer.pictureContainerOpen {
-  transform: translateX(-100%);
+	transform: translateX(-100%);
 }
