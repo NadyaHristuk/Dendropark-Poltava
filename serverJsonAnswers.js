@@ -96,18 +96,17 @@
 
 // {
 //   "uk": {
-//     "number": "Номер",
 //     "title": "Назва місця",
 //     "description": "Опис місця",
 //     "imgAlt": "Альтернативний текст для зображення"
 //   },
 //   "en": {
-//     "number": "Location Number",
 //     "title": "Location Title",
 //     "description": "Location Description",
 //     "imgAlt": "Image Alt Text"
 //   },
-//  "locationId": "Location ID",
+//     "number": "Номер",
+//   "locationId": "locationId",
 //   "image": "Прикріпленний файл"
 //    "mapImage": "Прикріпленний файл"
 // }
@@ -148,15 +147,14 @@
 //   "uk": {
 //     "title": "Назва продукту",
 //     "description": "Опис продукту",
-//     "price": 10.99,
 //     "imgAlt": "Альтернативний текст для зображення"
 //   },
 //   "en": {
 //     "title": "Product Title",
 //     "description": "Product Description",
-//     "price": 10.99,
 //     "imgAlt": "Image Alt Text"
 //   },
+//   "price": 10.99,
 //   "image": "Прикріпленний файл"
 // }
 
@@ -192,17 +190,16 @@
 
 // {
 //   "uk": {
-//     "distance": 10,
 //     "title": "Прогулянка в парку",
 //     "text": "Це опис прогулянки в парку.",
 //     "imgAlt": "Зображення парку"
 //   },
 //   "en": {
-//     "distance": 10,
 //     "title": "Park Walk",
 //     "text": "This is a description of a walk in the park.",
 //     "imgAlt": "Park Image"
 //   },
+//     "distance": 10,
 //   "image": "Прикріпленний файл",
 //   "mapImage": "Прикріпленний файл"
 // }
