@@ -1,8 +1,8 @@
 //DOCUMENTS
 
-const BASE_URL = null;
+// const BASE_URL = null;
 
-const DOCUMENTS_ENDPOINT = "/documents";
+// const DOCUMENTS_ENDPOINT = "/documents";
 //getById = /events/:id
 //post = /events
 //delete = /events/:id
@@ -45,7 +45,7 @@ const DOCUMENTS_ENDPOINT = "/documents";
 // ==========================================================
 //EVENTS
 
-const EVENTS_ENDPOINT = "/events";
+// const EVENTS_ENDPOINT = "/events";
 //getById = /events/:id
 //post = /events
 //delete = /events/:id
@@ -92,7 +92,7 @@ const EVENTS_ENDPOINT = "/events";
 //post = /locations
 //delete = /locations/:id
 //put = /locations/:id
-const LOCATIONS_ENDPOINT = "/locations";
+// const LOCATIONS_ENDPOINT = "/locations";
 
 // {
 //   "uk": {
@@ -137,7 +137,7 @@ const LOCATIONS_ENDPOINT = "/locations";
 // ==========================================================
 // PRODUCTS
 
-const PRODUCTS_ENDPOINT = "/products";
+// const PRODUCTS_ENDPOINT = "/products";
 //getById = /products/:id
 //post = /products
 //delete = /products/:id
@@ -183,7 +183,7 @@ const PRODUCTS_ENDPOINT = "/products";
 // ==========================================================
 // TRIALS
 
-const TRIALS_ENDPOINT = "/trials";
+// const TRIALS_ENDPOINT = "/trials";
 //getById = /trials/:id
 //post = /trials
 //delete = /trials/:id
