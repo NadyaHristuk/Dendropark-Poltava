@@ -3,191 +3,207 @@
 @import '/src/styles/colors';
 
 .historyCreationSection {
-  padding-top: 48px;
+	padding-top: 48px;
 }
 .historyCreationContainer {
-  padding: 0 40px;
-  max-width: 390px;
-  margin: 0 auto;
+	padding: 0 40px;
+	max-width: 390px;
+	margin: 0 auto;
 
-  @include media-rules(tablet) {
-    max-width: $tablet;
-  }
+	@include media-rules(tablet) {
+		max-width: $tablet;
+	}
 
-  @include media-rules(desktop) {
-    max-width: $desktop;
-    padding: 0 80px;
-  }
+	@include media-rules(desktop) {
+		max-width: $desktop;
+		padding: 0 80px;
+	}
 }
 
 .historyCreationTitle {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 2.75;
-  margin-bottom: 20px;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 2.75;
+	margin-bottom: 20px;
 
-  @include media-rules(tablet) {
-    font-size: 44px;
-    line-height: 1;
-    margin-bottom: 48px;
-  }
+	@include media-rules(tablet) {
+		font-size: 44px;
+		line-height: 1;
+		margin-bottom: 48px;
+	}
 }
 
 .historyCreationText {
-  font-size: 12px;
-  font-family: 'Innerspace', sans-serif;
-  line-height: 2.5;
-  margin-bottom: 0;
+	font-size: 12px;
+	font-family: 'Innerspace', sans-serif;
+	line-height: 2.5;
+	margin-bottom: 0;
 
-  @include media-rules(tablet) {
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 1.5;
-  }
+	@include media-rules(tablet) {
+		font-size: 20px;
+		font-weight: 400;
+		line-height: 1.5;
+	}
 
-  @include media-rules(desktop) {
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 1.5;
-    max-width: 893px;
-  }
+	@include media-rules(desktop) {
+		font-size: 20px;
+		font-weight: 400;
+		line-height: 1.5;
+		max-width: 893px;
+	}
 }
 
 .historyCreationPicturesContainer {
-  @include media-rules(tablet) {
-    display: grid;
-    column-gap: 59px;
-    row-gap: 48px;
-    grid-template-areas:
-      'text levVaing'
-      'text ninaYacenko'
-      'subotnik subotnik';
-  }
+	@include media-rules(tablet) {
+		display: grid;
+		column-gap: 59px;
+		row-gap: 48px;
+		grid-template-areas:
+			'text levVaing'
+			'text ninaYacenko'
+			'subotnik subotnik';
+	}
 
-  @include media-rules(desktop) {
-    gap: 80px;
-    grid-template-areas:
-      'text levVaing'
-      'container container';
-  }
+	@include media-rules(desktop) {
+		gap: 40px;
+		grid-template-areas:
+			'text levVaing'
+			'container container';
+	}
 }
 
 .secondLayerContainer {
-  grid-area: container;
-  display: grid;
-  row-gap: 40px;
-  column-gap: 23px;
-  grid-template-areas:
-    'subotnik ninaYacenko'
-    'description ninaYacenko';
+	@include media-rules(desktop) {
+		grid-area: container;
+		display: grid;
+		row-gap: 40px;
+		column-gap: 23px;
+		grid-template-areas:
+			'subotnik ninaYacenko'
+			'description ninaYacenko';
+	}
 }
 
 .pictureDescription.pictureDescriptionNinaYacenko {
-  @include media-rules(desktop) {
-    line-height: 2.14;
-  }
+	@include media-rules(desktop) {
+		line-height: 2.14;
+	}
 }
 
 .historyDescriptionText {
-  @include media-rules(desktop) {
-    grid-area: description;
-    max-width: 1029px;
-    padding-top: 0;
-  }
+	@include media-rules(desktop) {
+		grid-area: description;
+		max-width: 1029px;
+		padding-top: 0;
+	}
 }
 
 .historyDescriptionText .historyCreationText {
-  max-width: 100%;
+	max-width: 100%;
 }
 
 .poltavBatleText {
-  @include media-rules(tablet) {
-    grid-area: text;
-    min-width: 417px;
-  }
-  @include media-rules(desktop) {
-    column-gap: 606px;
-    margin-bottom: 40px;
-    max-width: 606px;
-  }
+	margin-bottom: 48px;
+
+	@include media-rules(tablet) {
+		grid-area: text;
+		min-width: 417px;
+	}
+	@include media-rules(desktop) {
+		column-gap: 606px;
+		margin-bottom: 40px;
+		max-width: 606px;
+		margin-bottom: 0;
+	}
 }
 
 .levVaingortContainer {
-  @include media-rules(tablet) {
-    grid-area: levVaing;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	margin-bottom: 20px;
+
+	@include media-rules(tablet) {
+		grid-area: levVaing;
+	}
 }
 
 .ninaYacenkoContainer {
-  @include media-rules(tablet) {
-    display: flex;
-    gap: 26px;
-    flex-direction: column;
-    grid-area: ninaYacenko;
-  }
-  @include media-rules(tablet) {
-    max-width: 243px;
-    margin-left: auto;
-  }
+	display: flex;
+	gap: 12px;
+	flex-direction: column;
+	margin-bottom: 20px;
+	grid-area: ninaYacenko;
+
+	@include media-rules(tablet) {
+		gap: 26px;
+	}
+	@include media-rules(desktop) {
+		max-width: 243px;
+		margin-left: auto;
+	}
 }
 
 .subotnikContainer {
-  @include media-rules(tablet) {
-    grid-area: subotnik;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
+	display: flex;
+	gap: 12px;
+	flex-direction: column;
+	grid-area: subotnik;
 }
 
 .picturesContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
 }
 
 .pictureDescription {
-  font-family: 'Innerspace', sans-serif;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.66;
-  margin: 0;
+	font-family: 'Innerspace', sans-serif;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 1.66;
+	margin: 0;
 
-  @include media-rules(tablet) {
-    font-size: 14px;
-    line-height: 1.4;
-  }
+	@include media-rules(tablet) {
+		font-size: 14px;
+		line-height: 1.4;
+	}
 }
 
 .subotnikText {
-  @include media-rules(tablet) {
-    line-height: 2.14;
-  }
+	@include media-rules(tablet) {
+		line-height: 2.14;
+	}
 }
 
 .reduceButton {
-  padding: 23px 101.5px;
-  background-color: $pine-depths;
-  border-radius: 200px;
-  font-size: 18px;
-  line-height: 1;
-  letter-spacing: -0.01em;
-  font-family: 'Innerspace', sans-serif;
-  color: $snowdrift;
-  font-weight: 400;
-  display: flex;
-  gap: 10px;
+	margin-top: 48px;
+	padding: 23px 101.5px;
+	background-color: $pine-depths;
+	border-radius: 200px;
+	font-size: 18px;
+	line-height: 1;
+	letter-spacing: -0.01em;
+	font-family: 'Innerspace', sans-serif;
+	color: $snowdrift;
+	font-weight: 400;
+	display: flex;
+	gap: 10px;
+	cursor: pointer;
+	transition: background-color 0.5s ease-in-out;
 
-  @include media-rules(tablet) {
-    margin-top: 24px;
-  }
+	@include media-rules(tablet) {
+		margin-top: 24px;
+	}
+}
+
+.reduceButton:hover,
+.reduceButton:focus {
+	background-color: $emerald-field;
 }
 
 .vectorIcon {
-  color: $snowdrift;
-  width: 16px;
-  height: 16px;
+	color: $snowdrift;
+	width: 16px;
+	height: 16px;
 }
