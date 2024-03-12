@@ -107,6 +107,7 @@
 //     "description": "Location Description",
 //     "imgAlt": "Image Alt Text"
 //   },
+//  "locationId": "Location ID",
 //   "image": "Прикріпленний файл"
 //    "mapImage": "Прикріпленний файл"
 // }
