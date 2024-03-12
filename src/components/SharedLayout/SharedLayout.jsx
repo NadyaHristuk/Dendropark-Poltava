@@ -1,7 +1,7 @@
 import { useOutlet } from 'react-router-dom';
 
 import Header from '../Header';
-import { Footer } from '../Footer/Footer';
+import Footer from '../Footer';
 import { Notification } from '../Notification/Notification';
 
 export const SharedLayout = () => {

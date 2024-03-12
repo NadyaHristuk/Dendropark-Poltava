@@ -15,6 +15,52 @@ export const en = {
 				contacts: 'Контакти',
 			},
 		},
+		footer: {
+			logo: {
+				title: 'Полтавський міський парк',
+				alt: 'Полтавський міський парк',
+			},
+			navigation: {
+				main: 'Головна',
+				about: 'Про парк',
+				interaction: 'Взаємодія',
+				materials: 'Матеріали',
+				services: 'Послуги',
+				contacts: 'Контакти',
+			},
+			sections: {
+				interaction: {
+					title: 'Взаємодія:',
+					options: {
+						researchTrails: 'Дослідницькі стежки',
+						activities: 'Заходи',
+						rulesOfConduct: 'Правила поведінки',
+					},
+				},
+				materials: {
+					title: 'Матеріали:',
+					options: {
+						chronicle: 'Літопис',
+						documents: 'Документи',
+						help: 'Допомога',
+					},
+				},
+				services: {
+					title: 'Послуги:',
+					options: {
+						ourServices: 'Наші послуги',
+						seedlings: 'Саджанці',
+					},
+				},
+				contacts: {
+					title: 'Контакти:',
+					options: {
+						tel: '+38 (050) 289-41-33',
+						email: 'dekorkultur1@gmail.com',
+					},
+				},
+			},
+		},
 		parkInfo: {
 			attentionVisitors: 'До уваги відвідувачів',
 			parkPurpose:
