@@ -7,7 +7,7 @@ import desktop2x from '../../../assets/images/About/subonik-desktop-2x.jpg';
 
 export const subotnikPicture = {
     mobile: {
-        sizes: { height: 212, width: 310 },
+        sizes: { height: 148, width: 310 },
         images: { oneX: mobile1x, twoX: mobile2x },
     },
     tablet: {
