@@ -1,12 +1,15 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { HashLink } from 'react-router-hash-link';
 
 import Container from '../Container';
 import s from './Footer.module.scss';
 import { logo1x, logo2x } from '../../assets';
-import FooterSection from './FooterSection/FooterSection';
-import FooterSectionsWrapper from './FooterSectionsWrapper/FooterSectionsWrapper';
+
 import { useMedia } from '../../hooks';
+import FooterSection from './FooterSection';
+import FooterSectionsWrapper from './FooterSectionsWrapper';
+import FooterCopyright from './FooterCopyright';
 
 const Footer = () => {
 	const { isMobile, isTablet, isDesktop } = useMedia(); // Визначаємо тип пристрою користувача
@@ -110,23 +113,31 @@ const Footer = () => {
 							<li className={s.section_option}>
 								{(isDesktop || isTablet) && (
 									<a href="https://t.me/MaxMakukha" target="_blank">
-										{t('footer.sections.contacts.options.tel')}
+										+38 (050) 289-41-33
 									</a>
 								)}
 								{isMobile && (
-									<a href="tel:+380502894133">
-										{t('footer.sections.contacts.options.tel')}
-									</a>
+									<a href="tel:+380502894133">+38 (050) 289-41-33</a>
 								)}
 							</li>
 							<li className={s.section_option}>
-								<a href="mailTo:{t('footer.sections.contacts.options.email')}">
-									{t('footer.sections.contacts.options.email')}
+								<a href="mailTo:dekorkultur1@gmail.com">
+									dekorkultur1@gmail.com
 								</a>
 							</li>
 						</ul>
 					</FooterSection>
 				</FooterSectionsWrapper>
+				<FooterCopyright>
+					<p className={s.footer_copyright}>
+						© Полтавський міський парк / 2024
+					</p>
+					<a>
+						<p className={s.footer_copyright_goit_text}>
+							Сайт розроблений студентами
+						</p>
+					</a>
+				</FooterCopyright>
 			</footer>
 		</Container>
 	);

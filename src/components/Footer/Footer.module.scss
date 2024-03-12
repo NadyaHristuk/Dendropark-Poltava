@@ -8,6 +8,7 @@
 }
 .footer {
 	padding-top: 20px;
+	padding-bottom: 40px;
 	// background-color: $pine-depths;
 }
 
@@ -45,10 +46,6 @@
 	margin-bottom: 16px;
 }
 
-.section_159px {
-	width: 159px;
-}
-
 .section_option {
 	& a {
 		font-family: 'Innerspace', sans-serif;
@@ -61,4 +58,24 @@
 	& a:focus {
 		color: $light-color;
 	}
+}
+
+.footer_copyright {
+	font-family: 'Innerspace', sans-serif;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 1.29; // line-height: 18px;
+	color: $snowdrift;
+	padding-right: 8px;
+	margin-right: auto;
+	margin-bottom: 4px;
+	border-right: 1px solid $snowdrift;
+}
+
+.footer_copyright_goit_text {
+	font-family: 'Innerspace', sans-serif;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 1.29; // line-height: 18px;
+	margin-right: 8px;
 }
