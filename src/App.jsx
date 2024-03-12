@@ -8,6 +8,7 @@ import ContactPage from './pages/ContactPage';
 import AboutPage from './pages/AboutPage';
 import { ServicesPage } from './pages/ServicesPage';
 import NotFoundPage from './pages/NotFoundPage';
+import Login from './___adminPanel/pages/login/Login';
 
 function App() {
 	return (
@@ -20,7 +21,7 @@ function App() {
 					<Route path="about" element={<AboutPage />} />
 					<Route path="contact" element={<ContactPage />} />
 					<Route path="services" element={<ServicesPage />} />
-					{/* <Route path="adminPanell" element={<AdminPanell />} /> */}
+					<Route path="adminPanell" element={<Login />} />
 					<Route path="*" element={<NotFoundPage />} />
 				</Route>
 			</Routes>

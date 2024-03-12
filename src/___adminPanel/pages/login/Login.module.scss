@@ -1,0 +1,13 @@
+@import '../../../styles/colors';
+@import '../../../styles/mixins';
+@import '../../../styles/breakpoints';
+
+.container {
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.ant-btn {
+	background-color: green !important;
+}
