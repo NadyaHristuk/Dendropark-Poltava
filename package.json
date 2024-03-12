@@ -16,6 +16,7 @@
     "@emotion/styled": "^11.11.0",
     "@vitejs/plugin-react-swc": "^3.3.2",
     "antd": "^5.15.2",
+    "ants": "^0.0.3-alpha",
     "axios": "^1.6.7",
     "clsx": "^2.1.0",
     "i18next": "^23.8.2",
