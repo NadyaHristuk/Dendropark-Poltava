@@ -1,2 +1,64 @@
-@import 'src/styles/_colors.scss'; 
-@import '../../styles/mixins'; 
+@import 'src/styles/_colors.scss';
+@import 'src/styles/_mixins.scss';
+@import 'src/styles/_breakpoints.scss';
+
+.footer_container {
+	color: $snowdrift;
+	background-color: $pine-depths;
+}
+.footer {
+	padding-top: 20px;
+	// background-color: $pine-depths;
+}
+
+.logo {
+	display: flex;
+	gap: 6px;
+	align-items: center;
+	margin-right: auto;
+	width: 213px;
+	margin-bottom: 20px;
+}
+
+.logoImg {
+	width: 54px;
+	height: 54px;
+}
+
+.logoTitle {
+	font-weight: bold;
+	line-height: 0.875; // line-height: 14px;
+	letter-spacing: -0.02em;
+	width: 159px;
+	padding: 13px 0;
+	margin-bottom: 0;
+	color: $snowdrift;
+
+	& span {
+		color: $light-color;
+	}
+}
+
+.section_title {
+	font-weight: bold;
+	font-size: 18px;
+	margin-bottom: 16px;
+}
+
+.section_159px {
+	width: 159px;
+}
+
+.section_option {
+	& a {
+		font-family: 'Innerspace', sans-serif;
+		font-weight: normal;
+		font-size: 14px;
+		color: $snowdrift;
+	}
+
+	& a:hover,
+	& a:focus {
+		color: $light-color;
+	}
+}
