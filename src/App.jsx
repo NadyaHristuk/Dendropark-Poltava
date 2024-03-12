@@ -9,6 +9,7 @@ import AboutPage from './pages/AboutPage';
 import { ServicesPage } from './pages/ServicesPage';
 import NotFoundPage from './pages/NotFoundPage';
 import Login from './___adminPanel/pages/login/Login';
+import AdminPanel from './___adminPanel/adminPanel';
 
 function App() {
 	return (
@@ -24,6 +25,7 @@ function App() {
 					<Route path="adminPanell" element={<Login />} />
 					<Route path="*" element={<NotFoundPage />} />
 				</Route>
+				<Route path="/admin/*" element={<AdminPanel />} />
 			</Routes>
 		</NotificationsProvider>
 	);
