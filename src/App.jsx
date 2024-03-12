@@ -8,7 +8,7 @@ import ContactPage from './pages/ContactPage';
 import AboutPage from './pages/AboutPage';
 import { ServicesPage } from './pages/ServicesPage';
 import NotFoundPage from './pages/NotFoundPage';
-import Login from './___adminPanel/pages/login/Login';
+import Login from './___adminPanel/pages/login/login';
 import AdminPanel from './___adminPanel/adminPanel';
 
 function App() {
