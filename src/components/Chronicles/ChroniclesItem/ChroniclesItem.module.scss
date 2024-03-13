@@ -7,6 +7,9 @@
 	@include media-rules(tablet) {
 		width: 380px;
 	}
+	@include media-rules(desktop) {
+		width: 589px;
+	}
 }
 
 .photo {

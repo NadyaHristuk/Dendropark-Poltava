@@ -35,7 +35,7 @@ const DocumentsList = () => {
 	}, []);
 
 	return (
-		<section className={css.documentsSection}>
+		<section className={css.documentsSection} id="documents-section">
 			<h3 className={css.title}>{t('chronicles.documentsTitle')}</h3>
 			{loading ? (
 				<p>Loading...</p>
