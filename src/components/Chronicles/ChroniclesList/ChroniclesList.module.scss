@@ -2,20 +2,23 @@
 @import '/src/styles/colors';
 
 .chroniclesSection {
+	width: 358px;
 	padding-top: 80px;
-	margin-bottom: 64px;
+	padding-bottom: 64px;
 
 	// padding-right: 28px;
 
 	@include media-rules(tablet) {
-		padding-top: 64px;
-		margin-bottom: 120px;
+		width: 880px;
+		// padding-top: 64px;
+		padding-bottom: 120px;
 		overflow-y: auto;
 		padding-top: 80px;
 	}
 
-	// @include media-rules(desktop) {
-	// }
+	@include media-rules(desktop) {
+		width: 1280px;
+	}
 
 	// ::-webkit-scrollbar {
 	//   background-color: $stroke;
