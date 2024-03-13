@@ -9,45 +9,46 @@ import s from './BurgerMenu.module.scss';
 const BurgerMenu = () => {
 	const [isOpen, setIsOpen] = useState(false);
 	const { isMobile } = useMedia();
-	const navRef = useRef(null);
+	const navRef = useRef();
 
 	const { t } = useTranslation();
 
-	const toggleMenu = () => {
+	const toggleMenu = (e) => {
+		e.stopPropagation();
 		setIsOpen(!isOpen);
 	};
 
+	const handleEscape = (e) => {
+		if (e.key === 'Escape') setIsOpen(false);
+	};
+
+	const handleCloseBackdrop = (e) => {
+		if (navRef.current && !navRef.current.contains(e.target)) {
+			setIsOpen(false);
+		}
+	};
+
 	useEffect(() => {
-		const handleEscKey = (event) => {
-			if (event.key === 'Escape' && isOpen) {
-				setIsOpen(false);
-			}
-		};
-
-		const handleClickOutside = (event) => {
-			if (navRef.current && !navRef.current.contains(event.target) && isOpen) {
-				setIsOpen(false);
-			}
-		};
-
-		document.addEventListener('keydown', handleEscKey);
-		document.addEventListener('click', handleClickOutside);
+		if (isOpen) {
+			document.addEventListener('keydown', handleEscape);
+			document.addEventListener('click', handleCloseBackdrop);
+		}
 
 		return () => {
-			document.removeEventListener('keydown', handleEscKey);
-			document.removeEventListener('click', handleClickOutside);
+			document.removeEventListener('keydown', handleCloseBackdrop);
+			document.removeEventListener('click', handleCloseBackdrop);
 		};
 	}, [isOpen]);
 
 	return (
-		<div>
+		<div className={s.wrapper}>
 			<button onClick={toggleMenu} className={s.burgerBtn}>
 				<svg className={s.burgerBtnIcon}>
 					<use href={`${icons}#icon-burger`}></use>
 				</svg>
 			</button>
 			{isOpen && (
-				<nav className={s.burgerNav}>
+				<nav className={s.burgerNav} ref={navRef}>
 					<ul className={s.burgerList}>
 						<li>
 							<NavLink to="/" end>
