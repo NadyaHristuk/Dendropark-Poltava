@@ -1,0 +1,95 @@
+@import 'src/styles/_colors.scss';
+@import '/src/styles//mixins';
+@import '/src/styles/breakpoints';
+
+.currentGoal {
+	font-family: 'Innerspace', serif;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 179%;
+	color: $city-park;
+	margin-bottom: 10px;
+	@include media-rules(tablet) {
+		line-height: 214%;
+	}
+
+	@include media-rules(desktop) {
+		font-size: 20px;
+		line-height: 150%;
+		padding-top: 64px;
+		margin-bottom: 20px;
+		width: 603px;
+	}
+}
+.qrCodeWrap {
+	width: 358px;
+	height: 283px;
+	background-color: $lilac-haze;
+	border-radius: 20px;
+	border: 1px solid #d2d9d8;
+	padding: 44px 81px;
+	margin-bottom: 16px;
+
+	@include media-rules(tablet) {
+		width: 310px;
+		height: 283px;
+		padding: 57px 96px;
+		margin-bottom: 43px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	@include media-rules(desktop) {
+		padding: 126px 182px 211px;
+		width: 559px;
+		height: 532px;
+		margin-bottom: 0;
+		margin-left: 30px;
+	}
+}
+.qrCodeImg {
+	fill: $pine-depths;
+}
+.desktopDiv {
+	@include media-rules(desktop) {
+		position: relative;
+	}
+}
+.helpLink {
+	font-family: 'Innerspace', serif;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 150%;
+	color: $steel-whisper;
+	background-color: $pine-depths;
+	transition: background-color 0.5s ease-in-out;
+	border-radius: 200px;
+	padding: 15px 69px;
+	width: 358px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	@include media-rules(tablet) {
+		width: 310px;
+		padding: 15px 45px;
+	}
+
+	@include media-rules(desktop) {
+		position: absolute;
+		bottom: 69px;
+		right: 152px;
+		padding: 15px 28px;
+		width: 276px;
+	}
+}
+.helpLink:hover,
+.helpLink:focus {
+	background-color: $emerald-field;
+}
+.heartIcon {
+	width: 32px;
+	height: 32px;
+	fill: $tropical-wave;
+	margin-right: 14px;
+}

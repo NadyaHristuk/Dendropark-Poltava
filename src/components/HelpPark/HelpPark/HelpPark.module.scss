@@ -1,0 +1,111 @@
+@import 'src/styles/_colors.scss';
+@import '/src/styles//mixins';
+@import '/src/styles/breakpoints';
+
+.helpParkBox {
+  width: 100%;
+  max-width: $mobile;
+  margin: 0 auto;
+  margin-bottom: 64px;
+  @include media-rules(tablet) {
+    margin-bottom: 80px;
+    max-width: $tablet;
+  }
+
+  @include media-rules(desktop) {
+    margin-bottom: 120px;
+    max-width: $desktop;
+  }
+}
+.title {
+  font-family: 'Ermilov', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 133%;
+  letter-spacing: -0.02em;
+  color: $pine-depths;
+  margin-bottom: 16px;
+
+  @include media-rules(tablet) {
+    font-size: 28px;
+    line-height: 157%;
+    margin-bottom: 20px;
+  }
+
+  @include media-rules(desktop) {
+    font-size: 44px;
+    line-height: 100%;
+  }
+}
+.flexWrap {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 64px;
+
+  @include media-rules(tablet) {
+    flex-direction: row;
+    gap: 47px;
+    margin-bottom: 80px;
+  }
+
+  @include media-rules(desktop) {
+    gap: 91px;
+    width: 1280px;
+    margin-bottom: 120px;
+  }
+}
+.description {
+  font-family: 'Innerspace', serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: $city-park;
+  margin-bottom: 16px;
+  text-align: left;
+  width: 358px;
+
+  @include media-rules(tablet) {
+    line-height: 187%;
+    margin-bottom: 32px;
+    width: 701px;
+  }
+
+  @include media-rules(desktop) {
+    font-size: 20px;
+    line-height: 150%;
+    width: 964px;
+    margin-bottom: 20px;
+  }
+}
+.goal {
+  font-family: 'Innerspace', serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: $city-park;
+  margin-bottom: 32px;
+  @include media-rules(tablet) {
+    line-height: 187%;
+  }
+
+  @include media-rules(desktop) {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 107%;
+    font-family: 'Ermilov', sans-serif;
+    margin-bottom: 64px;
+  }
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 32px;
+
+  @include media-rules(desktop) {
+    padding-top: 50px;
+    width: 630px;
+    gap: 24px;
+    margin-bottom: 0;
+  }
+}

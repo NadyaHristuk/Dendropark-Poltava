@@ -7,14 +7,14 @@ import {
   map_desk_1x,
   map_desk_2x,
 } from '../../assets/images/map';
-import data from "./data.json"
-import scss from "./Map.module.scss"
+import data from './data.json';
+import scss from './Map.module.scss';
 import MapItem from './MapItem/MapItem';
+import { ParkLocationsData } from '../AboutPark/ParkLocations/locations';
 
 const Map = () => {
   const { isDesktop, isMobile, isTablet } = useMedia();
-
-
+  
   return (
     <>
       {(isMobile || isTablet) && (
@@ -40,7 +40,13 @@ const Map = () => {
           />
 
           <ul>
-            {data.map((item, index) => <MapItem key={item.id} className={`item-${index + 1}`} item={item}/>) }
+            {ParkLocationsData.map((item, index) => (
+              <MapItem
+                key={item.number}
+                className={`item-${index + 1}`}
+                item={item}
+              />
+            ))}
           </ul>
         </div>
       )}

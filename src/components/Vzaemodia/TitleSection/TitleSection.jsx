@@ -7,7 +7,10 @@ export const TitleSection = () => {
   return (
     <section className={titleSectionStyles.section}>
       <div className={titleSectionStyles.titleSectionContainer}>
-        <div className={titleSectionStyles.titleSectionTextContainer}>
+        <div
+          id="title-vzaemodia"
+          className={titleSectionStyles.titleSectionTextContainer}
+        >
           <h1 className={titleSectionStyles.title}>{t('vzaemodia.title')}</h1>
           <p className={titleSectionStyles.text}>{t('vzaemodia.heroInfo')}</p>
         </div>

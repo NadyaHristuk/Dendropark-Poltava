@@ -5,88 +5,124 @@ import { subotnikPicture } from '../Picture/subbotnikPicture';
 import { yaninaYakivnaPicture } from '../Picture/yaninaYakivna';
 import css from './HistoryCreation.module.scss';
 import { icons } from '../../../assets';
+import { useMedia } from '../../../hooks/useMedia';
+import { useRef } from 'react';
 
-export const HistoryCreation = ({ onClick }) => {
-  const { t } = useTranslation();
-  return (
-    <div className={css.historyCreationContainer}>
-      <p className={css.historyCreationText}>
-        {t('about.descriptionFirstParagraph')}
-        <br />
-        {t('about.descriptionSecondParagraph')}
-        <br />
-        {t('about.descriptionThirdParagraph')}
-      </p>
-      <div className={css.historyCreationSection}>
-        <h2 className={css.historyCreationTitle}>Історія створення</h2>
-        <p className={css.historyCreationText}>
-          За часів Полтавської баталії ця територія була густою незайманою
-          дібровою. Яківчанський ліс переходив у діброву на Монастирській горі.
-          Під час Другої світової війни зелений масив був вирубаний
-          націонал-соціалістами. Розбудова парку почалася у квітні 1962 р.
-          Рішенням Ради Міністрів України від 4 березня 1962 року «Про закладку
-          9 показових парків у обласних центрах України» було передбачено
-          створення в Полтаві дендропарку. <br />А вже 13—14 квітня було
-          закладено парк площею 17 га. У березні 1963 року його було включено до
-          списку ботанічних садів і дендропарків України. Ініціаторами проєкту
-          були головний архітектор міста Лев Вайнгорт та дендролог Яніна Яценко,
-          яка віддала парку 40 років свого життя.
-        </p>
-      </div>
-      <div className={css.historyCreationSection}>
-        <ul className={css.picturesContainer}>
-          <li className={css.pictureContainer}>
-            <Picture pictures={levVaingortPicture} />
+export const HistoryCreation = ({ onClick, onPicturesContainerHeight }) => {
+	const { isDesktop } = useMedia();
+	const { t } = useTranslation();
+	const picturesContainerRef = useRef(null);
 
-            <p className={css.pictureDescription}>
-              Головний архітектор Лев Вайнгорт перед схемою майбутнього парку
-              (16 квітня 1962)
-            </p>
-          </li>
-          <li className={css.pictureContainer}>
-            <Picture pictures={yaninaYakivnaPicture} />
+	const handleReduceButtonClick = () => {
+		if (picturesContainerRef.current) {
+			const container = picturesContainerRef.current;
+			const height = picturesContainerRef.current.offsetTop;
+			onPicturesContainerHeight(height);
+			container.scrollIntoView({
+				behavior: 'smooth',
+				block: 'start',
+				inline: 'nearest',
+			});
+		}
+		onClick();
+	};
 
-            <p className={css.pictureDescription}>
-              Яніна Яківна Яценко (31 травня 1926; Ставище Київської області - 2
-              грудня 2016 р., м. Полтава) — засновник та забудовник Полтавського
-              дендропарку, автор проекту «Парк на полі Полтавської битви».
-            </p>
-          </li>
-          <li className={css.pictureContainer}>
-            <Picture pictures={subotnikPicture} />
-            <p className={css.pictureDescription}>
-              Суботник з метою лісонасаджень на території майбутнього
-              дендропарку. 13-14.04.1962 р.
-            </p>
-          </li>
-        </ul>
-      </div>
-      <div className={css.historyCreationSection}>
-        <p className={css.pictureDescription}>
-          Схематичний план зон «Лісостепу» та «Української діброви» розробив
-          тодішній головний архітектор міста Л.С. Вайнгорт та ландшафтний
-          архітектор В. В. Жихарєв. Проект посадок на решті території виконала
-          дендролог Я. Я. Яценко за порадами заввідділу дендрології Ботанічного
-          саду АН УРСР професора Л. І. Рубцова. <br />
-          Дендропарки України «Тростянець», «Софіївка», «Олександрія» надсилали
-          посадковий матеріал, на базі якого і було створено колекцію порід
-          дерев та кущів — понад 200 видів. <br />З 1977 року згідно з
-          постановою Держкомприроди УРСР його оголошують заповідним зі статусом
-          парку-пам'ятки садово-паркового мистецтва республіканського значення.
-          У 1987 році відбувся Всесоюзний конкурс парків, де Полтавський міський
-          парк (дендропарк) посів друге місце після Ізмайлівського парку міста
-          Москви. У 1990 році парк отримує статус парку-пам'ятки
-          садово-паркового мистецтва загальнодержавного значення.
-        </p>
-      </div>
-      <div className={css.historyCreationSection}>
-        <button className={css.reduceButton} onClick={onClick}>
-          Згорнути
-          <svg className={css.vectorIcon}>
-            <use href={`${icons}#icon-Vector-top`}></use>
-          </svg>
-        </button>
-      </div>
-    </div>
-  );
+	return (
+		<div ref={picturesContainerRef} className={css.historyCreationContainer}>
+			<p className={css.historyCreationText}>
+				{t('about.descriptionFirstParagraph')}
+				<br />
+				{t('about.descriptionSecondParagraph')}
+				<br />
+				{t('about.descriptionThirdParagraph')}
+			</p>
+			<div
+				className={`${css.historyCreationPicturesContainer} ${css.historyCreationSection}`}
+			>
+				<div className={` ${css.poltavBatleText}`}>
+					<h2 className={css.historyCreationTitle}>
+						{t('about.historyCreationTitle')}
+					</h2>
+					<p className={`${css.historyCreationText}`}>
+						{t('about.historyCreationTextFirstArcticle')}
+						<br />
+						{t('about.historyCreationTextSecondArticle')}
+					</p>
+				</div>
+				<div className={`${css.levVaingortContainer} `}>
+					<Picture pictures={levVaingortPicture} />
+
+					<p className={css.pictureDescription}>
+						{t('about.levVaingortContainer')}
+					</p>
+				</div>
+
+				{isDesktop ? (
+					<div className={css.secondLayerContainer}>
+						<div className={`${css.ninaYacenkoContainer}`}>
+							<Picture pictures={yaninaYakivnaPicture} />
+
+							<p
+								className={`${css.pictureDescription} ${css.pictureDescriptionNinaYacenko}`}
+							>
+								{t('about.ninaYacenkoContainer')}
+							</p>
+						</div>
+						<div className={`${css.subotnikContainer}`}>
+							<Picture pictures={subotnikPicture} />
+							<p className={`${css.pictureDescription} ${css.subotnikText}`}>
+								{t('about.subotnikContainer')}
+							</p>
+						</div>
+						<div
+							className={`${css.historyCreationSection} ${css.historyDescriptionText} `}
+						>
+							<p className={css.historyCreationText}>
+								{t('about.historyCreationSectionFirstArtickle')}
+								<br />
+								{t('about.historyCreationSectionSecondArtickle')}
+								<br />
+								{t('about.historyCreationSectionThirdArtickle')}
+							</p>
+						</div>
+					</div>
+				) : (
+					<>
+						<div className={`${css.ninaYacenkoContainer}`}>
+							<Picture pictures={yaninaYakivnaPicture} />
+
+							<p
+								className={`${css.pictureDescription} ${css.pictureDescriptionNinaYacenko}`}
+							>
+								{t('about.ninaYacenkoContainer')}
+							</p>
+						</div>
+						<div className={`${css.subotnikContainer}`}>
+							<Picture pictures={subotnikPicture} />
+							<p className={`${css.pictureDescription} ${css.subotnikText}`}>
+								{t('about.subotnikContainer')}
+							</p>
+						</div>
+					</>
+				)}
+			</div>
+			<div
+				className={`${css.historyCreationSection} ${css.historyDescriptionText} `}
+			>
+				<p className={css.historyCreationText}>
+					{t('about.historyCreationSectionFirstArtickle')}
+					<br />
+					{t('about.historyCreationSectionSecondArtickle')}
+					<br />
+					{t('about.historyCreationSectionThirdArtickle')}
+				</p>
+			</div>{' '}
+			<button className={css.reduceButton} onClick={handleReduceButtonClick}>
+				{t('about.reduceButton')}
+				<svg className={css.vectorIcon}>
+					<use href={`${icons}#icon-Vector-top`}></use>
+				</svg>
+			</button>
+		</div>
+	);
 };

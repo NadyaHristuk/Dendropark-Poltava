@@ -1,31 +1,20 @@
 import { useOutlet } from 'react-router-dom';
 
 import Header from '../Header';
-import { Footer } from '../Footer/Footer';
-import { Notification } from '../Notification/Notification';
+import Footer from '../Footer';
 
 export const SharedLayout = () => {
-  const outlet = useOutlet();
-  const notifications = [
-    { id: 1, type: 'success', message: 'Successfully completed!' },
-  ];
+	const outlet = useOutlet();
 
-  return (
-    <>
-      <Header />
-      <main>
-        {outlet} {/* Тут рендериться компонент для активного маршруту */}
-      </main>
-      {notifications.map((notif) => (
-        <Notification
-          key={notif.id}
-          type={notif.type}
-          message={notif.message}
-        />
-      ))}
-      <Footer />
-    </>
-  );
+	return (
+		<>
+			<Header />
+			<main>
+				{outlet} {/* Тут рендериться компонент для активного маршруту */}
+			</main>
+			<Footer />
+		</>
+	);
 };
 
 export default SharedLayout;
