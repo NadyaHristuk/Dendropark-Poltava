@@ -137,8 +137,15 @@ const Footer = () => {
 							<p className={s.footer_copyright_goit_text}>
 								Сайт розроблений студентами
 							</p>
-							<svg className={s.footer_copyright_goit_logo}>
-								<use href={`${icons}#icon-goit-logo`}></use>
+							<svg className={s.footer_copyright_goit_icon_svg}>
+								<use
+									href={`${icons}#icon-goit-logo`}
+									className={s.footer_copyright_goit_icon_use}
+								></use>
+								<use
+									href={`${icons}#icon-goit-logo-hover`}
+									className={s.footer_copyright_goit_icon_use_hover}
+								></use>
 							</svg>
 						</div>
 					</a>

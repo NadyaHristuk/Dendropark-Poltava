@@ -86,10 +86,27 @@
 	margin-right: 8px;
 }
 
-.footer_copyright_goit_logo {
+.footer_copyright_goit_icon_svg {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	width: 58px;
 	height: 18px;
+}
+
+.footer_copyright_goit_wrapper .footer_copyright_goit_icon_use {
+	display: block;
+}
+.footer_copyright_goit_wrapper:is(:hover, :focus)
+	.footer_copyright_goit_icon_use {
+	display: none;
+}
+
+.footer_copyright_goit_wrapper .footer_copyright_goit_icon_use_hover {
+	display: none;
+}
+
+.footer_copyright_goit_wrapper:is(:hover, :focus)
+	.footer_copyright_goit_icon_use_hover {
+	display: block;
 }
