@@ -65,14 +65,16 @@
 	margin-bottom: 24px;
 
 	@include media-rules(tablet) {
-		width: 880px;
+		width: 870px;
 		flex-direction: row;
+		padding-right: 20px;
 	}
 
 	@include media-rules(desktop) {
-		width: 1280px;
+		width: 1270px;
 		align-items: flex-start;
 		justify-content: space-between;
+		padding-right: 30px;
 	}
 }
 
