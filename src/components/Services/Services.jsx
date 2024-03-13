@@ -9,7 +9,9 @@ export const Services = () => {
 			<section className={css.services_wrapper}>
 				<h2 className={css.title}>Наші послуги</h2>
 				<ServicesInfo items={infoData} />
-				<h2 className={css.title_store}>Ви можете придбати саджанці:</h2>
+				<h2 className={css.title_store} id="seedlings-section">
+					Ви можете придбати саджанці:
+				</h2>
 				<ServicesStore items={storeData} />
 			</section>
 		</>

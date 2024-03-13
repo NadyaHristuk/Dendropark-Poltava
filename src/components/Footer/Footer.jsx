@@ -80,12 +80,9 @@ const Footer = () => {
 								</HashLink>
 							</li>
 							<li className={s.section_option}>
-								<HashLink smooth to="/chronicles#documents-section">
-									{t('footer.sections.materials.options.documents')}
-								</HashLink>
-								<Link to="/">
+								<HashLink smooth to="/#help-section">
 									{t('footer.sections.materials.options.help')}
-								</Link>
+								</HashLink>
 							</li>
 						</ul>
 					</FooterSection>
@@ -96,14 +93,14 @@ const Footer = () => {
 						</p>
 						<ul>
 							<li className={s.section_option}>
-								<Link to="/services">
+								<HashLink smooth to="/services#header">
 									{t('footer.sections.services.options.ourServices')}
-								</Link>
+								</HashLink>
 							</li>
 							<li className={s.section_option}>
-								<Link to="/services">
+								<HashLink to="/services#seedlings-section">
 									{t('footer.sections.services.options.seedlings')}
-								</Link>
+								</HashLink>
 							</li>
 						</ul>
 					</FooterSection>
