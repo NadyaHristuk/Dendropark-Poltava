@@ -149,16 +149,18 @@ const Footer = () => {
 							</svg>
 						</div>
 					</a>
-					<div className={s.footer_social_networks}>
+					<div className={s.footer_social_networks_wrapper}>
+						<a href="https://t.me/MaxMakukha" target="_blank">
+							<svg className={s.footer_social_networks_icon}>
+								<use href={`${icons}#icon-telegram`}></use>
+							</svg>
+						</a>
 						<a
 							href="https://www.facebook.com/Poltava.Dendropark"
 							target="_blank"
 						>
-							<svg className={s.footer_social_networks_icons}>
-								<use
-									href={`${icons}#icon-facebook`}
-									className={s.footer_social_networks_facebook}
-								></use>
+							<svg className={s.footer_social_networks_icon}>
+								<use href={`${icons}#icon-facebook`}></use>
 							</svg>
 						</a>
 					</div>

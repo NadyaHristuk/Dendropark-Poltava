@@ -122,12 +122,13 @@
 	opacity: 1;
 }
 
-.footer_social_networks {
+.footer_social_networks_wrapper {
 	margin-top: 20px;
 	display: flex;
+	gap: 8px;
 }
 
-.footer_social_networks_icons {
+.footer_social_networks_icon {
 	width: 36px;
 	height: 36px;
 	fill: $snowdrift;
