@@ -10,7 +10,7 @@ export const ua = {
 					description:
 						'Ключове правило: поважайте інших, і людей, і тварин, і рослини.',
 					moreInfo: 'Дізнатися більше',
-					link: '/vzaemodia#rules',
+					link: '/vzaemodia#rules-section',
 					iconId: '#icon-new-attention',
 				},
 				{
@@ -33,15 +33,15 @@ export const ua = {
 					description:
 						'Хочете провести захід в Парку? Переходьте за посиланням.',
 					moreInfo: 'Дізнатися більше',
-					link: '/vzaemodia#rules-section',
+					link: '/vzaemodia#organizators-section',
 					iconId: '#icon-event',
 				},
 				{
 					title: 'Наші послуги',
 					description: 'Послуги КП “Декоративні культури.”',
 					moreInfo: 'Дізнатися більше',
-					link: 'services',
-					iconId: '#icon-services',
+					link: '/services#services',
+					iconId: '#icon-attention-services',
 				},
 				{
 					title: 'Адміністрація',
