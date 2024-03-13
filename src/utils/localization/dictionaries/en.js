@@ -46,10 +46,6 @@ export const en = {
 				},
 				contacts: {
 					title: 'Контакти:',
-					options: {
-						tel: '+38 (050) 289-41-33',
-						email: 'dekorkultur1@gmail.com',
-					},
 				},
 			},
 		},
@@ -261,24 +257,32 @@ export const en = {
 			sectionTitle: 'About park',
 			title: 'Poltava City Park',
 			descriptionFirstParagraph:
-				"Poltava City Park is a dendrological park, a park-monument of garden and park art of national importance in Ukraine. It is located in the northern part of the city of Poltava.",
+				'Poltava City Park is a dendrological park, a park-monument of garden and park art of national importance in Ukraine. It is located in the northern part of the city of Poltava.',
 			descriptionSecondParagraph:
 				"The park's distinctive feature is its relief: numerous scenic areas that open up interesting perspectives, bright clearings. The main pathway starts from the entrance on Yakivchanska Street, passes through the western slope, across the valley to the east, and ends at the entrance from Luhova Street. All scenic areas, a cascade of ponds, a system of clearings, groups of decorative plants are concentrated along this line. Existing pathways were taken into account during the park's development, which had positive results. Roads were graded but then allowed to be overgrown, creating a natural appearance.",
 			descriptionThirdParagraph:
-				"The park is rich in water sources; rivulets of the river called Tarnovschanska Tarapunka flow through all the ravines, which flows into the Vorskla River near the village of Voronina. The luxurious carpet of diverse grass combined with water, reed thickets, trees of various shapes and colors, creates an unforgettable effect.",
+				'The park is rich in water sources; rivulets of the river called Tarnovschanska Tarapunka flow through all the ravines, which flows into the Vorskla River near the village of Voronina. The luxurious carpet of diverse grass combined with water, reed thickets, trees of various shapes and colors, creates an unforgettable effect.',
 			readMore: 'Read more about the park',
 			locationsTitle: 'Park Locations',
 			locationsDivision:
 				'The park territory is divided into separate sections:',
 			historyCreationTitle: 'History of Creation',
-			historyCreationTextFirstArcticle: 'During the time of the Poltava battle, this territory was a dense uninhabited forest. The Yakivchansky forest turned into a forest on the Monastery Hill. During the Second World War, the green massif was cut down by the National Socialists. The construction of the park began in April 1962. By the decision of the Council of Ministers of Ukraine on March 4, 1962, "On the establishment of 9 model parks in the regional centers of Ukraine," the creation of a dendro park in Poltava was envisaged.',
-			historyCreationTextSecondArticle: 'And already on April 13-14, a park with an area of ​​17 hectares was laid. In March 1963, it was included in the list of botanical gardens and dendro parks of Ukraine. The initiators of the project were the chief architect of the city Lev Vaingort and dendrologist Yanina Yatsenko, who devoted 40 years of her life to the park.',
-			levVaingortContainer: 'Chief architect Lev Vaingort in front of the scheme of the future park (April 16, 1962)',
-			ninaYacenkoContainer: 'Yanina Yakivna Yatsenko (May 31, 1926; Stavyshche, Kyiv region - December 2, 2016, Poltava) - founder and builder of the Poltava dendro park, author of the project "Park on the field of the Poltava battle."',
-			subotnikContainer: 'Subbotnik with the aim of reforestation on the territory of the future dendro park. April 13-14, 1962.',
-			historyCreationSectionFirstArtickle: 'A schematic plan of the zones "Forest-Steppe" and "Ukrainian Forest" was developed by the then chief architect of the city L.S. Vaingort and landscape architect V.V. Zhykharev. The planting project for the rest of the territory was carried out by dendrologist Ya. Ya. Yatsenko with the advice of the dendrology department of the Botanical Garden of the USSR Academy of Sciences, Professor L.I. Rubtsov.',
-			historyCreationSectionSecondArtickle: 'Dendro parks of Ukraine "Trostyanets", "Sofiyivka", "Oleksandriya" sent planting material, on the basis of which a collection of tree and shrub species was created - over 200 species.',
-			historyCreationSectionThirdArtickle: "Since 1977, according to the resolution of the State Committee for Nature Conservation of the Ukrainian SSR, it has been declared a reserve with the status of a park-monument of garden and park art of republican significance. In 1987, the All-Union competition of parks took place, where the Poltava City Park (dendro park) took second place after the Izmailovsky Park in Moscow. In 1990, the park receives the status of a park-monument of garden and park art of national importance.",
+			historyCreationTextFirstArcticle:
+				'During the time of the Poltava battle, this territory was a dense uninhabited forest. The Yakivchansky forest turned into a forest on the Monastery Hill. During the Second World War, the green massif was cut down by the National Socialists. The construction of the park began in April 1962. By the decision of the Council of Ministers of Ukraine on March 4, 1962, "On the establishment of 9 model parks in the regional centers of Ukraine," the creation of a dendro park in Poltava was envisaged.',
+			historyCreationTextSecondArticle:
+				'And already on April 13-14, a park with an area of ​​17 hectares was laid. In March 1963, it was included in the list of botanical gardens and dendro parks of Ukraine. The initiators of the project were the chief architect of the city Lev Vaingort and dendrologist Yanina Yatsenko, who devoted 40 years of her life to the park.',
+			levVaingortContainer:
+				'Chief architect Lev Vaingort in front of the scheme of the future park (April 16, 1962)',
+			ninaYacenkoContainer:
+				'Yanina Yakivna Yatsenko (May 31, 1926; Stavyshche, Kyiv region - December 2, 2016, Poltava) - founder and builder of the Poltava dendro park, author of the project "Park on the field of the Poltava battle."',
+			subotnikContainer:
+				'Subbotnik with the aim of reforestation on the territory of the future dendro park. April 13-14, 1962.',
+			historyCreationSectionFirstArtickle:
+				'A schematic plan of the zones "Forest-Steppe" and "Ukrainian Forest" was developed by the then chief architect of the city L.S. Vaingort and landscape architect V.V. Zhykharev. The planting project for the rest of the territory was carried out by dendrologist Ya. Ya. Yatsenko with the advice of the dendrology department of the Botanical Garden of the USSR Academy of Sciences, Professor L.I. Rubtsov.',
+			historyCreationSectionSecondArtickle:
+				'Dendro parks of Ukraine "Trostyanets", "Sofiyivka", "Oleksandriya" sent planting material, on the basis of which a collection of tree and shrub species was created - over 200 species.',
+			historyCreationSectionThirdArtickle:
+				'Since 1977, according to the resolution of the State Committee for Nature Conservation of the Ukrainian SSR, it has been declared a reserve with the status of a park-monument of garden and park art of republican significance. In 1987, the All-Union competition of parks took place, where the Poltava City Park (dendro park) took second place after the Izmailovsky Park in Moscow. In 1990, the park receives the status of a park-monument of garden and park art of national importance.',
 			reduceButton: 'Collapse',
 			lookMapButton: 'Look on the map',
 		},

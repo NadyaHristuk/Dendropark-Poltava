@@ -1,0 +1,20 @@
+@import 'src/styles/_colors.scss';
+@import 'src/styles/_mixins.scss';
+@import 'src/styles/_breakpoints.scss';
+
+.footer_copyright_wrapper {
+	width: 360px;
+	display: flex;
+	flex-direction: column;
+
+	@include media-rules(tablet) {
+		width: 886px;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	@include media-rules(desktop) {
+		width: 1288px;
+	}
+}

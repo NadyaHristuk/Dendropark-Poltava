@@ -98,10 +98,6 @@ export const ua = {
 				},
 				contacts: {
 					title: 'Контакти:',
-					options: {
-						tel: '+38 (050) 289-41-33',
-						email: 'dekorkultur1@gmail.com',
-					},
 				},
 			},
 		},
