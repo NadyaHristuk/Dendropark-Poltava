@@ -9,7 +9,6 @@
 .footer {
 	padding-top: 20px;
 	padding-bottom: 40px;
-	// background-color: $pine-depths;
 }
 
 .logo {
@@ -52,6 +51,7 @@
 		font-weight: normal;
 		font-size: 14px;
 		color: $snowdrift;
+		@include transition(color);
 	}
 
 	& a:hover,
@@ -84,6 +84,7 @@
 	line-height: 1.29; // line-height: 18px;
 	color: $snowdrift;
 	margin-right: 8px;
+	@include transition(font-size);
 }
 
 .footer_copyright_goit_icon_svg {
@@ -94,19 +95,40 @@
 	height: 18px;
 }
 
+.footer_copyright_goit_wrapper:is(:hover, :focus) {
+	cursor: pointer;
+}
+
+.footer_copyright_goit_wrapper:is(:hover, :focus) .footer_copyright_goit_text {
+	font-size: 16px;
+}
+
 .footer_copyright_goit_wrapper .footer_copyright_goit_icon_use {
-	display: block;
+	opacity: 1;
+	@include transition(opacity);
 }
 .footer_copyright_goit_wrapper:is(:hover, :focus)
 	.footer_copyright_goit_icon_use {
-	display: none;
+	opacity: 0;
 }
 
 .footer_copyright_goit_wrapper .footer_copyright_goit_icon_use_hover {
-	display: none;
+	opacity: 0;
+	@include transition(opacity);
 }
 
 .footer_copyright_goit_wrapper:is(:hover, :focus)
 	.footer_copyright_goit_icon_use_hover {
-	display: block;
+	opacity: 1;
+}
+
+.footer_social_networks {
+	margin-top: 20px;
+	display: flex;
+}
+
+.footer_social_networks_icons {
+	width: 36px;
+	height: 36px;
+	fill: $snowdrift;
 }

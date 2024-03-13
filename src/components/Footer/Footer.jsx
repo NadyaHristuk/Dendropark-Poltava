@@ -149,6 +149,19 @@ const Footer = () => {
 							</svg>
 						</div>
 					</a>
+					<div className={s.footer_social_networks}>
+						<a
+							href="https://www.facebook.com/Poltava.Dendropark"
+							target="_blank"
+						>
+							<svg className={s.footer_social_networks_icons}>
+								<use
+									href={`${icons}#icon-facebook`}
+									className={s.footer_social_networks_facebook}
+								></use>
+							</svg>
+						</a>
+					</div>
 				</FooterCopyright>
 			</footer>
 		</Container>
