@@ -71,58 +71,58 @@ export const en = {
 			administrationDescription: 'Адміністрація парку.',
 		},
 		vzaemodia: {
-			title: 'Дослідницькі стежки',
+			title: 'Exploration trails',
 			heroInfo:
-				'Заохочуємо Вас дізнатись більше про парк і природу пройшовши маршрутом наших стежок',
+				'We encourage you to learn more about the park and nature by following our trails.',
 
-			trialTitle: 'Наші Стежки',
-			cardOneTitle: 'Стежка №1 Екологічна.',
+			trialTitle: 'Our Paths',
+			cardOneTitle: 'Trail No. 1 Ecological.',
 			cardOneText:
-				'Дізнайтесь більше про природу парку, а також екологічні принципи.',
-			cardButtonText: 'Подивитись на карті',
-			cardTwoTitle: 'Стежка №2 Історична',
+				'Learn more about the nature of the park and its ecological principles.',
+			cardButtonText: 'Look on the map.',
+			cardTwoTitle: 'Trail #2 Historical',
 			cardTwoText:
-				'Дізнайтесь більше про події що мали місце на цій території раніше, і артефакти минулих часів.',
-			cardThreeTitle: 'Стежка №3 Філософська',
+				'Learn more about the events that took place in this area before and the artifacts of the past.',
+			cardThreeTitle: 'Trail #3 Philosophical.',
 			cardThreeText:
-				'Ця стежка не має маршруту. Гуляйте парком, і поруч із красивими місцями ви можете знайти невеличку табличку із красивою цитатою.',
+				' This trail has no route. Walk around the park and you can find a small plaque with a beautiful quote next to beautiful places.',
 
-			organizationSectionTitle: 'Організаторам заходів',
+			organizationSectionTitle: 'For event organizers',
 			organizationSectionTextOne:
-				'Якщо Ви бажаєте провести в парку захід, будь ласка зконтактуйте з нами.',
+				'If you want to hold an event in the park, please contact us.',
 			organizationSectionTextTwo:
-				'Зверніть увагу, що є певні обмеження щодо заходів в парку:',
+				'Please note that there are certain restrictions on activities in the park:	',
 
-			important: 'Важливо',
+			important: 'Important',
 			importantTextOne:
-				"В парку для забезпечення спокою для гніздування птахів, діє режим тиші з 1 квітня до 15 червня. Річ у тому, що у квітні-травні у птахів та тварин зазвичай народжується потомство. Зайвий шум може їх налякати та навіть змусити залишити дитинчат. Тому дотримання цих умов необхідно для підтримки популяції звірів. Варто зазначити, що сезон тиші запроваджений на законодавчому рівні та регламентується статтею 39 закону України 'Про тваринний світ'. Тому в цей час ми не дозволимо проведення заходів із голосною музикою, надмірним шумом і т.д.",
+				'In order to ensure peace for nesting birds, the park is quiet from April 1 to June 15. The reason is that in April and May, birds and animals usually give birth to offspring. Excessive noise can frighten them and even force them to leave their young. Therefore, observance of these conditions is necessary to maintain the animal population. It is to be noted that the silence season was introduced at the legislative level and is regulated by Article 39 of the Law of Ukraine "On Wildlife". Therefore, during this time, we will not allow events with loud music, excessive noise, etc.',
 			importantTextTwo:
-				' Якщо Ви бажаєте посадити в парку дерева, зверніться до нас. Парк створений за принципами ландшафтних композицій, і з відповідним видовим складом рослин. Рослини що на думку адміністрації парку, порушають його структуру, можуть бути видалені. Тому щоб Вам не було прикро за особисто посаджене дерево - попередньо варто узгодити місце висадки і вид рослини.  Більше того, ми самі будемо опікуватися ним.',
+				'If you would like to plant trees in the park, please contact us. The park was created according to the principles of landscape compositions, and with the appropriate species composition of plants. Plants that, in the opinion of the park administration, violate its composition may be removed. Therefore, in order not to feel bad about the tree you personally planted, you should first agree on the planting site and the type of plant. Moreover, we will take care of it ourselves.',
 			importantTextThree:
-				"Ми вітаємо будь-яку допомогу парку: якщо Ви хочете зробити толоку-прибирання, спортивний або інший захід, створити на теріторії парку якийсь об'єкт чи майданчик - зверніться до нас, щоб ми спільно знайшли найкращий варіант реалізації Вашої ідеї.",
+				'We welcome any help from the park: if you want to organize a clean-up day, a sporting or other event, or create an object or a playground in the park, please contact us so that we can find the best way to implement your idea.',
 
-			rulesTitle: 'Правила поведінки для відвідувачів',
+			rulesTitle: 'Rules of behavior for visitors',
 			rulesTextOne:
-				'Загалом варто керуватися принципом що в гостях у мешканців парку: рослин і тварин що тут проживають.',
+				'In general, you should be guided by the principle that you are visiting the inhabitants of the park: the plants and animals that live here.',
 			rulesTextTwo:
-				"Згідно ЗУ: 'Про природно-заповідний фонд України' Відвідувачам дозволено:",
-			rulesListOne: 'Гуляти, проводити екскурсії тримаючись стежок',
-			rulesListTwo: 'Фотографувати',
-			rulesListThree: 'Займатися спортом',
-			rulesListFour: 'Велопрогулянки',
-			rule: 'Правило',
+				'According to the Law of Ukraine: "On the Nature Reserve Fund of Ukraine", visitors are allowed:',
+			rulesListOne: 'Walking, conducting excursions along the trails',
+			rulesListTwo: 'Take photos',
+			rulesListThree: 'Go in for sports',
+			rulesListFour: 'Cycling',
+			rule: ' ',
 			ruleOneText:
-				'Варто утриматися від розведення вогнищ (це псує грунт під кострищем - вбиває мікроорганізми).',
+				'It is worth refraining from making fires (it spoils the soil under the fire and kills microorganisms)',
 			ruleTwoText:
-				'Квіти і особливо першоцвіти мають рости в парку, зривати їх заборонено.',
+				'Flowers, especially primroses, are supposed to grow in the park, and it is forbidden to pick them.',
 			ruleThreeText:
-				'Не можна порушувати життя тварин парку: полювати, псувати - залазити в нори тварин, гнізда птахів, мурашники і т.д.',
-			ruleFourText:
-				' Варто берегти дерева, кущі та заборонено добувати березовий сік.',
+				"It is forbidden to disturb the life of the park's animals: to hunt, to spoil - to climb into animal burrows, bird nests, ant hills, etc.",
+			ruleFourText: 'Tidy up after yourself and your four-legged friends',
 			ruleFiveText:
-				'Парк треба любити ногами, тому  для машин і інших моторизованих засобів територія закрита.',
-			ruleSixText: 'Прибрати за собою і своїми чотириногими друзями.',
-			goodLuckText: 'Гарного відпочинку!',
+				'You need to love the park with your feet and eyes, so the territory is closed to cars and other motorized vehicles.',
+			ruleSixText:
+				'Trees and bushes should be protected. It is forbidden to extract birch sap',
+			goodLuckText: 'Have a good rest!',
 		},
 		attentionVisitors: {
 			title: 'To the attention of visitors',
