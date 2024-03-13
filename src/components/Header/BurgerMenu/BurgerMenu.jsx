@@ -69,7 +69,9 @@ const BurgerMenu = () => {
 							</NavLink>
 						</li>
 						<li>
-							<NavLink to="/service">{t('header.navigation.services')}</NavLink>
+							<NavLink to="/services">
+								{t('header.navigation.services')}
+							</NavLink>
 						</li>
 						<li>
 							<NavLink to="/contact">{t('header.navigation.contacts')}</NavLink>
