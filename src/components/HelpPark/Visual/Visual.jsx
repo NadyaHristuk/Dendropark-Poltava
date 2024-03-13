@@ -10,7 +10,7 @@ import css from './Visual.module.scss';
 
 export const Visual = () => {
 	return (
-		<picture>
+		<picture className={css.pictureWrap}>
 			<source
 				className={css.picture}
 				srcSet={`
