@@ -8,23 +8,25 @@ import { icons } from '../../../assets';
 import { useMedia } from '../../../hooks/useMedia';
 import { useRef } from 'react';
 
-export const HistoryCreation = ({ onClick }) => {
+export const HistoryCreation = ({ onClick, onPicturesContainerHeight }) => {
 	const { isDesktop } = useMedia();
 	const { t } = useTranslation();
-	const historyCreationRef = useRef(null);
+	const picturesContainerRef = useRef(null);
 
 	const handleReduceButtonClick = () => {
-		onClick();
-		if (historyCreationRef.current) {
+		if (picturesContainerRef.current) {
+			const height = picturesContainerRef.current.offsetTop;
+			onPicturesContainerHeight(height);
 			window.scrollTo({
-				top: historyCreationRef.current.offsetTop,
+				top: height,
 				behavior: 'smooth',
 			});
 		}
+		onClick();
 	};
 
 	return (
-		<div className={css.historyCreationContainer} ref={historyCreationRef}>
+		<div ref={picturesContainerRef} className={css.historyCreationContainer}>
 			<p className={css.historyCreationText}>
 				{t('about.descriptionFirstParagraph')}
 				<br />
