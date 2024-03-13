@@ -16,10 +16,10 @@
 		padding-bottom: 20px;
 	}
 
-	// @include media-rules(desktop) {
-	// 	padding-top: 60px;
-	// 	padding-bottom: 18px;
-	// }
+	@include media-rules(desktop) {
+		padding-top: 60px;
+		padding-bottom: 18px;
+	}
 }
 
 .footer_logo_and_sections_wrapper {
@@ -35,10 +35,10 @@
 		align-items: flex-start;
 	}
 
-	// @include media-rules(desktop) {
-	// 	padding-top: 60px;
-	// 	padding-bottom: 18px;
-	// }
+	@include media-rules(desktop) {
+		width: 1288px;
+		margin-bottom: 50px;
+	}
 }
 
 .logo {
@@ -221,9 +221,4 @@
 	width: 36px;
 	height: 36px;
 	fill: $snowdrift;
-
-	@include media-rules(tablet) {
-		width: 40px;
-		height: 40px;
-	}
 }
