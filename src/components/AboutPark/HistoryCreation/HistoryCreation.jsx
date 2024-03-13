@@ -6,12 +6,25 @@ import { yaninaYakivnaPicture } from '../Picture/yaninaYakivna';
 import css from './HistoryCreation.module.scss';
 import { icons } from '../../../assets';
 import { useMedia } from '../../../hooks/useMedia';
+import { useRef } from 'react';
 
 export const HistoryCreation = ({ onClick }) => {
-	const { isTablet, isDesktop } = useMedia();
+	const { isDesktop } = useMedia();
 	const { t } = useTranslation();
+	const historyCreationRef = useRef(null);
+
+	const handleReduceButtonClick = () => {
+		onClick();
+		if (historyCreationRef.current) {
+			window.scrollTo({
+				top: historyCreationRef.current.offsetTop,
+				behavior: 'smooth',
+			});
+		}
+	};
+
 	return (
-		<div className={css.historyCreationContainer}>
+		<div className={css.historyCreationContainer} ref={historyCreationRef}>
 			<p className={css.historyCreationText}>
 				{t('about.descriptionFirstParagraph')}
 				<br />
@@ -100,7 +113,7 @@ export const HistoryCreation = ({ onClick }) => {
 					{t('about.historyCreationSectionThirdArtickle')}
 				</p>
 			</div>{' '}
-			<button className={css.reduceButton} onClick={onClick}>
+			<button className={css.reduceButton} onClick={handleReduceButtonClick}>
 				{t('about.reduceButton')}
 				<svg className={css.vectorIcon}>
 					<use href={`${icons}#icon-Vector-top`}></use>
