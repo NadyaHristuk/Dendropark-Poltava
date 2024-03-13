@@ -57,7 +57,7 @@ export const ServicesStore = () => {
 								<p className={css.store_subtitle}>{title}</p>
 								<p className={css.store_descr}>{description}</p>
 							</div>
-							<p className={css.store_price}>Ціна: {price}</p>
+							<p className={css.store_price}>Ціна: {price} грн.</p>
 						</div>
 						<a
 							className={css.store_btn}
