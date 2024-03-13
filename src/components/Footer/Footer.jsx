@@ -23,7 +23,7 @@ const Footer = () => {
 	return (
 		<Container className={s.footer_container}>
 			<footer className={s.footer}>
-				<Link to="/" className={s.logo}>
+				<HashLink smooth to="/#header" className={s.logo}>
 					<picture>
 						<source srcSet={`${logo1x} 1x, ${logo2x} 2x`} />
 						<img
@@ -38,7 +38,7 @@ const Footer = () => {
 						<span> {logoTitleSpan} </span>
 						{logoTitleLastWord}
 					</p>
-				</Link>
+				</HashLink>
 				<FooterSectionsWrapper>
 					{/* Взаємодія */}
 					<FooterSection>
@@ -47,19 +47,19 @@ const Footer = () => {
 						</p>
 						<ul>
 							<li className={s.section_option}>
-								<Link to="/vzaemodia">
+								<HashLink smooth to="/vzaemodia#header">
 									{t('footer.sections.interaction.options.researchTrails')}
-								</Link>
+								</HashLink>
 							</li>
 							<li className={s.section_option}>
-								<Link to="/vzaemodia">
+								<HashLink smooth to="/vzaemodia#organizators-section">
 									{t('footer.sections.interaction.options.activities')}
-								</Link>
+								</HashLink>
 							</li>
 							<li className={s.section_option}>
-								<Link to="/vzaemodia">
+								<HashLink smooth to="/vzaemodia#rules-section">
 									{t('footer.sections.interaction.options.rulesOfConduct')}
-								</Link>
+								</HashLink>
 							</li>
 						</ul>
 					</FooterSection>
@@ -70,16 +70,19 @@ const Footer = () => {
 						</p>
 						<ul>
 							<li className={s.section_option}>
-								<Link to="/chronicles">
+								<HashLink smooth to="/chronicles#header">
 									{t('footer.sections.materials.options.chronicle')}
-								</Link>
+								</HashLink>
 							</li>
 							<li className={s.section_option}>
-								<Link to="/chronicles">
+								<HashLink smooth to="/chronicles#documents-section">
 									{t('footer.sections.materials.options.documents')}
-								</Link>
+								</HashLink>
 							</li>
 							<li className={s.section_option}>
+								<HashLink smooth to="/chronicles#documents-section">
+									{t('footer.sections.materials.options.documents')}
+								</HashLink>
 								<Link to="/">
 									{t('footer.sections.materials.options.help')}
 								</Link>

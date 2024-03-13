@@ -7,20 +7,20 @@ import { SectionWrapper } from './SectionWrapper/SectionWrapper';
 import Map from '../Map/Map';
 
 const VzaemodiaPage = () => {
-  return (
-    <>
-      <TitleSection />
-      <SectionWrapper>
-        <Map />
-      </SectionWrapper>
-      <TrialSection />
-      <OrganizatorsSection />
-      <SectionWrapper>
-        <CalendarIframe />
-      </SectionWrapper>
-      <RulesSection />
-    </>
-  );
+	return (
+		<>
+			<TitleSection />
+			<SectionWrapper>
+				<Map />
+			</SectionWrapper>
+			<TrialSection />
+			<OrganizatorsSection />
+			<SectionWrapper>
+				<CalendarIframe />
+			</SectionWrapper>
+			<RulesSection />
+		</>
+	);
 };
 
 export default VzaemodiaPage;

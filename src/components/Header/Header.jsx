@@ -10,7 +10,6 @@ import { logo1x, logo2x } from '../../assets';
 import BurgerMenu from './BurgerMenu';
 import LngSwitcher from './LngSwitcher/LngSwitcher';
 
-
 const Header = () => {
 	const { isMobile, isTablet, isDesktop } = useMedia(); // Визначаємо тип пристрою користувача
 
@@ -23,7 +22,7 @@ const Header = () => {
 
 	return (
 		<Container>
-			<header className={s.header}>
+			<header className={s.header} id="header">
 				<Link to="/" className={s.logo}>
 					<picture>
 						<source srcSet={`${logo1x} 1x, ${logo2x} 2x`} />
