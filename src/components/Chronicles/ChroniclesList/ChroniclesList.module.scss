@@ -2,95 +2,112 @@
 @import '/src/styles/colors';
 
 .chroniclesSection {
-  margin-bottom: 120px;
-  scrollbar-color: #45b288 #edfaf6;
-  scrollbar-width:thin;
-  padding-top: 64px;
-  padding-right: 28px;
-  
-  @include media-rules(tablet) {
-    overflow-y: auto;
-    max-height: 1180px;
-    padding-top: 80px;
-  }
+	width: 358px;
+	padding-top: 80px;
+	padding-bottom: 64px;
 
-  // @include media-rules(desktop) {
-  // }
+	@include media-rules(tablet) {
+		width: 880px;
+		padding-bottom: 120px;
+		padding-top: 80px;
+		overflow-y: scroll;
+		max-height: 1108px;
+	}
 
-  // ::-webkit-scrollbar {
-  //   background-color: $stroke;
-  //   width: 6px;
-  // }
-  // ::-webkit-scrollbar-thumb {
-  //   background: $osnovniy;
-  //   border-radius: 4px;
-  // }
-  // ::-webkit-scrollbar-thumb:hover {
-  //   background: $emerald-field;
-  // }
+	@include media-rules(desktop) {
+		width: 1280px;
+	}
+
+	// ::-webkit-scrollbar {
+	//   background-color: $stroke;
+	//   width: 6px;
+	// }
+	// ::-webkit-scrollbar-thumb {
+	//   background: $osnovniy;
+	//   border-radius: 4px;
+	// }
+	// ::-webkit-scrollbar-thumb:hover {
+	//   background: $emerald-field;
+	// }
 }
 
 .title {
-  color: $pine-depths;
-  font-weight: 700;
-  font-family: 'Ermilov', serif;
+	color: $pine-depths;
+	font-weight: 700;
+	font-family: 'Ermilov', serif;
 
-  font-size: 44px;
-  line-height: 44px;
-  margin-bottom: 48px;
+	font-size: 44px;
+	line-height: 44px;
+	margin-bottom: 48px;
 }
 
 .list {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  gap: 32px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	gap: 32px;
+
+	// @include media-rules(tablet) {
+	// overflow-y: scroll;
+	// max-height: 1108px;
+	// 	// scrollbar-color: #45b288 #edfaf6;
+	// 	// scrollbar-width:thin;
+	// }
 }
 
 .item {
-  display: flex;
-  flex-direction: column;
-  border-radius: 20px;
-  overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	margin-bottom: 24px;
 
-  @include media-rules(tablet) {
-    flex-direction: row;
-  }
+	@include media-rules(tablet) {
+		width: 870px;
+		flex-direction: row;
+		padding-right: 20px;
+	}
 
-  @include media-rules(desktop) {
-  }
+	@include media-rules(desktop) {
+		width: 1270px;
+		align-items: flex-start;
+		justify-content: space-between;
+		padding-right: 30px;
+	}
 }
 
 .message {
-  font-family: 'Ermilov', sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 1.66667;
-  color: $pine-depths;
-  @include media-rules(tablet) {
-    font-size: 20px;
-    line-height: 1.5;
-  }
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Ermilov', sans-serif;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 1.66667;
+	color: $pine-depths;
 
-  @include media-rules(desktop) {
-    font-size: 28px;
-    line-height: 1.07143;
-  }
+	@include media-rules(tablet) {
+		font-size: 20px;
+		line-height: 1.5;
+	}
+
+	@include media-rules(desktop) {
+		font-size: 28px;
+		line-height: 1.07143;
+	}
 }
 
-.attention {
-  background-color: $stroke;
-  border: 6px solid $lilac-haze;
-  // fill: $pine-depths;
-  fill: $stroke;
-  border-radius: 50%;
-  width: 37px;
-  height: 37px;
-  margin-right: 16px;
+.icon_attention {
+	background-color: $stroke;
+	fill: $stroke;
+	border: 6px solid $lilac-haze;
+	border-radius: 100%;
+	width: 56px;
+	height: 44px;
+	margin-right: 16px;
+	padding: 5px;
 
-  @include media-rules(tablet) {
-    width: 40px;
-    height: 40px;
-  }
+	@include media-rules(tablet) {
+		width: 44px;
+		padding: 5px;
+	}
 }
-

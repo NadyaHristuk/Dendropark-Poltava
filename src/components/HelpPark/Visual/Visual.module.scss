@@ -1,16 +1,30 @@
 @import '/src/styles/colors';
 @import '/src/styles/mixins';
+.pictureWrap {
+	max-width: 390px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
+	@include media-rules(tablet) {
+		max-width: $tablet;
+	}
+
+	@include media-rules(desktop) {
+		max-width: $desktop;
+	}
+}
 .picture {
-  background-color: $osnovniy;
-  margin: 0 auto;
-  padding: 0;
-  margin-bottom: 64px;
-  object-fit: cover;
-  @include media-rules(tablet) {
-    margin-bottom: 80px;
-  }
-  @include media-rules(desktop) {
-    margin-bottom: 120px;
-  }
+	background-color: $osnovniy;
+	margin: 0 auto 60px;
+	max-width: 100%;
+
+	@include media-rules(tablet) {
+		margin: 0 auto 80px;
+	}
+
+	@include media-rules(desktop) {
+		margin: 0 auto 120px;
+	}
 }

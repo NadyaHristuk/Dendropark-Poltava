@@ -1,12 +1,11 @@
-import { photo1 } from '../../../assets';
 import scss from './StudentsItems.module.scss';
 import { icons } from '../../../assets';
 
-const StudentsItems = ({ name, role, linkedin }) => {
+const StudentsItems = ({ name, role, linkedin, src }) => {
   return (
     <li className={scss.list_item}>
-      <a className={scss.link} href={linkedin}>
-        <img className={scss.img} src={photo1} alt="photo-student" />
+      <a target="_blank" className={scss.link} href={linkedin}>
+        <img className={scss.img} src={src} alt="photo-student" />
         <div className={scss.wrapper}>
           <p className={scss.name}>{name}</p>
           <p className={scss.role}>{role}</p>

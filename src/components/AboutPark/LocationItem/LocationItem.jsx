@@ -19,7 +19,7 @@ export const LocationItem = ({ card }) => {
 		<li className={css.locationItem} id={card.locationID}>
 			{isMobile ? (
 				<>
-					<div className={`${css.numberSign}ы`}>
+					<div className={`${css.numberSign}`}>
 						{arabicToRoman(card.number)}
 					</div>
 					<div className={css.sliderContainer}>

@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router';
 import CommonLayout from './CommonLayout/CommonLayout';
-import Login from './pages/login/login';
+import Login from './pages/login/Login';
 import Documents from './pages/Documents/Documents';
 import Trials from './pages/Trials/Trials';
 import Products from './pages/Products/Products';
