@@ -1,4 +1,6 @@
 @import 'src/styles/_colors.scss';
+@import 'src/styles/_mixins.scss';
+@import 'src/styles/_breakpoints.scss';
 
 .footer_sections_wrapper {
 	width: 360px;
@@ -7,7 +9,9 @@
 	column-gap: 20px;
 	flex-wrap: wrap;
 	color: $snowdrift;
-	padding-bottom: 40px;
-	margin-bottom: 40px;
-	border-bottom: 1.01px solid rgba(221, 223, 228, 0.3);
+
+	@include media-rules(tablet) {
+		width: 493px;
+		column-gap: 40px;
+	}
 }
