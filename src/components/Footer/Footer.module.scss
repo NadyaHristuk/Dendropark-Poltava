@@ -72,10 +72,24 @@
 	border-right: 1px solid $snowdrift;
 }
 
+.footer_copyright_goit_wrapper {
+	display: flex;
+	align-items: center;
+}
+
 .footer_copyright_goit_text {
 	font-family: 'Innerspace', sans-serif;
 	font-weight: normal;
 	font-size: 14px;
 	line-height: 1.29; // line-height: 18px;
+	color: $snowdrift;
 	margin-right: 8px;
+}
+
+.footer_copyright_goit_logo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 58px;
+	height: 18px;
 }

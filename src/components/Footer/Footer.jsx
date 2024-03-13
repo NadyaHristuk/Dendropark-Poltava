@@ -4,7 +4,7 @@ import { HashLink } from 'react-router-hash-link';
 
 import Container from '../Container';
 import s from './Footer.module.scss';
-import { logo1x, logo2x } from '../../assets';
+import { icons, logo1x, logo2x } from '../../assets';
 
 import { useMedia } from '../../hooks';
 import FooterSection from './FooterSection';
@@ -133,9 +133,14 @@ const Footer = () => {
 						© Полтавський міський парк / 2024
 					</p>
 					<a>
-						<p className={s.footer_copyright_goit_text}>
-							Сайт розроблений студентами
-						</p>
+						<div className={s.footer_copyright_goit_wrapper}>
+							<p className={s.footer_copyright_goit_text}>
+								Сайт розроблений студентами
+							</p>
+							<svg className={s.footer_copyright_goit_logo}>
+								<use href={`${icons}#icon-goit-logo`}></use>
+							</svg>
+						</div>
 					</a>
 				</FooterCopyright>
 			</footer>
