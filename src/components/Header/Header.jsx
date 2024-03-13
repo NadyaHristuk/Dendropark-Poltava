@@ -7,8 +7,9 @@ import Container from '../Container';
 import s from './Header.module.scss';
 
 import { logo1x, logo2x } from '../../assets';
-import LngSwitcher from './LgnSwitcher/LngSwitcher';
 import BurgerMenu from './BurgerMenu';
+import LngSwitcher from './LngSwitcher/LngSwitcher';
+
 
 const Header = () => {
 	const { isMobile, isTablet, isDesktop } = useMedia(); // Визначаємо тип пристрою користувача
@@ -80,6 +81,7 @@ const Header = () => {
 						</a>
 					</address>
 				)}
+				{/* <LngSwitcher2 /> */}
 				<LngSwitcher />
 				{(isTablet || isMobile) && <BurgerMenu />}
 			</header>

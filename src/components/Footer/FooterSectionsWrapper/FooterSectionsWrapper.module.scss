@@ -1,0 +1,10 @@
+@import 'src/styles/_colors.scss';
+
+.footer_sections_wrapper {
+	width: 360px;
+	display: flex;
+	row-gap: 40px;
+	column-gap: 20px;
+	flex-wrap: wrap;
+	color: $snowdrift;
+}
