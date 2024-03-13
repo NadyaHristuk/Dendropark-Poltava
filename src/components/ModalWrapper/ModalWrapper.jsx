@@ -1,5 +1,6 @@
 import Modal from 'react-modal';
 import scss from './ModalWrapper.module.scss';
+import './ModalWrapper.module.scss';
 
 export const modalWrapper = (WrappedComponent) => {
   return function ModalWrapper(props) {
