@@ -1,14 +1,25 @@
 @import '../../styles/colors';
 @import '../../styles/mixins';
 
-@include media-rules(tablet) {
-}
-
 .modal_wrapper {
   width: 358px;
+  background-color: rgb(225, 244, 238);
+  border-radius: 13px;
   @include media-rules(tablet) {
     width: 784px;
-    padding: 0 40px;
+  }
+  @include media-rules(desktop) {
+    width: 954px;
+  }
+}
+
+.tablet_wrapper {
+  padding-top: 10px;
+  @include media-rules(tablet) {
+    padding: 32px 30px 22px 40px;
+  }
+  @include media-rules(desktop) {
+    padding: 40px 42px 24px 53px;
   }
 }
 
@@ -18,8 +29,17 @@
   gap: 16px;
   justify-content: center;
   overflow: auto;
-  height: calc(64px + 154px * 3);
-  padding-bottom: 30px;
+  height: 634px;
+  @include media-rules(tablet) {
+    column-gap: 20.34px;
+    row-gap: 26px;
+    height: 570px;
+  }
+  @include media-rules(desktop) {
+    column-gap: 23.73px;
+    row-gap: 26px;
+    height: 570px;
+  }
 }
 
 .list_wrapper::-webkit-scrollbar {
@@ -40,33 +60,60 @@
 
 .title {
   font-weight: 700;
-  font-size: 24px;
+  font-family: 'Ermilov', sans-serif;
+  font-size: 22px;
   line-height: 1;
-  margin-top: 50px;
   color: $pine-depths;
   text-align: center;
   @include media-rules(tablet) {
+    font-size: 24px;
+    text-align: left;
+  }
+  @include media-rules(desktop) {
     font-size: 29px;
   }
 }
 
 .subtitle {
   font-weight: 700;
+  font-family: 'Ermilov', sans-serif;
   font-size: 10px;
   line-height: 2.2;
   color: $pine-depths;
   text-align: center;
   margin-top: 7px;
-  margin-bottom: 26px;
+  margin-bottom: 22px;
+  @include media-rules(tablet) {
+    text-align: left;
+  }
+  @include media-rules(desktop) {
+    font-size: 13px;
+    margin-top: 9px;
+    margin-bottom: 12px;
+  }
 }
 
 .btn_close {
   position: absolute;
-  right: 21px;
-  top: 26px;
+  right: 15px;
+  top: 12px;
   cursor: pointer;
+  @include media-rules(tablet) {
+    right: 21px;
+    top: 26px;
+  }
+  @include media-rules(desktop) {
+    right: 21px;
+    top: 26px;
+  }
 }
 
 .btn_close svg {
   fill: $pine-depths;
+  width: 14px;
+  height: 14px;
+  @include media-rules(desktop) {
+    width: 16.78px;
+    height: 16.78px;
+  }
 }

@@ -36,6 +36,11 @@
 	display: flex;
 	flex-wrap: wrap;
 	gap: 32px;
+
+	@include media-rules(tablet) {
+		overflow-y: scroll;
+		max-height: 300px;
+	}
 }
 
 .item {
