@@ -6,14 +6,12 @@
 	padding-top: 80px;
 	padding-bottom: 64px;
 
-	// padding-right: 28px;
-
 	@include media-rules(tablet) {
 		width: 880px;
-		// padding-top: 64px;
 		padding-bottom: 120px;
-		overflow-y: auto;
 		padding-top: 80px;
+		overflow-y: scroll;
+		max-height: 1108px;
 	}
 
 	@include media-rules(desktop) {
@@ -49,18 +47,17 @@
 	flex-wrap: wrap;
 	gap: 32px;
 
-	@include media-rules(tablet) {
-		// overflow-y: scroll;
-		// max-height: 1108px;
-		// scrollbar-color: #45b288 #edfaf6;
-		// scrollbar-width:thin;
-	}
+	// @include media-rules(tablet) {
+	// overflow-y: scroll;
+	// max-height: 1108px;
+	// 	// scrollbar-color: #45b288 #edfaf6;
+	// 	// scrollbar-width:thin;
+	// }
 }
 
 .item {
 	display: flex;
 	flex-direction: column;
-	// border-radius: 20px;
 	overflow: hidden;
 	margin-bottom: 24px;
 
