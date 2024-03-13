@@ -1,2 +1,224 @@
-@import 'src/styles/_colors.scss'; 
-@import '../../styles/mixins'; 
+@import 'src/styles/_colors.scss';
+@import 'src/styles/_mixins.scss';
+@import 'src/styles/_breakpoints.scss';
+
+.footer_container {
+	color: $snowdrift;
+	background-color: $pine-depths;
+}
+
+.footer {
+	padding-top: 20px;
+	padding-bottom: 65px;
+
+	@include media-rules(tablet) {
+		padding-top: 40px;
+		padding-bottom: 20px;
+	}
+
+	@include media-rules(desktop) {
+		padding-top: 60px;
+		padding-bottom: 18px;
+	}
+}
+
+.footer_logo_and_sections_wrapper {
+	width: 360px;
+	padding-bottom: 40px;
+	margin-bottom: 40px;
+	border-bottom: 1.01px solid rgba(221, 223, 228, 0.3);
+
+	@include media-rules(tablet) {
+		width: 886px;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+
+	@include media-rules(desktop) {
+		width: 1288px;
+		margin-bottom: 50px;
+	}
+}
+
+.logo {
+	display: flex;
+	gap: 6px;
+	align-items: center;
+	margin-right: auto;
+	width: 213px;
+	margin-bottom: 20px;
+}
+
+.logoImg {
+	width: 54px;
+	height: 54px;
+}
+
+.logoTitle {
+	font-weight: bold;
+	line-height: 0.875; // line-height: 14px;
+	letter-spacing: -0.02em;
+	width: 159px;
+	padding: 13px 0;
+	margin-bottom: 0;
+	color: $snowdrift;
+
+	& span {
+		color: $light-color;
+	}
+}
+
+.section_title {
+	font-weight: bold;
+	font-size: 18px;
+	margin-bottom: 16px;
+
+	@include media-rules(tablet) {
+		font-size: 20px;
+		margin-bottom: 24px;
+	}
+}
+
+.section_option {
+	& a {
+		font-family: 'Innerspace', sans-serif;
+		font-weight: normal;
+		font-size: 14px;
+		color: $snowdrift;
+		@include transition(color);
+	}
+
+	@include media-rules(tablet) {
+		& a {
+			font-size: 16px;
+		}
+	}
+
+	&:not(:last-child) {
+		margin-bottom: 8px;
+	}
+
+	@include media-rules(tablet) {
+		&:not(:last-child) {
+			margin-bottom: 14px;
+		}
+	}
+
+	& a:hover,
+	& a:focus {
+		color: $light-color;
+	}
+}
+
+.footer_copyright_text_wrapper {
+	display: flex;
+	flex-direction: column;
+
+	@include media-rules(tablet) {
+		flex-direction: row;
+	}
+}
+
+.footer_copyright {
+	font-family: 'Innerspace', sans-serif;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 1.29; // line-height: 18px;
+	color: $snowdrift;
+	padding-right: 8px;
+	margin-right: auto;
+	margin-bottom: 4px;
+	border-right: 1px solid $snowdrift;
+
+	@include media-rules(tablet) {
+		font-size: 16px;
+		line-height: 1.5; // line-height: 24px;
+		padding-right: 12px;
+		margin-right: 0;
+		margin-bottom: 0;
+	}
+}
+
+.footer_copyright_goit_wrapper {
+	display: flex;
+	align-items: center;
+}
+
+.footer_copyright_goit_text {
+	font-family: 'Innerspace', sans-serif;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 1.29; // line-height: 18px;
+	color: $snowdrift;
+	margin-right: 8px;
+	@include transition(font-size);
+
+	@include media-rules(tablet) {
+		font-size: 16px;
+		line-height: 1.5; // line-height: 24px;
+		padding-left: 12px;
+	}
+}
+
+.footer_copyright_goit_icon_svg {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 58px;
+	height: 18px;
+
+	@include media-rules(tablet) {
+		width: 77px;
+		height: 23px;
+	}
+}
+
+.footer_copyright_goit_wrapper:is(:hover, :focus) {
+	cursor: pointer;
+}
+
+.footer_copyright_goit_wrapper:is(:hover, :focus) .footer_copyright_goit_text {
+	font-size: 16px;
+
+	@include media-rules(tablet) {
+		font-size: 18px;
+	}
+}
+
+.footer_copyright_goit_wrapper .footer_copyright_goit_icon_use {
+	opacity: 1;
+	@include transition(opacity);
+}
+.footer_copyright_goit_wrapper:is(:hover, :focus)
+	.footer_copyright_goit_icon_use {
+	opacity: 0;
+}
+
+.footer_copyright_goit_wrapper .footer_copyright_goit_icon_use_hover {
+	opacity: 0;
+	@include transition(opacity);
+}
+
+.footer_copyright_goit_wrapper:is(:hover, :focus)
+	.footer_copyright_goit_icon_use_hover {
+	opacity: 1;
+}
+
+.footer_social_networks_wrapper {
+	margin-top: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: 8px;
+
+	@include media-rules(tablet) {
+		margin-top: 0;
+	}
+}
+
+.footer_social_networks_icon {
+	width: 36px;
+	height: 36px;
+	fill: $snowdrift;
+}

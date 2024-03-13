@@ -3,22 +3,26 @@
 @import '/src/styles/colors';
 
 .container {
-  width: 100%;
+	width: 100%;
 
-  background-color: $snowdrift;
-  color: $pine-depths;
+	background-color: $snowdrift;
+	color: $pine-depths;
 
-  padding-top: 64px;
+	padding-top: 64px;
 
-  @include media-rules(tablet) {
-    padding-bottom: 80px;
-  }
+	@include media-rules(tablet) {
+		padding-top: 80px;
+	}
 
-  @include media-rules(desktop) {
-    padding-bottom: 120px;
-  }
+	@include media-rules(desktop) {
+		padding-top: 120px;
+	}
 }
 
 .lowPadding {
-  padding-bottom: 64px;
+	padding-bottom: 64px;
+}
+
+.container.topPadding {
+	padding-top: 73px;
 }

@@ -6,40 +6,55 @@ import { Picture } from '../Picture/Picture';
 import { heroPicture } from '../Picture/heroPicture';
 import Container from '../../Container/Container';
 import { SectionWrapper } from '../SectionWrapper/SectionWrapper';
+import { useMedia } from '../../../hooks/useMedia';
 
 export const ParkDescription = () => {
-  const { t } = useTranslation();
-  const [showMore, setShowMore] = useState(false);
+	const { t } = useTranslation();
+	const [showMore, setShowMore] = useState(false);
+	const { isDesktop, isMobile } = useMedia();
 
-  const ParkDescriptionClass = `${css.descriptionTitle} ${
-    showMore && css.descriptionTitleShowMore
-  }`;
+	const ParkDescriptionClass = `${css.descriptionTitle} ${
+		showMore && isMobile && css.descriptionTitleShowMore
+	}`;
 
-  return (
-    <SectionWrapper>
-      <h1 className={ParkDescriptionClass}>Про парк</h1>
-      <div className={css.heroPictureContainer}>
-        <Picture pictures={heroPicture} />
-      </div>
-      {!showMore && (
-        <Container>
-          <p className={css.parkDesription}>
-            {t('about.descriptionFirstParagraph')}
-            <br />
-            {t('about.descriptionSecondParagraph')}
-            <br />
-            {t('about.descriptionThirdParagraph')}
-          </p>
-          <button
-            onClick={() => setShowMore(true)}
-            className={css.readMoreButton}
-          >
-            {t('about.readMore')}
-          </button>
-        </Container>
-      )}
+	return (
+		<SectionWrapper topPadding>
+			{isDesktop ? (
+				<Container>
+					{' '}
+					<h1 className={ParkDescriptionClass}>{t('about.sectionTitle')}</h1>
+					<div className={css.heroPictureContainer}>
+						<Picture pictures={heroPicture} />
+					</div>
+				</Container>
+			) : (
+				<>
+					<h1 className={ParkDescriptionClass}>{t('about.sectionTitle')}</h1>
+					<div className={css.heroPictureContainer}>
+						<Picture pictures={heroPicture} />
+					</div>
+				</>
+			)}
+			{!showMore && (
+				<Container>
+					<p className={css.parkDesription}>
+						{t('about.descriptionFirstParagraph')}
+						<br />
+						{t('about.descriptionSecondParagraph')}
+						<br />
+						{t('about.descriptionThirdParagraph')}
+					</p>
 
-      {showMore && <HistoryCreation onClick={() => setShowMore(false)} />}
-    </SectionWrapper>
-  );
+					<button
+						onClick={() => setShowMore(true)}
+						className={css.readMoreButton}
+					>
+						{t('about.readMore')}
+					</button>
+				</Container>
+			)}
+
+			{showMore && <HistoryCreation onClick={() => setShowMore(false)} />}
+		</SectionWrapper>
+	);
 };
