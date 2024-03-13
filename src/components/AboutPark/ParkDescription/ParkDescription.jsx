@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import css from './ParkDescription.module.scss';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { HistoryCreation } from '../HistoryCreation/HistoryCreation';
 import { Picture } from '../Picture/Picture';
 import { heroPicture } from '../Picture/heroPicture';
@@ -12,10 +12,24 @@ export const ParkDescription = () => {
 	const { t } = useTranslation();
 	const [showMore, setShowMore] = useState(false);
 	const { isDesktop, isMobile } = useMedia();
+	const [picturesContainerHeight, setPicturesContainerHeight] = useState(0);
+
+	const handlePicturesContainerHeight = (height) => {
+		setPicturesContainerHeight(height);
+	};
 
 	const ParkDescriptionClass = `${css.descriptionTitle} ${
 		showMore && isMobile && css.descriptionTitleShowMore
 	}`;
+
+	useEffect(() => {
+		if (!showMore) {
+			window.scrollTo({
+				top: picturesContainerHeight,
+				behavior: 'smooth',
+			});
+		}
+	}, [showMore, picturesContainerHeight]);
 
 	return (
 		<SectionWrapper topPadding>
@@ -54,7 +68,12 @@ export const ParkDescription = () => {
 				</Container>
 			)}
 
-			{showMore && <HistoryCreation onClick={() => setShowMore(false)} />}
+			{showMore && (
+				<HistoryCreation
+					onClick={() => setShowMore(false)}
+					onPicturesContainerHeight={handlePicturesContainerHeight}
+				/>
+			)}
 		</SectionWrapper>
 	);
 };
