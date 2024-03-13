@@ -15,11 +15,13 @@ export const HistoryCreation = ({ onClick, onPicturesContainerHeight }) => {
 
 	const handleReduceButtonClick = () => {
 		if (picturesContainerRef.current) {
+			const container = picturesContainerRef.current;
 			const height = picturesContainerRef.current.offsetTop;
 			onPicturesContainerHeight(height);
-			window.scrollTo({
-				top: height,
+			container.scrollIntoView({
 				behavior: 'smooth',
+				block: 'start',
+				inline: 'nearest',
 			});
 		}
 		onClick();
