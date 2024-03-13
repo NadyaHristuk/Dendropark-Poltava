@@ -2,15 +2,19 @@
 @import '/src/styles/mixins';
 
 .picture {
-  background-color: $osnovniy;
-  margin: 0 auto;
-  padding: 0;
-  margin-bottom: 64px;
-  object-fit: cover;
-  @include media-rules(tablet) {
-    margin-bottom: 80px;
-  }
-  @include media-rules(desktop) {
-    margin-bottom: 120px;
-  }
+	background-color: $osnovniy;
+	width: 100%;
+	max-width: none;
+	height: auto;
+	padding: 0;
+	margin-bottom: 64px;
+	@include media-rules(tablet) {
+		margin-bottom: 80px;
+	}
+	@include media-rules(desktop) {
+		margin-bottom: 120px;
+		max-width: none;
+		object-fit: cover;
+		object-position: bottom;
+	}
 }

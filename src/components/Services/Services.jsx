@@ -6,7 +6,7 @@ import css from './ServicesInfo/ServicesInfo.module.scss';
 export const Services = () => {
 	return (
 		<>
-			<section className={css.services_wrapper}>
+			<section id="services" className={css.services_wrapper}>
 				<h2 className={css.title}>Наші послуги</h2>
 				<ServicesInfo items={infoData} />
 				<h2 className={css.title_store}>Ви можете придбати саджанці:</h2>
