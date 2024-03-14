@@ -114,17 +114,16 @@
 //Приклад відповіді
 // {
 //     "uk": {
-//         "number": "132",
 //         "title": "Прогулянка в парку",
 //         "description": "Це опис прогулянки в парку.",
 //         "imgAlt": "awdwadawdwadaw"
 //     },
 //     "en": {
-//         "number": "123",
 //         "title": "Park Walk",
 //         "description": "This is a description of a walk in the park.",
 //         "imgAlt": "awdadawdawdawd"
 //     },
+//      "number": "132",
 //     "locationId": "Location ID",
 //     "image": "https://res.cloudinary.com/dxgv5a6mt/image/upload/v1710236624/wapblkbvmeww5fu5s40p.png",
 //     "mapImage": "https://res.cloudinary.com/dxgv5a6mt/image/upload/v1710236624/s5xtqwnbpfldcmlehw87.png",
@@ -163,15 +162,14 @@
 //     "uk": {
 //         "title": "Прогулянка в парку",
 //         "description": "Це опис прогулянки в парку.",
-//         "price": 132,
 //         "imgAlt": "awdwadawdwadaw"
 //     },
 //     "en": {
 //         "title": "Park Walk",
 //         "description": "This is a description of a walk in the park.",
-//         "price": 123,
 //         "imgAlt": "awdadawdawdawd"
 //     },
+//     "price": 132,
 //     "image": "https://res.cloudinary.com/dxgv5a6mt/image/upload/v1710237130/zmm3vfmguhjyxzwgr0xx.png",
 //     "owner": "65eca34887b0cdc5bdd53ad8",
 //     "_id": "65f025cbaef0313843135303",
@@ -207,21 +205,92 @@
 //Приклад Відповіді
 // {
 //     "uk": {
-//         "distance": 132,
 //         "title": "Прогулянка в парку",
 //         "text": "Це опис прогулянки в парку.",
 //         "imgAlt": "awdwadawdwadaw"
 //     },
 //     "en": {
-//         "distance": 123,
 //         "title": "Park Walk",
 //         "text": "This is a description of a walk in the park.",
 //         "imgAlt": "awdadawdawdawd"
 //     },
+//     "distance": 132,
 //     "image": "https://res.cloudinary.com/dxgv5a6mt/image/upload/v1710236893/o422wk8zuuvii05a3r9o.png",
 //     "mapImage": "https://res.cloudinary.com/dxgv5a6mt/image/upload/v1710236893/ftqqkwiv1bo1s3sg06p3.png",
 //     "owner": "65eca34887b0cdc5bdd53ad8",
 //     "_id": "65f024dea8ed38e11bb7b1d2",
 //     "createdAt": "2024-03-12T09:48:14.332Z",
 //     "updatedAt": "2024-03-12T09:48:14.332Z"
+// }
+// ==========================================================
+// QR
+
+// const PRODUCTS_ENDPOINT = "/changeqr";
+//getById = /changeqr/:id
+//post = /changeqr
+//delete = /changeqr/:id
+//put = /changeqr/:id
+
+// {
+//   "uk": {
+//     "title": "Назва продукту",
+//     "description": "Опис продукту",
+//   },
+//   "en": {
+//     "title": "Product Title",
+//     "description": "Product Description",
+//   },
+//    "icon": "Шлях до іконки"
+// }
+
+//Приклад відповіді
+// {
+//     "uk": {
+//         "buttonText": "Прогулянка в парку",
+//         "description": "Це опис прогулянки в парку.",
+//     },
+//     "en": {
+//         "buttonText": "Park Walk",
+//         "description": "This is a description of a walk in the park.",
+//     },
+//     "owner": "65eca34887b0cdc5bdd53ad8",
+//     "_id": "65f025cbaef0313843135303",
+//     "createdAt": "2024-03-12T09:52:11.073Z",
+//     "updatedAt": "2024-03-12T09:52:11.073Z"
+// }
+
+// ==========================================================
+// SERVICES
+
+// const PRODUCTS_ENDPOINT = "/services";
+//getById = /services/:id
+//post = /services
+//delete = /services/:id
+//put = /services/:id
+
+// {
+//   "uk": {
+//     "title": "Назва продукту",
+//     "description": "Опис продукту",
+//   },
+//   "en": {
+//     "title": "Product Title",
+//     "description": "Product Description",
+//   },
+// }
+
+//Приклад відповіді
+// {
+//     "uk": {
+//         "title": "Прогулянка в парку",
+//         "description": "Це опис прогулянки в парку.",
+//     },
+//     "en": {
+//         "title": "Park Walk",
+//         "description": "This is a description of a walk in the park.",
+//     },
+//     "owner": "65eca34887b0cdc5bdd53ad8",
+//     "_id": "65f025cbaef0313843135303",
+//     "createdAt": "2024-03-12T09:52:11.073Z",
+//     "updatedAt": "2024-03-12T09:52:11.073Z"
 // }

@@ -1,0 +1,41 @@
+[
+	{
+		"uk": {
+			"title": "Стежка №1 Екологічна.",
+			"text": "Дізнайтесь більше про природу парку, а також екологічні принципи.",
+			"imgAlt": "Зображення парку"
+		},
+		"en": {
+			"title": "Trail No. 1 Ecological.",
+			"text": "Learn more about the nature of the park and its ecological principles.",
+			"imgAlt": "Park Image"
+		},
+		"distance": 1400
+	},
+	{
+		"uk": {
+			"title": "Стежка №2 Історична.",
+			"text": "Дізнайтесь більше про події що мали місце на цій території раніше, і артефакти минулих часів.",
+			"imgAlt": "Зображення парку"
+		},
+		"en": {
+			"title": "Trail #2 Historical.",
+			"text": "Learn more about the events that took place in this area before and the artifacts of the past.",
+			"imgAlt": "Park Image"
+		},
+		"distance": 1400
+	},
+	{
+		"uk": {
+			"title": "Стежка №3 Філософська.",
+			"text": "Ця стежка не має маршруту. Гуляйте парком, і поруч із красивими місцями ви можете знайти невеличку табличку із красивою цитатою.",
+			"imgAlt": "Зображення парку"
+		},
+		"en": {
+			"title": "Trail #3 Philosophical.",
+			"text": "This trail has no route. Walk around the park and you can find a small plaque with a beautiful quote next to beautiful places.",
+			"imgAlt": "Park Image"
+		},
+		"distance": 1400
+	}
+]

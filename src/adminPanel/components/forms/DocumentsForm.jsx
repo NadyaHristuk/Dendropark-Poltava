@@ -16,7 +16,7 @@ const DocumentsForm = () => {
 			},
 			document: values.document,
 		});
-		console.log('Login response:', response);
+		return response;
 	};
 
 	const onFinishFailed = (errorInfo) => {

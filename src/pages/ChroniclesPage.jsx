@@ -5,7 +5,7 @@ import Container from '../components/Container/Container';
 const ChroniclesPage = () => {
 	return (
 		<Container>
-			<ChroniclesList />
+			<ChroniclesList paddingTop={"160"}/>
 			<DocumentsList />
 		</Container>
 	);

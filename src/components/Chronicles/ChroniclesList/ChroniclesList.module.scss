@@ -3,32 +3,19 @@
 
 .chroniclesSection {
 	width: 358px;
-	padding-top: 80px;
+	// padding-top: 80px;
 	padding-bottom: 64px;
 
 	@include media-rules(tablet) {
 		width: 880px;
-		padding-bottom: 120px;
-		padding-top: 80px;
-		overflow-y: scroll;
-		max-height: 1108px;
+		// padding-top: 80px;
+		padding-bottom: 80px;
 	}
 
 	@include media-rules(desktop) {
 		width: 1280px;
+		padding-bottom: 120px;
 	}
-
-	// ::-webkit-scrollbar {
-	//   background-color: $stroke;
-	//   width: 6px;
-	// }
-	// ::-webkit-scrollbar-thumb {
-	//   background: $osnovniy;
-	//   border-radius: 4px;
-	// }
-	// ::-webkit-scrollbar-thumb:hover {
-	//   background: $emerald-field;
-	// }
 }
 
 .title {
@@ -43,16 +30,17 @@
 
 .list {
 	display: flex;
-	flex-direction: column;
+	// flex-direction: column;
 	flex-wrap: wrap;
-	gap: 32px;
+	// gap: 32px;
+	max-height: 1165px;
+	overflow-y: auto;
 
-	// @include media-rules(tablet) {
-	// overflow-y: scroll;
-	// max-height: 1108px;
-	// 	// scrollbar-color: #45b288 #edfaf6;
-	// 	// scrollbar-width:thin;
-	// }
+	@include media-rules(tablet) {
+		max-height: 1110px;
+		scrollbar-color: #45b288 #edfaf6;
+		scrollbar-width: thin;
+	}
 }
 
 .item {
@@ -65,6 +53,7 @@
 		width: 870px;
 		flex-direction: row;
 		padding-right: 20px;
+		margin-bottom: 32px;
 	}
 
 	@include media-rules(desktop) {
