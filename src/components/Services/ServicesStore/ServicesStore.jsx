@@ -1,7 +1,7 @@
 import css from './services-store.module.scss';
 import { usePagination } from '../../../hooks/usePagination';
 import { useEffect, useState } from 'react';
-import data from '../servicesStore';
+
 import Slider from '../../Slider/Slider';
 import { useMedia } from '../../../hooks/useMedia';
 import { fetchProducts } from '../../../adminPanel/serviceApiProducts';
