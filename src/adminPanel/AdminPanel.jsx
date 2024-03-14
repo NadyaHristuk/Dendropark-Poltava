@@ -5,6 +5,8 @@ import Documents from './pages/Documents/Documents';
 import Trials from './pages/Trials/Trials';
 import Products from './pages/Products/Products';
 import Locations from './pages/Locations/Locations';
+import Services from './pages/Services/Services';
+import HelpPark from './pages/HelpPark/HelpPark';
 import PrivateRoute from './Routes/PrivateRoute';
 import PublicRoute from './Routes/PublicRoute';
 import Welcome from './pages/Welcome/Welcome';
@@ -26,6 +28,14 @@ const AdminPanel = () => {
 				<Route
 					path="documents"
 					element={<PrivateRoute element={<Documents />} />}
+				/>
+				<Route
+					path="donation"
+					element={<PrivateRoute element={<HelpPark />} />}
+				/>
+				<Route
+					path="services"
+					element={<PrivateRoute element={<Services />} />}
 				/>
 			</Route>
 			<Route path="/login" element={<PublicRoute element={<Login />} />} />

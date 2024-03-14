@@ -256,57 +256,81 @@ export const en = {
 			sectionTitle: 'About park',
 			title: 'Poltava City Park',
 			descriptionFirstParagraph:
-				'Poltava City Park is a dendrological park, a park-monument of garden and park art of national importance in Ukraine. It is located in the northern part of the city of Poltava.',
+				'Poltava City Park is an arboretum, a park-monument of landscape art of national importance in Ukraine. It is located in the northern part of Poltava.',
 			descriptionSecondParagraph:
-				"The park's distinctive feature is its relief: numerous scenic areas that open up interesting perspectives, bright clearings. The main pathway starts from the entrance on Yakivchanska Street, passes through the western slope, across the valley to the east, and ends at the entrance from Luhova Street. All scenic areas, a cascade of ponds, a system of clearings, groups of decorative plants are concentrated along this line. Existing pathways were taken into account during the park's development, which had positive results. Roads were graded but then allowed to be overgrown, creating a natural appearance.",
+				"The park's peculiarity is its topography: many viewpoints offering interesting perspectives and bright lawns. The main route is a path that starts from the entrance from Yakovchanska Street, runs along the western gully, across the valley to the east, and ends at the entrance from Lugova Street. All viewpoints, a cascade of ponds, a system of lawns, and groups of ornamental plants are concentrated on this line. When developing the park, the existing network of trails was taken into account, which had its positive effects. The roads were graded, but then allowed to grow overgrown, which created a natural look.",
 			descriptionThirdParagraph:
-				'The park is rich in water sources; rivulets of the river called Tarnovschanska Tarapunka flow through all the ravines, which flows into the Vorskla River near the village of Voronina. The luxurious carpet of diverse grass combined with water, reed thickets, trees of various shapes and colors, creates an unforgettable effect.',
-			readMore: 'Read more about the park',
-			locationsTitle: 'Park Locations',
+				'The park is rich in springs, and all the beams are lined with branches of a river called Tarnovshchanska Tarapunka, which flows into the Vorskla near the village of Voronina. A luxurious carpet of grasses combined with water, reeds, trees of various shapes and colors create an unforgettable effect.',
+			readMore: 'The history of creation',
+			locationsTitle: 'Locations of the park',
 			locationsDivision:
-				'The park territory is divided into separate sections:',
+				'The park is subdivided into separate areas:',
 			historyCreationTitle: 'History of Creation',
 			historyCreationTextFirstArcticle:
-				'During the time of the Poltava battle, this territory was a dense uninhabited forest. The Yakivchansky forest turned into a forest on the Monastery Hill. During the Second World War, the green massif was cut down by the National Socialists. The construction of the park began in April 1962. By the decision of the Council of Ministers of Ukraine on March 4, 1962, "On the establishment of 9 model parks in the regional centers of Ukraine," the creation of a dendro park in Poltava was envisaged.',
+				'At the time of the Battle of Poltava, this area was a dense, virgin oak forest. The Yakivchansky forest was a part of the grove on Monastyrska Hill. During the Second World War, the green space was cut down by the National Socialists. The development of the park began in April 1962. The decision of the Council of Ministers of Ukraine of March 4, 1962 "On the establishment of 9 demonstration parks in the regional centers of Ukraine" provided for the creation of an arboretum in Poltava.',
 			historyCreationTextSecondArticle:
-				'And already on April 13-14, a park with an area of ​​17 hectares was laid. In March 1963, it was included in the list of botanical gardens and dendro parks of Ukraine. The initiators of the project were the chief architect of the city Lev Vaingort and dendrologist Yanina Yatsenko, who devoted 40 years of her life to the park.',
+				"	 On April 13-14, a 17-hectare park was laid out. In March 1963, it was included in the list of botanical gardens and arboretums of Ukraine. The project was initiated by the city's chief architect Lev Vainhort and dendrologist Yanina Yatsenko, who devoted 40 years of her life to the park.",
 			levVaingortContainer:
-				'Chief architect Lev Vaingort in front of the scheme of the future park (April 16, 1962)',
+				'Chief architect Lev Weingart in front of the scheme of the future park (April 16, 1962)',
 			ninaYacenkoContainer:
-				'Yanina Yakivna Yatsenko (May 31, 1926; Stavyshche, Kyiv region - December 2, 2016, Poltava) - founder and builder of the Poltava dendro park, author of the project "Park on the field of the Poltava battle."',
+				'Yanina Yakivna Yatsenko (31 May 1926, Stavyshche, Kyiv region - 2 December 2016, Poltava) was the founder of the Poltava Arboretum, author of the project "Park on the Field of the Battle of Poltava.',
 			subotnikContainer:
-				'Subbotnik with the aim of reforestation on the territory of the future dendro park. April 13-14, 1962.',
+				'A clean-up day for planting trees on the territory of the future arboretum. 13-14.04.1962 р',
 			historyCreationSectionFirstArtickle:
-				'A schematic plan of the zones "Forest-Steppe" and "Ukrainian Forest" was developed by the then chief architect of the city L.S. Vaingort and landscape architect V.V. Zhykharev. The planting project for the rest of the territory was carried out by dendrologist Ya. Ya. Yatsenko with the advice of the dendrology department of the Botanical Garden of the USSR Academy of Sciences, Professor L.I. Rubtsov.',
+				'The schematic plan of the Forest-Steppe and Ukrainian Oaks zones was developed by the then chief architect of the city Lev Vainhort and landscape architect V. Zhykharev. The planting project for the rest of the territory was carried out by dendrologist Y. Yatsenko on the advice of Professor L. Rubtsov, Head of the Department of Dendrology of the Botanical Garden of the Academy of Sciences of the USSR. ',
 			historyCreationSectionSecondArtickle:
-				'Dendro parks of Ukraine "Trostyanets", "Sofiyivka", "Oleksandriya" sent planting material, on the basis of which a collection of tree and shrub species was created - over 200 species.',
+				'The Trostianets, Sofiyivka, and Oleksandriia arboretums of Ukraine sent planting material, on the basis of which a collection of tree and shrub species - more than 200 species - was created.',
 			historyCreationSectionThirdArtickle:
-				'Since 1977, according to the resolution of the State Committee for Nature Conservation of the Ukrainian SSR, it has been declared a reserve with the status of a park-monument of garden and park art of republican significance. In 1987, the All-Union competition of parks took place, where the Poltava City Park (dendro park) took second place after the Izmailovsky Park in Moscow. In 1990, the park receives the status of a park-monument of garden and park art of national importance.',
+				'Since 1977, according to the resolution of the State Committee for Nature Protection of the Ukrainian SSR, it has been declared a protected area with the status of a park-monument of landscape gardening art of republican significance. In 1987, the All-Union Parks Competition was held, where Poltava City Park (Arboretum) took second place after Izmailovsky Park in Moscow. In 1990, the park was granted the status of a park-monument of landscape art of national value. ',
 			reduceButton: 'Collapse',
 			lookMapButton: 'Look on the map',
+			firstCardTitle: 'Ukrainian oak forest',
+			firstCardDescription: 'The 11-hectare Ukrainian grove is located on a flat plateau - it is the first area on the right when entering the park along Yakivchanska Street from the side of the Zinkivskyi railway crossing, and begins after the private garages. The grove was founded in the spring of 1962. It is a tract planted with tree species typical for the forest zone of Poltava region: oak, maple, birch (elm), ash, wild apple and pear trees, olive, apricots (self-seeding), and magaliebka cherry.',
+			secondCardTitle: 'Lilac Grove',
+			secondCardDescription: 'This is a western gully with very steep slopes just behind the Ukrainian Grove. In 1963, 2000 lilac bushes of 10 varieties of German selection were planted here. At the bottom of the gully there is a pond No. 1. A stream flows along the bottom of the gully and there are three keys that need to be cleaned. Weeping willows are planted on the dam of the pond, some of them have dried up. On the slope between the lilacs (along the Swedish Forest) and the dam of Pond No. 1, bear nuts, robinia, and hemlock grow.',
+			thirdCardTitle: 'The valley between ponds 1 and 2 ',
+			thirdCardDescription: 'This area is bordered on one side by residential development and a stream. The brook that flows from the dry slope of Pond 1 flows into the kopanka (it flows into Pond 2). Another stream that flows along the border of the park also flows into Pond No. 2. This stream and the kopanka are lined with poplars and willows. The bottom of the gully is a large meadow with lilacs, deutzia, hemlock, round snowberry, silver maple, mountain ash, white poplar, and pyramidal poplar planted in clumps. Under the viewpoint No. 4, at the bottom of the dam, there is silver moss and scots pine. A steep slope of this site borders the collection site at the top. At the top of the slope, walnut, vinegar sumac, and scots pine are planted. At the bottom of the slope, there are common spruce, hemlock, dogwood, forsythia, pteleus, scumpia, and western skeleton.',
+
+			fourthCardTitle: 'The Swedish Forest',
+			fourthCardDescription: ' (Yakivchansky Forest, Tamarin Forest) is a remnant of a natural oak forest that is now part of Poltava City Park. 300 years ago, this forest was dense, difficult to traverse, and covered a much larger area. Only 17.94 hectares of this forest have survived to this day, and they are of the old-growth origin. More than a hundred hectares of the forest were destroyed by the German National Socialists during World War II to heat barracks. Today, the Swedish Forest site is located in the northwestern part of Poltava City Park. In the center of the Yakivchansky Forest there is a clearing from which 8 radial alleys diverge. They were laid to mark the 200th anniversary of the Battle of Poltava. According to the original idea, each alley opened up a new view. The tree stand of this section of the Park is dominated by 130-140-year-old oaks with an admixture of heart-leaved linden, sharp-leaved maples and field maples. The Yakivchansky forest begins to the left of the main entrance to the Park. Its edge is a large clearing with single mighty oaks. Among them there are two forms of common oak - early and late. They can be easily distinguished in spring and winter. The former sheds its leaves for the winter, while the latter does so only in the spring of the following year (for this reason, the plant is also called a non-ligneous oak). The common oak is the best and most valuable species of our deciduous forests. The oak tree lives up to a thousand years, and some trees up to two thousand years. The scientific name of oak is Quercus, which means a beautiful, strong tree in Celtic. Oak is good at cleaning the air from dust and soot.',
+			fifthCardTitle: 'Forest-steppe',
+			fifthCardDescription: 'The forest-steppe zone covers an area of 5 hectares. It is located in the northern part of the park on the border with the village of Yakivtsi. The planting was carried out in 1962. According to the preliminary plan, the entire territory of the park was to be divided into geographical zones of the USSR. Therefore, the Forest-Steppe zone appeared. This area, the entrance to the park from the village of Yakivtsi, is in good condition. ',
+			sixthCardTitle: 'Northern Gully',
+			sixthCardDescription: 'The Northern Gully is a narrow, very deep ravine with steep slopes. It was planted until 1962 with root trees and shrubs. A pond was planned: the pond mirror was 0.25 hectares, and the dam was 20 meters high. But this project was abandoned because it would have been dangerous for vacationers. A stream flows along the bottom of the ravine, which flows into pond No. 4. Pine and rowan trees are planted at the entrance to the ravine.',
+			seventhCardTitle: 'Arborterium',
+			seventhCardDescription: "The original idea of the park's collection area was to create a place where exotic plants for our area could be found. The arboretum is located on a hill between the Northern and Western Beams, along the summer cottages, and gradually descends from west to east. It begins with dense bushes of weeping forsythia, which are among the first to delight the eye with golden flowers in spring. Here we can also find holly mahonia from North America, Simon poplar from China, Japanese sophora, German medlar, Amur velvet, a relic of the Tertiary period whose ancestors grew on Earth 50 million years ago, and many other interesting plants.",
+			eighthCardTitle: 'The center of the park with ponds 3 and 4 ',
+			eighthCardDescription: 'Between the two ponds is the geographical center of the park.',
+			ninthCardTitle: 'From the Experimental Station from the side of Shvedska Street to the end of Pond 4',
+			ninthCardDescription: ' On the southern side, it borders on the Experimental Station, on the western side - on residential development of Tarnovshchyna settlement. From the east, the boundary of the site reaches the dam of pond No. 4, from the north it borders on pond No. 3 and plot VIII. A Tronka poplar grows near the entrance from Shvedska Street. On the slope from the Experimental Station to the "Forest" there are sharp-leaved maples and Tatar maples. At the bottom of the slope, there is a spruce and birch grove. The Lesok area borders the fields of the Experimental Station. This is a part of the forest that existed throughout the park until 1942. The trees were cut down, but saved from uprooting. Therefore, the age of the oaks growing here is counted from 1942. Over time, maples, ash trees, and linden trees grew in the Forest, which grew by self-seeding. Oak is the main tree species in this area. The northern slope of the forest is prone to strong landslides. In 1970, a landslide pushed down 15 meters of soil along with young trees. ',
+			tenthCardTitle: 'Eastern Valley',
+			tenthCardDescription: 'The Eastern Valley occupies the largest area - about 40 hectares. from the dam of pond No. 4 to the entrance from Luhova Street. It consists of three parts: the southern slope - below the village of Yakivtsi, the northern slope - below the Research Station, and the sole - the lower part of the valley from the fourth dam to Luhova Street. It consists of three sections: 1. The southern sl ope - near the border with Yakivtsi. Photo 1 The slope below the village of Yakivtsi is the most problematic in the park. They started planting it in the late 60s. The slope is crossed by three terraces 2-3 meters wide, laid by the Research Station after the war. Maples, ash trees, hornbeams, and poplars are planted along the steep part of the slope. This slope was subjected to a very strong landslide. Before that, three streams flowed from the slope. The bottom line was perfectly level. But after the landslide, the relief changed completely: hills and dips appeared closer to the birch grove. Unfortunately, the streams disappeared and salt water came to the surface. So the project had to be changed. There is very little oak left, but some spruce, Banks pine, scots pine, hawthorn, Simon poplar, rowan, sea buckthorn, and many different honeysuckle trees remain. Therefore, everything that grows on the saline slope must be preserved, because it is almost impossible to plant it again. In the western part of the southern slope, from viewpoint No. 8 to the saline zone, there is an alley.This area is planted with oak, scots pine, birch, and willow.Starting from the birch grove along the bottom of the slope, birch, Banks pine, common spruce, and sea buckthorn grow. 2. The northern sl ope is near the border with the Research Station. The northern slope of the Eastern Valley is much lower than the southern one.There are two terraces along it, and a shelterbelt forest runs along the border with the Experimental Station, which means that another very picturesque road has been formed.However, due to the fact that ash trees grow in the forest belt, part of the northern slope is clogged with self - seeding, which needs to be cut down.The border with the dry slope of the fourth dam, where the outlet pipe goes, is partially swampy.Silver moss grows from the northern part of the dam, and higher up, beyond the road, there is deerberry sumac and sea buckthorn.These plants are very picturesque in the fall, when the leaves and fruits of the sumac turn orange and burgundy.Closer to Luhova Street, walnut trees are planted on the terraces. 3. The sole is located between the slopes and adjacent to Luhova Street. This part of the park was supposed to be the front part, as the entrance to the park is projected from Luhova Street.Therefore, an alley was laid in the middle.There are 8 species of poplars planted at the entrance: Simone, Tronka, white, laurel, balsam, Canadian poplar, as well as Taras willow, pyramidal oak, weeping willow, spherical willow, hawthorn, Manchurian apricot, common apricot, and sea buckthorn.This is the youngest part of the park, founded in 1983. ',
+			eleventhCardTitle: 'The spring',
+			eleventhCardDescription: 'The part of the slope descending from Yakivtsi is most interesting for a small spring.',
 		},
 		contacts: {
-			title: 'Контакти',
-			address: 'Адреса',
+			title: 'Contact us',
+			address: 'Address',
 			office:
-				'Офіс Комунального підприємства “Декоративні культури” що опікується парком:',
+				'The office of the municipal enterprise "Decorative Cultures" that takes care of the park:',
 			street:
-				'вулиця Української Центральної Ради (9-го Січня) 2, Полтава, Полтавська, 36000',
+				'9th of January (Ukrainian Central Rada) Street, 2, Poltava, 36000',
 			location:
-				'Парк знаходиться в північній частині міста. Найлегше дібратися до центрального входу з боку вулиці Яківчанської, від училища Зв’язку.',
-			phone: 'Телефон',
-			socialMedia: 'Слідкуйте за нами в соцмережах',
-			person1: 'Ляшко Ігор Іванович',
+				'The park is located in the northern part of the city. The easiest way to get to the main entrance is from Yakivchanska Street, from the School of Communications.',
+			phone: 'Phone',
+			socialMedia: 'Follow us on social networks',
+			titleAdministration: 'Administration',
+			person1: 'Lyashko Igor',
 			person1Position:
-				'Директор Комунального підприємства "Декоративні Культури"',
-			person2: 'Макуха Максим Григорович',
-			person2Position: 'Начальник відділу "Полтавський міський парк"',
-			person3: 'Ринковий Григорій Анатолійович',
-			person3Position: 'Майстер відділу "Полтавський міський парк"',
+				'Director of the Municipal Enterprise "Decorative Cultures"',
+			person2: 'Makukha Maksym',
+			person2Position: 'Head of the "Poltava City Park" Department',
+			person3: 'Rynkovy Grigory',
+			person3Position: 'Master of the department "Poltava City Park"',
 		},
 		notFound: {
-			text: 'Жаль, але, схоже, сторінку, яку ви шукаєте, не знайдено. Будь ласка, поверніться на домашню сторінку, натиснувши посилання нижче.',
-			button: 'Повернутись на головну',
+			text: "We're sorry, but it looks like the page you are looking for was not found. Please return to the homepage by clicking the link below.",
+			button: 'Back to home',
 		},
 		chronicles: {
 			chroniclesTitle: 'Chronicles',
@@ -353,11 +377,11 @@ export const en = {
 		},
 
 		hero: {
-			textFirst: 'Пам’ятка',
-			textColor: ' садово-паркового мистецтва ',
-			textLast: 'загальнодержавного значення',
-			title: 'Welcome до Полтавського міського парку!',
-			link: 'Локації парку',
+			textFirst: 'A landmark of',
+			textColor: ' garden and park art ',
+			textLast: 'of national value.',
+			title: 'Welcome to Poltava City Park!',
+			link: 'Park locations',
 		},
 	},
 };

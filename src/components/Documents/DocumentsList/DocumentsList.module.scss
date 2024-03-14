@@ -2,14 +2,14 @@
 @import '/src/styles/colors';
 
 .documentsSection {
-	margin-bottom: 64px;
+	padding-bottom: 64px;
 
 	@include media-rules(tablet) {
-		margin-bottom: 80px;
+		padding-bottom: 80px;
 	}
 
 	@include media-rules(desktop) {
-		margin-bottom: 201px;
+		padding-bottom: 201px;
 	}
 }
 

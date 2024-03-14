@@ -1,6 +1,6 @@
 import { ParkDescription } from '../components/AboutPark/ParkDescription/ParkDescription';
 import { ParkLocations } from '../components/AboutPark/ParkLocations/ParkLocations';
-// import Container from '../components/Container/Container';
+import 'overlayscrollbars/styles/overlayscrollbars.css';
 
 const AboutPage = () => {
 	return (
