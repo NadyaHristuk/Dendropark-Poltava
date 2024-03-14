@@ -286,27 +286,28 @@ export const en = {
 			lookMapButton: 'Look on the map',
 		},
 		contacts: {
-			title: 'Контакти',
-			address: 'Адреса',
+			title: 'Contact us',
+			address: 'Address',
 			office:
-				'Офіс Комунального підприємства “Декоративні культури” що опікується парком:',
+				'The office of the municipal enterprise "Decorative Cultures" that takes care of the park:',
 			street:
-				'вулиця Української Центральної Ради (9-го Січня) 2, Полтава, Полтавська, 36000',
+				'9th of January (Ukrainian Central Rada) Street, 2, Poltava, 36000',
 			location:
-				'Парк знаходиться в північній частині міста. Найлегше дібратися до центрального входу з боку вулиці Яківчанської, від училища Зв’язку.',
-			phone: 'Телефон',
-			socialMedia: 'Слідкуйте за нами в соцмережах',
-			person1: 'Ляшко Ігор Іванович',
+				'The park is located in the northern part of the city. The easiest way to get to the main entrance is from Yakivchanska Street, from the School of Communications.',
+			phone: 'Phone',
+			socialMedia: 'Follow us on social networks',
+			titleAdministration: 'Administration',
+			person1: 'Lyashko Igor',
 			person1Position:
-				'Директор Комунального підприємства "Декоративні Культури"',
-			person2: 'Макуха Максим Григорович',
-			person2Position: 'Начальник відділу "Полтавський міський парк"',
-			person3: 'Ринковий Григорій Анатолійович',
-			person3Position: 'Майстер відділу "Полтавський міський парк"',
+				'Director of the Municipal Enterprise "Decorative Cultures"',
+			person2: 'Makukha Maksym',
+			person2Position: 'Head of the "Poltava City Park" Department',
+			person3: 'Rynkovy Grigory',
+			person3Position: 'Master of the department "Poltava City Park"',
 		},
 		notFound: {
-			text: 'Жаль, але, схоже, сторінку, яку ви шукаєте, не знайдено. Будь ласка, поверніться на домашню сторінку, натиснувши посилання нижче.',
-			button: 'Повернутись на головну',
+			text: "We're sorry, but it looks like the page you are looking for was not found. Please return to the homepage by clicking the link below.",
+			button: 'Back to home',
 		},
 		chronicles: {
 			chroniclesTitle: 'Chronicles',
@@ -353,11 +354,11 @@ export const en = {
 		},
 
 		hero: {
-			textFirst: 'Пам’ятка',
-			textColor: ' садово-паркового мистецтва ',
-			textLast: 'загальнодержавного значення',
-			title: 'Welcome до Полтавського міського парку!',
-			link: 'Локації парку',
+			textFirst: 'A landmark of',
+			textColor: ' garden and park art ',
+			textLast: 'of national value.',
+			title: 'Welcome to Poltava City Park!',
+			link: 'Park locations',
 		},
 	},
 };
