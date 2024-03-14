@@ -7,13 +7,13 @@
   max-width: $mobile;
   margin: 0 auto;
   margin-bottom: 64px;
+
   @include media-rules(tablet) {
     margin-bottom: 80px;
     max-width: $tablet;
   }
 
   @include media-rules(desktop) {
-    margin-bottom: 120px;
     max-width: $desktop;
   }
 }
