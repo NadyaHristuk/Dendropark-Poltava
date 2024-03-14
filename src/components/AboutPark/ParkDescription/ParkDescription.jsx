@@ -33,22 +33,15 @@ export const ParkDescription = () => {
 
 	return (
 		<SectionWrapper topPadding>
-			{isDesktop ? (
-				<Container>
-					{' '}
-					<h1 className={ParkDescriptionClass}>{t('about.sectionTitle')}</h1>
-					<div className={css.heroPictureContainer}>
-						<Picture pictures={heroPicture} />
-					</div>
-				</Container>
-			) : (
-				<>
-					<h1 className={ParkDescriptionClass}>{t('about.sectionTitle')}</h1>
-					<div className={css.heroPictureContainer}>
-						<Picture pictures={heroPicture} />
-					</div>
-				</>
-			)}
+			<Container>
+				<h1 className={ParkDescriptionClass}>{t('about.sectionTitle')}</h1>
+			</Container>
+			<div
+				className={`${css.heroPictureContainer} ${css.heroContainerDesktop}`}
+			>
+				<Picture pictures={heroPicture} />
+			</div>
+
 			{!showMore && (
 				<Container>
 					<p className={css.parkDesription}>
