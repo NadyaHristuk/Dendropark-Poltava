@@ -7,13 +7,30 @@ import {
   map_desk_1x,
   map_desk_2x,
 } from '../../assets/images/map';
-import data from './data.json';
 import scss from './Map.module.scss';
 import MapItem from './MapItem/MapItem';
-import { ParkLocationsData } from '../AboutPark/ParkLocations/locations';
+import { useState } from 'react';
+import { useEffect } from 'react';
+import { fetchLocations } from '../../adminPanel/serviceApiLocations';
 
 const Map = () => {
   const { isDesktop, isMobile, isTablet } = useMedia();
+
+  const [locations, setLocations] = useState([]);
+
+  useEffect(() => {
+    const getLocations = async () => {
+      try {
+        const data = await fetchLocations();
+        console.log(data)
+        setLocations(data)
+      } catch (error) {
+        console.log(error.message);
+      }
+    }
+
+    getLocations();
+  }, [])
   
   return (
     <>
@@ -40,9 +57,9 @@ const Map = () => {
           />
 
           <ul>
-            {ParkLocationsData.map((item, index) => (
+            {locations.map((item, index) => (
               <MapItem
-                key={item.number}
+                key={item._id}
                 className={`item-${index + 1}`}
                 item={item}
               />
