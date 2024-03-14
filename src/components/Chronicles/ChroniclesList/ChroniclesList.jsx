@@ -42,9 +42,9 @@ const ChroniclesList = ({ paddingTop }) => {
 		>
 			<h3 className={css.title}>{t('chronicles.chroniclesTitle')}</h3>
 			{loading ? (
-				<p className={css.message}>Завантаження...</p>
+				<p className={css.message}>Loading...</p>
 			) : error ? (
-				<p className={css.message}>Помилка: {error}</p>
+				<p className={css.message}>Error: {error}</p>
 			) : chronicles.length > 0 ? (
 				isMobile ? (
 					<ChroniclesListUl items={chronicles}/>
