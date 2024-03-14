@@ -10,6 +10,7 @@ export { default as photo9 } from './images/ModalStudents/sitsinskyi_volodymyr.j
 export { default as photo10 } from './images/ModalStudents/kozerivskyi_stanislav.jpeg';
 export { default as photo11 } from './images/ModalStudents/chalyi_victor.jpeg';
 export { default as photo12 } from './images/ModalStudents/bartosh_olena.jpeg';
+export { default as photo14 } from './images/ModalStudents/polishchuk_andrii.jpeg';
 // for header
 export { default as logo1x } from './images/header/logo@1x.png';
 export { default as logo2x } from './images/header/logo@2x.png';
