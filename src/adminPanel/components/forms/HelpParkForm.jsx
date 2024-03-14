@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, Form, Input, message, Upload } from 'antd';
 import { UploadOutlined } from '@ant-design/icons';
 import { postHelpParkData } from '../../serviceApiHelpPark';
@@ -22,6 +22,7 @@ const props = {
 };
 
 const HelpParkForm = () => {
+	const [image, setImage] = useState(null);
 	const onFinish = async (values) => {
 		const response = await postHelpParkData({
 			uk: {
@@ -37,6 +38,13 @@ const HelpParkForm = () => {
 			document: values.document,
 		});
 		console.log('Login response:', response);
+	};
+
+	const normFile = (e) => {
+		if (Array.isArray(e)) {
+			return e;
+		}
+		return e?.fileList;
 	};
 
 	const onFinishFailed = (errorInfo) => {
@@ -75,11 +83,21 @@ const HelpParkForm = () => {
 			<Form.Item
 				label="Завантажте QR-code"
 				name="qrCode"
+				valuePropName="fileList"
+				getValueFromEvent={normFile}
 				rules={[{ required: true, message: 'Please input qr-code' }]}
 			>
-				<Upload {...props}>
+				<Upload.Dragger
+					name="logo"
+					listType="picture"
+					maxCount={1}
+					beforeUpload={(file) => {
+						setImage(file);
+						return false;
+					}}
+				>
 					<Button icon={<UploadOutlined />}>Завантажити</Button>
-				</Upload>
+				</Upload.Dragger>
 			</Form.Item>
 
 			<Form.Item

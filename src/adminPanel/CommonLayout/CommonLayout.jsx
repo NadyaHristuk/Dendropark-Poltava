@@ -17,9 +17,10 @@ import UserBar from '../components/UserBar/UserBar';
 const { Header, Content, Sider } = Layout;
 
 const labels = [
+	'Welcome',
 	'Product',
 	'Trials',
-	'Events',
+	'Locations',
 	'Documents',
 	'Donation',
 	'Services',
