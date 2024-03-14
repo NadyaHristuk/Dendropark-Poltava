@@ -18,7 +18,7 @@ const ChroniclesList = ({ paddingTop }) => {
 	const paddingTopValue = isMobile ? '150' : paddingTop;
 
 	const savedLanguage = localStorage.getItem(LANGUAGE_STORAGE_KEY) || 'ua';
-	console.log(savedLanguage);
+	// console.log(savedLanguage);
 	// console.log(chronicles);
 
 	useEffect(() => {

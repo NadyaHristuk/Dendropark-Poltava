@@ -20,7 +20,6 @@ const DocumentsList = () => {
 			try {
 				setLoading(true);
 				const response = await fetchDocuments();
-				console.log(response);
 				// console.log(response);
 				if (response) {
 					setDocuments(response);
