@@ -1,10 +1,9 @@
 import { useRef, useState } from 'react';
-import { icons } from '../../../assets';
 import { CSSTransition } from 'react-transition-group';
+import { HashLink } from 'react-router-hash-link';
+import { icons } from '../../../assets';
 import scss from './MapItem.module.scss';
 import './transition.scss';
-import { HashLink } from 'react-router-hash-link';
-import { arabicToRoman } from '../../AboutPark/LocationItem/romanNumerals';
 
 const MapItem = ({ item, className }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -20,7 +19,7 @@ const MapItem = ({ item, className }) => {
       onMouseEnter={handleChange}
       onMouseLeave={handleChange}
     >
-      {arabicToRoman(item.number)}
+      {item.uk.number}
 
       <CSSTransition
         in={isVisible}
@@ -36,12 +35,12 @@ const MapItem = ({ item, className }) => {
                 <use href={`${icons}#icon-close`}></use>
               </svg>
             </button>
-            <div className={scss.number}>{arabicToRoman(item.number)}</div>
-            <h3 className={scss.title}>{item.title}</h3>
-            <p className={scss.description}>{item.description}</p>
+            <div className={scss.number}>{item.uk.number}</div>
+            <h3 className={scss.title}>{item.uk.title}</h3>
+            <p className={scss.description}>{item.uk.description}</p>
             <HashLink
               smooth
-              to={`/about#${item.locationID}`}
+              to={`/about#${item._id}`}
               className={scss.link}
             >
               Детальніше
