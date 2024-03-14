@@ -5,6 +5,7 @@
 	width: 358px;
 	background-color: rgb(225, 244, 238);
 	border-radius: 13px;
+	z-index: 98;
 	@include media-rules(tablet) {
 		width: 784px;
 	}
