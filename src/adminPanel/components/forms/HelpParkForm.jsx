@@ -1,51 +1,74 @@
-import React, { useState } from 'react';
-import { Button, Form, Input, message, Upload } from 'antd';
-import { UploadOutlined } from '@ant-design/icons';
+// import { useState } from 'react';
+import { Button, Form, Input } from 'antd';
+// import { UploadOutlined } from '@ant-design/icons';
 import { postHelpParkData } from '../../serviceApiHelpPark';
 
-const props = {
-	name: 'file',
-	action: 'https://run.mocky.io/v3/435e224c-44fb-4773-9faf-380c5e6a2188',
-	headers: {
-		authorization: 'authorization-text',
-	},
-	onChange(info) {
-		if (info.file.status !== 'uploading') {
-			console.log(info.file, info.fileList);
-		}
-		if (info.file.status === 'done') {
-			message.success(`${info.file.name} file uploaded successfully`);
-		} else if (info.file.status === 'error') {
-			message.error(`${info.file.name} file upload failed.`);
-		}
-	},
-};
+// const props = {
+// 	name: 'file',
+// 	action: 'https://run.mocky.io/v3/435e224c-44fb-4773-9faf-380c5e6a2188',
+// 	headers: {
+// 		authorization: 'authorization-text',
+// 	},
+// 	onChange(info) {
+// 		if (info.file.status !== 'uploading') {
+// 			console.log(info.file, info.fileList);
+// 		}
+// 		if (info.file.status === 'done') {
+// 			message.success(`${info.file.name} file uploaded successfully`);
+// 		} else if (info.file.status === 'error') {
+// 			message.error(`${info.file.name} file upload failed.`);
+// 		}
+// 	},
+// };
 
 const HelpParkForm = () => {
-	const [image, setImage] = useState(null);
+	// const [image, setImage] = useState(null);
+
 	const onFinish = async (values) => {
-		const response = await postHelpParkData({
+		// const formData = new FormData();
+		// formData.append('uk[description]', values.description);
+		// formData.append('uk[buttonText]', values.buttonText);
+		// formData.append('en[description]', values.descriptionEn);
+		// formData.append('en[buttonText]', values.buttonTextEn);
+		// formData.append('link', values.link);
+		// formData.append('image', image);
+		const formData = {
 			uk: {
-				title: values.title,
-				qrCode: values.qrCode,
-				link: values.link,
+				description: values.description,
+				buttonText: values.buttonText,
 			},
 			en: {
-				title: values.titleEn,
-				sqrCode: values.qrCode,
-				link: values.link,
+				description: values.descriptionEn,
+				buttonText: values.buttonTextEn,
 			},
-			document: values.document,
-		});
-		console.log('Login response:', response);
+			link: values.link,
+		};
+
+		const response = await postHelpParkData(formData);
+		return response;
 	};
 
-	const normFile = (e) => {
-		if (Array.isArray(e)) {
-			return e;
-		}
-		return e?.fileList;
-	};
+	// {
+	//     "uk": {
+	//         "buttonText": "Прогулянка в парку",
+	//         "description": "Це опис прогулянки в парку.",
+	//     },
+	//     "en": {
+	//         "buttonText": "Park Walk",
+	//         "description": "This is a description of a walk in the park.",
+	//     },
+	//     "owner": "65eca34887b0cdc5bdd53ad8",
+	//     "_id": "65f025cbaef0313843135303",
+	//     "createdAt": "2024-03-12T09:52:11.073Z",
+	//     "updatedAt": "2024-03-12T09:52:11.073Z"
+	// }
+
+	// const normFile = (e) => {
+	// 	if (Array.isArray(e)) {
+	// 		return e;
+	// 	}
+	// 	return e?.fileList;
+	// };
 
 	const onFinishFailed = (errorInfo) => {
 		console.log('Failed:', errorInfo);
@@ -64,23 +87,39 @@ const HelpParkForm = () => {
 		>
 			<p>Заповніть Українською</p>
 			<Form.Item
-				label="Заголовок збору:"
-				name="title"
+				label="Description"
+				name="description"
 				rules={[{ required: true, message: 'Please input title' }]}
+			>
+				<Input name="description" />
+			</Form.Item>
+			<Form.Item
+				label="ButtonText"
+				name="buttonText"
+				rules={[{ required: true, message: 'Please input button text' }]}
 			>
 				<Input />
 			</Form.Item>
 
 			<p>Заповніть Англійською</p>
 			<Form.Item
-				label="Title:"
-				name="titleEn"
-				rules={[{ required: true, message: 'Please input title' }]}
+				label="DescriptionEn"
+				name="descriptionEn"
+				rules={[{ required: true, message: 'Please input title english' }]}
 			>
-				<Input />
+				<Input name="descriptionEn" />
+			</Form.Item>
+			<Form.Item
+				label="buttonTextEn"
+				name="buttonTextEn"
+				rules={[
+					{ required: true, message: 'Please input button text english' },
+				]}
+			>
+				<Input name="buttonTextEn" />
 			</Form.Item>
 
-			<Form.Item
+			{/* <Form.Item
 				label="Завантажте QR-code"
 				name="qrCode"
 				valuePropName="fileList"
@@ -98,14 +137,14 @@ const HelpParkForm = () => {
 				>
 					<Button icon={<UploadOutlined />}>Завантажити</Button>
 				</Upload.Dragger>
-			</Form.Item>
+			</Form.Item> */}
 
 			<Form.Item
-				label="Посилання на збір"
+				label="Link"
 				name="link"
 				rules={[{ required: true, message: 'Please input link' }]}
 			>
-				<Input />
+				<Input name="link" />
 			</Form.Item>
 
 			<Form.Item wrapperCol={{ offset: 8, span: 16 }}>
