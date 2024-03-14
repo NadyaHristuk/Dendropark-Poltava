@@ -3,13 +3,17 @@ import { useTranslation } from 'react-i18next';
 import css from './LocationItem.module.scss';
 import { arabicToRoman } from './romanNumerals';
 import { icons } from '../../../assets';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { useMedia } from '../../../hooks/useMedia';
+import { useScrollBar } from '../../../hooks/use-scrollbar';
 
 export const LocationItem = ({ card }) => {
 	const { t } = useTranslation();
 	const [isMapOpen, setIsMapOpen] = useState(false);
 	const { isMobile } = useMedia();
+	const textDescriptionWrapper = useRef(null);
+
+	useScrollBar(textDescriptionWrapper);
 
 	const toggleMap = () => {
 		setIsMapOpen((prevState) => !prevState);
@@ -47,9 +51,11 @@ export const LocationItem = ({ card }) => {
 						</div>
 					</div>
 					<h3 className={css.cardTitle}>
-						{arabicToRoman(card.number)}. {card.title}
+						{arabicToRoman(card.number)}. {t(card.title)}
 					</h3>
-					<p className={css.locationItemDescr}>{card.description}</p>
+					<div ref={textDescriptionWrapper}>
+						<p className={css.locationItemDescr}>{t(card.description)}</p>
+					</div>
 					<button
 						onClick={toggleMap}
 						className={css.locationItemButton}
@@ -66,11 +72,11 @@ export const LocationItem = ({ card }) => {
 					<div className={css.textCard}>
 						<div className={css.numberSign}>{arabicToRoman(card.number)}</div>
 						<h3 className={css.cardTitle}>
-							{arabicToRoman(card.number)}. {card.title}
+							{arabicToRoman(card.number)}. {t(card.title)}
 						</h3>
-
-						<p className={css.locationItemDescr}>{card.description}</p>
-
+						<div ref={textDescriptionWrapper}>
+							<p className={css.locationItemDescr}>{t(card.description)}</p>
+						</div>
 						<button
 							onClick={toggleMap}
 							className={css.locationItemButton}
