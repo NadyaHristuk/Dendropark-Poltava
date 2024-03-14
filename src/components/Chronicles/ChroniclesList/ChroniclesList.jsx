@@ -4,37 +4,42 @@ import ChroniclesListUl from './ChroniclesListUl';
 import { useTranslation } from 'react-i18next';
 import { useMedia } from '../../../hooks/useMedia';
 import { icons } from '../../../assets';
-// import fetchChronicles from './ChroniclesApi.js'
-import chronicles from '../сhronicles';
+import fetchChronicles from './ChroniclesApi.js';
+// import chronicles from '../сhronicles';
 import css from './ChroniclesList.module.scss';
 
-const ChroniclesList = () => {
-	// const [chronicles, setChronicles] = useState([]);
+const ChroniclesList = ({ paddingTop }) => {
+	const [chronicles, setChronicles] = useState([]);
 	const [loading, setLoading] = useState(false);
 	const [error, setError] = useState(null);
 	const { t } = useTranslation();
 	const { isMobile } = useMedia();
+	const paddingTopValue = isMobile ? '150' : paddingTop;
 
-	// useEffect(() => {
-	//     const fetchChroniclesList = async () => {
-	//         try {
-	//             setLoading(true);
-	//             const response = await fetchChronicles();
-	//             if (response) {
-	//                 setChronicles(response.sort((a, b) => b.date - a.date));
-	//             }
-	//         } catch (error) {
-	//             setError(error.message);
-	//         } finally {
-	//             setLoading(false);
-	//         }
-	//     };
+	useEffect(() => {
+		const fetchChroniclesList = async () => {
+			try {
+				setLoading(true);
+				const response = await fetchChronicles();
+				if (response) {
+					setChronicles(response.slice(0,8).sort((a, b) => b.date - a.date));
+				}
+			} catch (error) {
+				setError(error.message);
+			} finally {
+				setLoading(false);
+			}
+		};
 
-	//     fetchChroniclesList();
-	// }, []);
+		fetchChroniclesList();
+	}, []);
 
 	return (
-		<section id="litopys" className={css.chroniclesSection}>
+		<section
+			id="litopys"
+			className={css.chroniclesSection}
+			style={{ paddingTop: `${paddingTopValue}px` }}
+		>
 			<h3 className={css.title}>{t('chronicles.chroniclesTitle')}</h3>
 			{loading ? (
 				<p className={css.message}>Завантаження...</p>
@@ -42,7 +47,7 @@ const ChroniclesList = () => {
 				<p className={css.message}>Помилка: {error}</p>
 			) : chronicles.length > 0 ? (
 				isMobile ? (
-					<ChroniclesListUl />
+					<ChroniclesListUl items={chronicles}/>
 				) : (
 					<ul className={css.list}>
 						{chronicles.map(({ id, photo, title, description }) => (

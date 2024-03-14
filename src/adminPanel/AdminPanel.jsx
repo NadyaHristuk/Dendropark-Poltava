@@ -7,20 +7,38 @@ import Products from './pages/Products/Products';
 import Locations from './pages/Locations/Locations';
 import Services from './pages/Services/Services';
 import HelpPark from './pages/HelpPark/HelpPark';
+import PrivateRoute from './Routes/PrivateRoute';
+import PublicRoute from './Routes/PublicRoute';
+import Welcome from './pages/Welcome/Welcome';
 
 const AdminPanel = () => {
 	return (
 		<Routes>
 			<Route path="/" element={<CommonLayout />}>
-				<Route path="product" element={<Products />} />
-				<Route path="trials" element={<Trials />} />
-				<Route path="events" element={<Locations />} />
-				{/* замість локації мають бути події */}
-				<Route path="documents" element={<Documents />} />
-				<Route path="donation" element={<HelpPark />} />
-				<Route path="services" element={<Services />} />
+				<Route index element={<Welcome />} />
+				<Route
+					path="product"
+					element={<PrivateRoute element={<Products />} />}
+				/>
+				<Route path="trials" element={<PrivateRoute element={<Trials />} />} />
+				<Route
+					path="locations"
+					element={<PrivateRoute element={<Locations />} />}
+				/>
+				<Route
+					path="documents"
+					element={<PrivateRoute element={<Documents />} />}
+				/>
+				<Route
+					path="donation"
+					element={<PrivateRoute element={<HelpPark />} />}
+				/>
+				<Route
+					path="services"
+					element={<PrivateRoute element={<Services />} />}
+				/>
 			</Route>
-			<Route path="/login" element={<Login />} />
+			<Route path="/login" element={<PublicRoute element={<Login />} />} />
 		</Routes>
 	);
 };
