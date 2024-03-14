@@ -1,35 +1,35 @@
-import { Button, Form, Input, Upload, InputNumber } from 'antd';
+import { useState } from 'react';
+import { Button, Form, Input, InputNumber, Upload } from 'antd';
 import { UploadOutlined } from '@ant-design/icons';
 import { postTrial } from '../../serviceApiTrials';
 
 const TrialsForm = () => {
+	const [image, setImage] = useState(null);
+	const [imageMap, setImageMap] = useState(null);
+
 	const onFinish = async (values) => {
-		const response = await postTrial({
-			uk: {
-				title: values.title,
-				imgAlt: values.subtitle,
-				text: values.text,
-			},
-			en: {
-				title: values.titleEn,
-				imgAlt: values.imgAltEn,
-				text: values.textEn,
-			},
-			distance: values.distance,
-		});
-		console.log(' response:', response);
+		const formData = new FormData();
+		formData.append('uk[title]', values.title);
+		formData.append('uk[imgAlt]', values.imgAlt);
+		formData.append('uk[text]', values.text);
+		formData.append('en[title]', values.titleEn);
+		formData.append('en[imgAlt]', values.imgAltEn);
+		formData.append('en[text]', values.textEn);
+		formData.append('distance', values.distance);
+		formData.append('image', image);
+		formData.append('mapImage', imageMap);
+
+		const response = await postTrial(formData);
+		return response;
 	};
 
 	const normFile = (e) => {
 		if (Array.isArray(e)) {
 			return e;
 		}
-		return e?.fileList;
+		return e && e.fileList;
 	};
 
-	const onFinishFailed = (errorInfo) => {
-		console.log('Failed:', errorInfo);
-	};
 	// {
 	//   "uk": {
 	//     "title": "Прогулянка в парку",
@@ -53,7 +53,6 @@ const TrialsForm = () => {
 			style={{ maxWidth: 600 }}
 			initialValues={{ remember: true }}
 			onFinish={onFinish}
-			onFinishFailed={onFinishFailed}
 			autoComplete="off"
 		>
 			{/* uk */}
@@ -127,13 +126,17 @@ const TrialsForm = () => {
 					},
 				]}
 			>
-				<Upload
-					name="logo"
-					action="https://dendropark-poltava-back.onrender.com/api/trials"
+				<Upload.Dragger
+					name="image"
 					listType="picture"
+					maxCount={1}
+					beforeUpload={(file) => {
+						setImage(file);
+						return false;
+					}}
 				>
-					<Button icon={<UploadOutlined />}>Click to upload</Button>
-				</Upload>
+					<Button icon={<UploadOutlined />}>Click or drag to upload</Button>
+				</Upload.Dragger>
 			</Form.Item>
 			<Form.Item
 				name="mapImage"
@@ -147,13 +150,17 @@ const TrialsForm = () => {
 					},
 				]}
 			>
-				<Upload
-					name="logo"
-					action="https://dendropark-poltava-back.onrender.com/api/trials"
+				<Upload.Dragger
+					name="mapImage"
 					listType="picture"
+					maxCount={1}
+					beforeUpload={(file) => {
+						setImageMap(file);
+						return false;
+					}}
 				>
-					<Button icon={<UploadOutlined />}>Click to upload</Button>
-				</Upload>
+					<Button icon={<UploadOutlined />}>Click or drag to upload</Button>
+				</Upload.Dragger>
 			</Form.Item>
 
 			<Form.Item wrapperCol={{ offset: 8, span: 16 }}>

@@ -5,25 +5,52 @@ import {
 	ThunderboltOutlined,
 	CalendarOutlined,
 	ShopOutlined,
+	HeartOutlined,
+	SunOutlined,
+	GlobalOutlined,
 } from '@ant-design/icons';
 
 import { Layout, Menu, theme } from 'antd';
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Outlet, useLocation } from 'react-router-dom';
+import UserBar from '../components/UserBar/UserBar';
 
 const { Header, Content, Sider } = Layout;
 
-function getItemLabel(index) {
-	const labels = ['Product', 'Trials', 'Locations', 'Documents'];
-	const currentItem = labels[index];
+const labels = [
+	'Welcome',
+	'Product',
+	'Trials',
+	'Locations',
+	'Documents',
+	'Donation',
+	'Services',
+];
 
-	return <Link to={currentItem.toLowerCase()}>{currentItem}</Link>;
+function getItemLabel(index) {
+	const currentItem = labels[index];
+	const path = currentItem !== 'Welcome' ? currentItem.toLowerCase() : '/admin';
+
+	return <Link to={path}>{currentItem}</Link>;
+}
+
+function selectedKey(pathname) {
+	let index = labels.findIndex((label) =>
+		pathname.includes(label.toLowerCase())
+	);
+
+	if (index === -1) index += 1;
+
+	return [`${index + 1}`];
 }
 
 const items = [
+	GlobalOutlined,
 	ShopOutlined,
 	ThunderboltOutlined,
 	CalendarOutlined,
 	FileOutlined,
+	HeartOutlined,
+	SunOutlined,
 ].map((icon, index) => ({
 	key: String(index + 1),
 	icon: React.createElement(icon),
@@ -34,6 +61,7 @@ const CommonLayout = () => {
 	const {
 		token: { colorBgContainer, borderRadiusLG },
 	} = theme.useToken();
+	const { pathname } = useLocation();
 
 	return (
 		<Layout hasSider>
@@ -51,12 +79,14 @@ const CommonLayout = () => {
 				<Menu
 					theme="dark"
 					mode="inline"
-					defaultSelectedKeys={['1']}
+					defaultSelectedKeys={() => selectedKey(pathname)}
 					items={items}
 				/>
 			</Sider>
 			<Layout style={{ marginLeft: 200 }}>
-				<Header style={{ padding: 0, background: colorBgContainer }} />
+				<Header style={{ padding: 0, background: colorBgContainer }}>
+					<UserBar />
+				</Header>
 				<Content style={{ margin: '24px 16px 0', overflow: 'initial' }}>
 					<div
 						style={{

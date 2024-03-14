@@ -22,14 +22,14 @@ export const ParkDescription = () => {
 		showMore && isMobile && css.descriptionTitleShowMore
 	}`;
 
-	useEffect(() => {
-		if (!showMore) {
-			window.scrollTo({
-				top: picturesContainerHeight,
-				behavior: 'smooth',
-			});
-		}
-	}, [showMore, picturesContainerHeight]);
+	// useEffect(() => {
+	// 	if (!showMore) {
+	// 		window.scrollTo({
+	// 			top: picturesContainerHeight,
+	// 			behavior: 'smooth',
+	// 		});
+	// 	}
+	// }, [showMore, picturesContainerHeight]);
 
 	return (
 		<SectionWrapper topPadding>

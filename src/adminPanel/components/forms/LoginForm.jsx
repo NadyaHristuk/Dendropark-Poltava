@@ -1,13 +1,22 @@
 import { Button, Form, Input } from 'antd';
 import { login } from '../../srviceApiAuth';
+import { useNavigate } from 'react-router-dom';
+import { useCustomContext } from '../../../context/Context';
 
 const LoginForm = () => {
+	const navigate = useNavigate();
+	const { setAdminEmail } = useCustomContext();
+
 	const onFinish = async (values) => {
 		try {
 			const response = await login({
 				email: values.email,
 				password: values.password,
 			});
+
+			navigate('/admin/product');
+			setAdminEmail(values.email);
+
 			console.log('Login response:', response);
 		} catch (error) {
 			throw new Error(error.message);

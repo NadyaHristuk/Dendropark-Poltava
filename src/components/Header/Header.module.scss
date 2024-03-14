@@ -2,13 +2,20 @@
 @import 'src/styles/_mixins.scss';
 
 .header {
-	display: flex;
-	position: relative;
-	align-items: center;
+	position: fixed;
+	background-color: $snowdrift;
+	z-index: 999;
+	width: 100%;
 	padding: 16px 0;
 }
 
-.nav {
+.header .container {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.header .container .nav {
 	display: flex;
 	gap: 32px;
 	align-items: center;

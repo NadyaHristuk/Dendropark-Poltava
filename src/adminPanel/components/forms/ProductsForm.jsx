@@ -1,23 +1,23 @@
 import { Button, Form, Input, Upload, InputNumber } from 'antd';
+import { useState } from 'react';
 import { UploadOutlined } from '@ant-design/icons';
 import { postProduct } from '../../serviceApiProducts';
 
 const ProductsForm = () => {
+	const [image, setImage] = useState(null);
 	const onFinish = async (values) => {
-		const response = await postProduct({
-			uk: {
-				title: values.title,
-				description: values.description,
-				imgAlt: values.imgAlt,
-			},
-			en: {
-				title: values.titleEn,
-				description: values.descriptionEn,
-				imgAlt: values.imgAltEn,
-			},
-			price: values.price,
-		});
-		console.log(' response:', response);
+		const formData = new FormData();
+		formData.append('uk[title]', values.title);
+		formData.append('uk[imgAlt]', values.imgAlt);
+		formData.append('uk[description]', values.description);
+		formData.append('en[title]', values.titleEn);
+		formData.append('en[imgAlt]', values.imgAltEn);
+		formData.append('en[description]', values.descriptionEn);
+		formData.append('price', values.price);
+		formData.append('image', image);
+
+		const response = await postProduct(formData);
+		return response;
 	};
 
 	const normFile = (e) => {
@@ -83,7 +83,7 @@ const ProductsForm = () => {
 				name="price"
 				rules={[{ required: true, message: 'Please input subtitle' }]}
 			>
-				<InputNumber />
+				<InputNumber name="price" />
 			</Form.Item>
 			{/* en */}
 			<p>Заповніть Англійською</p>
@@ -121,13 +121,17 @@ const ProductsForm = () => {
 					},
 				]}
 			>
-				<Upload
+				<Upload.Dragger
 					name="logo"
-					action="https://dendropark-poltava-back.onrender.com/api/products"
 					listType="picture"
+					maxCount={1}
+					beforeUpload={(file) => {
+						setImage(file);
+						return false;
+					}}
 				>
-					<Button icon={<UploadOutlined />}>Click to upload</Button>
-				</Upload>
+					<Button icon={<UploadOutlined />}>Click or drag to upload</Button>
+				</Upload.Dragger>
 			</Form.Item>
 
 			<Form.Item wrapperCol={{ offset: 8, span: 16 }}>
