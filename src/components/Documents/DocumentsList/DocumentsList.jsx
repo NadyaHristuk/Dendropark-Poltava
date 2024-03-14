@@ -4,7 +4,7 @@ import DocumentsListUI from './DocumentsListUI';
 import { useTranslation } from 'react-i18next';
 import { useMedia } from '../../../hooks/useMedia';
 import fetchDocuments from './DocumentsApi';
-import documents from '../documents';
+// import documents from '../documents';
 import css from './DocumentsList.module.scss';
 
 const DocumentsList = () => {
@@ -20,6 +20,7 @@ const DocumentsList = () => {
 			try {
 				setLoading(true);
 				const response = await fetchDocuments();
+				console.log(response);
 				// console.log(response);
 				if (response) {
 					setDocuments(response);
