@@ -38,9 +38,9 @@ const DocumentsList = () => {
 		<section className={css.documentsSection} id="documents-section">
 			<h3 className={css.title}>{t('chronicles.documentsTitle')}</h3>
 			{loading ? (
-				<p>Loading...</p>
+				<p className={css.message}>Loading...</p>
 			) : error ? (
-				<p>Error: {error}</p>
+				<p className={css.message}>Error: {error}</p>
 			) : documents.length > 0 ? (
 				isMobile ? (
 					<DocumentsListUI items={documents} />

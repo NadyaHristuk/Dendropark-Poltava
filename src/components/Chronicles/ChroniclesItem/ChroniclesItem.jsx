@@ -10,7 +10,7 @@ const ChroniclesItem = ({ url, title, description }) => {
 
 	const { isMobile } = useMedia();
 
-	const shortDescription = description.slice(0, isMobile ? 80 : 300) + '...';
+	const shortDescription = description.slice(0, isMobile ? 80 : 420) + '...';
 	const imgUrl = url? url: DefaultImg;
 
 	const openModal = () => {

@@ -71,7 +71,10 @@
 
 	@include media-rules(tablet) {
 		margin-bottom: 12px;
+		height: 200px;
 	}
+
+
 }
 .button {
 	font-family: 'Innerspace', serif;
