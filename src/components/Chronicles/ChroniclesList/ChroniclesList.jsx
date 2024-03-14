@@ -6,6 +6,7 @@ import { useMedia } from '../../../hooks/useMedia';
 import { icons } from '../../../assets';
 import fetchChronicles from './ChroniclesApi.js';
 // import chronicles from '../сhronicles';
+import { LANGUAGE_STORAGE_KEY } from '../../../constants';
 import css from './ChroniclesList.module.scss';
 
 const ChroniclesList = ({ paddingTop }) => {
@@ -15,6 +16,10 @@ const ChroniclesList = ({ paddingTop }) => {
 	const { t } = useTranslation();
 	const { isMobile } = useMedia();
 	const paddingTopValue = isMobile ? '150' : paddingTop;
+
+	const savedLanguage = localStorage.getItem(LANGUAGE_STORAGE_KEY) || 'ua';
+	// console.log(savedLanguage);
+	// console.log(chronicles);
 
 	useEffect(() => {
 		const fetchChroniclesList = async () => {
