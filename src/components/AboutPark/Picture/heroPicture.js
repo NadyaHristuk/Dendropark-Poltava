@@ -15,7 +15,7 @@ export const heroPicture = {
     images: { oneX: tablet1x, twoX: tablet2x },
   },
   desktop: {
-    sizes: { height: 881, width: '100%' },
+    sizes: { height: 881, width: 1440 },
     images: { oneX: desktop1x, twoX: desktop2x },
   },
 };
