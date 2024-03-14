@@ -29,22 +29,6 @@ const TrialsForm = () => {
 		}
 		return e && e.fileList;
 	};
-
-	// {
-	//   "uk": {
-	//     "title": "Прогулянка в парку",
-	//     "text": "Це опис прогулянки в парку.",
-	//     "imgAlt": "Зображення парку"
-	//   },
-	//   "en": {
-	//     "title": "Park Walk",
-	//     "text": "This is a description of a walk in the park.",
-	//     "imgAlt": "Park Image"
-	//   },
-	//     "distance": 10,
-	//   "image": "Прикріпленний файл",
-	//   "mapImage": "Прикріпленний файл"
-	// }
 	return (
 		<Form
 			name="basic"

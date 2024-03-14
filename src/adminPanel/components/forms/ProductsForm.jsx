@@ -27,23 +27,6 @@ const ProductsForm = () => {
 		return e?.fileList;
 	};
 
-	const onFinishFailed = (errorInfo) => {
-		console.log('Failed:', errorInfo);
-	};
-	// {
-	//   "uk": {
-	//     "title": "Назва продукту",
-	//     "description": "Опис продукту",
-	//     "imgAlt": "Альтернативний текст для зображення"
-	//   },
-	//   "en": {
-	//     "title": "Product Title",
-	//     "description": "Product Description",
-	//     "imgAlt": "Image Alt Text"
-	//   },
-	//   "price": 10.99,
-	//   "image": "Прикріпленний файл"
-	// }
 	return (
 		<Form
 			name="basic"
@@ -52,7 +35,6 @@ const ProductsForm = () => {
 			style={{ maxWidth: 600 }}
 			initialValues={{ remember: true }}
 			onFinish={onFinish}
-			onFinishFailed={onFinishFailed}
 			autoComplete="off"
 		>
 			{/* uk */}
