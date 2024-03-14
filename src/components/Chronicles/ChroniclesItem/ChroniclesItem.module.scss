@@ -5,7 +5,7 @@
 	width: 357px;
 
 	@include media-rules(tablet) {
-		width: 380px;
+		width: 390px;
 	}
 	@include media-rules(desktop) {
 		width: 589px;
@@ -23,7 +23,7 @@
 		width: 390px;
 		height: 348px;
 		margin-bottom: 0px;
-		margin-right: 28px;
+		// margin-right: 28px;
 	}
 
 	@include media-rules(desktop) {
