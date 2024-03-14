@@ -29,7 +29,11 @@ export const HistoryCreation = ({ onClick, onPicturesContainerHeight }) => {
 
 	return (
 		<div ref={picturesContainerRef} className={css.historyCreationContainer}>
-			<p className={css.historyCreationText}>
+			<p
+				className={`${css.historyCreationText} ${
+					picturesContainerRef.current && css.scroll_animation
+				} `}
+			>
 				{t('about.descriptionFirstParagraph')}
 				<br />
 				{t('about.descriptionSecondParagraph')}
