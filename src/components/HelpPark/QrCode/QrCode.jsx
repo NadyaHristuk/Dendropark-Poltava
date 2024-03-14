@@ -1,30 +1,64 @@
-import React from 'react';
+import QRCode from 'react-qr-code';
 import css from './QrCode.module.scss';
 import { useTranslation } from 'react-i18next';
 import icons from '/src/assets/icons/sprite.svg';
+import { useMedia } from '../../../hooks/useMedia';
 
 export const QrCode = () => {
 	const { t } = useTranslation();
+	const { isMobile, isTablet, isDesktop } = useMedia();
 
 	return (
 		<div className={css.desktopDiv}>
 			<p className={css.currentGoal}>{t('helpPark.currentGoal')}</p>
 
-			<div className={css.qrCodeWrap}>
-				<svg className={css.qrCodeImg} width="196" height="195">
-					<use href={`${icons}#icon-qrCode`}></use>
-				</svg>
-			</div>
-			<a
-				className={css.helpLink}
-				href="https://prytulafoundation.org/"
-				target="_blank"
-			>
-				<svg className={css.heartIcon}>
-					<use href={`${icons}#icon-simplethankyou`}></use>
-				</svg>
-				{t('helpPark.button')}
-			</a>
+			{(isMobile || isTablet) && (
+				<>
+					<div className={css.qrCodeWrap}>
+						<QRCode
+							className={css.qr}
+							size={256}
+							bgColor="transparent"
+							fgColor="#014631"
+							value="https://t.me/DekorKultur"
+							viewBox={`0 0 256 256`}
+						/>
+					</div>
+					<a
+						className={css.helpLink}
+						href="https://prytulafoundation.org/"
+						target="_blank"
+					>
+						<svg className={css.heartIcon}>
+							<use href={`${icons}#icon-simplethankyou`}></use>
+						</svg>
+						{t('helpPark.button')}
+					</a>
+				</>
+			)}
+
+			{isDesktop && (
+				<div className={css.qrCodeWrap}>
+					<QRCode
+						className={css.qr}
+						size={256}
+						bgColor="transparent"
+						fgColor="#014631"
+						value="https://t.me/DekorKultur"
+						viewBox={`0 0 256 256`}
+					/>
+					<a
+						className={css.helpLink}
+						href="https://prytulafoundation.org/"
+						target="_blank"
+					>
+						<svg className={css.heartIcon}>
+							<use href={`${icons}#icon-simplethankyou`}></use>
+						</svg>
+						{t('helpPark.button')}
+					</a>
+				</div>
+			)}
 		</div>
 	);
 };
