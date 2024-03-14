@@ -1,24 +1,27 @@
 import { Button, Form, Input, Upload } from 'antd';
 import { UploadOutlined } from '@ant-design/icons';
 import { postLocation } from '../../serviceApiLocations';
+import { useState } from 'react';
 
 const LocationsForm = () => {
+	const [image, setImage] = useState(null);
+	const [imageMap, setImageMap] = useState(null);
+
 	const onFinish = async (values) => {
-		const response = await postLocation({
-			uk: {
-				title: values.title,
-				subtitle: values.subtitle,
-				description: values.description,
-			},
-			en: {
-				title: values.titleEn,
-				subtitle: values.subtitleEn,
-				description: values.descriptionEn,
-			},
-			number: values.number,
-			locationId: values.locationId,
-		});
-		console.log(' response:', response);
+		const formData = new FormData();
+		formData.append('uk[title]', values.title);
+		formData.append('uk[imgAlt]', values.imgAlt);
+		formData.append('uk[description]', values.description);
+		formData.append('en[title]', values.titleEn);
+		formData.append('en[imgAlt]', values.imgAltEn);
+		formData.append('en[description]', values.descriptionEn);
+		formData.append('number', values.number);
+		formData.append('locationId', values.locationId);
+		formData.append('image', image);
+		formData.append('mapImage', imageMap);
+
+		const response = await postLocation(formData);
+		return response;
 	};
 
 	const normFile = (e) => {
@@ -137,13 +140,17 @@ const LocationsForm = () => {
 					},
 				]}
 			>
-				<Upload
-					name="logo"
-					action="https://dendropark-poltava-back.onrender.com/api/trials"
+				<Upload.Dragger
+					name="image"
 					listType="picture"
+					maxCount={1}
+					beforeUpload={(file) => {
+						setImage(file);
+						return false;
+					}}
 				>
-					<Button icon={<UploadOutlined />}>Click to upload</Button>
-				</Upload>
+					<Button icon={<UploadOutlined />}>Click or drag to upload</Button>
+				</Upload.Dragger>
 			</Form.Item>
 			<Form.Item
 				name="mapImage"
@@ -157,13 +164,17 @@ const LocationsForm = () => {
 					},
 				]}
 			>
-				<Upload
-					name="logo"
-					action="https://dendropark-poltava-back.onrender.com/api/trials"
+				<Upload.Dragger
+					name="mapImage"
 					listType="picture"
+					maxCount={1}
+					beforeUpload={(file) => {
+						setImageMap(file);
+						return false;
+					}}
 				>
-					<Button icon={<UploadOutlined />}>Click to upload</Button>
-				</Upload>
+					<Button icon={<UploadOutlined />}>Click or drag to upload</Button>
+				</Upload.Dragger>
 			</Form.Item>
 
 			<Form.Item wrapperCol={{ offset: 8, span: 16 }}>
