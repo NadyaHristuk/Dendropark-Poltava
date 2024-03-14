@@ -17,6 +17,7 @@ const customStyles = {
     border: '1px solid e1f4ee',
     borderRadius: '20px',
   },
+  overlay: {zIndex: 1000}
 };
 
 const ChroniclesModal = ({ url, title, description, onRequestClose }) => {

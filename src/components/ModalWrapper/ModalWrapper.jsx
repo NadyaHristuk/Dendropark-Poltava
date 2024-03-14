@@ -1,6 +1,7 @@
 import Modal from 'react-modal';
 import scss from './ModalWrapper.module.scss';
 import './ModalWrapper.module.scss';
+import './style.scss';
 
 export const modalWrapper = (WrappedComponent) => {
 	return function ModalWrapper(props) {
@@ -15,6 +16,7 @@ export const modalWrapper = (WrappedComponent) => {
 					contentLabel="Example Modal"
 					className={scss.modal}
 					overlayClassName={scss.overlay}
+					style={{ 'z-index': '1000' }}
 				>
 					{props.children}
 				</Modal>

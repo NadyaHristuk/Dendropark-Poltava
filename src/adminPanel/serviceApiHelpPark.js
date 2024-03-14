@@ -1,12 +1,12 @@
 import { apiCall } from './srviceApiAuth';
 
-export const fetchHelpParkData = () => apiCall('/donation');
+export const fetchHelpParkData = () => apiCall('/donations');
 
-export const getHelpParkDataById = (id) => apiCall(`/donation/${id}`);
+export const getHelpParkDataById = (id) => apiCall(`/donations/${id}`);
 
-export const postHelpParkData = (body) => apiCall(`/donation`, 'post', body);
+export const postHelpParkData = (body) => apiCall(`/donations`, 'post', body);
 
 export const updateHelpParkData = (id, updatedHelpParkData) =>
 	apiCall(`/documents/${id}`, 'put', updatedHelpParkData);
 
-export const deleteHelpParkData = (id) => apiCall(`/donation/${id}`, 'delete');
+export const deleteHelpParkData = (id) => apiCall(`/donations/${id}`, 'delete');
