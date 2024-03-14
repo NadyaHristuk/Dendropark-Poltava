@@ -74,9 +74,9 @@ export const LocationItem = ({ card }) => {
 						<h3 className={css.cardTitle}>
 							{arabicToRoman(card.number)}. {t(card.title)}
 						</h3>
-
-						<p className={css.locationItemDescr}>{t(card.description)}</p>
-
+						<div ref={textDescriptionWrapper}>
+							<p className={css.locationItemDescr}>{t(card.description)}</p>
+						</div>
 						<button
 							onClick={toggleMap}
 							className={css.locationItemButton}

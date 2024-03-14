@@ -3,7 +3,8 @@ import { useEffect } from "react";
 
 const config = {
     scrollbars: {
-        // autoHide: 'never'
+        defer: true,
+        // theme: 'os-theme-dark'
     }
 };
 

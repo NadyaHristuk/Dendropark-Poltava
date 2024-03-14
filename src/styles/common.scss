@@ -88,6 +88,14 @@ a {
 	text-decoration: none;
 }
 
+.os-scrollbar {
+	--os-track-bg: #e1f4ee;
+	--os-handle-bg: #45b288;
+	padding-left: 6px;
+	--os-padding-perpendicular: 0;
+	--os-size: 11px;
+}
+
 // .ReactModal__Overlay {
 //   opacity: 0;
 //   transition: opacity 500ms ease-in-out;
