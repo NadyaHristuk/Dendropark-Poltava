@@ -5,6 +5,8 @@ import {
 	ThunderboltOutlined,
 	CalendarOutlined,
 	ShopOutlined,
+	HeartOutlined,
+	SunOutlined,
 	GlobalOutlined,
 } from '@ant-design/icons';
 
@@ -14,7 +16,15 @@ import UserBar from '../components/UserBar/UserBar';
 
 const { Header, Content, Sider } = Layout;
 
-const labels = ['Welcome', 'Product', 'Trials', 'Locations', 'Documents'];
+const labels = [
+	'Welcome',
+	'Product',
+	'Trials',
+	'Locations',
+	'Documents',
+	'Donation',
+	'Services',
+];
 
 function getItemLabel(index) {
 	const currentItem = labels[index];
@@ -39,6 +49,8 @@ const items = [
 	ThunderboltOutlined,
 	CalendarOutlined,
 	FileOutlined,
+	HeartOutlined,
+	SunOutlined,
 ].map((icon, index) => ({
 	key: String(index + 1),
 	icon: React.createElement(icon),
