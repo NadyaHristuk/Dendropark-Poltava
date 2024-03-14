@@ -10,6 +10,7 @@ import {
 
 import { Layout, Menu, theme } from 'antd';
 import { Link, Outlet, useLocation } from 'react-router-dom';
+import UserBar from '../components/UserBar/UserBar';
 
 const { Header, Content, Sider } = Layout;
 
@@ -48,7 +49,6 @@ const CommonLayout = () => {
 	const {
 		token: { colorBgContainer, borderRadiusLG },
 	} = theme.useToken();
-
 	const { pathname } = useLocation();
 
 	return (
@@ -72,7 +72,9 @@ const CommonLayout = () => {
 				/>
 			</Sider>
 			<Layout style={{ marginLeft: 200 }}>
-				<Header style={{ padding: 0, background: colorBgContainer }} />
+				<Header style={{ padding: 0, background: colorBgContainer }}>
+					<UserBar />
+				</Header>
 				<Content style={{ margin: '24px 16px 0', overflow: 'initial' }}>
 					<div
 						style={{
