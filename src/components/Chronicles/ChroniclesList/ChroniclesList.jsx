@@ -59,8 +59,8 @@ const ChroniclesList = () => {
 				)
 			) : (
 				<p className={css.message}>
-					<svg className={css.attention}>
-						<use href={`${icons}#icon-attention1`}></use>
+					<svg className={css.icon_attention}>
+						<use href={`${icons}#icon-attention`}></use>
 					</svg>
 					Поки що не має нових подій, очікуйте згодом...
 				</p>

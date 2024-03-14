@@ -7,10 +7,13 @@
 	@include media-rules(tablet) {
 		width: 380px;
 	}
+	@include media-rules(desktop) {
+		width: 589px;
+	}
 }
 
 .photo {
-	width: 357px;
+	width: 358px;
 	height: 362px;
 	border-radius: 20px;
 	object-fit: cover;
@@ -30,7 +33,7 @@
 }
 
 .info {
-	width: 357px;
+	width: 358px;
 
 	@include media-rules(tablet) {
 		width: 462px;

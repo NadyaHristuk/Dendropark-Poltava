@@ -6,12 +6,29 @@ import { yaninaYakivnaPicture } from '../Picture/yaninaYakivna';
 import css from './HistoryCreation.module.scss';
 import { icons } from '../../../assets';
 import { useMedia } from '../../../hooks/useMedia';
+import { useRef } from 'react';
 
-export const HistoryCreation = ({ onClick }) => {
-	const { isTablet, isDesktop } = useMedia();
+export const HistoryCreation = ({ onClick, onPicturesContainerHeight }) => {
+	const { isDesktop } = useMedia();
 	const { t } = useTranslation();
+	const picturesContainerRef = useRef(null);
+
+	const handleReduceButtonClick = () => {
+		if (picturesContainerRef.current) {
+			const container = picturesContainerRef.current;
+			const height = picturesContainerRef.current.offsetTop;
+			onPicturesContainerHeight(height);
+			container.scrollIntoView({
+				behavior: 'smooth',
+				block: 'start',
+				inline: 'nearest',
+			});
+		}
+		onClick();
+	};
+
 	return (
-		<div className={css.historyCreationContainer}>
+		<div ref={picturesContainerRef} className={css.historyCreationContainer}>
 			<p className={css.historyCreationText}>
 				{t('about.descriptionFirstParagraph')}
 				<br />
@@ -100,7 +117,7 @@ export const HistoryCreation = ({ onClick }) => {
 					{t('about.historyCreationSectionThirdArtickle')}
 				</p>
 			</div>{' '}
-			<button className={css.reduceButton} onClick={onClick}>
+			<button className={css.reduceButton} onClick={handleReduceButtonClick}>
 				{t('about.reduceButton')}
 				<svg className={css.vectorIcon}>
 					<use href={`${icons}#icon-Vector-top`}></use>

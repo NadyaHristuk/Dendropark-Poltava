@@ -2,20 +2,29 @@ import axios from 'axios';
 
 const api = axios.create({
 	baseURL: 'https://dendropark-poltava-back.onrender.com/api',
+	// baseURL: 'http://localhost:3001/api',
 });
 
 export const token = {
 	set(token) {
 		api.defaults.headers.common.Authorization = `Bearer ${token}`;
+		localStorage.setItem('token', token);
 	},
 	unset() {
 		delete api.defaults.headers.common.Authorization;
+		localStorage.removeItem('token');
 	},
 };
 
 export const apiCall = async (path, method = 'get', body = null) => {
 	try {
-		const response = await api[method](path, body);
+		const headers = {};
+		const authToken = localStorage.getItem('token');
+		if (authToken) {
+			headers.Authorization = `Bearer ${authToken}`;
+		}
+
+		const response = await api[method](path, body, { headers });
 		if (path === '/auth/login' && response) token.set(response.data.token);
 		else if (path === '/auth/logout' && response) token.unset();
 		return response.data;

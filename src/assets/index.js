@@ -1,4 +1,15 @@
-export { default as photo1 } from './images/ModalStudents/photo1.jpeg';
+export { default as photo1 } from './images/ModalStudents/shevtsov.jpeg';
+export { default as photo2 } from './images/ModalStudents/liuba_dmytro.jpeg';
+export { default as photo3 } from './images/ModalStudents/pryimakova_kateryna.jpeg';
+export { default as photo4 } from './images/ModalStudents/sidenko_vladislav.jpeg';
+export { default as photo5 } from './images/ModalStudents/tkachenko_yuriy.jpeg';
+export { default as photo6 } from './images/ModalStudents/piliaiev_ihor.jpeg';
+export { default as photo7 } from './images/ModalStudents/gonchar_tatyana.jpeg';
+export { default as photo8 } from './images/ModalStudents/serhieiev_bohdan.jpeg';
+export { default as photo9 } from './images/ModalStudents/sitsinskyi_volodymyr.jpeg';
+export { default as photo10 } from './images/ModalStudents/kozerivskyi_stanislav.jpeg';
+export { default as photo11 } from './images/ModalStudents/chalyi_victor.jpeg';
+export { default as photo12 } from './images/ModalStudents/bartosh_olena.jpeg';
 // for header
 export { default as logo1x } from './images/header/logo@1x.png';
 export { default as logo2x } from './images/header/logo@2x.png';

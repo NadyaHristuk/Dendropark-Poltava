@@ -46,10 +46,6 @@ export const en = {
 				},
 				contacts: {
 					title: 'Контакти:',
-					options: {
-						tel: '+38 (050) 289-41-33',
-						email: 'dekorkultur1@gmail.com',
-					},
 				},
 			},
 		},
@@ -75,106 +71,105 @@ export const en = {
 			administrationDescription: 'Адміністрація парку.',
 		},
 		vzaemodia: {
-			title: 'Дослідницькі стежки',
+			title: 'Exploration trails',
 			heroInfo:
-				'Заохочуємо Вас дізнатись більше про парк і природу пройшовши маршрутом наших стежок',
+				'We encourage you to learn more about the park and nature by following our trails.',
 
-			trialTitle: 'Наші Стежки',
-			cardOneTitle: 'Стежка №1 Екологічна.',
+			trialTitle: 'Our Paths',
+			cardOneTitle: 'Trail No. 1 Ecological.',
 			cardOneText:
-				'Дізнайтесь більше про природу парку, а також екологічні принципи.',
-			cardButtonText: 'Подивитись на карті',
-			cardTwoTitle: 'Стежка №2 Історична',
+				'Learn more about the nature of the park and its ecological principles.',
+			cardButtonText: 'Look on the map.',
+			cardTwoTitle: 'Trail #2 Historical',
 			cardTwoText:
-				'Дізнайтесь більше про події що мали місце на цій території раніше, і артефакти минулих часів.',
-			cardThreeTitle: 'Стежка №3 Філософська',
+				'Learn more about the events that took place in this area before and the artifacts of the past.',
+			cardThreeTitle: 'Trail #3 Philosophical.',
 			cardThreeText:
-				'Ця стежка не має маршруту. Гуляйте парком, і поруч із красивими місцями ви можете знайти невеличку табличку із красивою цитатою.',
+				' This trail has no route. Walk around the park and you can find a small plaque with a beautiful quote next to beautiful places.',
 
-			organizationSectionTitle: 'Організаторам заходів',
+			organizationSectionTitle: 'For event organizers',
 			organizationSectionTextOne:
-				'Якщо Ви бажаєте провести в парку захід, будь ласка зконтактуйте з нами.',
+				'If you want to hold an event in the park, please contact us.',
 			organizationSectionTextTwo:
-				'Зверніть увагу, що є певні обмеження щодо заходів в парку:',
+				'Please note that there are certain restrictions on activities in the park:	',
 
-			important: 'Важливо',
+			important: 'Important',
 			importantTextOne:
-				"В парку для забезпечення спокою для гніздування птахів, діє режим тиші з 1 квітня до 15 червня. Річ у тому, що у квітні-травні у птахів та тварин зазвичай народжується потомство. Зайвий шум може їх налякати та навіть змусити залишити дитинчат. Тому дотримання цих умов необхідно для підтримки популяції звірів. Варто зазначити, що сезон тиші запроваджений на законодавчому рівні та регламентується статтею 39 закону України 'Про тваринний світ'. Тому в цей час ми не дозволимо проведення заходів із голосною музикою, надмірним шумом і т.д.",
+				'In order to ensure peace for nesting birds, the park is quiet from April 1 to June 15. The reason is that in April and May, birds and animals usually give birth to offspring. Excessive noise can frighten them and even force them to leave their young. Therefore, observance of these conditions is necessary to maintain the animal population. It is to be noted that the silence season was introduced at the legislative level and is regulated by Article 39 of the Law of Ukraine "On Wildlife". Therefore, during this time, we will not allow events with loud music, excessive noise, etc.',
 			importantTextTwo:
-				' Якщо Ви бажаєте посадити в парку дерева, зверніться до нас. Парк створений за принципами ландшафтних композицій, і з відповідним видовим складом рослин. Рослини що на думку адміністрації парку, порушають його структуру, можуть бути видалені. Тому щоб Вам не було прикро за особисто посаджене дерево - попередньо варто узгодити місце висадки і вид рослини.  Більше того, ми самі будемо опікуватися ним.',
+				'If you would like to plant trees in the park, please contact us. The park was created according to the principles of landscape compositions, and with the appropriate species composition of plants. Plants that, in the opinion of the park administration, violate its composition may be removed. Therefore, in order not to feel bad about the tree you personally planted, you should first agree on the planting site and the type of plant. Moreover, we will take care of it ourselves.',
 			importantTextThree:
-				"Ми вітаємо будь-яку допомогу парку: якщо Ви хочете зробити толоку-прибирання, спортивний або інший захід, створити на теріторії парку якийсь об'єкт чи майданчик - зверніться до нас, щоб ми спільно знайшли найкращий варіант реалізації Вашої ідеї.",
+				'We welcome any help from the park: if you want to organize a clean-up day, a sporting or other event, or create an object or a playground in the park, please contact us so that we can find the best way to implement your idea.',
 
-			rulesTitle: 'Правила поведінки для відвідувачів',
+			rulesTitle: 'Rules of behavior for visitors',
 			rulesTextOne:
-				'Загалом варто керуватися принципом що в гостях у мешканців парку: рослин і тварин що тут проживають.',
+				'In general, you should be guided by the principle that you are visiting the inhabitants of the park: the plants and animals that live here.',
 			rulesTextTwo:
-				"Згідно ЗУ: 'Про природно-заповідний фонд України' Відвідувачам дозволено:",
-			rulesListOne: 'Гуляти, проводити екскурсії тримаючись стежок',
-			rulesListTwo: 'Фотографувати',
-			rulesListThree: 'Займатися спортом',
-			rulesListFour: 'Велопрогулянки',
-			rule: 'Правило',
+				'According to the Law of Ukraine: "On the Nature Reserve Fund of Ukraine", visitors are allowed:',
+			rulesListOne: 'Walking, conducting excursions along the trails',
+			rulesListTwo: 'Take photos',
+			rulesListThree: 'Go in for sports',
+			rulesListFour: 'Cycling',
+			rule: ' ',
 			ruleOneText:
-				'Варто утриматися від розведення вогнищ (це псує грунт під кострищем - вбиває мікроорганізми).',
+				'It is worth refraining from making fires (it spoils the soil under the fire and kills microorganisms)',
 			ruleTwoText:
-				'Квіти і особливо першоцвіти мають рости в парку, зривати їх заборонено.',
+				'Flowers, especially primroses, are supposed to grow in the park, and it is forbidden to pick them.',
 			ruleThreeText:
-				'Не можна порушувати життя тварин парку: полювати, псувати - залазити в нори тварин, гнізда птахів, мурашники і т.д.',
-			ruleFourText:
-				' Варто берегти дерева, кущі та заборонено добувати березовий сік.',
+				"It is forbidden to disturb the life of the park's animals: to hunt, to spoil - to climb into animal burrows, bird nests, ant hills, etc.",
+			ruleFourText: 'Tidy up after yourself and your four-legged friends',
 			ruleFiveText:
-				'Парк треба любити ногами, тому  для машин і інших моторизованих засобів територія закрита.',
-			ruleSixText: 'Прибрати за собою і своїми чотириногими друзями.',
-			goodLuckText: 'Гарного відпочинку!',
+				'You need to love the park with your feet and eyes, so the territory is closed to cars and other motorized vehicles.',
+			ruleSixText:
+				'Trees and bushes should be protected. It is forbidden to extract birch sap',
+			goodLuckText: 'Have a good rest!',
 		},
 		attentionVisitors: {
-			title: 'До уваги відвідувачів',
+			title: 'To the attention of visitors',
 			description:
-				'Наш парк слугує не тільки для відпочинку, а й для наукових цілей та для збереження біорізноманіття, тому поважайте його мешканців: рослини і тварин.',
+				'Our park serves not only for recreation but also for scientific purposes and biodiversity conservation, so please respect its inhabitants: plants and animals.',
 			points: [
 				{
-					title: 'Правила поведінки',
-					description:
-						'Ключове правило: поважайте інших, і людей, і тварин, і рослини.',
-					moreInfo: 'Дізнатися більше',
+					title: 'Rules of behavior',
+					description: 'Key rule: respect others, people, animals, and plants.',
+					moreInfo: 'Learn more',
 					link: '/vzaemodia/#rules-section',
-					iconId: '#icon-attention',
+					iconId: '#icon-new-attention',
 				},
 				{
-					title: 'Дослідницькі стежки',
+					title: 'Ecotrails',
 					description:
-						'Хочете більше дізнатися про цінність парку і взаємозв’язки в природі?',
-					moreInfo: 'Дізнатися більше',
-					link: '/vzaemodia/#trials-section',
+						'Want to learn more about the park`s value and interconnections in nature?',
+					moreInfo: 'Learn more',
+					link: '/vzaemodia#title-vzaemodia',
 					iconId: '#icon-tracks',
 				},
 				{
-					title: 'Літопис',
-					description: 'Дізнатися про події і матеріали щодо парку.',
-					moreInfo: 'Дізнатися більше',
-					link: 'chronicles',
+					title: 'Chronicle',
+					description: 'Find out about events and materials about the park',
+					moreInfo: 'Learn more',
+					link: '#litopys',
 					iconId: '#icon-news',
 				},
 				{
-					title: 'Організаторам заходів',
-					description:
-						'Хочете провести захід в Парку? Переходьте за посиланням.',
-					moreInfo: 'Дізнатися більше',
+					title: 'For event organizers',
+					description: 'Want to hold an event in the Park? Follow the link.',
+					moreInfo: 'Learn more',
 					link: '/vzaemodia/#organizators-section',
 					iconId: '#icon-event',
 				},
 				{
-					title: 'Наші послуги',
-					description: 'Послуги КП “Декоративні культури.”',
-					moreInfo: 'Дізнатися більше',
-					link: 'services',
-					iconId: '#icon-services',
+					title: 'Our services',
+					description:
+						'Services of the Municipal Enterprise "Ornamental Cultures".',
+					moreInfo: 'Learn more',
+					link: '/services#services',
+					iconId: '#icon-attention-services',
 				},
 				{
-					title: 'Адміністрація',
-					description: 'Адміністрація парку.',
-					moreInfo: 'Дізнатися більше',
+					title: 'Administration',
+					description: 'Administration of the Park',
+					moreInfo: 'Learn more',
 					link: '/contact/#administration-section',
 					iconId: '#icon-administration',
 				},
@@ -261,24 +256,32 @@ export const en = {
 			sectionTitle: 'About park',
 			title: 'Poltava City Park',
 			descriptionFirstParagraph:
-				"Poltava City Park is a dendrological park, a park-monument of garden and park art of national importance in Ukraine. It is located in the northern part of the city of Poltava.",
+				'Poltava City Park is a dendrological park, a park-monument of garden and park art of national importance in Ukraine. It is located in the northern part of the city of Poltava.',
 			descriptionSecondParagraph:
 				"The park's distinctive feature is its relief: numerous scenic areas that open up interesting perspectives, bright clearings. The main pathway starts from the entrance on Yakivchanska Street, passes through the western slope, across the valley to the east, and ends at the entrance from Luhova Street. All scenic areas, a cascade of ponds, a system of clearings, groups of decorative plants are concentrated along this line. Existing pathways were taken into account during the park's development, which had positive results. Roads were graded but then allowed to be overgrown, creating a natural appearance.",
 			descriptionThirdParagraph:
-				"The park is rich in water sources; rivulets of the river called Tarnovschanska Tarapunka flow through all the ravines, which flows into the Vorskla River near the village of Voronina. The luxurious carpet of diverse grass combined with water, reed thickets, trees of various shapes and colors, creates an unforgettable effect.",
+				'The park is rich in water sources; rivulets of the river called Tarnovschanska Tarapunka flow through all the ravines, which flows into the Vorskla River near the village of Voronina. The luxurious carpet of diverse grass combined with water, reed thickets, trees of various shapes and colors, creates an unforgettable effect.',
 			readMore: 'Read more about the park',
 			locationsTitle: 'Park Locations',
 			locationsDivision:
 				'The park territory is divided into separate sections:',
 			historyCreationTitle: 'History of Creation',
-			historyCreationTextFirstArcticle: 'During the time of the Poltava battle, this territory was a dense uninhabited forest. The Yakivchansky forest turned into a forest on the Monastery Hill. During the Second World War, the green massif was cut down by the National Socialists. The construction of the park began in April 1962. By the decision of the Council of Ministers of Ukraine on March 4, 1962, "On the establishment of 9 model parks in the regional centers of Ukraine," the creation of a dendro park in Poltava was envisaged.',
-			historyCreationTextSecondArticle: 'And already on April 13-14, a park with an area of ​​17 hectares was laid. In March 1963, it was included in the list of botanical gardens and dendro parks of Ukraine. The initiators of the project were the chief architect of the city Lev Vaingort and dendrologist Yanina Yatsenko, who devoted 40 years of her life to the park.',
-			levVaingortContainer: 'Chief architect Lev Vaingort in front of the scheme of the future park (April 16, 1962)',
-			ninaYacenkoContainer: 'Yanina Yakivna Yatsenko (May 31, 1926; Stavyshche, Kyiv region - December 2, 2016, Poltava) - founder and builder of the Poltava dendro park, author of the project "Park on the field of the Poltava battle."',
-			subotnikContainer: 'Subbotnik with the aim of reforestation on the territory of the future dendro park. April 13-14, 1962.',
-			historyCreationSectionFirstArtickle: 'A schematic plan of the zones "Forest-Steppe" and "Ukrainian Forest" was developed by the then chief architect of the city L.S. Vaingort and landscape architect V.V. Zhykharev. The planting project for the rest of the territory was carried out by dendrologist Ya. Ya. Yatsenko with the advice of the dendrology department of the Botanical Garden of the USSR Academy of Sciences, Professor L.I. Rubtsov.',
-			historyCreationSectionSecondArtickle: 'Dendro parks of Ukraine "Trostyanets", "Sofiyivka", "Oleksandriya" sent planting material, on the basis of which a collection of tree and shrub species was created - over 200 species.',
-			historyCreationSectionThirdArtickle: "Since 1977, according to the resolution of the State Committee for Nature Conservation of the Ukrainian SSR, it has been declared a reserve with the status of a park-monument of garden and park art of republican significance. In 1987, the All-Union competition of parks took place, where the Poltava City Park (dendro park) took second place after the Izmailovsky Park in Moscow. In 1990, the park receives the status of a park-monument of garden and park art of national importance.",
+			historyCreationTextFirstArcticle:
+				'During the time of the Poltava battle, this territory was a dense uninhabited forest. The Yakivchansky forest turned into a forest on the Monastery Hill. During the Second World War, the green massif was cut down by the National Socialists. The construction of the park began in April 1962. By the decision of the Council of Ministers of Ukraine on March 4, 1962, "On the establishment of 9 model parks in the regional centers of Ukraine," the creation of a dendro park in Poltava was envisaged.',
+			historyCreationTextSecondArticle:
+				'And already on April 13-14, a park with an area of ​​17 hectares was laid. In March 1963, it was included in the list of botanical gardens and dendro parks of Ukraine. The initiators of the project were the chief architect of the city Lev Vaingort and dendrologist Yanina Yatsenko, who devoted 40 years of her life to the park.',
+			levVaingortContainer:
+				'Chief architect Lev Vaingort in front of the scheme of the future park (April 16, 1962)',
+			ninaYacenkoContainer:
+				'Yanina Yakivna Yatsenko (May 31, 1926; Stavyshche, Kyiv region - December 2, 2016, Poltava) - founder and builder of the Poltava dendro park, author of the project "Park on the field of the Poltava battle."',
+			subotnikContainer:
+				'Subbotnik with the aim of reforestation on the territory of the future dendro park. April 13-14, 1962.',
+			historyCreationSectionFirstArtickle:
+				'A schematic plan of the zones "Forest-Steppe" and "Ukrainian Forest" was developed by the then chief architect of the city L.S. Vaingort and landscape architect V.V. Zhykharev. The planting project for the rest of the territory was carried out by dendrologist Ya. Ya. Yatsenko with the advice of the dendrology department of the Botanical Garden of the USSR Academy of Sciences, Professor L.I. Rubtsov.',
+			historyCreationSectionSecondArtickle:
+				'Dendro parks of Ukraine "Trostyanets", "Sofiyivka", "Oleksandriya" sent planting material, on the basis of which a collection of tree and shrub species was created - over 200 species.',
+			historyCreationSectionThirdArtickle:
+				'Since 1977, according to the resolution of the State Committee for Nature Conservation of the Ukrainian SSR, it has been declared a reserve with the status of a park-monument of garden and park art of republican significance. In 1987, the All-Union competition of parks took place, where the Poltava City Park (dendro park) took second place after the Izmailovsky Park in Moscow. In 1990, the park receives the status of a park-monument of garden and park art of national importance.',
 			reduceButton: 'Collapse',
 			lookMapButton: 'Look on the map',
 		},
@@ -315,33 +318,33 @@ export const en = {
 				'Find out about planned activities, as well as time restrictions on the use of the park.',
 		},
 		helpPark: {
-			title: 'Допомога парку',
+			title: 'Support the park',
 			description:
-				'Загалом парк фінансується із місцевого бюджету. Але якщо ви бажаєте мати більше залученості то Ви можете зробити благодійний внесок, або долучитися до толоки.',
-			goals: 'Кошти будуть використані на:',
+				'In general, the park is funded from the local budget. But if you want to be more involved, you can make a charitable contribution or join the cleanup.',
+			goals: 'The funds will be used for:',
 			list: [
 				{
-					title: 'Розвиток парку',
-					subtitle: 'Cтворення нових майданчиків, стендів на стежках.',
+					title: 'For the development of the park',
+					subtitle: 'Creation of new sites, stands on the trails.',
 					iconId: '#icon-gateway',
 				},
 				{
-					title: 'Збереження життя',
-					subtitle: 'Cтворення оселищ для птахів і інших тварин.',
+					title: 'Preservation of life',
+					subtitle: 'Creation of habitats for birds and other animals.',
 					iconId: '#icon-lifebar',
 				},
 				{
-					title: 'Біорізноманіття',
-					subtitle: 'Закупівля і посадка цікавих саджанців.',
+					title: 'Biodiversity',
+					subtitle: 'Purchase and planting of interesting seedlings.',
 					iconId: '#icon-plant',
 				},
 				{
-					title: 'Підтримання і ремонт інфраструктури парку',
+					title: 'Maintenance and repair of the park`s infrastructure',
 					iconId: '#icon-repair',
 				},
 			],
-			currentGoal: 'Наразі потрібні кошти на будування дитячого майданчика',
-			button: 'Допомогти парку',
+			currentGoal: '',
+			button: 'Help the Park',
 			btnIcon: '#icon-simplethankyou',
 		},
 		studentModals: {
