@@ -8,12 +8,13 @@ import { icons } from '../../../assets';
 import chronicles from '../сhronicles';
 import css from './ChroniclesList.module.scss';
 
-const ChroniclesList = () => {
+const ChroniclesList = ({paddingTop}) => {
 	// const [chronicles, setChronicles] = useState([]);
 	const [loading, setLoading] = useState(false);
 	const [error, setError] = useState(null);
 	const { t } = useTranslation();
 	const { isMobile } = useMedia();
+	const paddingTopValue = isMobile? "150" : paddingTop;
 
 	// useEffect(() => {
 	//     const fetchChroniclesList = async () => {
@@ -34,7 +35,7 @@ const ChroniclesList = () => {
 	// }, []);
 
 	return (
-		<section id="litopys" className={css.chroniclesSection}>
+		<section id="litopys" className={css.chroniclesSection} style={{ paddingTop: `${paddingTopValue}px` }}>
 			<h3 className={css.title}>{t('chronicles.chroniclesTitle')}</h3>
 			{loading ? (
 				<p className={css.message}>Завантаження...</p>
