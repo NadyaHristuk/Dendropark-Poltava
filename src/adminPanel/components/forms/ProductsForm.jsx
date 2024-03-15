@@ -2,6 +2,8 @@ import { Button, Form, Input, Upload, InputNumber } from 'antd';
 import { useState } from 'react';
 import { UploadOutlined } from '@ant-design/icons';
 import { postProduct } from '../../serviceApiProducts';
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
 
 const ProductsForm = () => {
 	const [image, setImage] = useState(null);
@@ -51,7 +53,7 @@ const ProductsForm = () => {
 				name="description"
 				rules={[{ required: true, message: 'Please input description' }]}
 			>
-				<Input />
+				<ReactQuill theme="snow" />
 			</Form.Item>
 			<Form.Item
 				label="ImgAlt"
@@ -81,7 +83,7 @@ const ProductsForm = () => {
 				name="descriptionEn"
 				rules={[{ required: true, message: 'Please input description' }]}
 			>
-				<Input />
+				<ReactQuill theme="snow" />
 			</Form.Item>
 			<Form.Item
 				label="ImgAltEn"

@@ -3,6 +3,9 @@ import { UploadOutlined } from '@ant-design/icons';
 import { postLocation } from '../../serviceApiLocations';
 import { useState } from 'react';
 
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
+
 const LocationsForm = () => {
 	const [image, setImage] = useState(null);
 	const [imageMap, setImageMap] = useState(null);
@@ -78,7 +81,7 @@ const LocationsForm = () => {
 				name="description"
 				rules={[{ required: true, message: 'Please input description' }]}
 			>
-				<Input />
+				<ReactQuill theme="snow" />
 			</Form.Item>
 			{/* en */}
 			<p>Заповніть Англійською</p>
@@ -103,7 +106,7 @@ const LocationsForm = () => {
 				name="descriptionEn"
 				rules={[{ required: true, message: 'Please input description' }]}
 			>
-				<Input />
+				<ReactQuill theme="snow" />
 			</Form.Item>
 
 			<p>Завантажте Фото й Мапу</p>
