@@ -20,7 +20,7 @@ export const ParkDescription = () => {
 
 	useEffect(() => {
 		if (!showMore && containerHeight) {
-			scrollTo({ top: containerHeight });
+			scrollTo({ top: containerHeight, behavior: 'smooth' });
 		}
 	}, [showMore, containerHeight]);
 
