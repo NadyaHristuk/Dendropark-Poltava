@@ -70,7 +70,8 @@
 		justify-content: space-between;
 	}
 	.services_item {
-		flex-basis: calc((100% - 46px) / 2);
+		// flex-basis: calc((100% - 46px) / 2);
+		width: 50%;
 		justify-content: flex-start;
 	}
 	.title {

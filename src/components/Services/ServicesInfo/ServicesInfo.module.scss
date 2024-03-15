@@ -23,8 +23,8 @@
 	justify-content: space-between;
 	// gap: 16px;
 	padding-bottom: 32px;
-	// width: 298px;
-	margin: 0 auto;
+	// // width: 298px;
+	// margin: 0 auto;
 }
 .icon {
 	background-color: $stroke;
@@ -83,7 +83,8 @@
 		overflow: auto;
 	}
 	.services_item {
-		flex-basis: calc((100% - 46px) / 2);
+		// flex-basis: calc((100% - 46px) / 2);
+		width: 50%;
 		justify-content: flex-start;
 	}
 	.title {
@@ -127,5 +128,8 @@
 		font-size: 44px;
 		line-height: 1;
 		padding-bottom: 64px;
+	}
+	.services_item {
+		margin: 0;
 	}
 }

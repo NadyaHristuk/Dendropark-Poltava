@@ -26,7 +26,6 @@ export const ServicesInfo = () => {
 		}
 		fetchAllServices();
 	}, []);
-	console.log(service);
 	return (
 		<>
 			{isTablet || isDesktop ? (

@@ -4,11 +4,13 @@ import { icons } from '../../../../assets';
 import { useState, useEffect } from 'react';
 
 const ServicesInfoTabletDesktop = ({ items }) => {
-	const [currentLanguage, setCurrentLanguage] = useState(i18n.language);
+	const [currentLanguage, setCurrentLanguage] = useState(
+		i18n.language === 'ua' ? 'uk' : 'en'
+	);
 
 	useEffect(() => {
 		const handleLanguageChange = () => {
-			setCurrentLanguage(i18n.language);
+			setCurrentLanguage(i18n.language === 'ua' ? 'uk' : 'en');
 		};
 		i18n.on('languageChanged', handleLanguageChange);
 
@@ -16,18 +18,11 @@ const ServicesInfoTabletDesktop = ({ items }) => {
 			i18n.off('languageChanged', handleLanguageChange);
 		};
 	}, []);
-
 	return (
 		<div>
 			<ul className={css.services_list}>
-				{items.map(({ uk, en, _id }) => {
-					const { title: titleUK, description: textUK } = uk;
-					const { title: titleEN, description: textEN } = en;
-
-					const { title, description: text } =
-						currentLanguage === 'uk'
-							? { title: titleUK, description: textUK }
-							: { title: titleEN, description: textEN };
+				{items.map((item) => {
+					const { title, description, _id } = item[currentLanguage];
 
 					return (
 						<li key={_id} className={css.services_item}>
@@ -43,7 +38,7 @@ const ServicesInfoTabletDesktop = ({ items }) => {
 							</div>
 							<div className={css.item_wrapper}>
 								<h3 className={css.item_title}>{title}</h3>
-								<p className={css.item_description}>{text}</p>
+								<p className={css.item_description}>{description}</p>
 							</div>
 						</li>
 					);
