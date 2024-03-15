@@ -43,6 +43,14 @@
 	}
 }
 
+.heroPictureContainer.heroContainerDesktop {
+	@include media-rules(desktop) {
+		margin: 0 auto;
+		max-width: $desktop;
+		margin-bottom: 120px;
+	}
+}
+
 .readMoreButton {
 	background-color: $pine-depths;
 	padding: 18px 95.5px;

@@ -1,5 +1,4 @@
 
-import i18next from 'i18next';
 import {
   card1X1Mobile,
   card1X2Mobile,
