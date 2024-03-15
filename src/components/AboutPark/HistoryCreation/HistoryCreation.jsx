@@ -8,7 +8,7 @@ import { icons } from '../../../assets';
 import { useMedia } from '../../../hooks/useMedia';
 import { useRef } from 'react';
 
-export const HistoryCreation = ({ onClick, onPicturesContainerHeight }) => {
+export const HistoryCreation = ({ onClick, setContainerHeight }) => {
 	const { isDesktop } = useMedia();
 	const { t } = useTranslation();
 	const picturesContainerRef = useRef(null);
@@ -16,8 +16,8 @@ export const HistoryCreation = ({ onClick, onPicturesContainerHeight }) => {
 	const handleReduceButtonClick = () => {
 		if (picturesContainerRef.current) {
 			const container = picturesContainerRef.current;
-			const height = picturesContainerRef.current.offsetTop;
-			onPicturesContainerHeight(height);
+			const height = container.offsetTop;
+			setContainerHeight(height);
 			container.scrollIntoView({
 				behavior: 'smooth',
 				block: 'start',

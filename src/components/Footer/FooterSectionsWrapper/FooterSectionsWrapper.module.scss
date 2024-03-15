@@ -14,4 +14,10 @@
 		width: 493px;
 		column-gap: 40px;
 	}
+
+	@include media-rules(desktop) {
+		width: 793px;
+		column-gap: 40px;
+		flex-wrap: nowrap;
+	}
 }

@@ -3,6 +3,9 @@ import { UploadOutlined } from '@ant-design/icons';
 import { postLocation } from '../../serviceApiLocations';
 import { useState } from 'react';
 
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
+
 const LocationsForm = () => {
 	const [image, setImage] = useState(null);
 	const [imageMap, setImageMap] = useState(null);
@@ -30,26 +33,6 @@ const LocationsForm = () => {
 		}
 		return e?.fileList;
 	};
-
-	const onFinishFailed = (errorInfo) => {
-		console.log('Failed:', errorInfo);
-	};
-	// {
-	//   "uk": {
-	//     "title": "Назва місця",
-	//     "description": "Опис місця",
-	//     "imgAlt": "Альтернативний текст для зображення"
-	//   },
-	//   "en": {
-	//     "title": "Location Title",
-	//     "description": "Location Description",
-	//     "imgAlt": "Image Alt Text"
-	//   },
-	//     "number": "Номер",
-	//   "locationId": "locationId",
-	//   "image": "Прикріпленний файл"
-	//    "mapImage": "Прикріпленний файл"
-	// }
 	return (
 		<Form
 			name="basic"
@@ -58,7 +41,6 @@ const LocationsForm = () => {
 			style={{ maxWidth: 600 }}
 			initialValues={{ remember: true }}
 			onFinish={onFinish}
-			onFinishFailed={onFinishFailed}
 			autoComplete="off"
 		>
 			{/* uk */}
@@ -99,7 +81,7 @@ const LocationsForm = () => {
 				name="description"
 				rules={[{ required: true, message: 'Please input description' }]}
 			>
-				<Input />
+				<ReactQuill theme="snow" />
 			</Form.Item>
 			{/* en */}
 			<p>Заповніть Англійською</p>
@@ -124,7 +106,7 @@ const LocationsForm = () => {
 				name="descriptionEn"
 				rules={[{ required: true, message: 'Please input description' }]}
 			>
-				<Input />
+				<ReactQuill theme="snow" />
 			</Form.Item>
 
 			<p>Завантажте Фото й Мапу</p>

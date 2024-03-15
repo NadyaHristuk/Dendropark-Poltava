@@ -9,7 +9,7 @@
 	}
 
 	@include media-rules(desktop) {
-		padding-bottom: 201px;
+		padding-bottom: 150px;
 	}
 }
 
@@ -39,7 +39,7 @@
 
 	@include media-rules(tablet) {
 		overflow-y: scroll;
-		max-height: 300px;
+		max-height: 440px;
 	}
 }
 
@@ -56,5 +56,26 @@
 		width: calc(50% - 16px);
 		align-items: flex-start;
 		text-align: left;
+	}
+}
+
+.message {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Ermilov', sans-serif;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 1.66667;
+	color: $pine-depths;
+
+	@include media-rules(tablet) {
+		font-size: 20px;
+		line-height: 1.5;
+	}
+
+	@include media-rules(desktop) {
+		font-size: 28px;
+		line-height: 1.07143;
 	}
 }

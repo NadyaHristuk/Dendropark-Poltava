@@ -22,9 +22,6 @@ const LoginForm = () => {
 			throw new Error(error.message);
 		}
 	};
-	const onFinishFailed = (errorInfo) => {
-		console.log('Failed:', errorInfo);
-	};
 
 	return (
 		<Form
@@ -34,7 +31,6 @@ const LoginForm = () => {
 			style={{ maxWidth: 600 }}
 			initialValues={{ remember: true }}
 			onFinish={onFinish}
-			onFinishFailed={onFinishFailed}
 			autoComplete="off"
 		>
 			<Form.Item

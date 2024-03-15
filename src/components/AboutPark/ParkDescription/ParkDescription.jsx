@@ -11,44 +11,30 @@ import { useMedia } from '../../../hooks/useMedia';
 export const ParkDescription = () => {
 	const { t } = useTranslation();
 	const [showMore, setShowMore] = useState(false);
-	const { isDesktop, isMobile } = useMedia();
-	const [picturesContainerHeight, setPicturesContainerHeight] = useState(0);
-
-	const handlePicturesContainerHeight = (height) => {
-		setPicturesContainerHeight(height);
-	};
+	const { isMobile } = useMedia();
+	const [containerHeight, setContainerHeight] = useState(0);
 
 	const ParkDescriptionClass = `${css.descriptionTitle} ${
 		showMore && isMobile && css.descriptionTitleShowMore
 	}`;
 
-	// useEffect(() => {
-	// 	if (!showMore) {
-	// 		window.scrollTo({
-	// 			top: picturesContainerHeight,
-	// 			behavior: 'smooth',
-	// 		});
-	// 	}
-	// }, [showMore, picturesContainerHeight]);
+	useEffect(() => {
+		if (!showMore && containerHeight) {
+			scrollTo({ top: containerHeight });
+		}
+	}, [showMore, containerHeight]);
 
 	return (
 		<SectionWrapper topPadding>
-			{isDesktop ? (
-				<Container>
-					{' '}
-					<h1 className={ParkDescriptionClass}>{t('about.sectionTitle')}</h1>
-					<div className={css.heroPictureContainer}>
-						<Picture pictures={heroPicture} />
-					</div>
-				</Container>
-			) : (
-				<>
-					<h1 className={ParkDescriptionClass}>{t('about.sectionTitle')}</h1>
-					<div className={css.heroPictureContainer}>
-						<Picture pictures={heroPicture} />
-					</div>
-				</>
-			)}
+			<Container>
+				<h1 className={ParkDescriptionClass}>{t('about.sectionTitle')}</h1>
+			</Container>
+			<div
+				className={`${css.heroPictureContainer} ${css.heroContainerDesktop}`}
+			>
+				<Picture pictures={heroPicture} />
+			</div>
+
 			{!showMore && (
 				<Container>
 					<p className={css.parkDesription}>
@@ -71,7 +57,7 @@ export const ParkDescription = () => {
 			{showMore && (
 				<HistoryCreation
 					onClick={() => setShowMore(false)}
-					onPicturesContainerHeight={handlePicturesContainerHeight}
+					setContainerHeight={setContainerHeight}
 				/>
 			)}
 		</SectionWrapper>

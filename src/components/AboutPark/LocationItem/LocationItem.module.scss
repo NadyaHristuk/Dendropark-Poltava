@@ -92,11 +92,10 @@
 	line-height: 2;
 	display: -webkit-box;
 	-webkit-line-clamp: 3;
-	overflow-y: auto;
+
 	font-family: 'Innerspace', sans-serif;
 	-webkit-box-orient: vertical;
-
-	margin-bottom: 16px;
+	padding-right: 4px;
 
 	@include media-rules(tablet) {
 		-webkit-line-clamp: 6;
@@ -107,7 +106,7 @@
 		min-width: 590px;
 		font-size: 16px;
 		line-height: 1.5;
-		margin-bottom: 52px;
+
 		-webkit-line-clamp: 7;
 		padding-right: 20px;
 	}
@@ -123,10 +122,12 @@
 	gap: 8px;
 	align-items: center;
 	transition: color 500ms ease-in;
+	margin-top: 16px;
 
 	@include media-rules(desktop) {
 		font-size: 16px;
 		line-height: 1.5;
+		margin-top: 52px;
 	}
 }
 
