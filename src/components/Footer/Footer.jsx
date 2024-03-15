@@ -149,11 +149,11 @@ const Footer = () => {
 								{t('footer.copyright.owner')}
 							</p>
 							<a>
-								<div className={s.footer_copyright_goit_wrapper}>
-									<p
-										onClick={openModal}
-										className={s.footer_copyright_goit_text}
-									>
+								<div
+									className={s.footer_copyright_goit_wrapper}
+									onClick={openModal}
+								>
+									<p className={s.footer_copyright_goit_text}>
 										{t('footer.copyright.created')}
 									</p>
 									<svg className={s.footer_copyright_goit_icon_svg}>
