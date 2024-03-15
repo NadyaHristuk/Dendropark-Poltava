@@ -1,13 +1,14 @@
 import css from './services-store.module.scss';
 import { usePagination } from '../../../hooks/usePagination';
 import { useEffect, useState } from 'react';
-import data from '../servicesStore';
 import Slider from '../../Slider/Slider';
 import { useMedia } from '../../../hooks/useMedia';
 import { fetchProducts } from '../../../adminPanel/serviceApiProducts';
 import i18n from '../../../utils/localization/i18n';
+import { useTranslation } from 'react-i18next';
 
 export const ServicesStore = () => {
+	const { t } = useTranslation();
 	const { isMobile } = useMedia();
 	const [loading, setLoading] = useState(false);
 	const [error, setError] = useState(null);
@@ -67,14 +68,17 @@ export const ServicesStore = () => {
 									<p className={css.store_subtitle}>{title}</p>
 									<p className={css.store_descr}>{description}</p>
 								</div>
-								<p className={css.store_price}>Ціна: {price} грн.</p>
+								<p className={css.store_price}>
+									{t('footer.sections.services.priceText')}: {price}{' '}
+									{t('footer.sections.services.priceCount')}
+								</p>
 							</div>
 							<a
 								className={css.store_btn}
 								target="_blank"
 								href="https://t.me/alyonaplants"
 							>
-								<span>Купити</span>
+								<span>{t('footer.sections.services.buyBtn')}</span>
 							</a>
 						</li>
 					);

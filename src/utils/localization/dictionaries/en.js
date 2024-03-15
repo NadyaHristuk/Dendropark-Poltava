@@ -43,6 +43,8 @@ export const en = {
 						ourServices: 'Our services',
 						seedlings: 'Buy seedlings',
 					},
+					buyBtn: 'Buy',
+					priceText: 'Price',
 				},
 				contacts: {
 					title: 'Contacts:',

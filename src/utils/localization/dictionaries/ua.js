@@ -95,6 +95,9 @@ export const ua = {
 						ourServices: 'Наші послуги',
 						seedlings: 'Саджанці',
 					},
+					buyBtn: 'Купити',
+					priceCount: '₴',
+					priceText: 'Ціна',
 				},
 				contacts: {
 					title: 'Контакти:',
