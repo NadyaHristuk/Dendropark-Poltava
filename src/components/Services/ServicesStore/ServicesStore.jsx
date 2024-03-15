@@ -6,6 +6,7 @@ import { useMedia } from '../../../hooks/useMedia';
 import { fetchProducts } from '../../../adminPanel/serviceApiProducts';
 import i18n from '../../../utils/localization/i18n';
 import { useTranslation } from 'react-i18next';
+import { SyncLoader } from 'react-spinners';
 
 export const ServicesStore = () => {
 	const { t } = useTranslation();
@@ -89,7 +90,13 @@ export const ServicesStore = () => {
 
 	return (
 		<div>
-			<Slider chunkedData={chunkedData} currentPage={list} />
+			{loading ? (
+				<div className="spinner-container">
+					<SyncLoader loading={true} color="#36d7b7" size={15} />
+				</div>
+			) : (
+				<Slider chunkedData={chunkedData} currentPage={list} />
+			)}
 		</div>
 	);
 };
