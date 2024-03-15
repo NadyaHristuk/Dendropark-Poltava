@@ -17,11 +17,7 @@ export const ParkLocations = () => {
 			try {
 				const newLocations = await fetchData();
 
-				const locationsWithNumbers = newLocations.map((location, index) => ({
-					...location,
-					numeral: index + 1,
-				}));
-				setLocations(locationsWithNumbers);
+				setLocations(newLocations);
 			} catch (error) {}
 		};
 		fetchLocations();

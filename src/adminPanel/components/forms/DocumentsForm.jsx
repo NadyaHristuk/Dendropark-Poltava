@@ -18,23 +18,6 @@ const DocumentsForm = () => {
 		});
 		return response;
 	};
-
-	const onFinishFailed = (errorInfo) => {
-		console.log('Failed:', errorInfo);
-	};
-	// {
-	//   "uk": {
-	//     "title": "Назва документа",
-	//     "subtitle": "Підзаголовок документа",
-	//     "description": "Опис документа"
-	//   },
-	//   "en": {
-	//     "title": "Document Title",
-	//     "subtitle": "Document Subtitle",
-	//     "description": "Document Description"
-	//   },
-	//   "document": "Document Content"
-	// }
 	return (
 		<Form
 			name="basic"
@@ -43,7 +26,6 @@ const DocumentsForm = () => {
 			style={{ maxWidth: 600 }}
 			initialValues={{ remember: true }}
 			onFinish={onFinish}
-			onFinishFailed={onFinishFailed}
 			autoComplete="off"
 		>
 			{/* uk */}

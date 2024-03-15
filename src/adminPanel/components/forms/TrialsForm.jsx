@@ -2,19 +2,23 @@ import { useState } from 'react';
 import { Button, Form, Input, InputNumber, Upload } from 'antd';
 import { UploadOutlined } from '@ant-design/icons';
 import { postTrial } from '../../serviceApiTrials';
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
 
 const TrialsForm = () => {
 	const [image, setImage] = useState(null);
 	const [imageMap, setImageMap] = useState(null);
+	const [text, setText] = useState('');
+	const [textEn, setTextEn] = useState('');
 
 	const onFinish = async (values) => {
 		const formData = new FormData();
 		formData.append('uk[title]', values.title);
 		formData.append('uk[imgAlt]', values.imgAlt);
-		formData.append('uk[text]', values.text);
+		formData.append('uk[text]', text);
 		formData.append('en[title]', values.titleEn);
 		formData.append('en[imgAlt]', values.imgAltEn);
-		formData.append('en[text]', values.textEn);
+		formData.append('en[text]', textEn);
 		formData.append('distance', values.distance);
 		formData.append('image', image);
 		formData.append('mapImage', imageMap);
@@ -29,22 +33,6 @@ const TrialsForm = () => {
 		}
 		return e && e.fileList;
 	};
-
-	// {
-	//   "uk": {
-	//     "title": "Прогулянка в парку",
-	//     "text": "Це опис прогулянки в парку.",
-	//     "imgAlt": "Зображення парку"
-	//   },
-	//   "en": {
-	//     "title": "Park Walk",
-	//     "text": "This is a description of a walk in the park.",
-	//     "imgAlt": "Park Image"
-	//   },
-	//     "distance": 10,
-	//   "image": "Прикріпленний файл",
-	//   "mapImage": "Прикріпленний файл"
-	// }
 	return (
 		<Form
 			name="basic"
@@ -86,7 +74,12 @@ const TrialsForm = () => {
 				name="text"
 				rules={[{ required: true, message: 'Please input description' }]}
 			>
-				<Input />
+				<ReactQuill
+					theme="snow"
+					value={text}
+					onChange={setText}
+					styles={{ borderRadius: '40px' }}
+				/>
 			</Form.Item>
 			{/* en */}
 			<p>Заповніть Англійською</p>
@@ -111,7 +104,12 @@ const TrialsForm = () => {
 				name="textEn"
 				rules={[{ required: true, message: 'Please input description' }]}
 			>
-				<Input />
+				<ReactQuill
+					theme="snow"
+					value={textEn}
+					onChange={setTextEn}
+					styles={{ borderRadius: '40px' }}
+				/>
 			</Form.Item>
 			<p>Завантажте Фото й Карту</p>
 			<Form.Item
