@@ -2,15 +2,14 @@
 @import '../../styles/mixins';
 
 .section {
-  padding-top: 80px;
-  padding-bottom: 64px;
+  padding: 150px 0 64px;
 
   @include media-rules(tablet) {
-    padding-bottom: 80px;
+    padding: 167px 0 80px;
   }
 
   @include media-rules(desktop) {
-    padding-bottom: 120px;
+    padding: 167px 0 120px;
   }
 }
 

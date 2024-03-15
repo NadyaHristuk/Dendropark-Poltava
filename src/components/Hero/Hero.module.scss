@@ -2,10 +2,10 @@
 @import "../../styles/mixins";
 
 .hero {
-    padding: 150px 0;
+    padding: 150px 0 64px;
 
     @include media-rules(tablet) {
-        padding: 167px 0;
+        padding: 167px 0 80px;
     }
 
     @include media-rules(desktop) {
