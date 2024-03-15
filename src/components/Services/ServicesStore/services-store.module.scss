@@ -14,6 +14,12 @@
 .store_list {
 	box-sizing: border-box;
 }
+.img {
+	margin: 0 auto;
+	display: block;
+	border-radius: 20px;
+	width: 100%;
+}
 .store_btn {
 	outline: none;
 	cursor: pointer;
@@ -73,12 +79,7 @@
 	margin: 0 auto;
 	margin-bottom: 24px;
 }
-.itemImage img {
-	display: block;
-	margin: 0 auto;
-	border-radius: 20px;
-	width: 100%;
-}
+
 .store_subtitle {
 	padding-top: 24px;
 	font-weight: 700;
@@ -168,7 +169,7 @@
 		cursor: pointer;
 	}
 	.store_scroll_wrapper {
-		height: 210px;
-		overflow: hidden;
+		min-height: 210px;
+		overflow: auto;
 	}
 }
