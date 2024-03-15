@@ -1,5 +1,7 @@
 import { Button, Form, Input } from 'antd';
 import { postOurServices } from '../../serviceApiOurServices';
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
 // import { fetchTrials } from '../../serviceApiTrials';
 // import { fetchProducts } from '../../serviceApiProducts';
 // import { fetchOurServices } from '../../serviceApiOurServices';
@@ -80,7 +82,7 @@ const OurServicesForm = () => {
 				name="description"
 				rules={[{ required: true, message: 'Please input description' }]}
 			>
-				<Input name="description" />
+				<ReactQuill theme="snow" />
 			</Form.Item>
 
 			<p>Заповніть Англійською</p>
@@ -97,7 +99,7 @@ const OurServicesForm = () => {
 				name="descriptionEn"
 				rules={[{ required: true, message: 'Please input description' }]}
 			>
-				<Input name="descriptionEn" />
+				<ReactQuill theme="snow" />
 			</Form.Item>
 
 			<Form.Item wrapperCol={{ offset: 8, span: 16 }}>
