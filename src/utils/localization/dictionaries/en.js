@@ -25,7 +25,7 @@ export const en = {
 					title: 'Interaction:',
 					options: {
 						researchTrails: 'Exploration trails',
-						activities: 'For event organizers',
+						activities: 'Events',
 						rulesOfConduct: 'Rules of conduct',
 					},
 				},
