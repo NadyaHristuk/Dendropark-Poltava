@@ -11,6 +11,9 @@ import { photo10 } from '../../assets';
 import { photo11 } from '../../assets';
 import { photo12 } from '../../assets';
 import { photo14 } from '../../assets';
+import { photo15 } from '../../assets';
+import { photo16 } from '../../assets';
+import { photo17 } from '../../assets';
 
 const data = [
 	{
@@ -56,6 +59,12 @@ const data = [
 		src: `${photo6}`,
 	},
 	{
+		name: 'Василенко Олександр',
+		role: 'Front-end developer',
+		linkedin: 'https://www.linkedin.com/in/sasha-vasylenko/',
+		src: `${photo16}`,
+	},
+	{
 		name: 'Гончар Тетяна',
 		role: 'QA engineer',
 		linkedin: 'https://www.linkedin.com/in/tetianahonchar/',
@@ -90,6 +99,18 @@ const data = [
 		role: 'Front-end developer',
 		linkedin: 'https://www.linkedin.com/in/andrii-polishchuk-25771b193/',
 		src: `${photo14}`,
+	},
+	{
+		name: 'Кучма Олена',
+		role: 'QA engineer',
+		linkedin: '#',
+		src: `${photo15}`,
+	},
+	{
+		name: 'Татарникова Ольга',
+		role: 'Designer',
+		linkedin: 'http://www.linkedin.com/in/olha-tatarnykova-8600b7276',
+		src: `${photo17}`,
 	},
 ];
 
