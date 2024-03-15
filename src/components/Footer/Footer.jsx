@@ -146,7 +146,7 @@ const Footer = () => {
 					<FooterCopyright>
 						<div className={s.footer_copyright_text_wrapper}>
 							<p className={s.footer_copyright}>
-								© Полтавський міський парк / 2024
+								{t('footer.copyright.owner')}
 							</p>
 							<a>
 								<div className={s.footer_copyright_goit_wrapper}>
@@ -154,7 +154,7 @@ const Footer = () => {
 										onClick={openModal}
 										className={s.footer_copyright_goit_text}
 									>
-										Сайт розроблений студентами
+										{t('footer.copyright.created')}
 									</p>
 									<svg className={s.footer_copyright_goit_icon_svg}>
 										<use

@@ -48,6 +48,10 @@ export const en = {
 					title: 'Contacts:',
 				},
 			},
+			copyright: {
+				owner: '© Poltava city park / 2024',
+				created: 'The website developed by students of the company',
+			},
 		},
 		parkInfo: {
 			attentionVisitors: 'До уваги відвідувачів',

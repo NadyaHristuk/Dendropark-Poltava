@@ -100,6 +100,10 @@ export const ua = {
 					title: 'Контакти:',
 				},
 			},
+			copyright: {
+				owner: '© Полтавський міський парк / 2024',
+				created: 'Сайт розроблений студентами',
+			},
 		},
 		parkInfo: {
 			attentionVisitors: 'До уваги відвідувачів',
