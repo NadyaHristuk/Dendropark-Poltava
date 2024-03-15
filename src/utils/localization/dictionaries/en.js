@@ -45,6 +45,8 @@ export const en = {
 					},
 					buyBtn: 'Buy',
 					priceText: 'Price',
+					ourServicesText: 'Our services',
+					canBuy: 'You can buy seedlings',
 				},
 				contacts: {
 					title: 'Contacts:',

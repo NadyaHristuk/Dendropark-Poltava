@@ -98,6 +98,8 @@ export const ua = {
 					buyBtn: 'Купити',
 					priceCount: '₴',
 					priceText: 'Ціна',
+					ourServicesText: 'Наші послуги',
+					canBuy: 'Ви можете придбати саджанці',
 				},
 				contacts: {
 					title: 'Контакти:',
