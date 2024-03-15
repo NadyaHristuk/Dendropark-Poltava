@@ -1,9 +1,9 @@
 import { Button, Form, Input } from 'antd';
-import { postDocument } from '../../serviceApiDocuments';
+import { postDocument, updateDocument } from '../../serviceApiDocuments';
 
-const DocumentsForm = () => {
+const DocumentsForm = ({ name, document }) => {
 	const onFinish = async (values) => {
-		const response = await postDocument({
+		const formData = {
 			uk: {
 				title: values.title,
 				subtitle: values.subtitle,
@@ -15,33 +15,36 @@ const DocumentsForm = () => {
 				description: values.descriptionEn,
 			},
 			document: values.document,
-		});
+		};
+
+		const response =
+			name === 'postForm'
+				? await postDocument(formData)
+				: await updateDocument(document._id, formData);
+
 		return response;
 	};
 
 	const onFinishFailed = (errorInfo) => {
 		console.log('Failed:', errorInfo);
 	};
-	// {
-	//   "uk": {
-	//     "title": "Назва документа",
-	//     "subtitle": "Підзаголовок документа",
-	//     "description": "Опис документа"
-	//   },
-	//   "en": {
-	//     "title": "Document Title",
-	//     "subtitle": "Document Subtitle",
-	//     "description": "Document Description"
-	//   },
-	//   "document": "Document Content"
-	// }
+
 	return (
 		<Form
-			name="basic"
+			name={name}
 			labelCol={{ span: 8 }}
 			wrapperCol={{ span: 16 }}
 			style={{ maxWidth: 600 }}
-			initialValues={{ remember: true }}
+			initialValues={{
+				remember: true,
+				title: document?.uk.title,
+				subtitle: document?.uk.subtitle,
+				description: document?.uk.description,
+				titleEn: document?.en.title,
+				subtitleEn: document?.en.subtitle,
+				descriptionEn: document?.en.description,
+				document: document?.document,
+			}}
 			onFinish={onFinish}
 			onFinishFailed={onFinishFailed}
 			autoComplete="off"

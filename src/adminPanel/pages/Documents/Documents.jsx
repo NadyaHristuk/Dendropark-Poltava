@@ -6,9 +6,8 @@ const Documents = () => {
 	return (
 		<div className={styles.father}>
 			<div className={styles.container1}>
-				<DocumentsForm />
+				<DocumentsForm name="postForm" />
 			</div>
-
 			<DocumentList />
 		</div>
 	);
