@@ -12,8 +12,8 @@
 
 	@include media-rules(tablet) {
 		flex-direction: row;
-		width: 960px;
-		padding: 97px 43px 70px 80px;
+		width: 920px;
+		padding: 50px 40px;
 	}
 
 	@include media-rules(desktop) {
@@ -46,6 +46,9 @@
 	@include media-rules(tablet) {
 		width: 464px;
 	}
+	@include media-rules(desktop) {
+		width: 540px;
+	}
 }
 
 .title {
@@ -67,8 +70,7 @@
 	line-height: 1.5;
 	color: $city-park;
 	text-align: justify;
-
-	max-height: 387px;
+	max-height: 220px;
 	padding-right: 18px;
 	overflow-y: auto;
 
