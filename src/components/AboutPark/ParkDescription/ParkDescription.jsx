@@ -11,25 +11,18 @@ import { useMedia } from '../../../hooks/useMedia';
 export const ParkDescription = () => {
 	const { t } = useTranslation();
 	const [showMore, setShowMore] = useState(false);
-	const { isDesktop, isMobile } = useMedia();
-	const [picturesContainerHeight, setPicturesContainerHeight] = useState(0);
-
-	const handlePicturesContainerHeight = (height) => {
-		setPicturesContainerHeight(height);
-	};
+	const { isMobile } = useMedia();
+	const [containerHeight, setContainerHeight] = useState(0);
 
 	const ParkDescriptionClass = `${css.descriptionTitle} ${
 		showMore && isMobile && css.descriptionTitleShowMore
 	}`;
 
-	// useEffect(() => {
-	// 	if (!showMore) {
-	// 		window.scrollTo({
-	// 			top: picturesContainerHeight,
-	// 			behavior: 'smooth',
-	// 		});
-	// 	}
-	// }, [showMore, picturesContainerHeight]);
+	useEffect(() => {
+		if (!showMore && containerHeight) {
+			scrollTo({ top: containerHeight });
+		}
+	}, [showMore, containerHeight]);
 
 	return (
 		<SectionWrapper topPadding>
@@ -64,7 +57,7 @@ export const ParkDescription = () => {
 			{showMore && (
 				<HistoryCreation
 					onClick={() => setShowMore(false)}
-					onPicturesContainerHeight={handlePicturesContainerHeight}
+					setContainerHeight={setContainerHeight}
 				/>
 			)}
 		</SectionWrapper>

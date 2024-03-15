@@ -9,6 +9,7 @@ import { useScrollBar } from '../../../hooks/use-scrollbar';
 import i18n from '../../../utils/localization/i18n.js';
 import { createPictureMapObj } from './createPictureMapObj.js';
 import { createPictureObj } from './createPictureObj.js';
+import { getDates } from './getDatesForUsing.js';
 
 export const LocationItem = ({ card }) => {
 	const { t } = useTranslation();
@@ -22,41 +23,10 @@ export const LocationItem = ({ card }) => {
 	const toggleMap = () => {
 		setIsMapOpen((prevState) => !prevState);
 	};
-	const {
-		image,
-		mapImage,
 
-		uk: {
-			description: descriptionUK,
-			imgAlt: imgAltUK,
-			number: numberUK,
-			title: titleUK,
-		},
-		en: {
-			description: descriptionEN,
-			imgAlt: imgAltEN,
-			number: numberEN,
-			title: titleEN,
-		},
-		_id,
-	} = card;
+	const dates = getDates(card, currentLanguage);
 
-	const datesForUsing =
-		currentLanguage === 'ua'
-			? {
-					description: descriptionUK,
-					imgAlt: imgAltUK,
-					number: numberUK,
-					title: titleUK,
-			  }
-			: {
-					description: descriptionEN,
-					imgAlt: imgAltEN,
-					number: numberEN,
-					title: titleEN,
-			  };
-
-	const { description, imgAlt, number, title } = datesForUsing;
+	const { description, imgAlt, number, title, image, mapImage, _id } = dates;
 
 	const pictureLocation = createPictureObj(image, imgAlt);
 	const pictureMap = createPictureMapObj(mapImage, imgAlt);
