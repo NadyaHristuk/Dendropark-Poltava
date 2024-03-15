@@ -50,7 +50,7 @@ export const en = {
 			},
 			copyright: {
 				owner: '© Poltava city park / 2024',
-				created: 'The website developed by students of the company',
+				created: 'The website developed by students',
 			},
 		},
 		parkInfo: {
