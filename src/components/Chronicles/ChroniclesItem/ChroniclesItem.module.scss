@@ -77,23 +77,26 @@
 
 }
 .button {
+	display: flex;
+    align-items: center;
+
 	font-family: 'Innerspace', serif;
 	font-weight: 400;
 	font-size: 16px;
 
 	line-height: 1.5;
-	color: $pine-depths;
+	color: $tropical-wave;
 }
 .button:hover {
-	color: $tropical-wave;
+	color: $emerald-field;
 }
 
 .arrowUpIcon {
-	width: 16px;
-	height: 16px;
-	fill: $pine-depths;
+	width: 20px;
+	height: 20px;
+	fill: $tropical-wave;
 }
 
 .button:hover .arrowUpIcon {
-	fill: $tropical-wave;
+	fill: $emerald-field;
 }
