@@ -11,3 +11,7 @@
 .ReactModal__Overlay--before-close {
 	opacity: 0;
 }
+
+.ReactModal__Overlay--after-open:focus-visible {
+	outline: transparent;
+}

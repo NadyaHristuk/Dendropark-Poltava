@@ -5,6 +5,7 @@
 .footer_container {
 	color: $snowdrift;
 	background-color: $pine-depths;
+	margin-top: 40px;
 }
 
 .footer {
@@ -209,7 +210,6 @@
 	margin-top: 20px;
 	display: flex;
 	align-items: center;
-	justify-content: center;
 	column-gap: 8px;
 
 	@include media-rules(tablet) {
@@ -218,6 +218,9 @@
 }
 
 .footer_social_networks_icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	width: 36px;
 	height: 36px;
 	fill: $snowdrift;

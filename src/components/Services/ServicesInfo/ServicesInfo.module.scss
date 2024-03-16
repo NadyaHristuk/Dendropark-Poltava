@@ -8,7 +8,7 @@
 	letter-spacing: -0.02em;
 	color: $pine-depths;
 	padding-bottom: 32px;
-	padding-top: 63px;
+	padding-top: 137px;
 }
 .swiper_wrapper {
 	padding-bottom: 120px;
@@ -23,8 +23,8 @@
 	justify-content: space-between;
 	// gap: 16px;
 	padding-bottom: 32px;
-	// width: 298px;
-	margin: 0 auto;
+	// // width: 298px;
+	// margin: 0 auto;
 }
 .icon {
 	background-color: $stroke;
@@ -83,7 +83,8 @@
 		overflow: auto;
 	}
 	.services_item {
-		flex-basis: calc((100% - 46px) / 2);
+		// flex-basis: calc((100% - 46px) / 2);
+		width: 50%;
 		justify-content: flex-start;
 	}
 	.title {
@@ -91,7 +92,6 @@
 		font-size: 40px;
 		line-height: 1.45;
 		letter-spacing: -0.02em;
-		padding-top: 80px;
 	}
 	.item_title {
 		font-size: 20px;
@@ -127,5 +127,8 @@
 		font-size: 44px;
 		line-height: 1;
 		padding-bottom: 64px;
+	}
+	.services_item {
+		margin: 0;
 	}
 }

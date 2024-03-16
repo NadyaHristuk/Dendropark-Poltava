@@ -1,9 +1,9 @@
 @import '../../../styles/colors';
+@import '../../../styles/mixins';
 ::-webkit-scrollbar {
 	width: 6px; /* Ширина скролла */
 	border-radius: 5px;
 }
-
 ::-webkit-scrollbar-track {
 	background-color: #f1f1f1; /* Колір фону скролла */
 }
@@ -14,6 +14,13 @@
 .store_list {
 	box-sizing: border-box;
 }
+.img {
+	margin: 0 auto;
+	display: block;
+	border-radius: 20px;
+	width: 100%;
+}
+
 .store_btn {
 	outline: none;
 	cursor: pointer;
@@ -35,7 +42,8 @@
 	span {
 		position: relative;
 		z-index: 10;
-		transition: color 0.4s;
+		// transition: color 0.4s;
+		@include transition(color);
 	}
 
 	&:hover span {
@@ -58,12 +66,17 @@
 		width: 120%;
 		left: -10%;
 		transform: skew(30deg);
+		// @include transition(transform)
 		transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
 	}
 
 	&:hover::before {
 		transform: translate3d(100%, 0, 0);
 	}
+}
+.store_btn:hover {
+	background-color: $tropical-wave;
+	text-decoration: none;
 }
 
 .store_item {
@@ -73,12 +86,7 @@
 	margin: 0 auto;
 	margin-bottom: 24px;
 }
-.itemImage img {
-	display: block;
-	margin: 0 auto;
-	border-radius: 20px;
-	width: 100%;
-}
+
 .store_subtitle {
 	padding-top: 24px;
 	font-weight: 700;
@@ -113,11 +121,8 @@
 	letter-spacing: -0.01em;
 	color: #fefefe;
 	font-family: 'Innerspace', sans-serif;
-	transition: all 0.5s;
-	text-decoration: none;
-}
-.store_btn:hover {
-	background-color: $tropical-wave;
+	// transition: all 0.5s;
+	@include transition(all);
 	text-decoration: none;
 }
 
@@ -164,11 +169,12 @@
 		flex-basis: calc((100% - 64px) / 3);
 		justify-content: flex-start;
 		overflow: hidden;
-		transition: all 0.5s;
+		// transition: all 0.5s;
+		@include transition(all);
 		cursor: pointer;
 	}
 	.store_scroll_wrapper {
-		height: 210px;
-		overflow: hidden;
+		min-height: 210px;
+		overflow: auto;
 	}
 }

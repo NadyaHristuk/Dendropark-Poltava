@@ -1,7 +1,7 @@
 import { HashLink } from 'react-router-hash-link';
+import { useTranslation } from 'react-i18next';
 import Map from '../Map/Map';
 import scss from './Hero.module.scss';
-import { useTranslation } from 'react-i18next';
 
 const Hero = () => {
 	const { t } = useTranslation();

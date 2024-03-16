@@ -46,7 +46,6 @@ const DocumentsForm = ({ name, document }) => {
 				document: document?.document,
 			}}
 			onFinish={onFinish}
-			onFinishFailed={onFinishFailed}
 			autoComplete="off"
 		>
 			{/* uk */}

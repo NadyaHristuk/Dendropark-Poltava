@@ -1,54 +1,24 @@
-import React, { useState } from 'react';
-import { Button, Form, Input, message, Upload } from 'antd';
-import { UploadOutlined } from '@ant-design/icons';
+import { Button, Form, Input } from 'antd';
 import { postHelpParkData } from '../../serviceApiHelpPark';
 
-const props = {
-	name: 'file',
-	action: 'https://run.mocky.io/v3/435e224c-44fb-4773-9faf-380c5e6a2188',
-	headers: {
-		authorization: 'authorization-text',
-	},
-	onChange(info) {
-		if (info.file.status !== 'uploading') {
-			console.log(info.file, info.fileList);
-		}
-		if (info.file.status === 'done') {
-			message.success(`${info.file.name} file uploaded successfully`);
-		} else if (info.file.status === 'error') {
-			message.error(`${info.file.name} file upload failed.`);
-		}
-	},
-};
-
 const HelpParkForm = () => {
-	const [image, setImage] = useState(null);
+	// const [image, setImage] = useState(null);
+
 	const onFinish = async (values) => {
-		const response = await postHelpParkData({
+		const formData = {
 			uk: {
-				title: values.title,
-				qrCode: values.qrCode,
-				link: values.link,
+				description: values.description,
+				buttonText: values.buttonText,
 			},
 			en: {
-				title: values.titleEn,
-				sqrCode: values.qrCode,
-				link: values.link,
+				description: values.descriptionEn,
+				buttonText: values.buttonTextEn,
 			},
-			document: values.document,
-		});
-		console.log('Login response:', response);
-	};
+			link: values.link,
+		};
 
-	const normFile = (e) => {
-		if (Array.isArray(e)) {
-			return e;
-		}
-		return e?.fileList;
-	};
-
-	const onFinishFailed = (errorInfo) => {
-		console.log('Failed:', errorInfo);
+		const response = await postHelpParkData(formData);
+		return response;
 	};
 
 	return (
@@ -59,53 +29,47 @@ const HelpParkForm = () => {
 			style={{ maxWidth: 600 }}
 			initialValues={{ remember: true }}
 			onFinish={onFinish}
-			onFinishFailed={onFinishFailed}
 			autoComplete="off"
 		>
 			<p>Заповніть Українською</p>
 			<Form.Item
-				label="Заголовок збору:"
-				name="title"
+				label="Description"
+				name="description"
 				rules={[{ required: true, message: 'Please input title' }]}
+			>
+				<Input name="description" />
+			</Form.Item>
+			<Form.Item
+				label="ButtonText"
+				name="buttonText"
+				rules={[{ required: true, message: 'Please input button text' }]}
 			>
 				<Input />
 			</Form.Item>
 
 			<p>Заповніть Англійською</p>
 			<Form.Item
-				label="Title:"
-				name="titleEn"
-				rules={[{ required: true, message: 'Please input title' }]}
+				label="DescriptionEn"
+				name="descriptionEn"
+				rules={[{ required: true, message: 'Please input title english' }]}
 			>
-				<Input />
+				<Input name="descriptionEn" />
 			</Form.Item>
-
 			<Form.Item
-				label="Завантажте QR-code"
-				name="qrCode"
-				valuePropName="fileList"
-				getValueFromEvent={normFile}
-				rules={[{ required: true, message: 'Please input qr-code' }]}
+				label="buttonTextEn"
+				name="buttonTextEn"
+				rules={[
+					{ required: true, message: 'Please input button text english' },
+				]}
 			>
-				<Upload.Dragger
-					name="logo"
-					listType="picture"
-					maxCount={1}
-					beforeUpload={(file) => {
-						setImage(file);
-						return false;
-					}}
-				>
-					<Button icon={<UploadOutlined />}>Завантажити</Button>
-				</Upload.Dragger>
+				<Input name="buttonTextEn" />
 			</Form.Item>
-
 			<Form.Item
-				label="Посилання на збір"
+				label="Link"
 				name="link"
 				rules={[{ required: true, message: 'Please input link' }]}
 			>
-				<Input />
+				<Input name="link" />
 			</Form.Item>
 
 			<Form.Item wrapperCol={{ offset: 8, span: 16 }}>

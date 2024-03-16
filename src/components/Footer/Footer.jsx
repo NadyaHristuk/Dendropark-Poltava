@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { HashLink } from 'react-router-hash-link';
 
@@ -127,7 +126,7 @@ const Footer = () => {
 								<ul>
 									<li className={s.section_option}>
 										{(isDesktop || isTablet) && (
-											<a href="https://t.me/MaxMakukha" target="_blank">
+											<a href="https://t.me/DekorKultur" target="_blank">
 												+38 (050) 289-41-33
 											</a>
 										)}
@@ -147,15 +146,15 @@ const Footer = () => {
 					<FooterCopyright>
 						<div className={s.footer_copyright_text_wrapper}>
 							<p className={s.footer_copyright}>
-								© Полтавський міський парк / 2024
+								{t('footer.copyright.owner')}
 							</p>
 							<a>
-								<div className={s.footer_copyright_goit_wrapper}>
-									<p
-										onClick={openModal}
-										className={s.footer_copyright_goit_text}
-									>
-										Сайт розроблений студентами
+								<div
+									className={s.footer_copyright_goit_wrapper}
+									onClick={openModal}
+								>
+									<p className={s.footer_copyright_goit_text}>
+										{t('footer.copyright.created')}
 									</p>
 									<svg className={s.footer_copyright_goit_icon_svg}>
 										<use
@@ -171,7 +170,7 @@ const Footer = () => {
 							</a>
 						</div>
 						<div className={s.footer_social_networks_wrapper}>
-							<a href="https://t.me/MaxMakukha" target="_blank">
+							<a href="https://t.me/DekorKultur" target="_blank">
 								<svg className={s.footer_social_networks_icon}>
 									<use href={`${icons}#icon-telegram`}></use>
 								</svg>

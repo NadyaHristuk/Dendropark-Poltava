@@ -95,7 +95,7 @@
 
 	font-family: 'Innerspace', sans-serif;
 	-webkit-box-orient: vertical;
-	padding-right: 3px;
+	padding-right: 4px;
 
 	@include media-rules(tablet) {
 		-webkit-line-clamp: 6;
@@ -121,8 +121,9 @@
 	display: flex;
 	gap: 8px;
 	align-items: center;
-	transition: color 500ms ease-in;
 	margin-top: 16px;
+
+	@include transition(color);
 
 	@include media-rules(desktop) {
 		font-size: 16px;
@@ -146,10 +147,16 @@
 	right: 7px;
 	top: 4px;
 
+	@include transition(transform);
 	@include media-rules(desktop) {
 		right: 18px;
 		top: 12px;
 	}
+}
+
+.crossIconButton:hover {
+	cursor: pointer;
+	transform: scale(1.15);
 }
 
 .crossIcon {

@@ -75,7 +75,7 @@ const Header = () => {
 				)}
 				{(isDesktop || isTablet) && (
 					<address className={s.address}>
-						<a href="https://t.me/MaxMakukha" target="_blank">
+						<a href="https://t.me/DekorKultur" target="_blank">
 							+38 (050) 289-41-33
 						</a>
 					</address>

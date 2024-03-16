@@ -1,0 +1,31 @@
+@import "src/styles/colors";
+@import "src/styles/mixins";
+
+.header {
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.05);
+    background: $snowdrift;
+    z-index: 50;
+    padding: 16px 0;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.leftWrapper {
+    @include media-rules(desktop) {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+}
+
+.rightWrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}

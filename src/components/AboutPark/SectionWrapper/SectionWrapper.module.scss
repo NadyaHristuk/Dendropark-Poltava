@@ -24,5 +24,8 @@
 }
 
 .container.topPadding {
-	padding-top: 73px;
+	padding-top: 150px;
+	@include media-rules(desktop) {
+		padding-top: 167px;
+	}
 }
