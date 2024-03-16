@@ -47,7 +47,7 @@ const OurServicesForm = ({ item, name, isOpen, setIsOpen }) => {
 			onFinish={onFinish}
 			autoComplete="off"
 		>
-			<p>Заповніть Українською</p>
+			<p style={{ marginBottom: 10 }}>Заповніть Українською</p>
 			<Form.Item
 				label="Title"
 				name="title"
@@ -74,7 +74,7 @@ const OurServicesForm = ({ item, name, isOpen, setIsOpen }) => {
 				<ReactQuill style={{ fontWeight: 'normal' }} theme="snow" />
 			</Form.Item>
 
-			<p>Заповніть Англійською</p>
+			<p style={{ marginBottom: 10 }}>Заповніть Англійською</p>
 			<Form.Item
 				label="TitleEn"
 				name="titleEn"

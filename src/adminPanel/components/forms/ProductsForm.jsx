@@ -57,7 +57,7 @@ const ProductsForm = ({ name, item, isOpen, setIsOpen }) => {
 			autoComplete="off"
 		>
 			{/* uk */}
-			<p>Заповніть Українською</p>
+			<p style={{ marginBottom: 10 }}>Заповніть Українською</p>
 			<Form.Item
 				label="Title"
 				name="title"
@@ -107,7 +107,7 @@ const ProductsForm = ({ name, item, isOpen, setIsOpen }) => {
 				<InputNumber name="price" />
 			</Form.Item>
 			{/* en */}
-			<p>Заповніть Англійською</p>
+			<p style={{ marginBottom: 10 }}>Заповніть Англійською</p>
 			<Form.Item
 				label="TitleEn"
 				name="titleEn"
@@ -144,7 +144,7 @@ const ProductsForm = ({ name, item, isOpen, setIsOpen }) => {
 			>
 				<Input />
 			</Form.Item>
-			<p>Завантажте Фото</p>
+			<p style={{ marginBottom: 10 }}>Завантажте Фото</p>
 			<Form.Item
 				name="image"
 				label="Image"
@@ -166,7 +166,7 @@ const ProductsForm = ({ name, item, isOpen, setIsOpen }) => {
 						return false;
 					}}
 				>
-					<Button icon={<UploadOutlined />}>Click or drag to upload</Button>
+					<Button icon={<UploadOutlined />}>Завантажте фото</Button>
 				</Upload.Dragger>
 			</Form.Item>
 

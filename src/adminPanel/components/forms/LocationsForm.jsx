@@ -61,7 +61,7 @@ const LocationsForm = ({ name, item, isOpen, setIsOpen }) => {
 			autoComplete="off"
 		>
 			{/* uk */}
-			<p>Заповніть Українською</p>
+			<p style={{ marginBottom: 10 }}>Заповніть Українською</p>
 			<Form.Item
 				label="Number"
 				name="number"
@@ -114,7 +114,7 @@ const LocationsForm = ({ name, item, isOpen, setIsOpen }) => {
 				<ReactQuill style={{ fontWeight: 'normal' }} theme="snow" />
 			</Form.Item>
 			{/* en */}
-			<p>Заповніть Англійською</p>
+			<p style={{ marginBottom: 10 }}>Заповніть Англійською</p>
 			<Form.Item
 				label="TitleEn"
 				name="titleEn"
@@ -154,7 +154,7 @@ const LocationsForm = ({ name, item, isOpen, setIsOpen }) => {
 				<ReactQuill style={{ fontWeight: 'normal' }} theme="snow" />
 			</Form.Item>
 
-			<p>Завантажте Фото й Мапу</p>
+			<p style={{ marginBottom: 10 }}>Завантажте Фото й Мапу</p>
 			<Form.Item
 				name="image"
 				label="Image"
@@ -176,7 +176,7 @@ const LocationsForm = ({ name, item, isOpen, setIsOpen }) => {
 						return false;
 					}}
 				>
-					<Button icon={<UploadOutlined />}>Click or drag to upload</Button>
+					<Button icon={<UploadOutlined />}>Завантажте фото</Button>
 				</Upload.Dragger>
 			</Form.Item>
 			<Form.Item
@@ -200,7 +200,7 @@ const LocationsForm = ({ name, item, isOpen, setIsOpen }) => {
 						return false;
 					}}
 				>
-					<Button icon={<UploadOutlined />}>Click or drag to upload</Button>
+					<Button icon={<UploadOutlined />}>Завантажте мапу</Button>
 				</Upload.Dragger>
 			</Form.Item>
 

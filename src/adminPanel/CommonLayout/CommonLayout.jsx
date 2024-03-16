@@ -14,7 +14,7 @@ import { Layout, Menu, theme } from 'antd';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import UserBar from '../components/UserBar/UserBar';
 
-const { Header, Content, Sider } = Layout;
+const { Header, Content } = Layout;
 
 const labels = [
 	'Welcome',
@@ -64,33 +64,29 @@ const CommonLayout = () => {
 	const { pathname } = useLocation();
 
 	return (
-		<Layout hasSider>
-			<Sider
-				style={{
-					overflow: 'auto',
-					height: '100vh',
-					position: 'fixed',
-					left: 0,
-					top: 0,
-					bottom: 0,
-				}}
-			>
-				<div className="demo-logo-vertical" />
-				<Menu
-					theme="dark"
-					mode="inline"
-					defaultSelectedKeys={() => selectedKey(pathname)}
-					items={items}
-				/>
-			</Sider>
-			<Layout style={{ marginLeft: 200 }}>
-				<Header style={{ padding: 0, background: colorBgContainer }}>
+		<Layout>
+			<Layout>
+				<Header
+					style={{
+						padding: 0,
+						background: colorBgContainer,
+						alignItems: 'center',
+						display: 'flex',
+					}}
+				>
+					<Menu
+						style={{ width: '100%', display: 'inline-flex' }}
+						theme="dark"
+						mode="horizontal"
+						defaultSelectedKeys={() => selectedKey(pathname)}
+						items={items}
+					/>
 					<UserBar />
 				</Header>
-				<Content style={{ margin: '24px 16px 0', overflow: 'initial' }}>
+				<Content style={{ margin: '10px', overflow: 'initial' }}>
 					<div
 						style={{
-							padding: 24,
+							padding: 12,
 							textAlign: 'center',
 							background: colorBgContainer,
 							borderRadius: borderRadiusLG,

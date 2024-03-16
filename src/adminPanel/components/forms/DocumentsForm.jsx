@@ -49,7 +49,7 @@ const DocumentsForm = ({ name, item, isOpen, setIsOpen }) => {
 			autoComplete="off"
 		>
 			{/* uk */}
-			<p>Заповніть Українською</p>
+			<p style={{ marginBottom: 10 }}>Заповніть Українською</p>
 			<Form.Item
 				label="Title"
 				name="title"
@@ -89,7 +89,7 @@ const DocumentsForm = ({ name, item, isOpen, setIsOpen }) => {
 				<Input />
 			</Form.Item>
 			{/* en */}
-			<p>Заповніть Англійською</p>
+			<p style={{ marginBottom: 10 }}>Заповніть Англійською</p>
 			<Form.Item
 				label="TitleEn"
 				name="titleEn"
@@ -128,7 +128,7 @@ const DocumentsForm = ({ name, item, isOpen, setIsOpen }) => {
 			>
 				<Input />
 			</Form.Item>
-			<p>Додайте посилання на документ</p>
+			<p style={{ marginBottom: 10 }}>Додайте посилання на документ</p>
 			<Form.Item
 				label="Document"
 				name="document"

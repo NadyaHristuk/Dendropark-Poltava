@@ -43,7 +43,7 @@ const HelpParkForm = ({ name, item, isOpen, setIsOpen }) => {
 			onFinish={onFinish}
 			autoComplete="off"
 		>
-			<p>Заповніть Українською</p>
+			<p style={{ marginBottom: 10 }}>Заповніть Українською</p>
 			<Form.Item
 				label="Description"
 				name="description"
@@ -69,7 +69,7 @@ const HelpParkForm = ({ name, item, isOpen, setIsOpen }) => {
 				<Input />
 			</Form.Item>
 
-			<p>Заповніть Англійською</p>
+			<p style={{ marginBottom: 10 }}>Заповніть Англійською</p>
 			<Form.Item
 				label="DescriptionEn"
 				name="descriptionEn"
