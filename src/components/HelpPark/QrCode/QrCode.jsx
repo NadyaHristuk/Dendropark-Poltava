@@ -1,16 +1,18 @@
+import { useState, useEffect } from 'react';
 import QRCode from 'react-qr-code';
 import css from './QrCode.module.scss';
-import { useTranslation } from 'react-i18next';
 import icons from '/src/assets/icons/sprite.svg';
 import { useMedia } from '../../../hooks/useMedia';
-import { useEffect } from 'react';
 import { fetchHelpParkData } from '../../../adminPanel/serviceApiHelpPark';
-import { useState } from 'react';
 
 export const QrCode = () => {
-	const { t } = useTranslation();
 	const { isMobile, isTablet, isDesktop } = useMedia();
-	const [donation, setDonation] = useState(null)
+	const [donation, setDonation] = useState({})
+	const savedLanguage = localStorage.getItem('LANGUAGE_KEY') || 'ua';
+
+	let lang;
+
+	savedLanguage === 'ua' ? (lang = 'uk') : (lang = 'en');
 
 	useEffect(() => {
 		const getLinkHelpParkData = async() => {
@@ -27,7 +29,7 @@ export const QrCode = () => {
 
 	return (
 		<div className={css.desktopDiv}>
-			<p className={css.currentGoal}>{t('helpPark.currentGoal')}</p>
+			<p className={css.currentGoal}>{donation[lang].description}</p>
 
 			{(isMobile || isTablet) && (
 				<>
@@ -37,19 +39,19 @@ export const QrCode = () => {
 							size={256}
 							bgColor="transparent"
 							fgColor="#014631"
-							value="https://t.me/DekorKultur"
+							value={donation.link}
 							viewBox={`0 0 256 256`}
 						/>
 					</div>
 					<a
 						className={css.helpLink}
-						href="https://prytulafoundation.org/"
+						href={donation.link}
 						target="_blank"
 					>
 						<svg className={css.heartIcon}>
 							<use href={`${icons}#icon-simplethankyou`}></use>
 						</svg>
-						{t('helpPark.button')}
+						{donation[lang].buttonText}
 					</a>
 				</>
 			)}
@@ -61,18 +63,18 @@ export const QrCode = () => {
 						size={256}
 						bgColor="transparent"
 						fgColor="#014631"
-						value="https://t.me/DekorKultur"
+						value={donation.link}
 						viewBox={`0 0 256 256`}
 					/>
 					<a
 						className={css.helpLink}
-						href="https://prytulafoundation.org/"
+						href={donation.link}
 						target="_blank"
 					>
 						<svg className={css.heartIcon}>
 							<use href={`${icons}#icon-simplethankyou`}></use>
 						</svg>
-						{t('helpPark.button')}
+						{donation[lang].buttonText}
 					</a>
 				</div>
 			)}
