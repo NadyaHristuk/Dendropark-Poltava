@@ -1,6 +1,13 @@
 @import '/src/styles/colors';
 @import '/src/styles/mixins';
 
+.modal_wrapper {
+	background-color: #edfaf6;
+	border: 1px solid e1f4ee;
+	border-radius: 20px;
+	padding: 20px;
+}
+
 .container {
 	display: flex;
 	flex-direction: column;
