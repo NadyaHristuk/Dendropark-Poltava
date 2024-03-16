@@ -2,7 +2,13 @@
 @import '/src/styles//mixins';
 @import '/src/styles/breakpoints';
 
+.desktopDiv {
+	max-width: 590px;
+}
+
 .currentGoal {
+	max-width: 358px;
+	text-align: center;
 	font-family: 'Innerspace', serif;
 	font-weight: 400;
 	font-size: 14px;
@@ -11,10 +17,12 @@
 	margin-bottom: 10px;
 
 	@include media-rules(tablet) {
+		max-width: 310px;
 		line-height: 214%;
 	}
 
 	@include media-rules(desktop) {
+		max-width: 559px;
 		font-size: 20px;
 		line-height: 150%;
 		padding-top: 64px;
@@ -46,7 +54,6 @@
 		width: 559px;
 		height: 532px;
 		margin-bottom: 0;
-		margin-left: 30px;
 	}
 }
 
