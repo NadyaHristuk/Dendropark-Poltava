@@ -1,16 +1,15 @@
-import { Picture } from '../Picture/Picture';
-import { useTranslation } from 'react-i18next';
-import css from './LocationItem.module.scss';
-import { arabicToRoman } from './romanNumerals';
-import { icons } from '../../../assets';
 import { useEffect, useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { useLocation } from 'react-router-dom';
+import { Picture } from '../Picture/Picture';
+import css from './LocationItem.module.scss';
 import { useMedia } from '../../../hooks/useMedia';
 import { useScrollBar } from '../../../hooks/use-scrollbar';
 import i18n from '../../../utils/localization/i18n.js';
 import { createPictureMapObj } from './createPictureMapObj.js';
 import { createPictureObj } from './createPictureObj.js';
 import { getDates } from './getDatesForUsing.js';
-import { useLocation } from 'react-router-dom';
+import { icons } from '../../../assets';
 
 export const LocationItem = ({ card }) => {
 	const { t } = useTranslation();
