@@ -3,10 +3,27 @@ import css from './QrCode.module.scss';
 import { useTranslation } from 'react-i18next';
 import icons from '/src/assets/icons/sprite.svg';
 import { useMedia } from '../../../hooks/useMedia';
+import { useEffect } from 'react';
+import { fetchHelpParkData } from '../../../adminPanel/serviceApiHelpPark';
+import { useState } from 'react';
 
 export const QrCode = () => {
 	const { t } = useTranslation();
 	const { isMobile, isTablet, isDesktop } = useMedia();
+	const [donation, setDonation] = useState(null)
+
+	useEffect(() => {
+		const getLinkHelpParkData = async() => {
+			try {
+				const data = await fetchHelpParkData()
+				setDonation(data[0])
+			} catch (error) {
+				console.log((error.message))
+			}
+		}
+
+		getLinkHelpParkData()
+	}, [])
 
 	return (
 		<div className={css.desktopDiv}>
