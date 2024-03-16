@@ -18,8 +18,6 @@ const ChroniclesList = ({ paddingTop }) => {
 	const paddingTopValue = isMobile ? '150' : paddingTop;
 
 	const savedLanguage = localStorage.getItem(LANGUAGE_STORAGE_KEY) || 'ua';
-	// console.log(savedLanguage);
-	// console.log(chronicles);
 
 	useEffect(() => {
 		const fetchChroniclesList = async () => {
@@ -27,7 +25,7 @@ const ChroniclesList = ({ paddingTop }) => {
 				setLoading(true);
 				const response = await fetchChronicles();
 				if (response) {
-					setChronicles(response.slice(0,8).sort((a, b) => b.date - a.date));
+					setChronicles(response.slice(0, 8).sort((a, b) => b.date - a.date));
 				}
 			} catch (error) {
 				setError(error.message);
@@ -52,7 +50,7 @@ const ChroniclesList = ({ paddingTop }) => {
 				<p className={css.message}>Error: {error}</p>
 			) : chronicles.length > 0 ? (
 				isMobile ? (
-					<ChroniclesListUl items={chronicles}/>
+					<ChroniclesListUl items={chronicles} />
 				) : (
 					<ul className={css.list}>
 						{chronicles.map(({ id, photo, title, description }) => (

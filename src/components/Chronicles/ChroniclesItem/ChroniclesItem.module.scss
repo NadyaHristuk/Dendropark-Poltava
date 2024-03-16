@@ -73,12 +73,10 @@
 		margin-bottom: 12px;
 		height: 200px;
 	}
-
-
 }
 .button {
 	display: flex;
-    align-items: center;
+	align-items: center;
 
 	font-family: 'Innerspace', serif;
 	font-weight: 400;
@@ -90,7 +88,6 @@
 .button:hover {
 	color: $osnovniy;
 }
-
 
 .arrowUpIcon {
 	width: 20px;

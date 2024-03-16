@@ -1,5 +1,4 @@
 import { icons } from '../../../assets';
-// import closeIcon from "../../../assets/icons/mi_close.svg";
 import css from './ChroniclesModal.module.scss';
 import ComponentWithModal from '../../ModalWrapper/ModalWrapper';
 
@@ -20,7 +19,6 @@ const ChroniclesModal = ({ url, title, description, isOpen, isClose }) => {
 					<svg className={css.closeIcon}>
 						<use href={`${icons}#icon-close`}></use>
 					</svg>
-					{/* <img className={css.closeIcon} src={closeIcon} alt="Close Icon" /> */}
 				</button>
 			</div>
 		</ComponentWithModal>
