@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import QRCode from 'react-qr-code';
 import css from './QrCode.module.scss';
 import icons from '/src/assets/icons/sprite.svg';
@@ -7,7 +7,7 @@ import { fetchHelpParkData } from '../../../adminPanel/serviceApiHelpPark';
 
 export const QrCode = () => {
 	const { isMobile, isTablet, isDesktop } = useMedia();
-	const [donation, setDonation] = useState({})
+	const [donation, setDonation] = useState({});
 	const savedLanguage = localStorage.getItem('LANGUAGE_KEY') || 'ua';
 
 	let lang;
@@ -15,21 +15,21 @@ export const QrCode = () => {
 	savedLanguage === 'ua' ? (lang = 'uk') : (lang = 'en');
 
 	useEffect(() => {
-		const getLinkHelpParkData = async() => {
+		const getDonations = async () => {
 			try {
 				const data = await fetchHelpParkData()
 				setDonation(data[0])
 			} catch (error) {
-				console.log((error.message))
+				console.log(error.message)
 			}
 		}
 
-		getLinkHelpParkData()
+		getDonations();
 	}, [])
 
 	return (
 		<div className={css.desktopDiv}>
-			<p className={css.currentGoal}>{donation[lang].description}</p>
+			<p className={css.currentGoal}>{donation[lang]?.description}</p>
 
 			{(isMobile || isTablet) && (
 				<>
@@ -39,7 +39,7 @@ export const QrCode = () => {
 							size={256}
 							bgColor="transparent"
 							fgColor="#014631"
-							value={donation.link}
+							value={donation?.link || ""}
 							viewBox={`0 0 256 256`}
 						/>
 					</div>
@@ -51,7 +51,7 @@ export const QrCode = () => {
 						<svg className={css.heartIcon}>
 							<use href={`${icons}#icon-simplethankyou`}></use>
 						</svg>
-						{donation[lang].buttonText}
+						{donation[lang]?.buttonText}
 					</a>
 				</>
 			)}
@@ -63,18 +63,18 @@ export const QrCode = () => {
 						size={256}
 						bgColor="transparent"
 						fgColor="#014631"
-						value={donation.link}
+						value={donation?.link || ""}
 						viewBox={`0 0 256 256`}
 					/>
 					<a
 						className={css.helpLink}
-						href={donation.link}
+						href={donation?.link}
 						target="_blank"
 					>
 						<svg className={css.heartIcon}>
 							<use href={`${icons}#icon-simplethankyou`}></use>
 						</svg>
-						{donation[lang].buttonText}
+						{donation[lang]?.buttonText}
 					</a>
 				</div>
 			)}
