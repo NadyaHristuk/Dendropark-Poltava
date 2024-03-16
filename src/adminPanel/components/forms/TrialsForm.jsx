@@ -30,7 +30,6 @@ const TrialsForm = ({ name, item, isOpen, setIsOpen }) => {
 
 		if (isOpen) setIsOpen(false);
 		if (response) setChanged(true);
-		return response;
 	};
 
 	const normFile = (e) => {
@@ -44,7 +43,7 @@ const TrialsForm = ({ name, item, isOpen, setIsOpen }) => {
 			name="basic"
 			labelCol={{ span: 8 }}
 			wrapperCol={{ span: 16 }}
-			style={{ maxWidth: 600 }}
+			style={{ maxWidth: 600, color: '#0F172A' }}
 			initialValues={{
 				remember: true,
 				title: item?.uk.title,
@@ -59,7 +58,7 @@ const TrialsForm = ({ name, item, isOpen, setIsOpen }) => {
 			autoComplete="off"
 		>
 			{/* uk */}
-			<p>Заповніть Українською</p>
+			<p style={{ marginBottom: 10 }}>Заповніть Українською</p>
 			<Form.Item
 				label="Distance"
 				name="distance"
@@ -112,7 +111,7 @@ const TrialsForm = ({ name, item, isOpen, setIsOpen }) => {
 				<ReactQuill theme="snow" style={{ fontWeight: 400 }} />
 			</Form.Item>
 			{/* en */}
-			<p>Заповніть Англійською</p>
+			<p style={{ marginBottom: 10 }}>Заповніть Англійською</p>
 			<Form.Item
 				label="TitleEn"
 				name="titleEn"
@@ -151,7 +150,7 @@ const TrialsForm = ({ name, item, isOpen, setIsOpen }) => {
 			>
 				<ReactQuill style={{ fontWeight: 'normal' }} theme="snow" />
 			</Form.Item>
-			<p>Завантажте Фото й Карту</p>
+			<p style={{ marginBottom: 10 }}>Завантажте Фото й Карту</p>
 			<Form.Item
 				name="image"
 				label="Image"
@@ -173,7 +172,7 @@ const TrialsForm = ({ name, item, isOpen, setIsOpen }) => {
 						return false;
 					}}
 				>
-					<Button icon={<UploadOutlined />}>Click or drag to upload</Button>
+					<Button icon={<UploadOutlined />}>Завантажте фото</Button>
 				</Upload.Dragger>
 			</Form.Item>
 			<Form.Item
@@ -197,7 +196,7 @@ const TrialsForm = ({ name, item, isOpen, setIsOpen }) => {
 						return false;
 					}}
 				>
-					<Button icon={<UploadOutlined />}>Click or drag to upload</Button>
+					<Button icon={<UploadOutlined />}>Завантажте мапу</Button>
 				</Upload.Dragger>
 			</Form.Item>
 

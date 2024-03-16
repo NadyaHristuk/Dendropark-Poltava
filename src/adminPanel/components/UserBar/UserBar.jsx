@@ -1,5 +1,4 @@
 import { LoginOutlined, LogoutOutlined } from '@ant-design/icons';
-
 import s from './UserBar.module.scss';
 import { Link } from 'react-router-dom';
 import { logout } from '../../srviceApiAuth';
@@ -7,6 +6,9 @@ import { useCustomContext } from '../../../context/Context';
 
 const UserBar = () => {
 	const isAuth = localStorage.getItem('token');
+	// const {
+	// 	token: { colorBgContainer },
+	// } = theme.useToken();
 	const { adminEmail, setAdminEmail } = useCustomContext();
 
 	const removeToken = () => {

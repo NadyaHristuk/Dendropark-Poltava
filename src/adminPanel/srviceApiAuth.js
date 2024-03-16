@@ -24,7 +24,7 @@ export const apiCall = async (path, method = 'get', body) => {
 		}
 		const response = await api[method](path, body);
 		if (path === '/auth/login' && response) token.set(response.data.token);
-		else if (path === '/auth/logout' && response) token.unset();
+		if (path === '/auth/logout' && response) token.unset();
 		return response.data;
 	} catch (error) {
 		throw new Error(error.response ? error.response.data : error.message);
