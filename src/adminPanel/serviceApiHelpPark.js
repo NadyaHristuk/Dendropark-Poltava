@@ -7,6 +7,6 @@ export const getHelpParkDataById = (id) => apiCall(`/donations/${id}`);
 export const postHelpParkData = (body) => apiCall(`/donations`, 'post', body);
 
 export const updateHelpParkData = (id, updatedHelpParkData) =>
-	apiCall(`/documents/${id}`, 'put', updatedHelpParkData);
+	apiCall(`/donations/${id}`, 'put', updatedHelpParkData);
 
 export const deleteHelpParkData = (id) => apiCall(`/donations/${id}`, 'delete');
