@@ -18,7 +18,7 @@ const customStyles = {
 
 Modal.setAppElement('#modal-root');
 
-const ModalForm = ({ closeModal, modalIsOpen, children }) => {
+const DeleteModal = ({ closeModal, modalIsOpen, children }) => {
 	return (
 		<Modal
 			isOpen={modalIsOpen}
@@ -31,4 +31,4 @@ const ModalForm = ({ closeModal, modalIsOpen, children }) => {
 	);
 };
 
-export default ModalForm;
+export default DeleteModal;
