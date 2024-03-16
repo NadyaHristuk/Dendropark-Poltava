@@ -1,3 +1,4 @@
+import DocumentList from '../../components/DocumentsList/DocumentList';
 import DocumentsForm from '../../components/forms/DocumentsForm';
 import styles from './Documents.module.scss';
 
@@ -5,11 +6,9 @@ const Documents = () => {
 	return (
 		<div className={styles.father}>
 			<div className={styles.container1}>
-				{' '}
-				<DocumentsForm />
+				<DocumentsForm name="postForm" />
 			</div>
-
-			<div className={styles.container2}></div>
+			<DocumentList />
 		</div>
 	);
 };
