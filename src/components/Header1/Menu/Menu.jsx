@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import { useLocation } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
 import { icons } from "../../../assets";
 import { useMedia } from "../../../hooks";
@@ -12,7 +11,6 @@ const Menu = () => {
     const [isOpenMenu, setIsOpenMenu] = useState(false);
     const menuRef = useRef(null);
     const nodeRef = useRef(null);
-    const location = useLocation();
     const { isMobile, isTablet} = useMedia();
 
     const toggleMenu = () => {
@@ -34,7 +32,10 @@ const Menu = () => {
 
     useEffect(() => {
         setIsOpenMenu(false);
-        window.scrollTo(0, 0);
+        window.scrollTo({
+            top: 0,
+            behavior: 'instant'
+        });
     }, [location.pathname]);
 
     return (

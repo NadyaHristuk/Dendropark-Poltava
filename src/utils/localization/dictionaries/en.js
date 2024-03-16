@@ -326,6 +326,7 @@ export const en = {
 			eleventhCardTitle: 'The spring',
 			eleventhCardDescription:
 				'The part of the slope descending from Yakivtsi is most interesting for a small spring.',
+			detailLink: "Read more"
 		},
 		contacts: {
 			title: 'Contact us',

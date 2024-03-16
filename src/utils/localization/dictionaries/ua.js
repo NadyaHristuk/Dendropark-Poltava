@@ -255,6 +255,8 @@ export const ua = {
 			eleventhCardTitle: 'Криничка',
 			eleventhCardDescription:
 				"Частина схилу що спускається від Яківців, найбільш цікавим об'єктом є невелика криничка-джерело.",
+			detailLink: "Детальніше"
+
 		},
 		contacts: {
 			title: 'Контакти',
