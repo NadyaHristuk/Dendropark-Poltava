@@ -3,19 +3,22 @@ import { useTranslation } from 'react-i18next';
 import css from './LocationItem.module.scss';
 import { arabicToRoman } from './romanNumerals';
 import { icons } from '../../../assets';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useMedia } from '../../../hooks/useMedia';
 import { useScrollBar } from '../../../hooks/use-scrollbar';
 import i18n from '../../../utils/localization/i18n.js';
 import { createPictureMapObj } from './createPictureMapObj.js';
 import { createPictureObj } from './createPictureObj.js';
 import { getDates } from './getDatesForUsing.js';
+import { useLocation } from 'react-router-dom';
 
 export const LocationItem = ({ card }) => {
 	const { t } = useTranslation();
 	const [isMapOpen, setIsMapOpen] = useState(false);
 	const { isMobile } = useMedia();
 	const textDescriptionWrapper = useRef(null);
+	const location = useLocation();
+
 	useScrollBar(textDescriptionWrapper);
 
 	const currentLanguage = i18n.language;
@@ -30,6 +33,16 @@ export const LocationItem = ({ card }) => {
 
 	const pictureLocation = createPictureObj(image, imgAlt);
 	const pictureMap = createPictureMapObj(mapImage, imgAlt);
+
+	useEffect(() => {
+		if (card && location.hash) {
+			const id = location.hash.replace('#', '');
+			const element = document.getElementById(id);
+			if (element) {
+				element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+			}
+		}
+	}, [card, location.hash]);
 
 	return (
 		<li className={css.locationItem} id={_id}>

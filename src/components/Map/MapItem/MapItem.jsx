@@ -4,10 +4,17 @@ import { HashLink } from 'react-router-hash-link';
 import { icons } from '../../../assets';
 import scss from './MapItem.module.scss';
 import './transition.scss';
+import { useTranslation } from 'react-i18next';
 
 const MapItem = ({ item, className }) => {
 	const [isVisible, setIsVisible] = useState(false);
 	const nodeRef = useRef(null);
+	const {t} = useTranslation();
+	const savedLanguage = localStorage.getItem('LANGUAGE_KEY') || 'ua';
+
+	let lang;
+
+	savedLanguage === 'ua' ? (lang = 'uk') : (lang = 'en');
 
 	const handleChange = () => {
 		setIsVisible(!isVisible);
@@ -19,7 +26,7 @@ const MapItem = ({ item, className }) => {
 			onMouseEnter={handleChange}
 			onMouseLeave={handleChange}
 		>
-			{item.uk.number}
+			{item[lang].number}
 
 			<CSSTransition
 				in={isVisible}
@@ -35,11 +42,11 @@ const MapItem = ({ item, className }) => {
 								<use href={`${icons}#icon-close`}></use>
 							</svg>
 						</button>
-						<div className={scss.number}>{item.uk.number}</div>
-						<h3 className={scss.title}>{item.uk.title}</h3>
-						<p className={scss.description}>{item.uk.description}</p>
+						<div className={scss.number}>{item[lang].number}</div>
+						<h3 className={scss.title}>{item[lang].title}</h3>
+						<p className={scss.description}>{item[lang].description}</p>
 						<HashLink smooth to={`/about#${item._id}`} className={scss.link}>
-							Детальніше
+							{t('about.detailLink')}
 							<svg className={scss.linkIcon}>
 								<use href={`${icons}#icon-arrow-up`}></use>
 							</svg>

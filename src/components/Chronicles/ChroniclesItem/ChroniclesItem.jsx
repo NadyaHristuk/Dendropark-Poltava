@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { icons } from '../../../assets';
-import ChroniclesModal from '../../Modal/ChroniclesModal/ChroniclesModal';
+import ChroniclesModal from '../ChroniclesModal/ChroniclesModal';
 import { useMedia } from '../../../hooks/useMedia';
-import DefaultImg from '../../../assets/images/NotFound/404-tab.jpg'
+import DefaultImg from '../../../assets/images/NotFound/404-tab.jpg';
 import css from './ChroniclesItem.module.scss';
 
 const ChroniclesItem = ({ url, title, description }) => {
@@ -11,7 +11,7 @@ const ChroniclesItem = ({ url, title, description }) => {
 	const { isMobile } = useMedia();
 
 	const shortDescription = description.slice(0, isMobile ? 80 : 300) + '...';
-	const imgUrl = url? url: DefaultImg;
+	const imgUrl = url ? url : DefaultImg;
 
 	const openModal = () => {
 		setIsOpen(true);
@@ -41,7 +41,7 @@ const ChroniclesItem = ({ url, title, description }) => {
 			{modalIsOpen && (
 				<ChroniclesModal
 					isOpen={modalIsOpen}
-					onRequestClose={closeModal}
+					isClose={closeModal}
 					url={imgUrl}
 					title={title}
 					description={description}

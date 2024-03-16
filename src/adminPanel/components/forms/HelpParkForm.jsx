@@ -1,9 +1,9 @@
 import { Button, Form, Input } from 'antd';
-import { postHelpParkData } from '../../serviceApiHelpPark';
+import { postHelpParkData, updateHelpParkData } from '../../serviceApiHelpPark';
+import { useChanged } from '../PanellList/ChangeContext';
 
-const HelpParkForm = () => {
-	// const [image, setImage] = useState(null);
-
+const HelpParkForm = ({ name, item, isOpen, setIsOpen }) => {
+	const { setChanged } = useChanged();
 	const onFinish = async (values) => {
 		const formData = {
 			uk: {
@@ -17,7 +17,12 @@ const HelpParkForm = () => {
 			link: values.link,
 		};
 
-		const response = await postHelpParkData(formData);
+		const response =
+			name === 'postForm'
+				? await postHelpParkData(formData)
+				: await updateHelpParkData(item._id, formData);
+		if (isOpen) setIsOpen(false);
+		if (response) setChanged(true);
 		return response;
 	};
 
@@ -27,31 +32,53 @@ const HelpParkForm = () => {
 			labelCol={{ span: 8 }}
 			wrapperCol={{ span: 16 }}
 			style={{ maxWidth: 600 }}
-			initialValues={{ remember: true }}
+			initialValues={{
+				remember: true,
+				description: item?.uk.description,
+				descriptionEn: item?.en.description,
+				link: item?.link,
+				buttonText: item?.uk.buttonText,
+				buttonTextEn: item?.en.buttonText,
+			}}
 			onFinish={onFinish}
 			autoComplete="off"
 		>
-			<p>Заповніть Українською</p>
+			<p style={{ marginBottom: 10 }}>Заповніть Українською</p>
 			<Form.Item
 				label="Description"
 				name="description"
-				rules={[{ required: true, message: 'Please input title' }]}
+				rules={[
+					{
+						required: name === 'postForm' ? true : false,
+						message: 'Please input title',
+					},
+				]}
 			>
 				<Input name="description" />
 			</Form.Item>
 			<Form.Item
 				label="ButtonText"
 				name="buttonText"
-				rules={[{ required: true, message: 'Please input button text' }]}
+				rules={[
+					{
+						required: name === 'postForm' ? true : false,
+						message: 'Please input button text',
+					},
+				]}
 			>
 				<Input />
 			</Form.Item>
 
-			<p>Заповніть Англійською</p>
+			<p style={{ marginBottom: 10 }}>Заповніть Англійською</p>
 			<Form.Item
 				label="DescriptionEn"
 				name="descriptionEn"
-				rules={[{ required: true, message: 'Please input title english' }]}
+				rules={[
+					{
+						required: name === 'postForm' ? true : false,
+						message: 'Please input title english',
+					},
+				]}
 			>
 				<Input name="descriptionEn" />
 			</Form.Item>
@@ -59,7 +86,10 @@ const HelpParkForm = () => {
 				label="buttonTextEn"
 				name="buttonTextEn"
 				rules={[
-					{ required: true, message: 'Please input button text english' },
+					{
+						required: name === 'postForm' ? true : false,
+						message: 'Please input button text english',
+					},
 				]}
 			>
 				<Input name="buttonTextEn" />
@@ -67,14 +97,19 @@ const HelpParkForm = () => {
 			<Form.Item
 				label="Link"
 				name="link"
-				rules={[{ required: true, message: 'Please input link' }]}
+				rules={[
+					{
+						required: name === 'postForm' ? true : false,
+						message: 'Please input link',
+					},
+				]}
 			>
 				<Input name="link" />
 			</Form.Item>
 
 			<Form.Item wrapperCol={{ offset: 8, span: 16 }}>
 				<Button type="primary" htmlType="submit">
-					Submit
+					{name === 'postForm' ? 'Додати' : 'Оновити'}
 				</Button>
 			</Form.Item>
 		</Form>

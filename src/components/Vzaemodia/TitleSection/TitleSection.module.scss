@@ -10,10 +10,12 @@
 	color: $pine-depths;
 	user-select: none;
 	padding-bottom: 50px;
+	padding-top: 86px;
 
 	@include media-rules(tablet) {
 		max-width: $tablet;
 		padding-bottom: 80px;
+		padding-top: 96px;
 	}
 
 	@include media-rules(desktop) {

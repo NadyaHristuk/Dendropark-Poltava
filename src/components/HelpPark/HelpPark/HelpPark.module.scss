@@ -44,13 +44,11 @@
 
   @include media-rules(tablet) {
     flex-direction: row;
-    gap: 47px;
+    justify-content: space-between;
     margin-bottom: 80px;
   }
 
   @include media-rules(desktop) {
-    gap: 91px;
-    width: 1280px;
     margin-bottom: 120px;
   }
 }
