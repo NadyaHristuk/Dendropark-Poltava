@@ -1,12 +1,14 @@
 import { Button, Form, Input, Upload, InputNumber } from 'antd';
 import { useState } from 'react';
 import { UploadOutlined } from '@ant-design/icons';
-import { postProduct } from '../../serviceApiProducts';
+import { postProduct, updateProduct } from '../../serviceApiProducts';
+import { useChanged } from '../PanellList/ChangeContext';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 
-const ProductsForm = () => {
+const ProductsForm = ({ name, item, isOpen, setIsOpen }) => {
 	const [image, setImage] = useState(null);
+	const { setChanged } = useChanged();
 	const onFinish = async (values) => {
 		const formData = new FormData();
 		formData.append('uk[title]', values.title);
@@ -18,7 +20,13 @@ const ProductsForm = () => {
 		formData.append('price', values.price);
 		formData.append('image', image);
 
-		const response = await postProduct(formData);
+		const response =
+			name === 'postForm'
+				? await postProduct(formData)
+				: await updateProduct(item._id, formData);
+
+		if (isOpen) setIsOpen(false);
+		if (response) setChanged(true);
 		return response;
 	};
 
@@ -35,64 +43,108 @@ const ProductsForm = () => {
 			labelCol={{ span: 8 }}
 			wrapperCol={{ span: 16 }}
 			style={{ maxWidth: 600 }}
-			initialValues={{ remember: true }}
+			initialValues={{
+				remember: true,
+				title: item?.uk.title,
+				description: item?.uk.description,
+				titleEn: item?.en.title,
+				descriptionEn: item?.en.description,
+				price: item?.price,
+				imgAlt: item?.uk.imgAlt,
+				imgAltEn: item?.en.imgAlt,
+			}}
 			onFinish={onFinish}
 			autoComplete="off"
 		>
 			{/* uk */}
-			<p>Заповніть Українською</p>
+			<p style={{ marginBottom: 10 }}>Заповніть Українською</p>
 			<Form.Item
 				label="Title"
 				name="title"
-				rules={[{ required: true, message: 'Please input title' }]}
+				rules={[
+					{
+						required: name === 'postForm' ? true : false,
+						message: 'Please input title',
+					},
+				]}
 			>
 				<Input />
 			</Form.Item>
 			<Form.Item
 				label="Description"
 				name="description"
-				rules={[{ required: true, message: 'Please input description' }]}
+				rules={[
+					{
+						required: name === 'postForm' ? true : false,
+						message: 'Please input description',
+					},
+				]}
 			>
-				<ReactQuill theme="snow" />
+				<ReactQuill style={{ fontWeight: 'normal' }} theme="snow" />
 			</Form.Item>
 			<Form.Item
 				label="ImgAlt"
 				name="imgAlt"
-				rules={[{ required: true, message: 'Please input alternative text' }]}
+				rules={[
+					{
+						required: name === 'postForm' ? true : false,
+						message: 'Please input alternative text',
+					},
+				]}
 			>
 				<Input />
 			</Form.Item>
 			<Form.Item
 				label="Price"
 				name="price"
-				rules={[{ required: true, message: 'Please input subtitle' }]}
+				rules={[
+					{
+						required: name === 'postForm' ? true : false,
+						message: 'Please input subtitle',
+					},
+				]}
 			>
 				<InputNumber name="price" />
 			</Form.Item>
 			{/* en */}
-			<p>Заповніть Англійською</p>
+			<p style={{ marginBottom: 10 }}>Заповніть Англійською</p>
 			<Form.Item
 				label="TitleEn"
 				name="titleEn"
-				rules={[{ required: true, message: 'Please input title' }]}
+				rules={[
+					{
+						required: name === 'postForm' ? true : false,
+						message: 'Please input title',
+					},
+				]}
 			>
 				<Input />
 			</Form.Item>
 			<Form.Item
 				label="DescriptionEn"
 				name="descriptionEn"
-				rules={[{ required: true, message: 'Please input description' }]}
+				rules={[
+					{
+						required: name === 'postForm' ? true : false,
+						message: 'Please input description',
+					},
+				]}
 			>
-				<ReactQuill theme="snow" />
+				<ReactQuill style={{ fontWeight: 'normal' }} theme="snow" />
 			</Form.Item>
 			<Form.Item
 				label="ImgAltEn"
 				name="imgAltEn"
-				rules={[{ required: true, message: 'Please input alternative text' }]}
+				rules={[
+					{
+						required: name === 'postForm' ? true : false,
+						message: 'Please input alternative text',
+					},
+				]}
 			>
 				<Input />
 			</Form.Item>
-			<p>Завантажте Фото</p>
+			<p style={{ marginBottom: 10 }}>Завантажте Фото</p>
 			<Form.Item
 				name="image"
 				label="Image"
@@ -100,7 +152,7 @@ const ProductsForm = () => {
 				getValueFromEvent={normFile}
 				rules={[
 					{
-						required: true,
+						required: name === 'postForm' ? true : false,
 						message: 'Please upload a image!',
 					},
 				]}
@@ -114,13 +166,13 @@ const ProductsForm = () => {
 						return false;
 					}}
 				>
-					<Button icon={<UploadOutlined />}>Click or drag to upload</Button>
+					<Button icon={<UploadOutlined />}>Завантажте фото</Button>
 				</Upload.Dragger>
 			</Form.Item>
 
 			<Form.Item wrapperCol={{ offset: 8, span: 16 }}>
 				<Button type="primary" htmlType="submit">
-					Submit
+					{name === 'postForm' ? 'Додати' : 'Оновити'}
 				</Button>
 			</Form.Item>
 		</Form>

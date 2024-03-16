@@ -3,7 +3,12 @@
 @import '../../../styles/breakpoints';
 
 .container {
-	width: 100%;
-	max-width: 600px;
+	width: 600px;
 	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 100vh;
+	gap: 40px;
 }
