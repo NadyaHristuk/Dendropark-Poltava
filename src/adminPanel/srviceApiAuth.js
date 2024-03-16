@@ -20,6 +20,7 @@ export const apiCall = async (path, method = 'get', body = null) => {
 	try {
 		const headers = {};
 		const authToken = localStorage.getItem('token');
+
 		if (authToken) {
 			headers.Authorization = `Bearer ${authToken}`;
 		}

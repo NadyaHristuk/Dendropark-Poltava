@@ -9,6 +9,12 @@ const UserBar = () => {
 	const isAuth = localStorage.getItem('token');
 	const { adminEmail, setAdminEmail } = useCustomContext();
 
+	const removeToken = () => {
+		localStorage.removeItem('token');
+	};
+	const delay = 3600000; // 1 hour
+	setTimeout(removeToken, delay);
+
 	const signOut = () => {
 		setAdminEmail('');
 		logout(adminEmail);
@@ -19,7 +25,7 @@ const UserBar = () => {
 		<div className={s.wrapper}>
 			{isAuth ? (
 				<Link to="/admin" onClick={signOut} className={s.link}>
-					<b>{adminEmail} </b>- Вийти: <LogoutOutlined className={s.icon} />
+					Вийти: <LogoutOutlined className={s.icon} />
 				</Link>
 			) : (
 				<Link to="/admin/login" className={s.link}>

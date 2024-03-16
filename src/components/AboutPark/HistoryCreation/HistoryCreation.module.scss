@@ -20,8 +20,6 @@
 	}
 }
 
-
-
 .historyCreationTitle {
 	font-size: 16px;
 	font-weight: 700;
@@ -192,7 +190,7 @@
 	display: flex;
 	gap: 10px;
 	cursor: pointer;
-	transition: background-color 0.5s ease-in-out;
+	@include transition(background-color);
 
 	@include media-rules(tablet) {
 		margin-top: 24px;

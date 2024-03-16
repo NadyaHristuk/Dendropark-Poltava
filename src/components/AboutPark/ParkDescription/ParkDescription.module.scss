@@ -61,7 +61,7 @@
 	letter-spacing: -0.01em;
 	color: $snowdrift;
 	white-space: nowrap;
-	transition: background-color 0.5s ease-in-out;
+	@include transition(background-color);
 	cursor: pointer;
 
 	@include media-rules(tablet) {

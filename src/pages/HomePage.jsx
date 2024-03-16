@@ -5,6 +5,7 @@ import Container from '../components/Container/Container';
 import { HelpPark } from '../components/HelpPark/HelpPark/HelpPark';
 import Hero from '../components/Hero/Hero';
 import { Visual } from '../components/HelpPark/Visual/Visual';
+import { ScrollToTop } from '../components/ScrollToTop/ScrollToTop';
 
 const HomePage = () => {
 	return (
@@ -30,6 +31,8 @@ const HomePage = () => {
 			<Container>
 				<ChroniclesList />
 			</Container>
+
+			<ScrollToTop />
 		</>
 	);
 };
