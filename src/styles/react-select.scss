@@ -1,0 +1,108 @@
+@import "./colors";
+@import "./mixins";
+
+#body {
+    & .react-select {
+
+        &__control {
+            border: 1.01px solid rgba(18, 18, 18, 0.2);
+            border-radius: 201px;
+            width: 68px;
+            height: 49px;
+            cursor: pointer;
+            transition: border-color .2s linear;
+            padding: 0 14px;
+
+            &:hover {
+                border-color: $osnovniy;
+            }
+
+            &--is-focused {
+                box-shadow: none;
+            }
+
+            // &--is-focused .react-select__indicator svg {
+            //     fill: $osnovniy;
+            // }
+
+            // &--is-focused .react-select__single-value {
+            //     color: $osnovniy;
+            // }
+
+            &:hover .react-select__indicator svg {
+                fill: $osnovniy;
+            }
+
+            &:hover .react-select__single-value {
+                color: $osnovniy;
+            }
+
+        }
+
+        &__value-container {
+            margin: 0;
+            padding: 0;
+        
+        }
+
+        &__single-value {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1;
+            letter-spacing: -0.01em;
+            color: $pine-depths;
+            transition: color .2s linear;
+            overflow: visible;
+            margin: 0;
+        }
+
+        &__indicator {
+
+            padding: 0;
+
+            & svg {
+                width: 13px;
+                height: 13px;
+                fill: $pine-depths;
+                transition: fill .2s linear;
+            }
+        }
+
+        &__indicator-separator {
+            display: none;
+        }
+
+        &__menu {
+            right: 0;
+            width: 194px;
+            box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.05);
+            background: $snowdrift;
+            border: 10.07px solid $stroke;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        &__menu-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding: 22px 31px;
+        }
+
+        &__option {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.5;
+            color: $pine-depths;
+            cursor: pointer;
+            padding: 4px 0;
+
+            @include transition(color)
+        }
+
+        &__option--is-focused, &__option--is-selected {
+            background-color: transparent;
+            color: $osnovniy;
+        }
+    }
+}

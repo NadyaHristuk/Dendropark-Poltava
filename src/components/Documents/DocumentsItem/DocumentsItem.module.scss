@@ -52,6 +52,8 @@
 	width: 37px;
 	height: 37px;
 	margin-right: 16px;
+	scale: 1;
+	@include transition (scale);
 
 	@include media-rules(tablet) {
 		width: 40px;
@@ -64,12 +66,17 @@
 	fill: $tropical-wave;
 }
 
+.wraper:hover .documentsIcon{
+	scale: 1.15;
+	@include transition (scale)
+}
+
 .wraper:hover .link {
 	color: $tropical-wave;
 }
 
 .arrowUpIcon {
-	width: 16px;
-	height: 16px;
+	width: 20px;
+	height: 20px;
 	fill: $pine-depths;
 }

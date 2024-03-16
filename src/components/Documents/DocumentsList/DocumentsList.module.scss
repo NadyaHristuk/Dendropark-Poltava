@@ -9,7 +9,7 @@
 	}
 
 	@include media-rules(desktop) {
-		padding-bottom: 201px;
+		padding-bottom: 150px;
 	}
 }
 
@@ -39,7 +39,7 @@
 
 	@include media-rules(tablet) {
 		overflow-y: scroll;
-		max-height: 300px;
+		max-height: 440px;
 	}
 }
 

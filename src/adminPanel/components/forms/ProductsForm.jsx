@@ -2,6 +2,8 @@ import { Button, Form, Input, Upload, InputNumber } from 'antd';
 import { useState } from 'react';
 import { UploadOutlined } from '@ant-design/icons';
 import { postProduct } from '../../serviceApiProducts';
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
 
 const ProductsForm = () => {
 	const [image, setImage] = useState(null);
@@ -27,23 +29,6 @@ const ProductsForm = () => {
 		return e?.fileList;
 	};
 
-	const onFinishFailed = (errorInfo) => {
-		console.log('Failed:', errorInfo);
-	};
-	// {
-	//   "uk": {
-	//     "title": "Назва продукту",
-	//     "description": "Опис продукту",
-	//     "imgAlt": "Альтернативний текст для зображення"
-	//   },
-	//   "en": {
-	//     "title": "Product Title",
-	//     "description": "Product Description",
-	//     "imgAlt": "Image Alt Text"
-	//   },
-	//   "price": 10.99,
-	//   "image": "Прикріпленний файл"
-	// }
 	return (
 		<Form
 			name="basic"
@@ -52,7 +37,6 @@ const ProductsForm = () => {
 			style={{ maxWidth: 600 }}
 			initialValues={{ remember: true }}
 			onFinish={onFinish}
-			onFinishFailed={onFinishFailed}
 			autoComplete="off"
 		>
 			{/* uk */}
@@ -69,7 +53,7 @@ const ProductsForm = () => {
 				name="description"
 				rules={[{ required: true, message: 'Please input description' }]}
 			>
-				<Input />
+				<ReactQuill theme="snow" />
 			</Form.Item>
 			<Form.Item
 				label="ImgAlt"
@@ -99,7 +83,7 @@ const ProductsForm = () => {
 				name="descriptionEn"
 				rules={[{ required: true, message: 'Please input description' }]}
 			>
-				<Input />
+				<ReactQuill theme="snow" />
 			</Form.Item>
 			<Form.Item
 				label="ImgAltEn"

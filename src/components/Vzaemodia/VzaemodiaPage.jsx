@@ -5,6 +5,7 @@ import { RulesSection } from './RulesSection/RulesSection';
 import CalendarIframe from '../Calendar/CalendarIframe';
 import { SectionWrapper } from './SectionWrapper/SectionWrapper';
 import Map from '../Map/Map';
+import { ScrollToTop } from '../ScrollToTop/ScrollToTop';
 
 const VzaemodiaPage = () => {
 	return (
@@ -19,6 +20,7 @@ const VzaemodiaPage = () => {
 				<CalendarIframe />
 			</SectionWrapper>
 			<RulesSection />
+			<ScrollToTop />
 		</>
 	);
 };
