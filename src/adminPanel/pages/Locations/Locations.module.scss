@@ -9,9 +9,13 @@
 	gap: 20px;
 }
 .container1 {
-	width: 35%;
+	min-width: 320px;
+	width: 24%;
+	background-color: #f8fafc;
+	border-radius: 10px;
+	padding: 20px;
+	padding-left: 6px;
 }
 .container2 {
-	width: 65%;
-	background-color: black;
+	width: 76%;
 }

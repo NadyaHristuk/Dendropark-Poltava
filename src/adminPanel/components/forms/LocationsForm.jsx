@@ -1,29 +1,36 @@
 import { Button, Form, Input, Upload } from 'antd';
 import { UploadOutlined } from '@ant-design/icons';
-import { postLocation } from '../../serviceApiLocations';
+import { postLocation, updateLocation } from '../../serviceApiLocations';
 import { useState } from 'react';
 
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
+import { useChanged } from '../PanellList/ContextProvider/useChanged';
 
-const LocationsForm = () => {
+const LocationsForm = ({ name, item, isOpen, setIsOpen }) => {
 	const [image, setImage] = useState(null);
 	const [imageMap, setImageMap] = useState(null);
+	const { setChanged } = useChanged();
 
 	const onFinish = async (values) => {
 		const formData = new FormData();
-		formData.append('uk[title]', values.title);
-		formData.append('uk[imgAlt]', values.imgAlt);
-		formData.append('uk[description]', values.description);
+		formData.append('ua[title]', values.title);
+		formData.append('ua[imgAlt]', values.imgAlt);
+		formData.append('ua[description]', values.description);
 		formData.append('en[title]', values.titleEn);
 		formData.append('en[imgAlt]', values.imgAltEn);
 		formData.append('en[description]', values.descriptionEn);
 		formData.append('number', values.number);
-		formData.append('locationId', values.locationId);
 		formData.append('image', image);
 		formData.append('mapImage', imageMap);
 
-		const response = await postLocation(formData);
+		const response =
+			name === 'postForm'
+				? await postLocation(formData)
+				: await updateLocation(item._id, formData);
+
+		if (isOpen) setIsOpen(false);
+		if (response) setChanged(true);
 		return response;
 	};
 
@@ -39,23 +46,31 @@ const LocationsForm = () => {
 			labelCol={{ span: 8 }}
 			wrapperCol={{ span: 16 }}
 			style={{ maxWidth: 600 }}
-			initialValues={{ remember: true }}
+			initialValues={{
+				remember: true,
+				title: item?.ua.title,
+				description: item?.ua.description,
+				titleEn: item?.en.title,
+				descriptionEn: item?.en.description,
+				distance: item?.distance,
+				number: item?.number,
+				imgAlt: item?.ua.imgAlt,
+				imgAltEn: item?.en.imgAlt,
+			}}
 			onFinish={onFinish}
 			autoComplete="off"
 		>
-			{/* uk */}
-			<p>Заповніть Українською</p>
-			<Form.Item
-				label="LocationId"
-				name="locationId"
-				rules={[{ required: true, message: 'Please input distance' }]}
-			>
-				<Input />
-			</Form.Item>
+			{/* ua */}
+			<p style={{ marginBottom: 10 }}>Заповніть Українською</p>
 			<Form.Item
 				label="Number"
 				name="number"
-				rules={[{ required: true, message: 'Please input distance' }]}
+				rules={[
+					{
+						required: name === 'postForm' ? true : false,
+						message: 'Please input distance',
+					},
+				]}
 			>
 				<Input />
 			</Form.Item>
@@ -63,7 +78,12 @@ const LocationsForm = () => {
 			<Form.Item
 				label="Title"
 				name="title"
-				rules={[{ required: true, message: 'Please input title' }]}
+				rules={[
+					{
+						required: name === 'postForm' ? true : false,
+						message: 'Please input title',
+					},
+				]}
 			>
 				<Input />
 			</Form.Item>
@@ -71,7 +91,12 @@ const LocationsForm = () => {
 			<Form.Item
 				label="ImgAlt"
 				name="imgAlt"
-				rules={[{ required: true, message: 'Please input subtitle' }]}
+				rules={[
+					{
+						required: name === 'postForm' ? true : false,
+						message: 'Please input subtitle',
+					},
+				]}
 			>
 				<Input />
 			</Form.Item>
@@ -79,16 +104,26 @@ const LocationsForm = () => {
 			<Form.Item
 				label="Description"
 				name="description"
-				rules={[{ required: true, message: 'Please input description' }]}
+				rules={[
+					{
+						required: name === 'postForm' ? true : false,
+						message: 'Please input description',
+					},
+				]}
 			>
-				<ReactQuill theme="snow" />
+				<ReactQuill style={{ fontWeight: 'normal' }} theme="snow" />
 			</Form.Item>
 			{/* en */}
-			<p>Заповніть Англійською</p>
+			<p style={{ marginBottom: 10 }}>Заповніть Англійською</p>
 			<Form.Item
 				label="TitleEn"
 				name="titleEn"
-				rules={[{ required: true, message: 'Please input title' }]}
+				rules={[
+					{
+						required: name === 'postForm' ? true : false,
+						message: 'Please input title',
+					},
+				]}
 			>
 				<Input />
 			</Form.Item>
@@ -96,7 +131,12 @@ const LocationsForm = () => {
 			<Form.Item
 				label="ImgAltEn"
 				name="imgAltEn"
-				rules={[{ required: true, message: 'Please input alternative text' }]}
+				rules={[
+					{
+						required: name === 'postForm' ? true : false,
+						message: 'Please input alternative text',
+					},
+				]}
 			>
 				<Input />
 			</Form.Item>
@@ -104,12 +144,17 @@ const LocationsForm = () => {
 			<Form.Item
 				label="DescriptionEn"
 				name="descriptionEn"
-				rules={[{ required: true, message: 'Please input description' }]}
+				rules={[
+					{
+						required: name === 'postForm' ? true : false,
+						message: 'Please input description',
+					},
+				]}
 			>
-				<ReactQuill theme="snow" />
+				<ReactQuill style={{ fontWeight: 'normal' }} theme="snow" />
 			</Form.Item>
 
-			<p>Завантажте Фото й Мапу</p>
+			<p style={{ marginBottom: 10 }}>Завантажте Фото й Мапу</p>
 			<Form.Item
 				name="image"
 				label="Image"
@@ -117,7 +162,7 @@ const LocationsForm = () => {
 				getValueFromEvent={normFile}
 				rules={[
 					{
-						required: true,
+						required: name === 'postForm' ? true : false,
 						message: 'Please upload a image!',
 					},
 				]}
@@ -131,7 +176,7 @@ const LocationsForm = () => {
 						return false;
 					}}
 				>
-					<Button icon={<UploadOutlined />}>Click or drag to upload</Button>
+					<Button icon={<UploadOutlined />}>Завантажте фото</Button>
 				</Upload.Dragger>
 			</Form.Item>
 			<Form.Item
@@ -141,7 +186,7 @@ const LocationsForm = () => {
 				getValueFromEvent={normFile}
 				rules={[
 					{
-						required: true,
+						required: name === 'postForm' ? true : false,
 						message: 'Please upload a file!',
 					},
 				]}
@@ -155,13 +200,13 @@ const LocationsForm = () => {
 						return false;
 					}}
 				>
-					<Button icon={<UploadOutlined />}>Click or drag to upload</Button>
+					<Button icon={<UploadOutlined />}>Завантажте мапу</Button>
 				</Upload.Dragger>
 			</Form.Item>
 
 			<Form.Item wrapperCol={{ offset: 8, span: 16 }}>
 				<Button type="primary" htmlType="submit">
-					Submit
+					{name === 'postForm' ? 'Додати' : 'Оновити'}
 				</Button>
 			</Form.Item>
 		</Form>

@@ -16,17 +16,15 @@ export const token = {
 	},
 };
 
-export const apiCall = async (path, method = 'get', body = null) => {
+export const apiCall = async (path, method = 'get', body) => {
 	try {
-		const headers = {};
 		const authToken = localStorage.getItem('token');
-		if (authToken) {
-			headers.Authorization = `Bearer ${authToken}`;
+		if (authToken && method !== 'get') {
+			token.set(authToken);
 		}
-
-		const response = await api[method](path, body, { headers });
+		const response = await api[method](path, body);
 		if (path === '/auth/login' && response) token.set(response.data.token);
-		else if (path === '/auth/logout' && response) token.unset();
+		if (path === '/auth/logout' && response) token.unset();
 		return response.data;
 	} catch (error) {
 		throw new Error(error.response ? error.response.data : error.message);

@@ -6,12 +6,16 @@
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
-	gap: 20px;
+	gap: 50px;
 }
 .container1 {
-	width: 45%;
+	width: 24%;
+	min-width: 320px;
+	background-color: #f8fafc;
+	border-radius: 10px;
+	padding: 20px;
+	padding-left: 6px;
 }
 .container2 {
-	width: 55%;
-	background-color: black;
+	width: 76%;
 }

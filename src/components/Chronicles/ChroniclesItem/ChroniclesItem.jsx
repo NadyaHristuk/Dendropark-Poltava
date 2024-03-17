@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { icons } from '../../../assets';
-import ChroniclesModal from '../../Modal/ChroniclesModal/ChroniclesModal';
+import ChroniclesModal from '../ChroniclesModal/ChroniclesModal';
 import { useMedia } from '../../../hooks/useMedia';
 import DefaultImg from '../../../assets/images/NotFound/404-tab.jpg';
 import css from './ChroniclesItem.module.scss';

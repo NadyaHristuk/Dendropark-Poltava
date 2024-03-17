@@ -1,5 +1,4 @@
 import { LoginOutlined, LogoutOutlined } from '@ant-design/icons';
-
 import s from './UserBar.module.scss';
 import { Link } from 'react-router-dom';
 import { logout } from '../../srviceApiAuth';
@@ -7,7 +6,16 @@ import { useCustomContext } from '../../../context/Context';
 
 const UserBar = () => {
 	const isAuth = localStorage.getItem('token');
+	// const {
+	// 	token: { colorBgContainer },
+	// } = theme.useToken();
 	const { adminEmail, setAdminEmail } = useCustomContext();
+
+	const removeToken = () => {
+		localStorage.removeItem('token');
+	};
+	const delay = 3600000; // 1 hour
+	setTimeout(removeToken, delay);
 
 	const signOut = () => {
 		setAdminEmail('');
@@ -19,7 +27,7 @@ const UserBar = () => {
 		<div className={s.wrapper}>
 			{isAuth ? (
 				<Link to="/admin" onClick={signOut} className={s.link}>
-					<b>{adminEmail} </b>- Вийти: <LogoutOutlined className={s.icon} />
+					Вийти: <LogoutOutlined className={s.icon} />
 				</Link>
 			) : (
 				<Link to="/admin/login" className={s.link}>
