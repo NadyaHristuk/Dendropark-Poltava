@@ -2,19 +2,20 @@
 @import '/src/styles/colors';
 
 .chroniclesSection {
-	width: 358px;
+	max-width: 358px;
+	// width: 358px;
 	// padding-top: 80px;
-	padding-bottom: 64px;
+	// padding-bottom: 64px;
 
 	@include media-rules(tablet) {
-		width: 880px;
+		max-width: 880px;
 		// padding-top: 80px;
-		padding-bottom: 80px;
+		// padding-bottom: 80px;
 	}
 
 	@include media-rules(desktop) {
-		width: 1280px;
-		padding-bottom: 120px;
+		max-width: 1280px;
+		// padding-bottom: 120px;
 	}
 }
 

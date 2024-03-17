@@ -2,14 +2,17 @@
 @import '/src/styles/colors';
 
 .documentsSection {
-	padding-bottom: 64px;
-
+	padding-top: 94px;
+	// padding-bottom: 64px;
+	
 	@include media-rules(tablet) {
-		padding-bottom: 80px;
+		padding-top: 80px;
+		// padding-bottom: 80px;
 	}
-
+	
 	@include media-rules(desktop) {
-		padding-bottom: 150px;
+		padding-top: 120px;
+		// padding-bottom: 150px;
 	}
 }
 

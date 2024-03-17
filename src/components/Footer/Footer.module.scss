@@ -5,7 +5,13 @@
 .footer_container {
 	color: $snowdrift;
 	background-color: $pine-depths;
-	margin-top: 40px;
+	margin-top: 64px;
+	@include media-rules(tablet) {
+		padding-top: 80px;
+	}
+	@include media-rules(desktop) {
+		padding-top: 120px;
+	}
 }
 
 .footer {
