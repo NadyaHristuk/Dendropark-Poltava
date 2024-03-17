@@ -73,22 +73,22 @@
 }
 
 .linkedin_icon {
-	width: 13px;
-	height: 13px;
+	width: 15px;
+	height: 15px;
 	position: absolute;
 	fill: $light-color;
 	right: 13px;
-	bottom: 14px;
+	bottom: 12px;
 	@include media-rules(tablet) {
-		width: 14.85px;
-		height: 14.85px;
-		right: 21px;
-		bottom: 20px;
+		width: 32px;
+		height: 32px;
+		right: 14px;
+		bottom: 13px;
 	}
 	@include media-rules(desktop) {
-		width: 19px;
-		height: 19px;
-		right: 25.73px;
-		bottom: 24px;
+		width: 32px;
+		height: 32px;
+		right: 14px;
+		bottom: 13px;
 	}
 }
