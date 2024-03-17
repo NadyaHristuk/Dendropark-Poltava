@@ -33,6 +33,7 @@
 	display: block;
 	border-radius: 13px;
 	height: 134px;
+	object-fit: cover;
 	@include media-rules(tablet) {
 		height: 190px;
 	}

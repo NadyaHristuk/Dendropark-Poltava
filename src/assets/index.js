@@ -13,7 +13,7 @@ export { default as photo12 } from './images/ModalStudents/bartosh_olena.jpeg';
 export { default as photo14 } from './images/ModalStudents/polishchuk_andrii.jpeg';
 export { default as photo15 } from './images/ModalStudents/kuchma_olena.jpeg';
 export { default as photo16 } from './images/ModalStudents/vasylenko_oleksandr.jpeg';
-export { default as photo17 } from './images/ModalStudents/tatarnykova_olha.jpeg';
+export { default as photo17 } from './images/ModalStudents/tatarnykova_olha.png';
 // for header
 export { default as logo1x } from './images/header/logo@1x.png';
 export { default as logo2x } from './images/header/logo@2x.png';
