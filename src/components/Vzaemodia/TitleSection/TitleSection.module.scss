@@ -21,6 +21,7 @@
 	@include media-rules(desktop) {
 		max-width: $desktop;
 		padding-bottom: 120px;
+		padding-top: 86px;
 	}
 }
 
