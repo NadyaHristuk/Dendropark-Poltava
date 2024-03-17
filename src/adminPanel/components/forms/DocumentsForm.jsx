@@ -1,6 +1,6 @@
 import { Button, Form, Input } from 'antd';
 import { postDocument, updateDocument } from '../../serviceApiDocuments';
-import { useChanged } from '../PanellList/ChangeContext';
+import { useChanged } from '../PanellList/ContextProvider/useChanged';
 
 const DocumentsForm = ({ name, item, isOpen, setIsOpen }) => {
 	const { setChanged } = useChanged();

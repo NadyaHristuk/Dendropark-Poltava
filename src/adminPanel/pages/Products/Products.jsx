@@ -1,7 +1,7 @@
 import styles from './Products.module.scss';
 import { PanellList } from '../../components/PanellList/PanellList';
 import { fetchProducts, deleteProduct } from '../../serviceApiProducts';
-import { ChangedProvider } from '../../components/PanellList/ChangeContext';
+import { ChangedProvider } from '../../components/PanellList/ContextProvider/ChangeContext';
 import ProductsForm from '../../components/forms/ProductsForm';
 
 const Products = () => {

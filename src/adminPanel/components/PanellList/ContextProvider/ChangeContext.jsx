@@ -1,8 +1,6 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useState } from 'react';
 
 const ChangedContext = createContext();
-
-const useChanged = () => useContext(ChangedContext);
 
 const ChangedProvider = ({ children }) => {
 	const [changed, setChanged] = useState(false);
@@ -14,4 +12,4 @@ const ChangedProvider = ({ children }) => {
 	);
 };
 
-export { useChanged, ChangedProvider };
+export { ChangedProvider, ChangedContext };

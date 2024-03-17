@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
-import { useChanged } from '../PanellList/ChangeContext';
+import { useChanged } from '../PanellList/ContextProvider/useChanged';
 
 const LocationsForm = ({ name, item, isOpen, setIsOpen }) => {
 	const [image, setImage] = useState(null);

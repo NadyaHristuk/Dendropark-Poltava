@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { List } from 'antd';
 import s from './DocumentList.module.scss';
 import ModalForm from '../Modal/Modal';
-import { useChanged } from './ChangeContext';
+import { useChanged } from './ContextProvider/useChanged';
 import { PanellListItem } from './PanellListItem';
 import DeleteModal from '../Modal/DeleteModal';
 
