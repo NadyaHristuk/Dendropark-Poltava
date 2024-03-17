@@ -13,9 +13,9 @@ const TrialsForm = ({ name, item, isOpen, setIsOpen }) => {
 
 	const onFinish = async (values) => {
 		const formData = new FormData();
-		formData.append('uk[title]', values.title);
-		formData.append('uk[imgAlt]', values.imgAlt);
-		formData.append('uk[text]', values.text);
+		formData.append('ua[title]', values.title);
+		formData.append('ua[imgAlt]', values.imgAlt);
+		formData.append('ua[text]', values.text);
 		formData.append('en[title]', values.titleEn);
 		formData.append('en[imgAlt]', values.imgAltEn);
 		formData.append('en[text]', values.textEn);
@@ -46,18 +46,18 @@ const TrialsForm = ({ name, item, isOpen, setIsOpen }) => {
 			style={{ maxWidth: 600, color: '#0F172A' }}
 			initialValues={{
 				remember: true,
-				title: item?.uk.title,
+				title: item?.ua.title,
 				text: item?.en.text,
 				titleEn: item?.en.title,
 				textEn: item?.en.text,
 				distance: item?.distance,
-				imgAlt: item?.uk.imgAlt,
+				imgAlt: item?.ua.imgAlt,
 				imgAltEn: item?.en.imgAlt,
 			}}
 			onFinish={onFinish}
 			autoComplete="off"
 		>
-			{/* uk */}
+			{/* ua */}
 			<p style={{ marginBottom: 10 }}>Заповніть Українською</p>
 			<Form.Item
 				label="Distance"

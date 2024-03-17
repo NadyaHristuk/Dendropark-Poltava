@@ -7,7 +7,7 @@ const DocumentsForm = ({ name, item, isOpen, setIsOpen }) => {
 
 	const onFinish = async (values) => {
 		const formData = {
-			uk: {
+			ua: {
 				title: values.title,
 				subtitle: values.subtitle,
 				description: values.description,
@@ -37,9 +37,9 @@ const DocumentsForm = ({ name, item, isOpen, setIsOpen }) => {
 			style={{ maxWidth: 500 }}
 			initialValues={{
 				remember: true,
-				title: item?.uk.title,
-				subtitle: item?.uk.subtitle,
-				description: item?.uk.description,
+				title: item?.ua.title,
+				subtitle: item?.ua.subtitle,
+				description: item?.ua.description,
 				titleEn: item?.en.title,
 				subtitleEn: item?.en.subtitle,
 				descriptionEn: item?.en.description,
@@ -48,7 +48,7 @@ const DocumentsForm = ({ name, item, isOpen, setIsOpen }) => {
 			onFinish={onFinish}
 			autoComplete="off"
 		>
-			{/* uk */}
+			{/* ua */}
 			<p style={{ marginBottom: 10 }}>Заповніть Українською</p>
 			<Form.Item
 				label="Title"

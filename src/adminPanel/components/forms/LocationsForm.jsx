@@ -14,9 +14,9 @@ const LocationsForm = ({ name, item, isOpen, setIsOpen }) => {
 
 	const onFinish = async (values) => {
 		const formData = new FormData();
-		formData.append('uk[title]', values.title);
-		formData.append('uk[imgAlt]', values.imgAlt);
-		formData.append('uk[description]', values.description);
+		formData.append('ua[title]', values.title);
+		formData.append('ua[imgAlt]', values.imgAlt);
+		formData.append('ua[description]', values.description);
 		formData.append('en[title]', values.titleEn);
 		formData.append('en[imgAlt]', values.imgAltEn);
 		formData.append('en[description]', values.descriptionEn);
@@ -48,19 +48,19 @@ const LocationsForm = ({ name, item, isOpen, setIsOpen }) => {
 			style={{ maxWidth: 600 }}
 			initialValues={{
 				remember: true,
-				title: item?.uk.title,
-				description: item?.uk.description,
+				title: item?.ua.title,
+				description: item?.ua.description,
 				titleEn: item?.en.title,
 				descriptionEn: item?.en.description,
 				distance: item?.distance,
 				number: item?.number,
-				imgAlt: item?.uk.imgAlt,
+				imgAlt: item?.ua.imgAlt,
 				imgAltEn: item?.en.imgAlt,
 			}}
 			onFinish={onFinish}
 			autoComplete="off"
 		>
-			{/* uk */}
+			{/* ua */}
 			<p style={{ marginBottom: 10 }}>Заповніть Українською</p>
 			<Form.Item
 				label="Number"
