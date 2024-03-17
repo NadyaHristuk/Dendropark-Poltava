@@ -1,6 +1,6 @@
 import { Button, Form, Input } from 'antd';
 import { postHelpParkData, updateHelpParkData } from '../../serviceApiHelpPark';
-import { useChanged } from '../PanellList/ChangeContext';
+import { useChanged } from '../PanellList/ContextProvider/useChanged';
 
 const HelpParkForm = ({ name, item, isOpen, setIsOpen }) => {
 	const { setChanged } = useChanged();

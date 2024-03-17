@@ -2,7 +2,7 @@ import { PanellList } from '../../components/PanellList/PanellList';
 import DocumentsForm from '../../components/forms/DocumentsForm';
 import { fetchDocuments, deleteDocument } from '../../serviceApiDocuments';
 import styles from './Documents.module.scss';
-import { ChangedProvider } from '../../components/PanellList/ChangeContext';
+import { ChangedProvider } from '../../components/PanellList/ContextProvider/ChangeContext';
 
 const Documents = () => {
 	return (

@@ -1,5 +1,5 @@
 import LocationsForm from '../../components/forms/LocationsForm';
-import { ChangedProvider } from '../../components/PanellList/ChangeContext';
+import { ChangedProvider } from '../../components/PanellList/ContextProvider/ChangeContext';
 import { PanellList } from '../../components/PanellList/PanellList';
 import { fetchLocations, deleteLocation } from '../../serviceApiLocations';
 import styles from './Locations.module.scss';

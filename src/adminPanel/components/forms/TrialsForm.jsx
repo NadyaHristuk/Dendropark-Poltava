@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Button, Form, Input, InputNumber, Upload } from 'antd';
 import { UploadOutlined } from '@ant-design/icons';
 import { postTrial, updateTrial } from '../../serviceApiTrials';
-import { useChanged } from '../PanellList/ChangeContext';
+import { useChanged } from '../PanellList/ContextProvider/useChanged';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 

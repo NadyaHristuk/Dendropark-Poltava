@@ -1,6 +1,6 @@
 import styles from './Trials.module.scss';
 import { PanellList } from '../../components/PanellList/PanellList';
-import { ChangedProvider } from '../../components/PanellList/ChangeContext';
+import { ChangedProvider } from '../../components/PanellList/ContextProvider/ChangeContext';
 import { fetchTrials, deleteTrial } from '../../serviceApiTrials';
 import TrialsForm from '../../components/forms/TrialsForm';
 

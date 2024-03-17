@@ -1,6 +1,6 @@
 import HelpParkForm from '../../components/forms/HelpParkForm';
 import { PanellList } from '../../components/PanellList/PanellList';
-import { ChangedProvider } from '../../components/PanellList/ChangeContext';
+import { ChangedProvider } from '../../components/PanellList/ContextProvider/ChangeContext';
 import {
 	fetchHelpParkData,
 	deleteHelpParkData,
