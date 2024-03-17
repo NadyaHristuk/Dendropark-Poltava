@@ -7,11 +7,11 @@ export const PanellListItem = ({ item, openFormEdit, openDeleteModal }) => {
 			<List.Item.Meta
 				title={
 					// title
-					item.uk.title &&
+					item.ua.title &&
 					item.en.title && (
 						<p className={style.text} style={{ fontSize: '18px' }}>
-							<span className={style.span}>Uk title: </span>
-							{item.uk.title && item.uk.title} |{' '}
+							<span className={style.span}>Ua title: </span>
+							{item.ua.title && item.ua.title} |{' '}
 							<span className={style.span}>Eng title: </span>
 							{item.en.title && item.en.title}
 						</p>
@@ -24,10 +24,10 @@ export const PanellListItem = ({ item, openFormEdit, openDeleteModal }) => {
 							<img width={272} alt={item.en.imgAlt} src={item.image} />
 						)}
 						{/* subtitle */}
-						{item.uk.subtitle && item.en.subtitle && (
+						{item.ua.subtitle && item.en.subtitle && (
 							<p className={style.text}>
-								<span className={style.span}>Uk subtitle: </span>
-								{item.uk.subtitle} <br />{' '}
+								<span className={style.span}>Ua subtitle: </span>
+								{item.ua.subtitle} <br />{' '}
 								<span className={style.span}>En subtitle: </span>
 								{item.en.subtitle}
 							</p>
@@ -37,14 +37,14 @@ export const PanellListItem = ({ item, openFormEdit, openDeleteModal }) => {
 						{/* text or description */}
 						<div className={style.textDesc}>
 							<span className={style.spanDesc}>
-								{item.en.description ? 'Uk description: ' : 'Uk text: '}
+								{item.en.description ? 'Ua description: ' : 'Ua text: '}
 							</span>{' '}
 							{/* Використовуйте dangerouslySetInnerHTML для вставки HTML з бекенду */}
 							<div
 								dangerouslySetInnerHTML={{
-									__html: item.uk.description
-										? item.uk.description
-										: item.uk.text,
+									__html: item.ua.description
+										? item.ua.description
+										: item.ua.text,
 								}}
 							/>
 							<br />{' '}
@@ -62,20 +62,20 @@ export const PanellListItem = ({ item, openFormEdit, openDeleteModal }) => {
 						</div>
 
 						{/* alt for image */}
-						{item.en.imgAlt && item.uk.imgAlt && (
+						{item.en.imgAlt && item.ua.imgAlt && (
 							<p className={style.text}>
-								<span className={style.span}>Uk alt text: </span>{' '}
-								{item.uk.imgAlt}
+								<span className={style.span}>Ua alt text: </span>{' '}
+								{item.ua.imgAlt}
 								<br /> <span className={style.span}>En alt text: </span>{' '}
 								{item.en.imgAlt}
 							</p>
 						)}
 
 						{/* button text */}
-						{item.en.buttonText && item.uk.buttonText && (
+						{item.en.buttonText && item.ua.buttonText && (
 							<p className={style.text}>
-								<span className={style.span}>Uk button text: </span>{' '}
-								{item.uk.buttonText}
+								<span className={style.span}>Ua button text: </span>{' '}
+								{item.ua.buttonText}
 								<br /> <span className={style.span}>En button text: </span>{' '}
 								{item.en.buttonText}
 							</p>

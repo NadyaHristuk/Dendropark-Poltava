@@ -6,7 +6,7 @@ const HelpParkForm = ({ name, item, isOpen, setIsOpen }) => {
 	const { setChanged } = useChanged();
 	const onFinish = async (values) => {
 		const formData = {
-			uk: {
+			ua: {
 				description: values.description,
 				buttonText: values.buttonText,
 			},
@@ -34,10 +34,10 @@ const HelpParkForm = ({ name, item, isOpen, setIsOpen }) => {
 			style={{ maxWidth: 600 }}
 			initialValues={{
 				remember: true,
-				description: item?.uk.description,
+				description: item?.ua.description,
 				descriptionEn: item?.en.description,
 				link: item?.link,
-				buttonText: item?.uk.buttonText,
+				buttonText: item?.ua.buttonText,
 				buttonTextEn: item?.en.buttonText,
 			}}
 			onFinish={onFinish}

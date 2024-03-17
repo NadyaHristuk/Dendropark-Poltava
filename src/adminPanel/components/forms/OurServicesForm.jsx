@@ -11,7 +11,7 @@ const OurServicesForm = ({ item, name, isOpen, setIsOpen }) => {
 	const { setChanged } = useChanged();
 	const onFinish = async (values) => {
 		const formData = {
-			uk: {
+			ua: {
 				title: values.title,
 				description: values.description,
 			},
@@ -39,8 +39,8 @@ const OurServicesForm = ({ item, name, isOpen, setIsOpen }) => {
 			style={{ maxWidth: 600 }}
 			initialValues={{
 				remember: true,
-				title: item?.uk.title,
-				description: item?.uk.description,
+				title: item?.ua.title,
+				description: item?.ua.description,
 				titleEn: item?.en.title,
 				descriptionEn: item?.en.description,
 			}}
