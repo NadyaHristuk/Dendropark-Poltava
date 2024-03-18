@@ -230,4 +230,10 @@
 	width: 36px;
 	height: 36px;
 	fill: $snowdrift;
+	@include transition(transform);
+
+	&:hover,
+	&:focus {
+		transform: scale(1.15);
+	}
 }

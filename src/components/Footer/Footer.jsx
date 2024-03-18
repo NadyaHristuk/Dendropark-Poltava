@@ -26,7 +26,7 @@ const Footer = () => {
 		document.body.style.overflow = 'auto';
 	};
 
-	const titleArr = t('footer.logo.title').split(' ');
+	const titleArr = t('logo.title').split(' ');
 	const logoTitleSpan = titleArr.splice(1, 1).toString();
 	const logoTitleFirstWord = titleArr.splice(0, 1).toString();
 	const logoTitleLastWord = titleArr.toString();
@@ -42,7 +42,7 @@ const Footer = () => {
 								<source srcSet={`${logo1x} 1x, ${logo2x} 2x`} />
 								<img
 									src={`${logo1x} 1x}`}
-									alt={t('footer.logo.alt')}
+									alt={t('logo.alt')}
 									className={s.logoImg}
 								/>
 							</picture>

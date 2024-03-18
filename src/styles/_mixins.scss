@@ -7,106 +7,106 @@
 // $desktop: 1440px;
 
 @mixin media-rules($screen) {
-  @if $screen == tablet {
-    @media screen and (min-width: $tablet) {
-      @content;
-    }
-  } @else if $screen == desktop {
-    @media screen and (min-width: $desktop) {
-      @content;
-    }
-  }
+	@if $screen == tablet {
+		@media screen and (min-width: $tablet) {
+			@content;
+		}
+	} @else if $screen == desktop {
+		@media screen and (min-width: $desktop) {
+			@content;
+		}
+	}
 }
 
 @mixin visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
 
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
 }
 
 //transition
 
 @mixin transition($property: all) {
-  $duration: 250ms;
-  $timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition: $property $duration $timing-function;
+	$duration: 250ms;
+	$timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition: $property $duration $timing-function;
 }
 
 @mixin contentWrapper {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  transition: transform 1400ms ease-in-out;
-  gap: 24px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	transition: transform 1400ms ease-in-out;
+	gap: 24px;
 
-  @include media-rules(tablet) {
-    gap: 0px;
+	@include media-rules(tablet) {
+		gap: 0px;
 
-    flex-direction: row;
-  }
+		flex-direction: row;
+	}
 }
 
 @mixin animationMixin {
-  transform: translateX(0%);
-  @include media-rules(tablet) {
-    transform: translateX(120%);
-  }
-  @include contentWrapper;
+	transform: translateX(0%);
+	@include media-rules(tablet) {
+		transform: translateX(120%);
+	}
+	@include contentWrapper;
 }
 
 @mixin closeAnimationMixin {
-  transform: translateX(0%);
-  @include contentWrapper;
+	transform: translateX(0%);
+	@include contentWrapper;
 }
 
 @mixin mobileAnimationMixin {
-  transform: translateX(120%);
-  flex-direction: column;
-  @include contentWrapper;
+	transform: translateX(120%);
+	flex-direction: column;
+	@include contentWrapper;
 }
 
 @mixin closeMobileAnimationMixin {
-  transform: translateX(0%);
-  flex-direction: column;
-  @include contentWrapper;
+	transform: translateX(0%);
+	flex-direction: column;
+	@include contentWrapper;
 }
 
 //map animation
 
 @mixin mapContainer {
-  position: absolute;
-  display: flex;
-  transition: transform 1400ms ease-in-out;
+	position: absolute;
+	display: flex;
+	transition: transform 1400ms ease-in-out;
 }
 
 @mixin mapContainerClose {
-  top: 60px;
-  transform: translateX(-120%);
-  @include media-rules(tablet) {
-    top: 0px;
-    left: 0px;
-  }
-  @include mapContainer;
+	top: 60px;
+	transform: translateX(-120%);
+	@include media-rules(tablet) {
+		top: 0px;
+		left: 0px;
+	}
+	@include mapContainer;
 }
 
 @mixin mapContainerOpen {
-  transform: translateX(0%);
-  z-index: 9999;
-  top: 60px;
-  @include media-rules(tablet) {
-    top: 0px;
-    left: 6px;
-  }
-  @include media-rules(desktop) {
-    left: 0px;
-  }
-  @include mapContainer;
+	transform: translateX(0%);
+	z-index: 9999;
+	top: 60px;
+	@include media-rules(tablet) {
+		top: 0px;
+		left: 6px;
+	}
+	@include media-rules(desktop) {
+		left: 0px;
+	}
+	@include mapContainer;
 }

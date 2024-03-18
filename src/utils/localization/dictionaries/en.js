@@ -1,11 +1,11 @@
 export const en = {
 	translation: {
 		title: 'Дослідницькі стежки',
+		logo: {
+			title: 'Poltava city park',
+			alt: 'Poltava city park',
+		},
 		header: {
-			logo: {
-				title: 'Poltava city park',
-				alt: 'Poltava city park',
-			},
 			navigation: {
 				main: 'Main',
 				about: 'About park',
@@ -16,10 +16,6 @@ export const en = {
 			},
 		},
 		footer: {
-			logo: {
-				title: 'Poltava city park',
-				alt: 'Poltava city park',
-			},
 			sections: {
 				interaction: {
 					title: 'Interaction:',
@@ -326,7 +322,7 @@ export const en = {
 			eleventhCardTitle: 'The spring',
 			eleventhCardDescription:
 				'The part of the slope descending from Yakivtsi is most interesting for a small spring.',
-			detailLink: "Read more"
+			detailLink: 'Read more',
 		},
 		contacts: {
 			title: 'Contact us',
