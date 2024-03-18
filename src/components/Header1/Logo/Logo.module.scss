@@ -1,25 +1,29 @@
-@import "src/styles/colors";
+@import 'src/styles/colors';
 
 .link {
-    display: flex;
-    align-items: center;
-    gap: 6px;
+	display: flex;
+	align-items: center;
+	gap: 6px;
 }
 
 .icon {
-    width: 54px;
-    height: 54px;
+	width: 54px;
+	height: 54px;
 }
 
 .title {
-    max-width: 159px;
-    font-family: 'Ermilov';
-    font-size: 16px;
-    line-height: 0.875;
-    letter-spacing: -0.02em;
-    color: $pine-depths;
+	max-width: 159px;
+	font-family: 'Ermilov';
+	font-size: 16px;
+	line-height: 0.875;
+	letter-spacing: -0.02em;
+	color: $pine-depths;
 
-    &Color {
-        color: $osnovniy;
-    }
+	&Color {
+		color: $osnovniy;
+	}
+
+	& span {
+		color: $light-color;
+	}
 }
