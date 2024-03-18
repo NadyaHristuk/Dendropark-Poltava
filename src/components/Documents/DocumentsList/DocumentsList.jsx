@@ -4,7 +4,9 @@ import DocumentsListUI from './DocumentsListUI';
 import { useTranslation } from 'react-i18next';
 import { useMedia } from '../../../hooks/useMedia';
 import fetchDocuments from './DocumentsApi';
+import { LANGUAGE_STORAGE_KEY } from '../../../constants';
 // import documents from '../documents';
+import { icons } from '../../../assets';
 import css from './DocumentsList.module.scss';
 
 const DocumentsList = () => {
@@ -14,13 +16,14 @@ const DocumentsList = () => {
 
 	const { t } = useTranslation();
 	const { isMobile } = useMedia();
+	const savedLanguage = localStorage.getItem(LANGUAGE_STORAGE_KEY) || 'ua';
 
 	useEffect(() => {
 		async function fetchDocumentsList() {
 			try {
 				setLoading(true);
 				const response = await fetchDocuments();
-				// console.log(response);
+
 				if (response) {
 					setDocuments(response);
 				}
@@ -37,21 +40,17 @@ const DocumentsList = () => {
 	return (
 		<section className={css.documentsSection} id="documents-section">
 			<h3 className={css.title}>{t('chronicles.documentsTitle')}</h3>
-			{loading ? (
-				<p className={css.message}>Loading...</p>
-			) : error ? (
-				<p className={css.message}>Error: {error}</p>
-			) : documents.length > 0 ? (
+			{!loading && documents.length > 0 ? (
 				isMobile ? (
 					<DocumentsListUI items={documents} />
 				) : (
 					<ul className={css.list}>
-						{documents.map(({ id, title, subtitle, description, document }) => (
-							<li key={id} className={css.item}>
+						{documents.map((document) => (
+							<li key={document._id} className={css.item}>
 								<DocumentsItem
-									title={title}
-									subtitle={subtitle}
-									description={description}
+									title={document[savedLanguage].title}
+									subtitle={document[savedLanguage].subtitle}
+									description={document[savedLanguage].description}
 									link={document}
 								/>
 							</li>
@@ -59,7 +58,12 @@ const DocumentsList = () => {
 					</ul>
 				)
 			) : (
-				<p>Поки що не має документів, спробуйте згодом...</p>
+				<p className={css.message}>
+					<svg className={css.icon_attention}>
+						<use href={`${icons}#icon-attention`}></use>
+					</svg>
+					Поки що не має документів, спробуйте згодом...
+				</p>
 			)}
 		</section>
 	);
