@@ -53,11 +53,11 @@ export const ua = {
 			],
 		},
 		title: 'Дослідницькі стежки',
+		logo: {
+			title: 'Полтавський міський парк',
+			alt: 'Полтавський міський парк',
+		},
 		header: {
-			logo: {
-				title: 'Полтавський міський парк',
-				alt: 'Полтавський міський парк',
-			},
 			navigation: {
 				main: 'Головна',
 				about: 'Про парк',
@@ -68,10 +68,6 @@ export const ua = {
 			},
 		},
 		footer: {
-			logo: {
-				title: 'Полтавський міський парк',
-				alt: 'Полтавський міський парк',
-			},
 			sections: {
 				interaction: {
 					title: 'Взаємодія:',
@@ -255,8 +251,7 @@ export const ua = {
 			eleventhCardTitle: 'Криничка',
 			eleventhCardDescription:
 				"Частина схилу що спускається від Яківців, найбільш цікавим об'єктом є невелика криничка-джерело.",
-			detailLink: "Детальніше"
-
+			detailLink: 'Детальніше',
 		},
 		contacts: {
 			title: 'Контакти',
