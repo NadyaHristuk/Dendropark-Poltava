@@ -9,14 +9,14 @@ export default function DocumentsItem({ title, subtitle, description, link }) {
 					<use href={`${icons}#icon-document`}></use>
 				</svg>
 				<a className={css.link} href={link} target="_blank">
-					{subtitle}
+					{title}
 				</a>
 				<svg className={css.arrowUpIcon}>
 					<use href={`${icons}#icon-arrow-up`}></use>
 				</svg>
 			</div>
 			<div className={css.description}>
-				<p className={css.text}>{title}</p>
+				<p className={css.text}>{subtitle}</p>
 				<p className={css.text}>{description}</p>
 			</div>
 		</>

@@ -82,3 +82,19 @@
 		line-height: 1.07143;
 	}
 }
+
+.icon_attention {
+	background-color: $stroke;
+	fill: $stroke;
+	border: 6px solid $lilac-haze;
+	border-radius: 100%;
+	width: 56px;
+	height: 44px;
+	margin-right: 16px;
+	padding: 5px;
+
+	@include media-rules(tablet) {
+		width: 44px;
+		padding: 5px;
+	}
+}
