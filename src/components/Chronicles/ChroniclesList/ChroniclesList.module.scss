@@ -42,11 +42,11 @@
 	// flex-direction: column;
 	flex-wrap: wrap;
 	// gap: 32px;
-	max-height: 1165px;
-	overflow-y: auto;
-
+	
 	@include media-rules(tablet) {
-		max-height: 1110px;
+		max-height: 1165px;
+		overflow-y: auto;
+		// max-height: 1110px;
 		scrollbar-color: #45b288 #edfaf6;
 		scrollbar-width: thin;
 	}
