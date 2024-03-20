@@ -10,6 +10,7 @@ import HelpPark from './pages/HelpPark/HelpPark';
 import PrivateRoute from './Routes/PrivateRoute';
 import PublicRoute from './Routes/PublicRoute';
 import Welcome from './pages/Welcome/Welcome';
+import Events from './pages/Events/Events';
 
 const AdminPanel = () => {
 	return (
@@ -37,6 +38,7 @@ const AdminPanel = () => {
 					path="services"
 					element={<PrivateRoute element={<Services />} />}
 				/>
+				<Route path="events" element={<PrivateRoute element={<Events />} />} />
 			</Route>
 			<Route path="/login" element={<PublicRoute element={<Login />} />} />
 		</Routes>

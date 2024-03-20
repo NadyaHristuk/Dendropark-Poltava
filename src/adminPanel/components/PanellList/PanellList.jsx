@@ -102,7 +102,7 @@ export const PanellList = ({ getOperation, deleteOperation, Form }) => {
 				closeModal={closeDeleteModal}
 			>
 				<div className={s.deleteModalContainer}>
-					<h3>Ви підтверджуєте що хочете це видалити?</h3>
+					<h3>Ви підтверджуєте видалення?</h3>
 					<div className={s.buttonsContainer}>
 						<button
 							className={s.cancelBtn}
