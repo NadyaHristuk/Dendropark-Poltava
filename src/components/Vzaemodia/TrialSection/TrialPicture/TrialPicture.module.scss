@@ -1,5 +1,5 @@
-@import '/src/styles/colors';
-@import '../../../../styles/mixins';
+@import "/src/styles/colors";
+@import "../../../../styles/mixins";
 
 .picture {
   background-color: $lilac-haze;
@@ -8,16 +8,15 @@
   border-radius: 20px;
   width: 100%;
   max-width: 310px;
-  max-height: 200px;
-
+  max-height: 184px;
+  object-fit: cover;
+  object-position: center;
   @include media-rules(tablet) {
     max-width: none;
     max-height: none;
     width: 470px;
     height: 450px;
-    object-fit: cover;
   }
   @include media-rules(desktop) {
-    object-fit: cover;
   }
 }

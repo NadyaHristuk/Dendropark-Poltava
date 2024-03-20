@@ -1,15 +1,15 @@
-import styles from './TrialPicture.module.scss';
+import styles from "./TrialPicture.module.scss";
 
 //props for srcSet
 // {
 //   mob, mob_x2, tab, tab_x2, imgAlt;
 // }
 
-export const TrialPicture = ({ tab_x2, imgAlt }) => {
+export const TrialPicture = ({ image, imgAlt }) => {
   return (
     <img
       className={styles.picture}
-      src={`${tab_x2}`}
+      src={`${image}`}
       alt={`${imgAlt}`}
       aria-label="hero-image"
     />
