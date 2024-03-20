@@ -1,0 +1,103 @@
+@import "../../styles/colors";
+@import "../../styles/mixins";
+
+.hero {
+    padding: 150px 0 64px;
+
+    @include media-rules(tablet) {
+        padding: 167px 0 80px;
+    }
+
+    @include media-rules(desktop) {
+        padding: 167px 0 120px;
+    }
+}
+
+.info {
+    margin-bottom: 32px;
+
+    @include media-rules(tablet) {
+        margin-bottom: 48px;
+    }
+
+    @include media-rules(tablet) {
+        margin-bottom: 80px;
+    }
+}
+
+.text {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.43;
+    letter-spacing: -0.02em;
+    color: $pine-depths;
+    margin-bottom: 8px;
+
+    &Color {
+        color: $osnovniy;
+    }
+
+    @include media-rules(tablet) {
+        font-size: 20px;
+        line-height: 1.3;
+        letter-spacing: -0.02em;
+        margin-bottom: 14px;
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    @include media-rules(tablet) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: initial;
+    }
+}
+
+.title {
+    font-size: 32px;
+    line-height: 1.06;
+    letter-spacing: -0.02em;
+    color: $pine-depths;
+
+    @include media-rules(tablet) {
+        max-width: 646px;
+        font-size: 40px;
+        line-height: 1.45;
+    }
+
+    @include media-rules(desktop) {
+        max-width: 872px;
+        font-size: 56px;
+        line-height: 1.04;
+    }
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 61px;
+    font-family: "Innerspace";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.01em;
+    color: $snowdrift;
+    border: 1px solid #000;
+    border-radius: 200px;
+    background-color: $pine-depths;
+
+    @include media-rules(tablet) {
+        height: 44px;
+        min-width: 155px;
+    }
+
+    @include media-rules(desktop) {
+        @include visually-hidden
+    }
+}

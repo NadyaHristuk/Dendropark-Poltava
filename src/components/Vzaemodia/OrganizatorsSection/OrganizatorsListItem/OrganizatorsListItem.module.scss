@@ -1,0 +1,73 @@
+@import '/src/styles/breakpoints';
+@import '/src/styles/mixins';
+@import '/src/styles/colors';
+
+.icon {
+	background-color: $stroke;
+	fill: $stroke;
+	border: 8px solid $lilac-haze;
+	border-radius: 100%;
+	width: 52px;
+	height: 52px;
+	margin-right: 16px;
+	padding: 7px;
+
+	@include media-rules(tablet) {
+		padding: 4px;
+		margin-bottom: 57px;
+	}
+}
+
+.listItem {
+	padding-bottom: 24px;
+	border-radius: 20px;
+	position: relative;
+	display: flex;
+
+	@include media-rules(tablet) {
+		padding-bottom: 32px;
+	}
+
+	&:last-child {
+		padding-bottom: 0px;
+		margin-bottom: 0px;
+	}
+}
+
+.iconContainer {
+	position: absolute;
+	left: 0px;
+
+	@include media-rules(tablet) {
+		top: -12px;
+	}
+}
+
+.textContainer {
+	width: 100%;
+	padding-left: 60px;
+}
+
+.title {
+	font-family: 'Ermilov', sans-serif;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 111%;
+	letter-spacing: -0.02em;
+
+	@include media-rules(tablet) {
+		font-size: 20px;
+		line-height: 160%;
+	}
+}
+
+.text {
+	font-family: 'Innerspace', serif;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 200%;
+}

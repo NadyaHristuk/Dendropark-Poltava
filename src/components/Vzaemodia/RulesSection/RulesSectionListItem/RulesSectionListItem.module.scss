@@ -1,0 +1,47 @@
+@import '/src/styles/breakpoints';
+@import '/src/styles/mixins';
+@import '/src/styles/colors';
+
+.icon {
+  background-color: $pine-depths;
+  fill: $pine-depths;
+  border-radius: 10px;
+  padding: 5px;
+
+  @include media-rules(tablet) {
+    margin-bottom: 57px;
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.listItem {
+  padding: 24px;
+  border-radius: 20px;
+  background-color: $lilac-haze;
+
+  @include media-rules(tablet) {
+    padding: 32px;
+    width: 100%;
+    height: 310px;
+  }
+}
+
+.title {
+  font-family: 'Ermilov', sans-serif;
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 111%;
+  @include media-rules(tablet) {
+    font-size: 20px;
+    line-height: 150%;
+  }
+}
+
+.text {
+  font-family: 'Innerspace', serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+}

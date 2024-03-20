@@ -1,0 +1,95 @@
+@import '../../../styles/colors';
+@import '../../../styles/mixins';
+
+.wrapper {
+	position: relative;
+	padding: 11px;
+	background-color: $snowdrift;
+	margin-top: 9px;
+	border-radius: 8px;
+	margin-bottom: 3px;
+	@include media-rules(tablet) {
+		padding: 15px;
+		margin-top: 12px;
+	}
+	@include media-rules(desktop) {
+		padding: 14px;
+		margin-top: 12px;
+	}
+}
+
+.list_item {
+	width: calc((358px - 56px) / 2);
+	@include media-rules(tablet) {
+		width: calc((784px - 80px - 40px) / 3);
+	}
+	@include media-rules(desktop) {
+		width: calc((840px - 50px) / 3);
+	}
+}
+
+.img {
+	width: 100%;
+	display: block;
+	border-radius: 13px;
+	height: 134px;
+	object-fit: cover;
+	@include media-rules(tablet) {
+		height: 190px;
+	}
+}
+
+.link:hover {
+	text-decoration: none;
+}
+
+.link:hover .wrapper {
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.name {
+	font-weight: 700;
+	font-family: 'Ermilov', sans-serif;
+	font-size: 7px;
+	line-height: 1.5;
+	margin-bottom: 2px;
+	color: $pine-depths;
+	text-transform: uppercase;
+	@include media-rules(tablet) {
+		font-size: 10px;
+		margin-bottom: 4px;
+	}
+}
+
+.role {
+	font-family: 'Innerspace', sans-serif;
+	font-size: 6px;
+	line-height: 1.5;
+	text-transform: uppercase;
+	color: $light-color;
+	font-weight: 400;
+	@include media-rules(tablet) {
+		font-size: 8px;
+	}
+}
+
+.linkedin_icon {
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	fill: $light-color;
+	right: 13px;
+	bottom: 12px;
+	@include media-rules(tablet) {
+		width: 32px;
+		height: 32px;
+		right: 14px;
+		bottom: 13px;
+	}
+	@include media-rules(desktop) {
+		width: 32px;
+		height: 32px;
+		right: 14px;
+		bottom: 13px;
+	}
+}

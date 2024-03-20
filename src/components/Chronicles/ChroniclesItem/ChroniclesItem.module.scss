@@ -1,0 +1,100 @@
+@import '/src/styles/mixins';
+@import '/src/styles/colors';
+
+.thumb {
+	max-width: 357px;
+
+	@include media-rules(tablet) {
+		max-width: 390px;
+	}
+	@include media-rules(desktop) {
+		max-width: 589px;
+	}
+}
+
+.photo {
+	width: 100%;
+	height: 362px;
+	border-radius: 20px;
+	object-fit: cover;
+	margin-bottom: 24px;
+
+	@include media-rules(tablet) {
+		// width: 390px;
+		height: 348px;
+		margin-bottom: 0px;
+	}
+
+	@include media-rules(desktop) {
+		// width: 589px;
+		height: 348px;
+	}
+}
+
+.info {
+	max-width: 357px;
+
+	@include media-rules(tablet) {
+		max-width: 462px;
+		margin-left: 28px;
+	}
+	@include media-rules(desktop) {
+		max-width: 670px;
+	}
+}
+
+.title {
+	color: $pine-depths;
+	margin-bottom: 8px;
+	font-family: 'Ermilov', serif;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 1.5;
+	color: $pine-depths;
+	@include media-rules(tablet) {
+		margin-bottom: 32px;
+	}
+
+	@include media-rules(desktop) {
+	}
+}
+
+.description {
+	color: $pine-depths;
+	margin-bottom: 16px;
+	font-family: 'Innerspace', serif;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1.5;
+	color: $city-park;
+	text-align: justify;
+
+	@include media-rules(tablet) {
+		margin-bottom: 12px;
+		height: 200px;
+	}
+}
+.button {
+	display: flex;
+	align-items: center;
+
+	font-family: 'Innerspace', serif;
+	font-weight: 400;
+	font-size: 16px;
+
+	line-height: 1.5;
+	color: $tropical-wave;
+}
+.button:hover {
+	color: $osnovniy;
+}
+
+.arrowUpIcon {
+	width: 20px;
+	height: 20px;
+	fill: $tropical-wave;
+}
+
+.button:hover .arrowUpIcon {
+	fill: $emerald-field;
+}

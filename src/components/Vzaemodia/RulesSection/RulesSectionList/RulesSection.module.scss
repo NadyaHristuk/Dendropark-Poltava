@@ -1,0 +1,25 @@
+@import '/src/styles/breakpoints';
+@import '/src/styles/mixins';
+@import '/src/styles/colors';
+
+.list {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  margin-bottom: 24px;
+
+  @include media-rules(tablet) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 52px;
+    row-gap: 32px;
+    margin-bottom: 64px;
+  }
+
+  @include media-rules(desktop) {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 32px;
+    gap: 32px;
+    margin-bottom: 64px;
+  }
+}

@@ -1,0 +1,17 @@
+.ReactModal__Overlay {
+	opacity: 0;
+	transition: opacity 250ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+	z-index: 1000;
+	opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+	opacity: 0;
+}
+
+.ReactModal__Overlay--after-open:focus-visible {
+	outline: transparent;
+}

@@ -1,0 +1,17 @@
+@import '/src/styles/colors';
+@import '../../../../styles/mixins';
+
+.list {
+	margin-bottom: 24px;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	user-select: none;
+
+	@include media-rules(tablet) {
+		gap: 32px;
+	}
+
+	@include media-rules(desktop) {
+	}
+}

@@ -1,0 +1,100 @@
+@import 'src/styles/_colors.scss';
+@import '/src/styles//mixins';
+@import '/src/styles/breakpoints';
+
+.desktopDiv {
+	max-width: 590px;
+}
+
+.currentGoal {
+	max-width: 358px;
+	text-align: center;
+	font-family: 'Innerspace', serif;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 179%;
+	color: $city-park;
+	margin-bottom: 10px;
+
+	@include media-rules(tablet) {
+		max-width: 310px;
+		line-height: 214%;
+	}
+
+	@include media-rules(desktop) {
+		max-width: 559px;
+		font-size: 20px;
+		line-height: 150%;
+		padding-top: 64px;
+		margin-bottom: 20px;
+		width: 603px;
+	}
+}
+
+.qrCodeWrap {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 358px;
+	height: 359px;
+	background-color: $lilac-haze;
+	border-radius: 20px;
+	border: 1px solid #d2d9d8;
+	margin-bottom: 16px;
+
+	@include media-rules(tablet) {
+		width: 310px;
+		height: 283px;
+		margin-bottom: 43px;
+	}
+
+	@include media-rules(desktop) {
+		flex-direction: column;
+		gap: 82px;
+		width: 559px;
+		height: 532px;
+		margin-bottom: 0;
+	}
+}
+
+.qr {
+	width: 196px;
+	height: 195px;
+
+}
+
+// .desktopDiv {
+// 	@include media-rules(desktop) {
+// 		position: relative;
+// 	}
+// }
+
+.helpLink {
+	height: 60px;
+	font-size: 20px;
+	line-height: 1.50;
+	color: $steel-whisper;
+	background-color: $pine-depths;
+	transition: background-color 0.5s ease-in-out;
+	border-radius: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 14px;
+
+	@include media-rules(desktop) {
+		min-width: 276px;
+		padding: 0 28px;
+	}
+}
+
+.helpLink:hover,
+.helpLink:focus {
+	background-color: $emerald-field;
+}
+
+.heartIcon {
+	width: 32px;
+	height: 32px;
+	fill: $tropical-wave;
+}

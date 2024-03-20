@@ -1,0 +1,28 @@
+.wrapper {
+	margin-left: auto;
+	width: 200px;
+	height: 100%;
+	display: inline-flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 0 20px;
+	background-color: #0f172a;
+}
+
+.link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+	font-size: 20px;
+	color: #94a3b8;
+	border: 1px solid #94a3b8;
+	border-radius: 8px;
+	padding: 10px;
+	height: 45px;
+}
+
+.icon svg {
+	width: 35px;
+	height: 35px;
+}

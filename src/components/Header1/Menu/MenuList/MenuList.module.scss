@@ -1,0 +1,35 @@
+@import 'src/styles/colors';
+@import 'src/styles/mixins';
+
+.list {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	padding: 0 24px;
+	margin-bottom: 12px;
+
+	@include media-rules(desktop) {
+		flex-direction: row;
+		gap: 32px;
+		margin-bottom: 0;
+		padding: 0;
+	}
+}
+
+.link {
+	display: inline-block;
+	font-size: 16px;
+	line-height: 1.5;
+	color: $pine-depths;
+	transition: color 0.2s linear;
+	padding: 4px 0;
+	@include transition(color);
+
+	&:global(.active) {
+		color: $osnovniy;
+	}
+
+	&:is(:hover, :focus) {
+		color: $osnovniy;
+	}
+}

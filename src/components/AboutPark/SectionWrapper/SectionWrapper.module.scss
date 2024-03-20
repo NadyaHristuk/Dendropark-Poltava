@@ -1,0 +1,31 @@
+@import '/src/styles/breakpoints';
+@import '/src/styles/mixins';
+@import '/src/styles/colors';
+
+.container {
+	width: 100%;
+
+	background-color: $snowdrift;
+	color: $pine-depths;
+
+	padding-top: 64px;
+
+	@include media-rules(tablet) {
+		padding-top: 80px;
+	}
+
+	@include media-rules(desktop) {
+		padding-top: 120px;
+	}
+}
+
+.lowPadding {
+	padding-bottom: 64px;
+}
+
+.container.topPadding {
+	padding-top: 150px;
+	@include media-rules(desktop) {
+		padding-top: 167px;
+	}
+}
