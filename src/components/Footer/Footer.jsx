@@ -25,6 +25,12 @@ const Footer = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const scrollWithOffset = el => {
+    const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+    const yOffset = -90;
+    window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' });
+  };
+
   const openModal = () => {
     setModalIsOpen(true);
     document.body.style.overflow = 'hidden';
@@ -79,17 +85,17 @@ const Footer = () => {
                 <p className={s.section_title}>{t('footer.sections.interaction.title')}</p>
                 <ul>
                   <li className={s.section_option}>
-                    <HashLink smooth to="/vzaemodia#header">
+                    <HashLink smooth to="/vzaemodia#vzaemodia-section" scroll={scrollWithOffset}>
                       {t('footer.sections.interaction.options.researchTrails')}
                     </HashLink>
                   </li>
                   <li className={s.section_option}>
-                    <HashLink smooth to="/vzaemodia#organizators-section">
+                    <HashLink smooth to="/vzaemodia#organizators-section" scroll={scrollWithOffset}>
                       {t('footer.sections.interaction.options.activities')}
                     </HashLink>
                   </li>
                   <li className={s.section_option}>
-                    <HashLink smooth to="/vzaemodia#rules-section">
+                    <HashLink smooth to="/vzaemodia#rules-section" scroll={scrollWithOffset}>
                       {t('footer.sections.interaction.options.rulesOfConduct')}
                     </HashLink>
                   </li>
@@ -100,17 +106,17 @@ const Footer = () => {
                 <p className={s.section_title}>{t('footer.sections.materials.title')}</p>
                 <ul>
                   <li className={s.section_option}>
-                    <HashLink smooth to="/chronicles#header">
+                    <HashLink smooth to="/chronicles#litopys" scroll={scrollWithOffset}>
                       {t('footer.sections.materials.options.chronicle')}
                     </HashLink>
                   </li>
                   <li className={s.section_option}>
-                    <HashLink smooth to="/chronicles#documents-section">
+                    <HashLink smooth to="/chronicles#documents-section" scroll={scrollWithOffset}>
                       {t('footer.sections.materials.options.documents')}
                     </HashLink>
                   </li>
                   <li className={s.section_option}>
-                    <HashLink smooth to="/#help-section">
+                    <HashLink smooth to="/#help-section" scroll={scrollWithOffset}>
                       {t('footer.sections.materials.options.help')}
                     </HashLink>
                   </li>
@@ -121,12 +127,12 @@ const Footer = () => {
                 <p className={s.section_title}>{t('footer.sections.services.title')}</p>
                 <ul>
                   <li className={s.section_option}>
-                    <HashLink smooth to="/services#header">
+                    <HashLink smooth to="/services#services-section" scroll={scrollWithOffset}>
                       {t('footer.sections.services.options.ourServices')}
                     </HashLink>
                   </li>
                   <li className={s.section_option}>
-                    <HashLink to="/services#seedlings-section">
+                    <HashLink to="/services#seedlings-section" scroll={scrollWithOffset}>
                       {t('footer.sections.services.options.seedlings')}
                     </HashLink>
                   </li>
