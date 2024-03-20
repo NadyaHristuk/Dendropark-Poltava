@@ -4,10 +4,11 @@ import {
 	FileOutlined,
 	ThunderboltOutlined,
 	CalendarOutlined,
-	ShopOutlined,
+	PlusOutlined,
 	HeartOutlined,
 	SunOutlined,
 	GlobalOutlined,
+	ShopOutlined,
 } from '@ant-design/icons';
 
 import { Layout, Menu, theme } from 'antd';
@@ -24,6 +25,7 @@ const labels = [
 	'Documents',
 	'Donation',
 	'Services',
+	'Events',
 ];
 
 function getItemLabel(index) {
@@ -47,10 +49,11 @@ const items = [
 	GlobalOutlined,
 	ShopOutlined,
 	ThunderboltOutlined,
-	CalendarOutlined,
+	PlusOutlined,
 	FileOutlined,
 	HeartOutlined,
 	SunOutlined,
+	CalendarOutlined,
 ].map((icon, index) => ({
 	key: String(index + 1),
 	icon: React.createElement(icon),
