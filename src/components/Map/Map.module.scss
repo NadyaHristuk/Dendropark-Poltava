@@ -1,3 +1,22 @@
+@import "../../styles/mixins";
+
 .map {
     position: relative;
+}
+
+.image {
+    display: block;
+    margin: 0 auto;
+}
+
+.mapImage {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+
+    @include media-rules(desktop) {
+        width: 1161.5px;
+        height: 874px;
+    }
 }
