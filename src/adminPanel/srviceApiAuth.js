@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-	baseURL: 'https://dendropark-poltava-back.onrender.com/api',
+	baseURL: 'https://dendropark-poltava-back-ix1i.onrender.com/api',
 	// baseURL: 'http://localhost:3001/api',
 });
 
