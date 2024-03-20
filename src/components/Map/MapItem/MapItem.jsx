@@ -14,7 +14,7 @@ const MapItem = ({ item, className }) => {
 
 	let lang;
 
-	savedLanguage === 'ua' ? (lang = 'uk') : (lang = 'en');
+	savedLanguage === 'ua' ? (lang = 'ua') : (lang = 'en');
 
 	const handleChange = () => {
 		setIsVisible(!isVisible);
