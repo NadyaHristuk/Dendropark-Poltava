@@ -31,7 +31,7 @@ const ServicesInfoTabletDesktop = ({ items }) => {
 							</div>
 							<div className={css.item_wrapper}>
 								<h3 className={css.item_title}>{title}</h3>
-								<p className={css.item_description}>{description}</p>
+								<div className={css.item_description}dangerouslySetInnerHTML={{ __html: description }} />
 							</div>
 						</li>
 					);
