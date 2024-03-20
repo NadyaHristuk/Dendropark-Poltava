@@ -10,6 +10,7 @@ export const CardContent = ({ card, handleClick, isMapOpen, lang }) => {
   const { isMobile } = useMedia();
   const text = lang === "ua" ? card.ua.text : card.en.text;
   const m = lang === "ua" ? "м" : "m";
+  const rule = lang === "ua" ? "Правило" : "Rule";
 
   return (
     <div className={styles.father}>
