@@ -5,7 +5,7 @@ import { useMedia } from "../../../../hooks/useMedia";
 import Slider from "../../../Slider/Slider";
 import i18n from "../../../../utils/localization/i18n";
 import { useState, useEffect } from "react";
-import { fetchOurServices } from "../../../../adminPanel/serviceApiProducts";
+import { fetchOurServices } from "../../../../adminPanel/serviceApiOurServices";
 const ServiceInfoMobile = () => {
 	const [currentLanguage, setCurrentLanguage] = useState(i18n.language);
 
@@ -13,7 +13,7 @@ const ServiceInfoMobile = () => {
 	const [loading, setLoading] = useState(false);
 	const [error, setError] = useState(null);
 	useEffect(() => {
-		async function fetchProductsList() {
+		async function fetchServicesList() {
 			try {
 				setLoading(true);
 				const response = await fetchOurServices();
@@ -24,7 +24,7 @@ const ServiceInfoMobile = () => {
 				setLoading(false);
 			}
 		}
-		fetchProductsList();
+		fetchServicesList();
 	}, []);
 	const { chunkedData } = usePagination({
 		perPage: 5,
