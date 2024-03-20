@@ -1,5 +1,5 @@
-@import '../../../styles/colors';
-@import '../../../styles/mixins';
+@import "../../../styles/colors";
+@import "../../../styles/mixins";
 ::-webkit-scrollbar {
 	width: 6px; /* Ширина скролла */
 	border-radius: 5px;
@@ -61,7 +61,7 @@
 	}
 
 	&::before {
-		content: '';
+		content: "";
 		background: #014631;
 		width: 120%;
 		left: -10%;
@@ -99,7 +99,9 @@
 	font-size: 16px;
 	line-height: 1.5;
 	color: #265543;
+	font-family: "Innerspace", sans-serif;
 }
+
 .store_price {
 	padding-top: 16px;
 	font-weight: 400;
@@ -120,7 +122,7 @@
 	line-height: 1.28571;
 	letter-spacing: -0.01em;
 	color: #fefefe;
-	font-family: 'Innerspace', sans-serif;
+	font-family: "Innerspace", sans-serif;
 	// transition: all 0.5s;
 	@include transition(all);
 	text-decoration: none;

@@ -1,7 +1,7 @@
-@import '../../../../styles/colors';
-@import '../../../../styles/mixins';
+@import "../../../../styles/colors";
+@import "../../../../styles/mixins";
 .title {
-	font-family: 'Ermilov', sans-serif;
+	font-family: "Ermilov", sans-serif;
 	font-weight: 700;
 	font-size: 32px;
 	line-height: 1.0625;
@@ -31,6 +31,9 @@
 		margin-bottom: 57px;
 	}
 }
+.item_title {
+	padding-top: 10px;
+}
 .item_icon {
 	// padding-top: 11px;
 }
@@ -57,11 +60,14 @@
 }
 
 .item_description {
-	font-family: 'Innerspace', sans-serif;
+	font-family: "Innerspace", sans-serif !important;
 	font-weight: 400;
 	font-size: 12px;
 	line-height: 2;
 	color: $forest-shadow;
+}
+.item_description p {
+	font-family: "Innerspace", sans-serif;
 }
 @media screen and (min-width: 960px) {
 	.services_list {
@@ -95,24 +101,5 @@
 	.btn_nextpage,
 	.btn_prevpage {
 		display: none;
-	}
-}
-
-@media screen and (min-width: 1440px) {
-	.title {
-		padding-bottom: 48px;
-	}
-	.item_description {
-		font-size: 16px;
-		line-height: 1.5;
-	}
-	.icon {
-		width: 50px;
-		height: 50px;
-	}
-	.title_store {
-		font-size: 44px;
-		line-height: 1;
-		padding-bottom: 64px;
 	}
 }
