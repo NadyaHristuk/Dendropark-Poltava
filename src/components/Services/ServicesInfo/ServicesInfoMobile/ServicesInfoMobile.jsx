@@ -1,15 +1,13 @@
-import css from './services-info-mobile.module.scss';
-import { icons } from '../../../../assets';
-import { usePagination } from '../../../../hooks/usePagination';
-import { useMedia } from '../../../../hooks/useMedia';
-import Slider from '../../../Slider/Slider';
-import i18n from '../../../../utils/localization/i18n';
-import { useState, useEffect } from 'react';
-import { fetchProducts } from '../../../../adminPanel/serviceApiProducts';
+import css from "./services-info-mobile.module.scss";
+import { icons } from "../../../../assets";
+import { usePagination } from "../../../../hooks/usePagination";
+import { useMedia } from "../../../../hooks/useMedia";
+import Slider from "../../../Slider/Slider";
+import i18n from "../../../../utils/localization/i18n";
+import { useState, useEffect } from "react";
+import { fetchOurServices } from "../../../../adminPanel/serviceApiProducts";
 const ServiceInfoMobile = () => {
-	const [currentLanguage, setCurrentLanguage] = useState(
-		i18n.language === 'ua' ? 'uk' : 'en'
-	);
+	const [currentLanguage, setCurrentLanguage] = useState(i18n.language);
 
 	const [products, setProducts] = useState([]);
 	const [loading, setLoading] = useState(false);
@@ -18,7 +16,7 @@ const ServiceInfoMobile = () => {
 		async function fetchProductsList() {
 			try {
 				setLoading(true);
-				const response = await fetchProducts();
+				const response = await fetchOurServices();
 				setProducts(response);
 			} catch (error) {
 				setError(error.message);
@@ -35,12 +33,12 @@ const ServiceInfoMobile = () => {
 
 	useEffect(() => {
 		const handleLanguageChange = () => {
-			setCurrentLanguage(i18n.language === 'ua' ? 'uk' : 'en');
+			setCurrentLanguage(i18n.language);
 		};
-		i18n.on('languageChanged', handleLanguageChange);
+		i18n.on("languageChanged", handleLanguageChange);
 
 		return () => {
-			i18n.off('languageChanged', handleLanguageChange);
+			i18n.off("languageChanged", handleLanguageChange);
 		};
 	}, []);
 
@@ -50,16 +48,11 @@ const ServiceInfoMobile = () => {
 		return (
 			<ul className={css.services_list}>
 				{cards.map((item) => {
-					const { title, description, _id } = item[currentLanguage];
+					const { title, description } = item[currentLanguage];
 					return (
-						<li key={_id} className={css.services_item}>
+						<li key={item._id} className={css.services_item}>
 							<div className={css.item_icon}>
-								<svg
-									className={css.icon}
-									width="32"
-									height="32"
-									aria-label="arrow-forward"
-								>
+								<svg className={css.icon} width="32" height="32" aria-label="arrow-forward">
 									<use href={`${icons}#icon-services-heart`}></use>
 								</svg>
 							</div>
@@ -73,10 +66,6 @@ const ServiceInfoMobile = () => {
 			</ul>
 		);
 	};
-	return (
-		<div>
-			{isMobile && <Slider chunkedData={chunkedData} currentPage={list} />}
-		</div>
-	);
+	return <div>{isMobile && <Slider chunkedData={chunkedData} currentPage={list} />}</div>;
 };
 export default ServiceInfoMobile;

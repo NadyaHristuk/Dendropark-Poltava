@@ -1,38 +1,31 @@
-import css from './services-info-tablet-desktop.module.scss';
-import i18n from '../../../../utils/localization/i18n';
-import { icons } from '../../../../assets';
-import { useState, useEffect } from 'react';
+import css from "./services-info-tablet-desktop.module.scss";
+import i18n from "../../../../utils/localization/i18n";
+import { icons } from "../../../../assets";
+import { useState, useEffect } from "react";
 
 const ServicesInfoTabletDesktop = ({ items }) => {
-	const [currentLanguage, setCurrentLanguage] = useState(
-		i18n.language === 'ua' ? 'uk' : 'en'
-	);
+	const [currentLanguage, setCurrentLanguage] = useState(i18n.language);
 
 	useEffect(() => {
 		const handleLanguageChange = () => {
-			setCurrentLanguage(i18n.language === 'ua' ? 'uk' : 'en');
+			setCurrentLanguage(i18n.language);
 		};
-		i18n.on('languageChanged', handleLanguageChange);
+		i18n.on("languageChanged", handleLanguageChange);
 
 		return () => {
-			i18n.off('languageChanged', handleLanguageChange);
+			i18n.off("languageChanged", handleLanguageChange);
 		};
 	}, []);
 	return (
 		<div>
 			<ul className={css.services_list}>
 				{items.map((item) => {
-					const { title, description, _id } = item[currentLanguage];
+					const { title, description } = item[currentLanguage];
 
 					return (
-						<li key={_id} className={css.services_item}>
+						<li key={item._id} className={css.services_item}>
 							<div className={css.item_icon}>
-								<svg
-									className={css.icon}
-									width="32"
-									height="32"
-									aria-label="arrow-forward"
-								>
+								<svg className={css.icon} width="32" height="32" aria-label="arrow-forward">
 									<use href={`${icons}#icon-services-heart`}></use>
 								</svg>
 							</div>
