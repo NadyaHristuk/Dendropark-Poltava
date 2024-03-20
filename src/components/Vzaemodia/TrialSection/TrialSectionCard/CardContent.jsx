@@ -9,6 +9,7 @@ export const CardContent = ({ card, handleClick, isMapOpen, lang }) => {
   const { t } = useTranslation();
   const { isMobile } = useMedia();
   const text = lang === "ua" ? card.ua.text : card.en.text;
+  const m = lang === "ua" ? "м" : "m";
 
   return (
     <div className={styles.father}>
@@ -31,7 +32,7 @@ export const CardContent = ({ card, handleClick, isMapOpen, lang }) => {
           !isMapOpen ? `${styles.listItemWrapperClose}` : `${styles.listItemWrapper}`
         }
       >
-        <span className={styles.trialLength}>{card.distance}</span>
+        <span className={styles.trialLength}>{`${card.distance} ${m}`}</span>
         <div
           className={
             isMapOpen && isMobile ? styles.imgContainerMobile : styles.imgContainer
@@ -43,7 +44,7 @@ export const CardContent = ({ card, handleClick, isMapOpen, lang }) => {
           />
         </div>
         <div className={styles.textWrapper}>
-          <span className={styles.trialLengthText}>{card.distance}</span>
+          <span className={styles.trialLengthText}>{`${card.distance} ${m}`}</span>
           <div>
             <h3 className={styles.cardTitle}>
               {lang === "ua" ? card.ua.title : card.en.title}
