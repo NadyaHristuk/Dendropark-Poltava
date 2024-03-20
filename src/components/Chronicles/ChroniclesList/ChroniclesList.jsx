@@ -6,7 +6,6 @@ import { useMedia } from '../../../hooks/useMedia';
 import { icons } from '../../../assets';
 import fetchChronicles from './ChroniclesApi.js';
 import {fetchEvents} from '../../../adminPanel/serviceApiEvents.js';
-// import chronicles from '../сhronicles';
 import { LANGUAGE_STORAGE_KEY } from '../../../constants';
 import css from './ChroniclesList.module.scss';
 
@@ -45,18 +44,18 @@ const ChroniclesList = ({ paddingTop }) => {
 			style={{ paddingTop: `${paddingTopValue}px` }}
 		>
 			<h3 className={css.title}>{t('chronicles.chroniclesTitle')}</h3>
-			{/* {!loading && chronicles.length > 0 ? (
+			{!loading && chronicles.length > 0 ? (
 				isMobile ? (
 					<ChroniclesListUl items={chronicles} />
 				) : (
 					<ul className={css.list}>
-						{chronicles.map(({ id, photo, title, description }) => (
-							<li key={id} className={css.item}>
+						{chronicles.map((item) => (
+							<li key={item._id} className={css.item}>
 								<ChroniclesItem
-									id={id}
-									url={photo}
-									title={title}
-									description={description}
+									id={item[savedLanguage]._id}
+									url={item.image}
+									title={item[savedLanguage].title}
+									description={item[savedLanguage].description}
 								/>
 							</li>
 						))}
@@ -69,7 +68,7 @@ const ChroniclesList = ({ paddingTop }) => {
 					</svg>
 					Поки що не має нових подій, очікуйте згодом...
 				</p>
-			)} */}
+			)}
 		</section>
 	);
 };
