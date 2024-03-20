@@ -21,6 +21,7 @@ const LocationsForm = ({ name, item, isOpen, setIsOpen }) => {
 		formData.append('en[imgAlt]', values.imgAltEn);
 		formData.append('en[description]', values.descriptionEn);
 		formData.append('number', values.number);
+		formData.append('numberArabic', values.numberArabic);
 		formData.append('image', image);
 		formData.append('mapImage', imageMap);
 
@@ -54,6 +55,7 @@ const LocationsForm = ({ name, item, isOpen, setIsOpen }) => {
 				descriptionEn: item?.en.description,
 				distance: item?.distance,
 				number: item?.number,
+				numberArabic: item?.numberArabic,
 				imgAlt: item?.ua.imgAlt,
 				imgAltEn: item?.en.imgAlt,
 			}}
@@ -62,18 +64,7 @@ const LocationsForm = ({ name, item, isOpen, setIsOpen }) => {
 		>
 			{/* ua */}
 			<p style={{ marginBottom: 10 }}>Заповніть Українською</p>
-			<Form.Item
-				label="Number"
-				name="number"
-				rules={[
-					{
-						required: name === 'postForm' ? true : false,
-						message: 'Please input distance',
-					},
-				]}
-			>
-				<Input />
-			</Form.Item>
+			
 
 			<Form.Item
 				label="Title"
@@ -153,7 +144,31 @@ const LocationsForm = ({ name, item, isOpen, setIsOpen }) => {
 			>
 				<ReactQuill style={{ fontWeight: 'normal' }} theme="snow" />
 			</Form.Item>
-
+			<p style={{ marginBottom: 10 }}>Номер локації римськими та арабськими цифрами</p>
+			<Form.Item
+				label="Number"
+				name="number"
+				rules={[
+					{
+						required: name === 'postForm' ? true : false,
+						message: 'Please input distance',
+					},
+				]}
+			>
+				<Input />
+			</Form.Item>
+			<Form.Item
+				label="NumberArabic"
+				name="numberArabic"
+				rules={[
+					{
+						required: name === 'postForm' ? true : false,
+						message: 'Please input distance',
+					},
+				]}
+			>
+				<Input />
+			</Form.Item>
 			<p style={{ marginBottom: 10 }}>Завантажте Фото й Мапу</p>
 			<Form.Item
 				name="image"
