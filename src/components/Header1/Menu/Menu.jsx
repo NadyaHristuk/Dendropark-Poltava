@@ -36,7 +36,7 @@ const Menu = () => {
 			top: 0,
 			behavior: 'instant',
 		});
-	}, []);
+	}, [location.pathname]);
 
 	return (
 		<div className={scss.menu} ref={menuRef}>

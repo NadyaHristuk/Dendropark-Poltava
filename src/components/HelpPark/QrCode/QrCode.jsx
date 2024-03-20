@@ -10,10 +10,6 @@ export const QrCode = () => {
 	const [donation, setDonation] = useState({});
 	const savedLanguage = localStorage.getItem('LANGUAGE_KEY') || 'ua';
 
-	let lang;
-
-	savedLanguage === 'ua' ? (lang = 'uk') : (lang = 'en');
-
 	useEffect(() => {
 		const getDonations = async () => {
 			try {
@@ -29,7 +25,7 @@ export const QrCode = () => {
 
 	return (
 		<div className={css.desktopDiv}>
-			<p className={css.currentGoal}>{donation[lang]?.description}</p>
+			<p className={css.currentGoal}>{donation[savedLanguage]?.description}</p>
 
 			{(isMobile || isTablet) && (
 				<>
@@ -51,7 +47,7 @@ export const QrCode = () => {
 						<svg className={css.heartIcon}>
 							<use href={`${icons}#icon-simplethankyou`}></use>
 						</svg>
-						{donation[lang]?.buttonText}
+						{donation[savedLanguage]?.buttonText}
 					</a>
 				</>
 			)}
@@ -74,7 +70,7 @@ export const QrCode = () => {
 						<svg className={css.heartIcon}>
 							<use href={`${icons}#icon-simplethankyou`}></use>
 						</svg>
-						{donation[lang]?.buttonText}
+						{donation[savedLanguage]?.buttonText}
 					</a>
 				</div>
 			)}
