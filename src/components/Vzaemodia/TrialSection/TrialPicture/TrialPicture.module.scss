@@ -10,8 +10,9 @@
   max-width: 310px;
   max-height: 184px;
   object-fit: cover;
-  object-position: center;
+  object-position: top;
   @include media-rules(tablet) {
+    object-position: center;
     max-width: none;
     max-height: none;
     width: 470px;
