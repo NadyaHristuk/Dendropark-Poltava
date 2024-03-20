@@ -1,5 +1,4 @@
 import axios from "axios";
-import { changeLanguage } from "i18next";
 
 
 const apiUrl = 'https://dendropark-poltava-back.onrender.com/api/locations';
