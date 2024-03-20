@@ -1,4 +1,3 @@
-import { ParkLocationsData } from './locations.js';
 import { useTranslation } from 'react-i18next';
 import css from './ParkLocations.module.scss';
 import Container from '../../Container/Container';
@@ -14,11 +13,11 @@ export const ParkLocations = () => {
 
 	useEffect(() => {
 		const fetchLocations = async () => {
-			try {
-				const newLocations = await fetchData();
+			const newLocations = await fetchData();
 
-				setLocations(newLocations);
-			} catch (error) {}
+			console.log(newLocations);
+
+			setLocations(newLocations);
 		};
 		fetchLocations();
 	}, []);

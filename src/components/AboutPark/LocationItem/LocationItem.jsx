@@ -12,6 +12,7 @@ import { getDates } from './getDatesForUsing.js';
 import { icons } from '../../../assets';
 
 export const LocationItem = ({ card }) => {
+	console.log(card);
 	const { t } = useTranslation();
 	const [isMapOpen, setIsMapOpen] = useState(false);
 	const { isMobile } = useMedia();
@@ -27,6 +28,8 @@ export const LocationItem = ({ card }) => {
 	};
 
 	const dates = getDates(card, currentLanguage);
+
+	console.log(dates);
 
 	const { description, imgAlt, number, title, image, mapImage, _id } = dates;
 

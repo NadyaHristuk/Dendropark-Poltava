@@ -4,18 +4,19 @@ export const getDates = (card, currentLanguage) => {
     const {
         image,
         mapImage,
+        number,
 
-        uk: {
+        ua: {
             description: descriptionUK,
             imgAlt: imgAltUK,
-            number: numberUK,
+
             title: titleUK,
 
         },
         en: {
             description: descriptionEN,
             imgAlt: imgAltEN,
-            number: numberEN,
+
             title: titleEN,
 
         },
@@ -29,18 +30,18 @@ export const getDates = (card, currentLanguage) => {
             ? {
                 description: descriptionUK,
                 imgAlt: imgAltUK,
-                number: numberUK,
+
                 title: titleUK,
             }
             : {
                 description: descriptionEN,
                 imgAlt: imgAltEN,
-                number: numberEN,
+
                 title: titleEN,
             };
 
 
-    const dates = { ...datesForUsing, image, mapImage, _id }
+    const dates = { ...datesForUsing, image, mapImage, _id, number }
 
 
     return dates
