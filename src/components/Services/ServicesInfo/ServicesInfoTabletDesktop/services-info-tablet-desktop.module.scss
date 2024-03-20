@@ -1,7 +1,7 @@
-@import '../../../../styles/_colors.scss';
-@import '../../../../styles/mixins';
+@import "../../../../styles/_colors.scss";
+@import "../../../../styles/mixins";
 .title {
-	font-family: 'Ermilov', sans-serif;
+	font-family: "Ermilov", sans-serif;
 	font-weight: 700;
 	font-size: 32px;
 	line-height: 1.0625;
@@ -17,7 +17,7 @@
 	// gap: 16px;
 	padding-bottom: 32px;
 	// width: 298px;
-	margin: 0 auto;
+	margin: 0;
 }
 .icon {
 	background-color: $stroke;
@@ -56,8 +56,15 @@
 	color: $pine-depths;
 }
 
+.item_description p {
+	font-family: "Innerspace", sans-serif;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 2;
+	color: $forest-shadow;
+}
 .item_description {
-	font-family: 'Innerspace', sans-serif;
+	font-family: "Innerspace", sans-serif;
 	font-weight: 400;
 	font-size: 12px;
 	line-height: 2;
