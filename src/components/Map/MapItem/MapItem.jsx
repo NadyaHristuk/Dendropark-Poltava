@@ -26,7 +26,7 @@ const MapItem = ({ item, className }) => {
 			onMouseEnter={handleChange}
 			onMouseLeave={handleChange}
 		>
-			{item[lang].number}
+			{item[lang]?.number}
 
 			<CSSTransition
 				in={isVisible}
@@ -42,9 +42,9 @@ const MapItem = ({ item, className }) => {
 								<use href={`${icons}#icon-close`}></use>
 							</svg>
 						</button>
-						<div className={scss.number}>{item[lang].number}</div>
-						<h3 className={scss.title}>{item[lang].title}</h3>
-						<p className={scss.description}>{item[lang].description}</p>
+						<div className={scss.number}>{item[lang]?.number}</div>
+						<h3 className={scss.title}>{item[lang]?.title}</h3>
+						<p className={scss.description}>{item[lang]?.description}</p>
 						<HashLink smooth to={`/about#${item._id}`} className={scss.link}>
 							{t('about.detailLink')}
 							<svg className={scss.linkIcon}>

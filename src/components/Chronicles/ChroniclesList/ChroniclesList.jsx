@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { useMedia } from '../../../hooks/useMedia';
 import { icons } from '../../../assets';
 import fetchChronicles from './ChroniclesApi.js';
+import {fetchEvents} from '../../../adminPanel/serviceApiEvents.js';
 // import chronicles from '../сhronicles';
 import { LANGUAGE_STORAGE_KEY } from '../../../constants';
 import css from './ChroniclesList.module.scss';
@@ -23,7 +24,7 @@ const ChroniclesList = ({ paddingTop }) => {
 		const fetchChroniclesList = async () => {
 			try {
 				setLoading(true);
-				const response = await fetchChronicles();
+				const response = await fetchEvents();
 				if (response) {
 					setChronicles(response.slice(0, 8).sort((a, b) => b.date - a.date));
 				}
@@ -44,7 +45,7 @@ const ChroniclesList = ({ paddingTop }) => {
 			style={{ paddingTop: `${paddingTopValue}px` }}
 		>
 			<h3 className={css.title}>{t('chronicles.chroniclesTitle')}</h3>
-			{!loading && chronicles.length > 0 ? (
+			{/* {!loading && chronicles.length > 0 ? (
 				isMobile ? (
 					<ChroniclesListUl items={chronicles} />
 				) : (
@@ -68,7 +69,7 @@ const ChroniclesList = ({ paddingTop }) => {
 					</svg>
 					Поки що не має нових подій, очікуйте згодом...
 				</p>
-			)}
+			)} */}
 		</section>
 	);
 };
