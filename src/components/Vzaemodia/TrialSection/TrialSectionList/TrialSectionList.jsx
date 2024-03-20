@@ -4,9 +4,11 @@ import i18n from "../../../../utils/localization/i18n.js";
 import styles from "./TrialSectionList.module.scss";
 import Slider from "../../../Slider/Slider.jsx";
 import { useState, useEffect } from "react";
+import { useMedia } from "../../../../hooks/useMedia.js";
 
 export const TrialSectionList = ({ trialsData }) => {
-  const PER_PAGE = 3;
+  const { isMobile } = useMedia();
+  const PER_PAGE = isMobile ? 2 : 3;
   const { chunkedData } = usePagination({ perPage: PER_PAGE, data: trialsData });
 
   const { language } = i18n;
