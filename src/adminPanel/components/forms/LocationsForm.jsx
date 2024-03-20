@@ -41,6 +41,7 @@ const LocationsForm = ({ name, item, isOpen, setIsOpen }) => {
 		}
 		return e?.fileList;
 	};
+	
 	return (
 		<Form
 			name="basic"
