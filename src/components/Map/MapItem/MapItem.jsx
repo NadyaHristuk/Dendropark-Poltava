@@ -10,11 +10,7 @@ const MapItem = ({ item, className }) => {
 	const [isVisible, setIsVisible] = useState(false);
 	const nodeRef = useRef(null);
 	const {t} = useTranslation();
-	const savedLanguage = localStorage.getItem('LANGUAGE_KEY') || 'ua';
-
-	let lang;
-
-	savedLanguage === 'ua' ? (lang = 'ua') : (lang = 'en');
+	const lang = localStorage.getItem('LANGUAGE_KEY') || 'ua';
 
 	const handleChange = () => {
 		setIsVisible(!isVisible);
