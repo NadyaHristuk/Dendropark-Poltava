@@ -3,11 +3,14 @@ import DocumentsItem from '../DocumentsItem/DocumentsItem';
 import DocumentsListUI from './DocumentsListUI';
 import { useTranslation } from 'react-i18next';
 import { useMedia } from '../../../hooks/useMedia';
-import fetchDocuments from './DocumentsApi';
+// import fetchDocuments from './DocumentsApi';
+import {fetchDocuments} from '../../../adminPanel/serviceApiDocuments';
 import { LANGUAGE_STORAGE_KEY } from '../../../constants';
 // import documents from '../documents';
 import { icons } from '../../../assets';
 import css from './DocumentsList.module.scss';
+
+
 
 const DocumentsList = () => {
 	const [documents, setDocuments] = useState([]);
@@ -23,7 +26,7 @@ const DocumentsList = () => {
 			try {
 				setLoading(true);
 				const response = await fetchDocuments();
-
+console.log(response);
 				if (response) {
 					setDocuments(response);
 				}

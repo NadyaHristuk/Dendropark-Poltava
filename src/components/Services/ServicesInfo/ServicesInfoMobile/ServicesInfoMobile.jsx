@@ -6,12 +6,13 @@ import Slider from "../../../Slider/Slider";
 import i18n from "../../../../utils/localization/i18n";
 import { useState, useEffect } from "react";
 import { fetchOurServices } from "../../../../adminPanel/serviceApiOurServices";
+
 const ServiceInfoMobile = () => {
 	const [currentLanguage, setCurrentLanguage] = useState(i18n.language);
-
 	const [products, setProducts] = useState([]);
 	const [loading, setLoading] = useState(false);
 	const [error, setError] = useState(null);
+
 	useEffect(() => {
 		async function fetchServicesList() {
 			try {
@@ -26,6 +27,7 @@ const ServiceInfoMobile = () => {
 		}
 		fetchServicesList();
 	}, []);
+
 	const { chunkedData } = usePagination({
 		perPage: 5,
 		data: products,
@@ -58,7 +60,10 @@ const ServiceInfoMobile = () => {
 							</div>
 							<div className={css.item_wrapper}>
 								<h3 className={css.item_title}>{title}</h3>
-								<p className={css.item_description}>{description}</p>
+								<div
+									className={css.item_description}
+									dangerouslySetInnerHTML={{ __html: description }}
+								/>
 							</div>
 						</li>
 					);
@@ -66,6 +71,8 @@ const ServiceInfoMobile = () => {
 			</ul>
 		);
 	};
+
 	return <div>{isMobile && <Slider chunkedData={chunkedData} currentPage={list} />}</div>;
 };
+
 export default ServiceInfoMobile;

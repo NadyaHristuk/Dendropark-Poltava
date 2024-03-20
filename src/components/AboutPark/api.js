@@ -1,7 +1,7 @@
 import axios from "axios";
 
 
-const apiUrl = 'https://dendropark-poltava-back.onrender.com/api/locations';
+const apiUrl = 'https://dendropark-poltava-back-ix1i.onrender.com/api/locations';
 
 
 export const fetchData = async () => {
