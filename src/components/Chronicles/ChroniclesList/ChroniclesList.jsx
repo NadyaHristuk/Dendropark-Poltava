@@ -13,17 +13,7 @@ const ChroniclesList = () => {
 	const [loading, setLoading] = useState(false);
 	const [error, setError] = useState(null);
 	const { t } = useTranslation();
-	const { isMobile, isTablet, isDesktop } = useMedia();
-	// const paddingTopValue = isMobile ? '150' : paddingTop;
-	let paddingTopValue = '0';
-
-	if(isMobile){
-		paddingTopValue = '64'
-	}else{
-		paddingTopValue = '80'
-	}
-
-	// const device =  `isMobile: ${isMobile} || isTablet: ${isTablet} || isDesktop: ${isDesktop}`;
+	const { isMobile} = useMedia();
 
 	const savedLanguage = localStorage.getItem(LANGUAGE_STORAGE_KEY) || 'ua';
 
@@ -49,7 +39,6 @@ const ChroniclesList = () => {
 		<section
 			id="litopys"
 			className={css.chroniclesSection}
-			style={{ paddingTop: `${paddingTopValue}px` }}
 		>
 			<h3 className={css.title}>{t('chronicles.chroniclesTitle')}</h3>
 			{!loading && chronicles.length > 0 ? (

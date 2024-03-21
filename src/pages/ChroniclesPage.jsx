@@ -3,10 +3,13 @@ import ChroniclesList from '../components/Chronicles/ChroniclesList/ChroniclesLi
 import Container from '../components/Container/Container';
 import { ScrollToTop } from '../components/ScrollToTop/ScrollToTop';
 
+
 const ChroniclesPage = () => {
 	return (
 		<Container>
-			<ChroniclesList />
+			<div style={{ paddingTop: `80px` }}>
+				<ChroniclesList />
+			</div>
 			<DocumentsList />
 			<ScrollToTop />
 		</Container>
