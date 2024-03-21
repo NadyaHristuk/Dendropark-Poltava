@@ -58,7 +58,8 @@ export const en = {
       parkPurpose:
         "Наш парк слугує не тільки для відпочинку, а й для наукових цілей та для збереження біорізноманіття, тому поважайте його мешканців: рослини і тварин.",
       behaviorRules: "Правила поведінки",
-      mainRule: "Ключове правило: поважайте інших, і людей, і тварин, і рослини.",
+      mainRule:
+        "Ключове правило: поважайте інших, і людей, і тварин, і рослини.",
       learnMore: "Дізнатися більше",
       researchTrails: "Дослідницькі стежки",
       researchTrailsDescription:
@@ -163,7 +164,8 @@ export const en = {
         },
         {
           title: "Our services",
-          description: 'Services of the Municipal Enterprise "Ornamental Cultures".',
+          description:
+            'Services of the Municipal Enterprise "Ornamental Cultures".',
           moreInfo: "Learn more",
           link: "/services#services",
           iconId: "#icon-attention-services",
@@ -181,15 +183,18 @@ export const en = {
         parkPurpose:
           "Our park serves not only as a place for relaxation but also for scientific purposes and biodiversity conservation. Therefore, please respect its inhabitants: plants and animals.",
         behaviorRules: "Behavior Rules",
-        mainRule: "The main rule: respect others, including people, animals, and plants.",
+        mainRule:
+          "The main rule: respect others, including people, animals, and plants.",
         learnMore: "Learn More",
         researchTrails: "Research Trails",
         researchTrailsDescription:
           "Want to learn more about the value of the park and the interconnections in nature?",
         chronicles: "Chronicles",
-        chroniclesDescription: "Learn about the events and materials regarding the park.",
+        chroniclesDescription:
+          "Learn about the events and materials regarding the park.",
         eventOrganizers: "For Event Organizers",
-        eventOrganizersDescription: "Want to hold an event in the Park? Follow the link.",
+        eventOrganizersDescription:
+          "Want to hold an event in the Park? Follow the link.",
         ourServices: "Our Services",
         servicesDescription:
           "Services of the Municipal Enterprise “Decorative Cultures.”",
@@ -203,7 +208,8 @@ export const en = {
 
         trialTitle: "Our trials",
         cardOneTitle: "Trail No.1 Ecological",
-        cardOneText: "Learn more about the park's nature and ecological principles.",
+        cardOneText:
+          "Learn more about the park's nature and ecological principles.",
         cardButtonText: "View on Map",
         cardTwoTitle: "Trail No.2 Historical",
         cardTwoText:
@@ -323,14 +329,16 @@ export const en = {
       address: "Address",
       office:
         'The office of the municipal enterprise "Decorative Cultures" that takes care of the park:',
-      street: "9th of January (Ukrainian Central Rada) Street, 2, Poltava, 36000",
+      street:
+        "9th of January (Ukrainian Central Rada) Street, 2, Poltava, 36000",
       location:
         "The park is located in the northern part of the city. The easiest way to get to the main entrance is from Yakivchanska Street, from the School of Communications.",
       phone: "Phone",
       socialMedia: "Follow us on social networks",
       titleAdministration: "Administration",
       person1: "Lyashko Igor",
-      person1Position: 'Director of the Municipal Enterprise "Decorative Cultures"',
+      person1Position:
+        'Director of the Municipal Enterprise "Decorative Cultures"',
       person2: "Makukha Maksym",
       person2Position: 'Head of the "Poltava City Park" Department',
       person3: "Rynkovy Grigory",
@@ -380,8 +388,8 @@ export const en = {
       btnIcon: "#icon-simplethankyou",
     },
     studentModals: {
-      title: "Розробили наш сайт",
-      subTitle: "Люди, що забезпечують нашу онлайн присутність",
+      title: "The site was developed by",
+      subTitle: "People who provide our online presence",
     },
 
     hero: {
