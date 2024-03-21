@@ -16,9 +16,11 @@ const MapItem = ({ item, className }) => {
 		setIsVisible(!isVisible);
 	};
 
+	const cl = (className === "item-10" && lang === "ua") ? `${scss[className]} ${scss.detail}` : scss[className];
+
 	return (
 		<li
-			className={`${scss.item} ${scss[className]}`}
+			className={`${scss.item} ${cl}`}
 			onMouseEnter={handleChange}
 			onMouseLeave={handleChange}
 		>
