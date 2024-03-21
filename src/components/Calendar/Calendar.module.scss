@@ -1,18 +1,6 @@
-@import '../../styles/colors';
-@import '../../styles/mixins';
-@import '../../styles/breakpoints';
-
-.section {
-  padding-bottom: 64px;
-
-  @include media-rules(tablet) {
-    padding-bottom: 80px;
-  }
-
-  @include media-rules(desktop) {
-    padding-bottom: 120px;
-  }
-}
+@import "../../styles/colors";
+@import "../../styles/mixins";
+@import "../../styles/breakpoints";
 
 .title {
   font-size: 24px;
@@ -35,7 +23,7 @@
 }
 
 .description {
-  font-family: 'Innerspace';
+  font-family: "Innerspace";
   font-size: 14px;
   line-height: 2.14;
   letter-spacing: -0.01em;
