@@ -71,6 +71,9 @@
 	line-height: 2;
 	color: $forest-shadow;
 }
+.services_wrapper {
+	padding-bottom: 64px;
+}
 @media screen and (min-width: 960px) {
 	.title_store {
 		padding-top: 80px;
@@ -109,6 +112,9 @@
 	.btn_prevpage {
 		display: none;
 	}
+	.services_wrapper {
+		padding-bottom: 64px;
+	}
 }
 
 @media screen and (min-width: 1440px) {
@@ -132,5 +138,8 @@
 	}
 	.services_item {
 		margin: 0;
+	}
+	.services_wrapper {
+		padding-bottom: 120px;
 	}
 }
