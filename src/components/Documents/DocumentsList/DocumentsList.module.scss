@@ -44,6 +44,10 @@
 
 	@include media-rules(tablet) {
 		overflow-y: scroll;
+		max-height: 320px;
+	}
+	
+	@include media-rules(desktop) {
 		max-height: 440px;
 	}
 }
