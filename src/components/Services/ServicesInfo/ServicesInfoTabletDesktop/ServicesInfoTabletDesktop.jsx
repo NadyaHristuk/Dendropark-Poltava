@@ -16,12 +16,12 @@ const ServicesInfoTabletDesktop = ({ items }) => {
 			i18n.off("languageChanged", handleLanguageChange);
 		};
 	}, []);
+
 	return (
 		<div>
 			<ul className={css.services_list}>
 				{items.map((item) => {
 					const { title, description } = item[currentLanguage];
-
 					return (
 						<li key={item._id} className={css.services_item}>
 							<div className={css.item_icon}>
@@ -31,7 +31,7 @@ const ServicesInfoTabletDesktop = ({ items }) => {
 							</div>
 							<div className={css.item_wrapper}>
 								<h3 className={css.item_title}>{title}</h3>
-								<p className={css.item_description}>{description}</p>
+								<div className={css.item_description}dangerouslySetInnerHTML={{ __html: description }} />
 							</div>
 						</li>
 					);

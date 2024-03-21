@@ -30,7 +30,8 @@ const ChroniclesItem = ({ url, title, description }) => {
 			</div>
 			<div className={css.info}>
 				<h4 className={css.title}>{title}</h4>
-				<p className={css.description}>{shortDescription}</p>
+				<div className={css.description}dangerouslySetInnerHTML={{ __html: shortDescription }} />
+				{/* <p className={css.description}>{shortDescription}</p> */}
 				<button className={css.button} onClick={openModal}>
 					Читати далі{' '}
 					<svg className={css.arrowUpIcon}>
