@@ -85,13 +85,13 @@
   font-family: 'Innerspace', sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  color: #265543;
+  color: $city-park;
 }
 
 .textDescription {
   font-family: 'Innerspace', sans-serif;
   font-size: 16px;
-  color: #265543;
+  color: $city-park;
   line-height: 1.12;
   margin-bottom: 24px;
 
@@ -124,7 +124,7 @@
   font-family: 'Innerspace', sans-serif;
   font-size: 14px;
   line-height: 1.43;
-  color: #265543;
+  color: $city-park;
   margin-bottom: 8px;
 
   @include media-rules(tablet) {
@@ -139,7 +139,13 @@
 .contactsLink {
   font-family: 'Innerspace', sans-serif;
   font-size: 20px;
-  color: #265543;
+  color: $city-park;
+  @include transition(color);
+
+  &:is(:hover, :focus) {
+    color: $light-color;
+
+  }
 
   @include media-rules(desktop) {
     font-size: 28px;
@@ -191,5 +197,11 @@
 .socialIcon {
   width: 40px;
   height: 40px;
-  fill: #45b288;
+  fill: $light-color;
+  @include transition(transform);
+
+
+  &:is(:hover, :focus) {
+    transform: scale(1.3);
+  }
 }
