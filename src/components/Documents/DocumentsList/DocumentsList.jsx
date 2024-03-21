@@ -49,7 +49,7 @@ const DocumentsList = () => {
                   title={document[savedLanguage].title}
                   subtitle={document[savedLanguage].subtitle}
                   description={document[savedLanguage].description}
-                  link={document}
+                  link={document.document}
                 />
               </li>
             ))}

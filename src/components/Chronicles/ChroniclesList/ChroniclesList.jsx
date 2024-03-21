@@ -4,19 +4,26 @@ import ChroniclesListUl from './ChroniclesListUl';
 import { useTranslation } from 'react-i18next';
 import { useMedia } from '../../../hooks/useMedia';
 import { icons } from '../../../assets';
-import fetchChronicles from './ChroniclesApi.js';
 import {fetchEvents} from '../../../adminPanel/serviceApiEvents.js';
-// import chronicles from '../сhronicles';
 import { LANGUAGE_STORAGE_KEY } from '../../../constants';
 import css from './ChroniclesList.module.scss';
 
-const ChroniclesList = ({ paddingTop }) => {
+const ChroniclesList = () => {
 	const [chronicles, setChronicles] = useState([]);
 	const [loading, setLoading] = useState(false);
 	const [error, setError] = useState(null);
 	const { t } = useTranslation();
-	const { isMobile } = useMedia();
-	const paddingTopValue = isMobile ? '150' : paddingTop;
+	const { isMobile, isTablet, isDesktop } = useMedia();
+	// const paddingTopValue = isMobile ? '150' : paddingTop;
+	let paddingTopValue = '0';
+
+	if(isMobile){
+		paddingTopValue = '64'
+	}else{
+		paddingTopValue = '80'
+	}
+
+	// const device =  `isMobile: ${isMobile} || isTablet: ${isTablet} || isDesktop: ${isDesktop}`;
 
 	const savedLanguage = localStorage.getItem(LANGUAGE_STORAGE_KEY) || 'ua';
 
@@ -45,18 +52,18 @@ const ChroniclesList = ({ paddingTop }) => {
 			style={{ paddingTop: `${paddingTopValue}px` }}
 		>
 			<h3 className={css.title}>{t('chronicles.chroniclesTitle')}</h3>
-			{/* {!loading && chronicles.length > 0 ? (
+			{!loading && chronicles.length > 0 ? (
 				isMobile ? (
 					<ChroniclesListUl items={chronicles} />
 				) : (
 					<ul className={css.list}>
-						{chronicles.map(({ id, photo, title, description }) => (
-							<li key={id} className={css.item}>
+						{chronicles.map((item) => (
+							<li key={item._id} className={css.item}>
 								<ChroniclesItem
-									id={id}
-									url={photo}
-									title={title}
-									description={description}
+									id={item[savedLanguage]._id}
+									url={item.image}
+									title={item[savedLanguage].title}
+									description={item[savedLanguage].description}
 								/>
 							</li>
 						))}
@@ -69,7 +76,7 @@ const ChroniclesList = ({ paddingTop }) => {
 					</svg>
 					Поки що не має нових подій, очікуйте згодом...
 				</p>
-			)} */}
+			)}
 		</section>
 	);
 };

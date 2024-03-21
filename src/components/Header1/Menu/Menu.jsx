@@ -31,7 +31,6 @@ const Menu = () => {
 	}, []);
 
 	useEffect(() => {
-		setIsOpenMenu(false);
 		window.scrollTo({
 			top: 0,
 			behavior: 'instant',
@@ -58,7 +57,7 @@ const Menu = () => {
 				<>
 					{(isMobile || isTablet) && (
 						<div className={scss.menuList} ref={nodeRef}>
-							<MenuList />
+							<MenuList handleClick={() => setIsOpenMenu(false)} />
 							{isMobile && <Phone />}
 						</div>
 					)}

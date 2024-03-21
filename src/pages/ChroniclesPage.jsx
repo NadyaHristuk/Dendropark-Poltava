@@ -6,7 +6,7 @@ import { ScrollToTop } from '../components/ScrollToTop/ScrollToTop';
 const ChroniclesPage = () => {
 	return (
 		<Container>
-			<ChroniclesList paddingTop={'160'} />
+			<ChroniclesList />
 			<DocumentsList />
 			<ScrollToTop />
 		</Container>

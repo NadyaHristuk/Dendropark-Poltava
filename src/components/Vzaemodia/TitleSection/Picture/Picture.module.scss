@@ -1,5 +1,5 @@
-@import '/src/styles/colors';
-@import '../../../../styles/mixins';
+@import "/src/styles/colors";
+@import "../../../../styles/mixins";
 
 .picture {
   background-color: $snowdrift;
@@ -11,6 +11,7 @@
 
   @include media-rules(desktop) {
     max-width: none;
+    max-height: 574px;
     object-fit: cover;
     object-position: bottom;
   }

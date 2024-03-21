@@ -10,11 +10,7 @@ const MapItem = ({ item, className }) => {
 	const [isVisible, setIsVisible] = useState(false);
 	const nodeRef = useRef(null);
 	const {t} = useTranslation();
-	const savedLanguage = localStorage.getItem('LANGUAGE_KEY') || 'ua';
-
-	let lang;
-
-	savedLanguage === 'ua' ? (lang = 'uk') : (lang = 'en');
+	const lang = localStorage.getItem('LANGUAGE_KEY') || 'ua';
 
 	const handleChange = () => {
 		setIsVisible(!isVisible);
@@ -26,7 +22,7 @@ const MapItem = ({ item, className }) => {
 			onMouseEnter={handleChange}
 			onMouseLeave={handleChange}
 		>
-			{item[lang]?.number}
+			{item?.number}
 
 			<CSSTransition
 				in={isVisible}
@@ -42,7 +38,7 @@ const MapItem = ({ item, className }) => {
 								<use href={`${icons}#icon-close`}></use>
 							</svg>
 						</button>
-						<div className={scss.number}>{item[lang]?.number}</div>
+						<div className={scss.number}>{item?.number}</div>
 						<h3 className={scss.title}>{item[lang]?.title}</h3>
 						<p className={scss.description}>{item[lang]?.description}</p>
 						<HashLink smooth to={`/about#${item._id}`} className={scss.link}>

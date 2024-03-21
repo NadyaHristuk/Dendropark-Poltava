@@ -121,6 +121,7 @@
 .footer_copyright_text_wrapper {
 	display: flex;
 	flex-direction: column;
+	height: 27px;
 
 	@include media-rules(tablet) {
 		flex-direction: row;
