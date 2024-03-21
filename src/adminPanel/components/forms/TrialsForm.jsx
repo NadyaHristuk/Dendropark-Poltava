@@ -60,7 +60,7 @@ const TrialsForm = ({ name, item, isOpen, setIsOpen }) => {
       {/* ua */}
       <p style={{ marginBottom: 10 }}>Заповніть Українською</p>
       <Form.Item
-        label="Distance"
+        label="Довжина стежки"
         name="distance"
         rules={[
           {
@@ -73,7 +73,7 @@ const TrialsForm = ({ name, item, isOpen, setIsOpen }) => {
       </Form.Item>
 
       <Form.Item
-        label="Title"
+        label="Заголовок"
         name="title"
         rules={[
           {
@@ -86,7 +86,7 @@ const TrialsForm = ({ name, item, isOpen, setIsOpen }) => {
       </Form.Item>
 
       <Form.Item
-        label="ImgAlt"
+        label="Опис фото"
         name="imgAlt"
         rules={[
           {
@@ -99,7 +99,7 @@ const TrialsForm = ({ name, item, isOpen, setIsOpen }) => {
       </Form.Item>
 
       <Form.Item
-        label="Text"
+        label="Опис стежки"
         name="text"
         rules={[
           {
@@ -108,12 +108,12 @@ const TrialsForm = ({ name, item, isOpen, setIsOpen }) => {
           },
         ]}
       >
-        <ReactQuill theme="snow" style={{ fontWeight: 400 }} />
+        <ReactQuill theme="snow" />
       </Form.Item>
       {/* en */}
       <p style={{ marginBottom: 10 }}>Заповніть Англійською</p>
       <Form.Item
-        label="TitleEn"
+        label="Title"
         name="titleEn"
         rules={[
           {
@@ -126,7 +126,7 @@ const TrialsForm = ({ name, item, isOpen, setIsOpen }) => {
       </Form.Item>
 
       <Form.Item
-        label="ImgAltEn"
+        label="ImgAlt"
         name="imgAltEn"
         rules={[
           {
@@ -139,7 +139,7 @@ const TrialsForm = ({ name, item, isOpen, setIsOpen }) => {
       </Form.Item>
 
       <Form.Item
-        label="TextEn"
+        label="Text"
         name="textEn"
         rules={[
           {
@@ -148,7 +148,7 @@ const TrialsForm = ({ name, item, isOpen, setIsOpen }) => {
           },
         ]}
       >
-        <ReactQuill style={{ fontWeight: "normal" }} theme="snow" />
+        <ReactQuill theme="snow" />
       </Form.Item>
       <p style={{ marginBottom: 10 }}>Завантажте Фото й Карту</p>
       <Form.Item
