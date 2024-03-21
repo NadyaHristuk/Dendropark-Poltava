@@ -4,18 +4,26 @@ import ChroniclesListUl from './ChroniclesListUl';
 import { useTranslation } from 'react-i18next';
 import { useMedia } from '../../../hooks/useMedia';
 import { icons } from '../../../assets';
-import fetchChronicles from './ChroniclesApi.js';
 import {fetchEvents} from '../../../adminPanel/serviceApiEvents.js';
 import { LANGUAGE_STORAGE_KEY } from '../../../constants';
 import css from './ChroniclesList.module.scss';
 
-const ChroniclesList = ({ paddingTop }) => {
+const ChroniclesList = () => {
 	const [chronicles, setChronicles] = useState([]);
 	const [loading, setLoading] = useState(false);
 	const [error, setError] = useState(null);
 	const { t } = useTranslation();
-	const { isMobile } = useMedia();
-	const paddingTopValue = isMobile ? '150' : paddingTop;
+	const { isMobile, isTablet, isDesktop } = useMedia();
+	// const paddingTopValue = isMobile ? '150' : paddingTop;
+	let paddingTopValue = '0';
+
+	if(isMobile){
+		paddingTopValue = '64'
+	}else{
+		paddingTopValue = '80'
+	}
+
+	// const device =  `isMobile: ${isMobile} || isTablet: ${isTablet} || isDesktop: ${isDesktop}`;
 
 	const savedLanguage = localStorage.getItem(LANGUAGE_STORAGE_KEY) || 'ua';
 
