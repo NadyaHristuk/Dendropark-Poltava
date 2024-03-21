@@ -8,32 +8,12 @@ import {fetchEvents} from '../../../adminPanel/serviceApiEvents.js';
 import { LANGUAGE_STORAGE_KEY } from '../../../constants';
 import css from './ChroniclesList.module.scss';
 
-const ChroniclesList = () => {
-	const [chronicles, setChronicles] = useState([]);
-	const [loading, setLoading] = useState(false);
-	const [error, setError] = useState(null);
+const ChroniclesList = ({chronicles, loading, error}) => {
+	
 	const { t } = useTranslation();
 	const { isMobile} = useMedia();
 
 	const savedLanguage = localStorage.getItem(LANGUAGE_STORAGE_KEY) || 'ua';
-
-	useEffect(() => {
-		const fetchChroniclesList = async () => {
-			try {
-				setLoading(true);
-				const response = await fetchEvents();
-				if (response) {
-					setChronicles(response.slice(0, 8).sort((a, b) => b.date - a.date));
-				}
-			} catch (error) {
-				setError(error.message);
-			} finally {
-				setLoading(false);
-			}
-		};
-
-		fetchChroniclesList();
-	}, []);
 
 	return (
 		<section

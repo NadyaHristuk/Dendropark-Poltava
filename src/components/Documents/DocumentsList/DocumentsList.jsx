@@ -8,7 +8,7 @@ import { LANGUAGE_STORAGE_KEY } from "../../../constants";
 import { icons } from "../../../assets";
 import css from "./DocumentsList.module.scss";
 
-const DocumentsList = () => {
+const DocumentsList = ( {chronicles}) => {
   const [documents, setDocuments] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -34,6 +34,16 @@ const DocumentsList = () => {
 
     fetchDocumentsList();
   }, []);
+
+  useEffect(() => {
+    if (chronicles && location.hash) {
+      const id = location.hash.replace("#", "");
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  }, [chronicles, location.hash]);
 
   return (
     <section className={css.documentsSection} id="documents-section">

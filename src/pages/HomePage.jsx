@@ -1,40 +1,64 @@
-import { AttentionVisitors } from '../components/AttentionVisitors/AttentionVisitors';
-import Calendar from '../components/Calendar/Calendar';
-import ChroniclesList from '../components/Chronicles/ChroniclesList/ChroniclesList';
-import Container from '../components/Container/Container';
-import { HelpPark } from '../components/HelpPark/HelpPark/HelpPark';
-import Hero from '../components/Hero/Hero';
-import { Visual } from '../components/HelpPark/Visual/Visual';
-import { ScrollToTop } from '../components/ScrollToTop/ScrollToTop';
+import { AttentionVisitors } from "../components/AttentionVisitors/AttentionVisitors";
+import Calendar from "../components/Calendar/Calendar";
+import ChroniclesList from "../components/Chronicles/ChroniclesList/ChroniclesList";
+import Container from "../components/Container/Container";
+import { HelpPark } from "../components/HelpPark/HelpPark/HelpPark";
+import Hero from "../components/Hero/Hero";
+import { Visual } from "../components/HelpPark/Visual/Visual";
+import { ScrollToTop } from "../components/ScrollToTop/ScrollToTop";
+import { useEffect, useState } from "react";
+import { fetchEvents } from "../adminPanel/serviceApiEvents";
 
 const HomePage = () => {
-	return (
-		<>
-			<Container>
-				<Hero />
-			</Container>
+    const [chronicles, setChronicles] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(null);
 
-			<Container>
-				<AttentionVisitors />
-			</Container>
+    useEffect(() => {
+        const fetchChroniclesList = async () => {
+            try {
+                setLoading(true);
+                const response = await fetchEvents();
+                if (response) {
+                    setChronicles(response.slice(0, 8).sort((a, b) => b.date - a.date));
+                }
+            } catch (error) {
+                setError(error.message);
+            } finally {
+                setLoading(false);
+            }
+        };
 
-			<Container>
-				<HelpPark />
-			</Container>
+        fetchChroniclesList();
+    }, []);
 
-			<Visual />
+    return (
+        <>
+            <Container>
+                <Hero />
+            </Container>
 
-			<Container>
-				<Calendar />
-			</Container>
+            <Container>
+                <AttentionVisitors />
+            </Container>
 
-			<Container>
-				<ChroniclesList />
-			</Container>
+            <Container>
+                <HelpPark />
+            </Container>
 
-			<ScrollToTop />
-		</>
-	);
+            <Visual />
+
+            <Container>
+                <Calendar />
+            </Container>
+
+            <Container>
+                <ChroniclesList chronicles={chronicles} loading={loading} error={error} />
+            </Container>
+
+            <ScrollToTop />
+        </>
+    );
 };
 
 export default HomePage;

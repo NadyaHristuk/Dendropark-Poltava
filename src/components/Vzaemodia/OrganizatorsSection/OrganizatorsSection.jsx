@@ -3,9 +3,23 @@ import { organizationRules } from './OrganizatorsList/organizationRules';
 import { OrganizatorsList } from './OrganizatorsList/OrganizatorsList';
 import { useTranslation } from 'react-i18next';
 import styles from './OrgSection.module.scss';
+import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 
-export const OrganizatorsSection = () => {
+export const OrganizatorsSection = ({trialsData}) => {
   const { t } = useTranslation();
+  const location = useLocation();
+
+  useEffect(() => {
+    if (trialsData && location.hash) {
+      const id = location.hash.replace("#", "");
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  }, [trialsData, location.hash]);
+
   return (
     <SectionWrapper>
       <div className={styles.organizatorsWrapper} id="organizators-section">
