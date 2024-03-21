@@ -2,7 +2,7 @@
 @import "/src/styles/colors";
 
 .thumb {
-  width: 357px;
+  width: 345px;
 
   @include media-rules(tablet) {
     width: 390px;
@@ -32,7 +32,7 @@
 }
 
 .info {
-  max-width: 357px;
+  max-width: 345px;
 
   @include media-rules(tablet) {
     max-width: 462px;
