@@ -17,7 +17,7 @@ const DocumentsListUI = ({ items }) => {
 							title={item[savedLanguage].title}
 							subtitle={item[savedLanguage].subtitle}
 							description={item[savedLanguage].description}
-							link={document}
+							link={item.document}
 						/>
 					</li>
 				))}
