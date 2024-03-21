@@ -3,19 +3,17 @@
 
 .chroniclesSection {
 	max-width: 358px;
-	// width: 358px;
-	// padding-top: 80px;
-	// padding-bottom: 64px;
+	padding-top: 80px;
+	padding-bottom: 64px;
 
 	@include media-rules(tablet) {
 		max-width: 880px;
-		// padding-top: 80px;
-		// padding-bottom: 80px;
+		padding-top: 87px;
+		padding-bottom: 80px;
 	}
 
 	@include media-rules(desktop) {
 		max-width: 1280px;
-		// padding-bottom: 120px;
 	}
 }
 
@@ -39,15 +37,12 @@
 
 .list {
 	display: flex;
-	// flex-direction: column;
 	flex-wrap: wrap;
 	justify-content: center;
-	// gap: 32px;
 	
 	@include media-rules(tablet) {
-		max-height: 1165px;
+		max-height: 1130px;
 		overflow-y: auto;
-		// max-height: 1110px;
 		scrollbar-color: #45b288 #edfaf6;
 		scrollbar-width: thin;
 	}

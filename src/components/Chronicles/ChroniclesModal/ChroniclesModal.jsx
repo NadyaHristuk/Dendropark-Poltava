@@ -13,7 +13,6 @@ const ChroniclesModal = ({ url, title, description, isOpen, isClose }) => {
 					<div className={css.info}>
 						<h4 className={css.title}>{title}</h4>
 						<div className={css.description}dangerouslySetInnerHTML={{ __html: description }} />
-						{/* <p className={css.description}>{description}</p> */}
 					</div>
 				</div>
 				<button onClick={isClose}>
