@@ -6,25 +6,21 @@ import { useMedia } from "../../../hooks/useMedia";
 import { fetchProducts } from "../../../adminPanel/serviceApiProducts";
 import i18n from "../../../utils/localization/i18n";
 import { useTranslation } from "react-i18next";
-import { SyncLoader } from "react-spinners";
 
 export const ServicesStore = () => {
 	const { t } = useTranslation();
 	const { isMobile } = useMedia();
-	const [loading, setLoading] = useState(false);
 	const [error, setError] = useState(null);
 	const [products, setProducts] = useState([]);
 	const [currentLanguage, setCurrentLanguage] = useState(i18n.language);
+
 	useEffect(() => {
 		async function fetchProductsList() {
 			try {
-				setLoading(true);
 				const response = await fetchProducts();
 				setProducts(response);
 			} catch (error) {
 				setError(error.message);
-			} finally {
-				setLoading(false);
 			}
 		}
 		fetchProductsList();
@@ -76,15 +72,5 @@ export const ServicesStore = () => {
 		);
 	};
 
-	return (
-		<div>
-			{loading ? (
-				<div className="spinner-container">
-					<SyncLoader loading={true} color="#36d7b7" size={15} />
-				</div>
-			) : (
-				<Slider chunkedData={chunkedData} currentPage={list} />
-			)}
-		</div>
-	);
+	return <Slider chunkedData={chunkedData} currentPage={list} />;
 };

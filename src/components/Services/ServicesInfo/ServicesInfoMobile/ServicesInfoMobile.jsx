@@ -10,19 +10,15 @@ import { fetchOurServices } from "../../../../adminPanel/serviceApiOurServices";
 const ServiceInfoMobile = () => {
 	const [currentLanguage, setCurrentLanguage] = useState(i18n.language);
 	const [products, setProducts] = useState([]);
-	const [loading, setLoading] = useState(false);
 	const [error, setError] = useState(null);
 
 	useEffect(() => {
 		async function fetchServicesList() {
 			try {
-				setLoading(true);
 				const response = await fetchOurServices();
 				setProducts(response);
 			} catch (error) {
 				setError(error.message);
-			} finally {
-				setLoading(false);
 			}
 		}
 		fetchServicesList();
