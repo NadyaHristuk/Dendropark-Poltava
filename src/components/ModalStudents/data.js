@@ -49,7 +49,7 @@ const data = [
       ua: "Сергєєв Богдан",
       en: "Serhieiev Bohdan",
     },
-    role: "Front-end developer",
+    role: "Full-stack developer",
     linkedin: "https://www.linkedin.com/in/bohdanserhieiev/",
     src: `${photo8}`,
   },
