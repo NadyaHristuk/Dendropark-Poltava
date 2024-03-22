@@ -16,7 +16,11 @@ const ChroniclesPage = () => {
                 setLoading(true);
                 const response = await fetchEvents();
                 if (response) {
-                    setChronicles(response.sort((a, b) => b.date - a.date));
+                    setChronicles(response.sort((a, b) => {
+                        const dateA = new Date(a.createdAt);
+                        const dateB = new Date(b.createdAt);
+                        return dateB - dateA;
+                    }));
                 }
             } catch (error) {
                 setError(error.message);
