@@ -4,14 +4,11 @@ import Container from "../components/Container/Container";
 import { ScrollToTop } from "../components/ScrollToTop/ScrollToTop";
 import { useEffect, useState } from "react";
 import { fetchEvents } from "../adminPanel/serviceApiEvents";
-import { useLocation, useNavigate } from "react-router-dom";
 
 const ChroniclesPage = () => {
     const [chronicles, setChronicles] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
-    const location = useLocation();
-    const navigate = useNavigate();
 
     console.log(location);
 
@@ -31,12 +28,6 @@ const ChroniclesPage = () => {
         };
 
         fetchChroniclesList();
-    }, []);
-
-    useEffect(() => {
-        if (!location.pathname) {
-            navigate("/chronicles", { replace: true });
-        }
     }, []);
 
     return (
