@@ -9,7 +9,8 @@
     "deploy": "gh-pages -d dist",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "format": "prettier --write ./src"
+    "format": "prettier --write ./src",
+    "postinstall": "npm install @esbuild/linux-x64 --force"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
