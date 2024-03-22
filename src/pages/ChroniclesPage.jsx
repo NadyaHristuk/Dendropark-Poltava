@@ -10,8 +10,6 @@ const ChroniclesPage = () => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
-    console.log(location);
-
     useEffect(() => {
         const fetchChroniclesList = async () => {
             try {
