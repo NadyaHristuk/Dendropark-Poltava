@@ -1,10 +1,8 @@
-import { useState, useEffect } from 'react';
 import ChroniclesItem from '../ChroniclesItem/ChroniclesItem';
 import ChroniclesListUl from './ChroniclesListUl';
 import { useTranslation } from 'react-i18next';
 import { useMedia } from '../../../hooks/useMedia';
 import { icons } from '../../../assets';
-import {fetchEvents} from '../../../adminPanel/serviceApiEvents.js';
 import { LANGUAGE_STORAGE_KEY } from '../../../constants';
 import css from './ChroniclesList.module.scss';
 
