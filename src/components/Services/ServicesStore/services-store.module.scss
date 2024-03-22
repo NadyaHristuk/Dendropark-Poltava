@@ -173,7 +173,6 @@
 		overflow: hidden;
 		// transition: all 0.5s;
 		@include transition(all);
-		cursor: pointer;
 	}
 	.store_scroll_wrapper {
 		min-height: 210px;
