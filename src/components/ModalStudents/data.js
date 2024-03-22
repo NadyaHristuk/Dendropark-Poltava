@@ -149,7 +149,7 @@ const data = [
       en: "Kuchma Olena",
     },
     role: "QA engineer",
-    linkedin: "#",
+    linkedin: "http://www.linkedin.com/in/olena-kuchma-395a982bb",
     src: `${photo15}`,
   },
   {
