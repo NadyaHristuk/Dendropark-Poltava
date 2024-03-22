@@ -1,5 +1,7 @@
+import WelcomeContent from "../../components/Welcome/WelcomeContent";
+
 const Welcome = () => {
-	return <h1>Welcome</h1>;
+  return <WelcomeContent />;
 };
 
 export default Welcome;
