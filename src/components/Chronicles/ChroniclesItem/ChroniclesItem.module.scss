@@ -2,7 +2,7 @@
 @import "/src/styles/colors";
 
 .thumb {
-  width: 340px;
+  width: 330px;
 
   @include media-rules(tablet) {
     width: 390px;
