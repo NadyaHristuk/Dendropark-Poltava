@@ -2,13 +2,13 @@
 @import "/src/styles/colors";
 
 .thumb {
-  max-width: 340px;
+  width: 340px;
 
   @include media-rules(tablet) {
-    max-width: 390px;
+    width: 390px;
   }
   @include media-rules(desktop) {
-    max-width: 589px;
+    width: 589px;
   }
 }
 
