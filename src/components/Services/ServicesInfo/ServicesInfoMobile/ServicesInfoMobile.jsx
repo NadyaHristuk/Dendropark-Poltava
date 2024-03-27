@@ -45,7 +45,7 @@ const ServiceInfoMobile = () => {
 	const list = (cards) => {
 		return (
 			<ul className={css.services_list}>
-				{cards.map((item) => {
+				{cards?.map((item) => {
 					const { title, description } = item[currentLanguage];
 					return (
 						<li key={item._id} className={css.services_item}>

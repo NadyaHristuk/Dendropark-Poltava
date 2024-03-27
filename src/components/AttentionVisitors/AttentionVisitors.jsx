@@ -10,7 +10,7 @@ export const AttentionVisitors = () => {
       <h2 className={css.title}>{t('attentionVisitors.title')}</h2>
       <p className={css.paragraph}>{t('attentionVisitors.description')}</p>
       <ul className={css.list}>
-        {points.map((point, index) => (
+        {points?.map((point, index) => (
           <AttentionItem
             key={index}
             title={point.title}

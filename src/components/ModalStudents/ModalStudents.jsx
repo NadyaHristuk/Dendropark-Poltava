@@ -28,7 +28,7 @@ const ModalStudents = ({ isOpen, isClose }) => {
           <h2 className={scss.title}>{t("studentModals.title")}</h2>
           <p className={scss.subtitle}>{t("studentModals.subTitle")}</p>
           <ul className={scss.list_wrapper}>
-            {shuffledData.map(({ name, role, linkedin, src }) => (
+            {shuffledData?.map(({ name, role, linkedin, src }) => (
               <StudentsItems
                 key={linkedin}
                 name={name}

@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://dendropark-poltava-back-ix1i.onrender.com/api",
-  // baseURL: 'http://localhost:3001/api',
+  baseURL: "/api",
+  // baseURL: 'https://dendropark-poltava-back-ix1i.onrender.com/api',
 });
 
 export const token = {
@@ -31,7 +31,8 @@ export const apiCall = async (path, method = "get", body) => {
   }
 };
 
-export const login = (credentials) => apiCall("/auth/login", "post", credentials);
+export const login = (credentials) =>
+  apiCall("/auth/login", "post", credentials);
 
 export const logout = (email) => apiCall("/auth/logout", "post", { email });
 

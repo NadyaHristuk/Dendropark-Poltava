@@ -32,7 +32,7 @@ export const ParkLocations = () => {
   const list = (cards) => {
     return (
       <ul className={css.parkLocationsList}>
-        {cards.map((card, idx) => (
+        {cards?.map((card, idx) => (
           <LocationItem key={idx} index={idx} card={card} />
         ))}
       </ul>

@@ -47,7 +47,7 @@ export const ServicesStore = () => {
     const list = (cards) => {
         return (
             <ul className={css.store_list}>
-                {cards.map((item) => {
+                {cards?.map((item) => {
                     const { title, description, imgAlt } = item[currentLanguage];
                     return (
                         <li key={item._id} className={css.store_item}>

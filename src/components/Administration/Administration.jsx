@@ -10,7 +10,7 @@ const Administration = () => {
     <section id="administration-section" className={scss.section}>
       <h2 className={scss.title}>{t('contacts.titleAdministration')}</h2>
       <ul className={scss.list}>
-        {data.map((person) => (
+        {data?.map((person) => (
           <AdministrationItem key={person.id} {...person} />
         ))}
       </ul>

@@ -20,7 +20,7 @@ const ServicesInfoTabletDesktop = ({ items }) => {
 	return (
 		<div>
 			<ul className={css.services_list}>
-				{items.map((item) => {
+				{items?.map((item) => {
 					const { title, description } = item[currentLanguage];
 					return (
 						<li key={item._id} className={css.services_item}>

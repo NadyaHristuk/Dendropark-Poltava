@@ -12,7 +12,7 @@ const ChroniclesListUl = ({ items }) => {
 	const list = (items) => {
 		return (
 			<ul className={css.list}>
-				{items.map((item) => (
+				{items?.map((item) => (
 							<li key={item._id} className={css.item}>
 								<ChroniclesItem
 									id={item[savedLanguage]._id}

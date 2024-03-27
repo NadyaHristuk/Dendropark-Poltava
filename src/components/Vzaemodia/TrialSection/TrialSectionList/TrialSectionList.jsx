@@ -20,7 +20,7 @@ export const TrialSectionList = ({ trialsData }) => {
   const list = (cards) => {
     return (
       <ul className={styles.list}>
-        {cards.map((card, idx) => (
+        {cards?.map((card, idx) => (
           <TrialSectionCard key={idx} card={card} lang={lang} />
         ))}
       </ul>
@@ -31,7 +31,7 @@ export const TrialSectionList = ({ trialsData }) => {
     <>
       {PER_PAGE >= trialsData.length ? (
         <ul className={styles.list}>
-          {trialsData.map((card, idx) => (
+          {trialsData?.map((card, idx) => (
             <TrialSectionCard key={idx} card={card} lang={lang} />
           ))}
         </ul>

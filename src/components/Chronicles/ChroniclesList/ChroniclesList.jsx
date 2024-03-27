@@ -26,7 +26,7 @@ const ChroniclesList = ({chronicles, loading, error}) => {
 					<ChroniclesListUl items={chronicles} />
 				) : (
 					<ul className={css.list}>
-						{chronicles.map((item) => (
+						{chronicles?.map((item) => (
 							<li key={item._id} className={css.item}>
 								<ChroniclesItem
 									id={item[savedLanguage]._id}

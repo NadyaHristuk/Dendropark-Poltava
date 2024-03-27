@@ -11,7 +11,7 @@ const DocumentsListUI = ({ items }) => {
 	const list = (items) => {
 		return (
 			<ul className={css.list}>
-				{items.map((item) => (
+				{items?.map((item) => (
 					<li key={item._id} className={css.item}>
 						<DocumentsItem
 							title={item[savedLanguage].title}

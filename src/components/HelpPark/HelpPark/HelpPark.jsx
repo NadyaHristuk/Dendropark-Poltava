@@ -17,7 +17,7 @@ export const HelpPark = () => {
 					<p className={css.goal}>{t('helpPark.goals')}</p>
 
 					<ul className={css.list}>
-						{list.map((item, index) => (
+						{list?.map((item, index) => (
 							<HelpParkItem
 								key={index}
 								iconId={item.iconId}
