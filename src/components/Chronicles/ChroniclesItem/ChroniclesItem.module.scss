@@ -2,13 +2,13 @@
 @import "/src/styles/colors";
 
 .thumb {
-  max-width: 340px;
+  width: 325px;
 
   @include media-rules(tablet) {
-    max-width: 390px;
+    width: 390px;
   }
   @include media-rules(desktop) {
-    max-width: 589px;
+    width: 589px;
   }
 }
 
@@ -30,14 +30,14 @@
 }
 
 .info {
-  max-width: 345px;
+  width: 325px;
 
   @include media-rules(tablet) {
-    max-width: 462px;
+    width: 462px;
     margin-left: 28px;
   }
   @include media-rules(desktop) {
-    max-width: 670px;
+    width: 670px;
   }
 }
 

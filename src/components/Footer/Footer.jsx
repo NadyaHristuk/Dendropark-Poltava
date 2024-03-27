@@ -15,7 +15,6 @@ import ModalStudents from '../ModalStudents/ModalStudents';
 
 const Footer = () => {
   const { pathname } = useLocation();
-  console.log(pathname);
   const { isMobile, isTablet, isDesktop } = useMedia(); // Визначаємо тип пристрою користувача
   const { t } = useTranslation();
   const [modalIsOpen, setModalIsOpen] = useState(false);
