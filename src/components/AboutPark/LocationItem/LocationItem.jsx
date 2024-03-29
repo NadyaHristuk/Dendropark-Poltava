@@ -10,10 +10,9 @@ import { createPictureMapObj } from "./createPictureMapObj.js";
 import { createPictureObj } from "./createPictureObj.js";
 import { getDates } from "./getDatesForUsing.js";
 import { icons } from "../../../assets";
-import { useLocation } from "react-router-dom";
+
 
 export const LocationItem = ({ card }) => {
-  const location = useLocation();
   const { t } = useTranslation();
   const [isMapOpen, setIsMapOpen] = useState(false);
   const { isMobile } = useMedia();
