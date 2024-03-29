@@ -83,13 +83,13 @@ const Map = () => {
 					</>
 
 					<ul>
-						{locations.map((item, index) => (
-							<MapItem
-								key={item._id}
-								className={`item-${index + 1}`}
-								item={item}
-							/>
-						))}
+					{Array.isArray(locations) && locations.map((item, index) => (
+  <MapItem
+    key={item._id}
+    className={`item-${index + 1}`}
+    item={item}
+  />
+))}
 					</ul>
 				</div>
 			)}

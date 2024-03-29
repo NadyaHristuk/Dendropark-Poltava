@@ -17,14 +17,14 @@ export const HelpPark = () => {
 					<p className={css.goal}>{t('helpPark.goals')}</p>
 
 					<ul className={css.list}>
-						{list?.map((item, index) => (
-							<HelpParkItem
-								key={index}
-								iconId={item.iconId}
-								title={item.title}
-								subtitle={item.subtitle}
-							/>
-						))}
+					{Array.isArray(list) && list.map((item, index) => (
+  <HelpParkItem
+    key={index}
+    iconId={item.iconId}
+    title={item.title}
+    subtitle={item.subtitle}
+  />
+))}
 					</ul>
 				</div>
 				<QrCode />

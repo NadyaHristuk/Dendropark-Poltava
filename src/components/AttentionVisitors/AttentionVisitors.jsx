@@ -10,17 +10,19 @@ export const AttentionVisitors = () => {
       <h2 className={css.title}>{t('attentionVisitors.title')}</h2>
       <p className={css.paragraph}>{t('attentionVisitors.description')}</p>
       <ul className={css.list}>
-        {points?.map((point, index) => (
-          <AttentionItem
-            key={index}
-            title={point.title}
-            description={point.description}
-            moreInfo={point.moreInfo}
-            link={point.link}
-            iconId={point.iconId}
-            itemId={point.itemId}
-          />
-        ))}
+      {
+  Array.isArray(points) && points.map((point, index) => (
+    <AttentionItem
+      key={point.id || index} // Предпочтительнее использовать уникальный ID, если доступен
+      title={point.title}
+      description={point.description}
+      moreInfo={point.moreInfo}
+      link={point.link}
+      iconId={point.iconId}
+      itemId={point.itemId}
+    />
+  ))
+}
       </ul>
     </section>
   );

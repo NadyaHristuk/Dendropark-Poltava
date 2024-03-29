@@ -45,25 +45,25 @@ const ServiceInfoMobile = () => {
 	const list = (cards) => {
 		return (
 			<ul className={css.services_list}>
-				{cards?.map((item) => {
-					const { title, description } = item[currentLanguage];
-					return (
-						<li key={item._id} className={css.services_item}>
-							<div className={css.item_icon}>
-								<svg className={css.icon} width="20" height="20" aria-label="arrow-forward">
-									<use href={`${icons}#icon-services-heart`}></use>
-								</svg>
-							</div>
-							<div className={css.item_wrapper}>
-								<h3 className={css.item_title}>{title}</h3>
-								<div
-									className={css.item_description}
-									dangerouslySetInnerHTML={{ __html: description }}
-								/>
-							</div>
-						</li>
-					);
-				})}
+{Array.isArray(cards) && cards.map((item) => {
+  const { title, description } = item[currentLanguage];
+  return (
+    <li key={item._id} className={css.services_item}>
+      <div className={css.item_icon}>
+        <svg className={css.icon} width="20" height="20" aria-label="arrow-forward">
+          <use href={`${icons}#icon-services-heart`}></use>
+        </svg>
+      </div>
+      <div className={css.item_wrapper}>
+        <h3 className={css.item_title}>{title}</h3>
+        <div
+          className={css.item_description}
+          dangerouslySetInnerHTML={{ __html: description }}
+        />
+      </div>
+    </li>
+  );
+})}
 			</ul>
 		);
 	};

@@ -11,9 +11,10 @@ const Slider = ({ chunkedData, currentPage }) => {
 	const { isMobile, isTablet } = useMedia();
 	const dynamicSpaceBeetwen = isMobile ? 30 : isTablet ? 50 : 100;
 
-	const slides = chunkedData?.map((cards, idx) => {
-		return <SwiperSlide key={idx}>{currentPage(cards)}</SwiperSlide>;
-	});
+	const slides = Array.isArray(chunkedData) ? chunkedData.map((cards, idx) => (
+		<SwiperSlide key={idx}>{currentPage(cards)}</SwiperSlide>
+	  )) : null;
+	  
 
 	return (
 		<Swiper

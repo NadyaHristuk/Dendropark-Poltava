@@ -47,36 +47,37 @@ export const ServicesStore = () => {
     const list = (cards) => {
         return (
             <ul className={css.store_list}>
-                {cards?.map((item) => {
-                    const { title, description, imgAlt } = item[currentLanguage];
-                    return (
-                        <li key={item._id} className={css.store_item}>
-                            <div className={css.store_subitem}>
-                                <img
-                                    className={css.img}
-                                    src={item.image}
-                                    alt={imgAlt}
-                                    width="312"
-                                />
-                                <div className={css.store_scroll_wrapper}>
-                                    <p className={css.store_subtitle}>{title}</p>
-                                    <p className={css.store_descr}>{description}</p>
-                                </div>
-                                <p className={css.store_price}>
-                                    {t("footer.sections.services.priceText")}: {item.price}{" "}
-                                    {t("footer.sections.services.priceCount")}
-                                </p>
-                            </div>
-                            <a
-                                className={css.store_btn}
-                                target="_blank"
-                                href="https://t.me/alyonaplants"
-                            >
-                                <span>{t("footer.sections.services.buyBtn")}</span>
-                            </a>
-                        </li>
-                    );
-                })}
+                {Array.isArray(cards) && cards.map((item) => {
+  const { title, description, imgAlt } = item[currentLanguage];
+  return (
+    <li key={item._id} className={css.store_item}>
+      <div className={css.store_subitem}>
+        <img
+          className={css.img}
+          src={item.image}
+          alt={imgAlt}
+          width="312"
+        />
+        <div className={css.store_scroll_wrapper}>
+          <p className={css.store_subtitle}>{title}</p>
+          <p className={css.store_descr}>{description}</p>
+        </div>
+        <p className={css.store_price}>
+          {t("footer.sections.services.priceText")}: {item.price}{" "}
+          {t("footer.sections.services.priceCount")}
+        </p>
+      </div>
+      <a
+        className={css.store_btn}
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://t.me/alyonaplants"
+      >
+        <span>{t("footer.sections.services.buyBtn")}</span>
+      </a>
+    </li>
+  );
+})}
             </ul>
         );
     };

@@ -30,19 +30,19 @@ export const PanellListItem = ({ item, openFormEdit, openDeleteModal }) => {
                 flexWrap: "wrap",
               }}
             >
-              {item.image && <img width={272} alt={item.en.imgAlt} src={item.image} />}
-              {item.mapImage && (
-                <img width={272} alt={item.en.imgAlt} src={item.mapImage} />
+              {item?.image && <img width={272} alt={item?.en?.imgAlt} src={item?.image} />}
+              {item?.mapImage && (
+                <img width={272} alt={item?.en?.imgAlt} src={item?.mapImage} />
               )}
             </div>
 
             {/* subtitle */}
-            {item.ua.subtitle && item.en.subtitle && (
+            {item?.ua?.subtitle && item?.en?.subtitle && (
               <p className={style.text}>
                 <span className={style.span}>Ua subtitle: </span>
-                {item.ua.subtitle} <br />{" "}
+                {item?.ua?.subtitle} <br />{" "}
                 <span className={style.span}>En subtitle: </span>
-                {item.en.subtitle}
+                {item?.en?.subtitle}
               </p>
             )}
             <br />

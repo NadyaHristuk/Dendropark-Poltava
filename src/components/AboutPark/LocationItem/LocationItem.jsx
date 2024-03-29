@@ -38,10 +38,15 @@ export const LocationItem = ({ card }) => {
       const id = location.hash.replace("#", "");
       const element = document.getElementById(id);
       if (element) {
-        element.scrollIntoView({ behavior: "smooth", block: "start" });
+  
+        element.scrollIntoView({ behavior: "smooth", block: "center" });
+       
+        
       }
     }
+
   }, [card, location.hash]);
+
 
   return (
     <li className={css.locationItem} id={_id}>
@@ -58,7 +63,7 @@ export const LocationItem = ({ card }) => {
             </div>
 
             <div
-              className={`${css.pictureContainer} ${css.mapPictureContainer} ${
+              className={`${css.pictureContainer} ${css?.mapPictureContainer} ${
                 isMapOpen && css.pictureContainerOpen
               }`}
             >
@@ -123,7 +128,7 @@ export const LocationItem = ({ card }) => {
               {
                 <div
                   className={`${css.pictureContainer} ${
-                    css.mapPictureContainer
+                    css?.mapPictureContainer
                   } ${isMapOpen && css.pictureContainerOpen}`}
                 >
                   <button className={css.crossIconButton} onClick={toggleMap}>

@@ -12,16 +12,16 @@ const ChroniclesListUl = ({ items }) => {
 	const list = (items) => {
 		return (
 			<ul className={css.list}>
-				{items?.map((item) => (
-							<li key={item._id} className={css.item}>
-								<ChroniclesItem
-									id={item[savedLanguage]._id}
-									url={item.image}
-									title={item[savedLanguage].title}
-									description={item[savedLanguage].description}
-								/>
-							</li>
-				))}
+{Array.isArray(items) && items.map((item) => (
+  <li key={item._id} className={css.item}>
+    <ChroniclesItem
+      id={item[savedLanguage]._id}
+      url={item.image}
+      title={item[savedLanguage].title}
+      description={item[savedLanguage].description}
+    />
+  </li>
+))}
 			</ul>
 		);
 	};

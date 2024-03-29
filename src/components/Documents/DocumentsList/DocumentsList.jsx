@@ -40,7 +40,7 @@ const DocumentsList = ( {chronicles}) => {
       const id = location.hash.replace("#", "");
       const element = document.getElementById(id);
       if (element) {
-        element.scrollIntoView({ behavior: "smooth", block: "start" });
+        element.scrollIntoView({ behavior: "smooth", block: "center" });
       }
     }
   }, [chronicles, location.hash]);
@@ -53,16 +53,16 @@ const DocumentsList = ( {chronicles}) => {
           <DocumentsListUI items={documents} />
         ) : (
           <ul className={css.list}>
-            {documents?.map((document) => (
-              <li key={document._id} className={css.item}>
-                <DocumentsItem
-                  title={document[savedLanguage].title}
-                  subtitle={document[savedLanguage].subtitle}
-                  description={document[savedLanguage].description}
-                  link={document.document}
-                />
-              </li>
-            ))}
+           {Array.isArray(documents) && documents.map((document) => (
+  <li key={document._id} className={css.item}>
+    <DocumentsItem
+      title={document[savedLanguage].title}
+      subtitle={document[savedLanguage].subtitle}
+      description={document[savedLanguage].description}
+      link={document.document}
+    />
+  </li>
+))}
           </ul>
         )
       ) : (

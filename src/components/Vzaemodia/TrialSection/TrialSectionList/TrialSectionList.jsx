@@ -17,13 +17,28 @@ export const TrialSectionList = ({ trialsData }) => {
     setLang(language);
   }, [language]);
 
+  useEffect(() => {
+    // Перевіряємо наявність хешу в URL
+    const hash = window.location.hash;
+    if (hash) {
+      // Видаляємо символ "#" для отримання ідентифікатора
+      const id = hash.replace('#', '');
+      // Знаходимо елемент
+      const element = document.getElementById(id);
+      if (element) {
+        // Прокручуємо до елементу
+        element.scrollIntoView({behavior: 'smooth'});
+      }
+    }
+  }, []);
+
   const list = (cards) => {
     return (
-      <ul className={styles.list}>
-        {cards?.map((card, idx) => (
-          <TrialSectionCard key={idx} card={card} lang={lang} />
-        ))}
-      </ul>
+     <ul className={styles.list}>
+      {Array.isArray(cards) ? cards.map((card, idx) => (
+        <TrialSectionCard key={idx} card={card} lang={lang} />
+      )) : null}
+    </ul>
     );
   };
 
@@ -31,9 +46,9 @@ export const TrialSectionList = ({ trialsData }) => {
     <>
       {PER_PAGE >= trialsData.length ? (
         <ul className={styles.list}>
-          {trialsData?.map((card, idx) => (
+          {Array.isArray(trialsData) ? trialsData.map((card, idx) => (
             <TrialSectionCard key={idx} card={card} lang={lang} />
-          ))}
+          )) : null}
         </ul>
       ) : (
         <Slider currentPage={list} chunkedData={chunkedData ? chunkedData : []} />

@@ -68,8 +68,7 @@ const CommonLayout = () => {
 
 	return (
 		<Layout>
-			<Layout>
-				<Header
+				<Header id="main-header"
 					style={{
 						padding: 0,
 						background: colorBgContainer,
@@ -100,7 +99,6 @@ const CommonLayout = () => {
 						</Suspense>
 					</div>
 				</Content>
-			</Layout>
 		</Layout>
 	);
 };

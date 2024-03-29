@@ -8,10 +8,10 @@ import Context from './context/Context.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 	<React.StrictMode>
-		<HashRouter>
+		<BrowserRouter>
 			<Context>
 				<App />
 			</Context>
-		</HashRouter>
+		</BrowserRouter>
 	</React.StrictMode>
 );

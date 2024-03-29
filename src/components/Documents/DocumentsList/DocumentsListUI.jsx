@@ -11,16 +11,16 @@ const DocumentsListUI = ({ items }) => {
 	const list = (items) => {
 		return (
 			<ul className={css.list}>
-				{items?.map((item) => (
-					<li key={item._id} className={css.item}>
-						<DocumentsItem
-							title={item[savedLanguage].title}
-							subtitle={item[savedLanguage].subtitle}
-							description={item[savedLanguage].description}
-							link={item.document}
-						/>
-					</li>
-				))}
+{Array.isArray(items) && items.map((item) => (
+  <li key={item._id} className={css.item}>
+    <DocumentsItem
+      title={item[savedLanguage].title}
+      subtitle={item[savedLanguage].subtitle}
+      description={item[savedLanguage].description}
+      link={item.document}
+    />
+  </li>
+))}
 			</ul>
 		);
 	};

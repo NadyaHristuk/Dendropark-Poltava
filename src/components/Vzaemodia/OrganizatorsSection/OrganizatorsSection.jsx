@@ -15,7 +15,7 @@ export const OrganizatorsSection = ({trialsData}) => {
       const id = location.hash.replace("#", "");
       const element = document.getElementById(id);
       if (element) {
-        element.scrollIntoView({ behavior: "smooth", block: "start" });
+        element.scrollIntoView({ behavior: "smooth", block: "center" });
       }
     }
   }, [trialsData, location.hash]);

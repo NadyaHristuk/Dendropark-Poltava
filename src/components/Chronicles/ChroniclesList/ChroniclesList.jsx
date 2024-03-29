@@ -24,16 +24,18 @@ const ChroniclesList = ({chronicles, loading, error}) => {
 					<ChroniclesListUl items={chronicles} />
 				) : (
 					<ul className={css.list}>
-						{chronicles?.map((item) => (
-							<li key={item._id} className={css.item}>
-								<ChroniclesItem
-									id={item[savedLanguage]._id}
-									url={item.image}
-									title={item[savedLanguage].title}
-									description={item[savedLanguage].description}
-								/>
-							</li>
-						))}
+						{
+  Array.isArray(chronicles) && chronicles.map((item) => (
+    <li key={item._id} className={css.item}>
+      <ChroniclesItem
+        id={item[savedLanguage]._id}
+        url={item.image}
+        title={item[savedLanguage].title}
+        description={item[savedLanguage].description}
+      />
+    </li>
+  ))
+}
 					</ul>
 				)
 			) : (
