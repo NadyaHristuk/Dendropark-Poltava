@@ -10,8 +10,10 @@ import { createPictureMapObj } from "./createPictureMapObj.js";
 import { createPictureObj } from "./createPictureObj.js";
 import { getDates } from "./getDatesForUsing.js";
 import { icons } from "../../../assets";
+import { useLocation } from "react-router-dom";
 
 export const LocationItem = ({ card }) => {
+  const location = useLocation();
   const { t } = useTranslation();
   const [isMapOpen, setIsMapOpen] = useState(false);
   const { isMobile } = useMedia();
@@ -34,19 +36,26 @@ export const LocationItem = ({ card }) => {
   const pictureMap = createPictureMapObj(mapImage, imgAlt);
 
   useEffect(() => {
-    if (card && location.hash) {
-      const id = location.hash.replace("#", "");
-      const element = document.getElementById(id);
-      if (element) {
-  
-        element.scrollIntoView({ behavior: "smooth", block: "center" });
-       
-        
+    // Функція, що виконує прокручування
+    const scrollToElement = () => {
+      if (card && location.hash) {
+        const id = location.hash.replace("#", "");
+        const element = document.getElementById(id);
+        if (element) {
+          // Використання requestAnimationFrame для забезпечення прокручування після оновлень DOM
+          requestAnimationFrame(() => {
+            element.scrollIntoView({ behavior: "smooth", block: "center" });
+          });
+        }
       }
-    }
+    };
 
+    // Встановлення невеликої затримки перед прокручуванням для додаткового забезпечення завантаження контенту
+    const timer = setTimeout(scrollToElement, 100); // Затримка 100 мс
+
+    // Очищення таймеру при розмонтуванні компоненту
+    return () => clearTimeout(timer);
   }, [card, location.hash]);
-
 
   return (
     <li className={css.locationItem} id={_id}>
