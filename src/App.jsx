@@ -24,6 +24,7 @@ function App() {
                     <Route path="contact" element={<ContactPage />} />
                     <Route path="services" element={<ServicesPage />} />
                     <Route path="*" element={<NotFoundPage />} />
+                   
                 </Route>
                 <Route path="/admin/*" element={<AdminPanel />} />
             </Routes>

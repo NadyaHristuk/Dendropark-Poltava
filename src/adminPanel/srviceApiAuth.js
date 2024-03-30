@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const api = axios.create({
-  // baseURL: "/api",
-  baseURL: "https://dendropark-poltava-back-ix1i.onrender.com/api",
+  baseURL: "/api",
+  // baseURL: "https://dendropark-poltava-back-ix1i.onrender.com/api",
 });
 
 export const token = {
