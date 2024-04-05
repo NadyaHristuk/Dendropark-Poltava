@@ -18,8 +18,6 @@ const Footer = () => {
   const { isMobile, isTablet, isDesktop } = useMedia(); // Визначаємо тип пристрою користувача
   const { t } = useTranslation();
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  const navigate = useNavigate();
-  const show = navigate.location === "/admin";
 
   const handleLogoClick = () => {
     // Виконуємо скрол до верху сторінки
@@ -49,7 +47,7 @@ const Footer = () => {
   return (
     <>
       <ModalStudents isOpen={modalIsOpen} isClose={closeModal} />
-      {show ? (
+      {!pathname.includes("/admin") ? (
         <div className={s.footer_container}>
           <footer className={s.footer}>
             <div className={s.footer_logo_and_sections_wrapper}>

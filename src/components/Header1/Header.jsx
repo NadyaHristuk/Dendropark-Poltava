@@ -1,5 +1,5 @@
 import { useMedia } from "../../hooks/useMedia";
-import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Container from "../Container";
 import Logo from "./Logo";
 import Menu from "./Menu";
@@ -10,12 +10,12 @@ import scss from "./Header.module.scss";
 
 const Header = () => {
   const { isDesktop, isTablet } = useMedia();
-  const navigate = useNavigate();
-  const show = navigate.location === "/admin";
+  const location = useLocation();
+  const path = location.pathname;
 
   return (
     <>
-      {show ? (
+      {!path.includes("/admin") ? (
         <div className={scss.headerWrapper}>
           <header className={scss.header}>
             <div className={scss.container}>
