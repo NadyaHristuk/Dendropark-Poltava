@@ -13,11 +13,10 @@ export const Loader = () => {
         justifyContent: "center",
         alignItems: "center",
         marginTop: "100px",
+        backgroundColor: "#e9eeee",
       }}
     >
-      <div>
-        <SyncLoader loading={true} size={15} color="#36d7b7" />
-      </div>
+      <div></div>
     </div>
   );
 };

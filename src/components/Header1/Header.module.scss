@@ -2,8 +2,10 @@
 @import "src/styles/mixins";
 
 .header {
+  top: 0;
+  right: 0;
+  left: 0;
   position: fixed;
-  width: 100%;
   box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.05);
   background: $snowdrift;
   z-index: 1000;
