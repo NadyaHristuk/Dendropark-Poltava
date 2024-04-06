@@ -2,10 +2,7 @@ import s from './Calendar.module.scss';
 
 const CalendarIframe = () => {
   return (
-    <iframe
-      src="https://calendar.google.com/calendar/embed?src=748c4564b5da26f60fe2204349efdc31902bc13e0f526fd3c890af8cbcabed9c%40group.calendar.google.com&ctz=Europe%2FKiev"
-      className={s.iframe}
-    ></iframe>
+    <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Europe%2FKiev&bgcolor=%23ffffff&src=ZGVrb3JrdWx0dXIxQGdtYWlsLmNvbQ&src=OTIzYzY4NDQzYTdiMDc3ZjJlMzM2OWZlOTZmZTA3M2VlMWUzMmYyZjZlM2U4MTVkOGI0ZmI5ODdlNWQ5YjBkZUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%23A79B8E"  className={s.iframe}></iframe>
   );
 };
 

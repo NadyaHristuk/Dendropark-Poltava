@@ -1,4 +1,4 @@
-import { ParkLocationsData } from "./locations.js";
+
 import { useTranslation } from "react-i18next";
 import css from "./ParkLocations.module.scss";
 import Container from "../../Container/Container";
