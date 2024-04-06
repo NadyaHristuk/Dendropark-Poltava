@@ -1,5 +1,5 @@
 @import "/src/styles/colors";
-@import "../../../../styles/mixins";
+@import "../../../styles/mixins";
 
 .picture {
   background-color: $snowdrift;
@@ -10,16 +10,15 @@
   padding: 0;
 
   @include media-rules(vzaemodiaPage) {
+    max-height: 552px;
     max-width: none;
-    max-height: 520px;
     object-fit: cover;
-    object-position: bottom;
   }
 
   @include media-rules(desktop) {
     max-width: none;
-    max-height: 574px;
+    max-height: 881px;
     object-fit: cover;
-    object-position: bottom;
+    object-position: top;
   }
 }

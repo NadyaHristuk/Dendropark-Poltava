@@ -13,22 +13,21 @@ const NotFoundPage = lazy(() => import("./pages/NotFoundPage"));
 const AdminPanel = lazy(() => import("./adminPanel/AdminPanel"));
 
 function App() {
-    return (
-        <NotificationsProvider>
-            <Routes>
-                <Route path="/" element={<SharedLayout />}>
-                    <Route index element={<HomePage />} />
-                    <Route path="vzaemodia" element={<VzaemodiaPage />} />
-                    <Route path="chronicles" element={<ChroniclesPage />} />
-                    <Route path="about" element={<AboutPage />} />
-                    <Route path="contact" element={<ContactPage />} />
-                    <Route path="services" element={<ServicesPage />} />
-                    <Route path="*" element={<NotFoundPage />} />
-                   
-                </Route>
-                <Route path="/admin/*" element={<AdminPanel />} />
-            </Routes>
-        </NotificationsProvider>
-    );
+  return (
+    <NotificationsProvider>
+      <Routes>
+        <Route path="/" element={<SharedLayout />}>
+          <Route index element={<HomePage />} />
+          <Route path="vzaemodia" element={<VzaemodiaPage />} />
+          <Route path="chronicles" element={<ChroniclesPage />} />
+          <Route path="about" element={<AboutPage />} />
+          <Route path="contact" element={<ContactPage />} />
+          <Route path="services" element={<ServicesPage />} />
+          <Route path="/admin/*" element={<AdminPanel />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Route>
+      </Routes>
+    </NotificationsProvider>
+  );
 }
 export default App;

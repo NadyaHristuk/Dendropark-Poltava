@@ -1,100 +1,99 @@
-@import '/src/styles/mixins';
-@import '/src/styles/colors';
+@import "/src/styles/mixins";
+@import "/src/styles/colors";
 
 .documentsSection {
-	padding-bottom: 64px;
-	
-	@include media-rules(tablet) {
-		padding-bottom: 80px;
-	}
+  padding-bottom: 64px;
 
+  @include media-rules(tablet) {
+    padding-bottom: 80px;
+  }
 }
 
 .title {
-	color: $pine-depths;
-	font-weight: 700;
-	font-family: 'Ermilov', serif;
-	font-size: 24px;
-	line-height: 1.33;
-	margin-bottom: 32px;
+  color: $pine-depths;
+  font-weight: 700;
+  font-family: "Ermilov", serif;
+  font-size: 24px;
+  line-height: 1.33;
+  margin-bottom: 32px;
 
-	@include media-rules(tablet) {
-		font-size: 40px;
-		line-height: 1.1;
-		margin-bottom: 48px;
-	}
+  @include media-rules(tablet) {
+    font-size: 40px;
+    line-height: 1.1;
+    margin-bottom: 48px;
+  }
 
-	@include media-rules(desktop) {
-		font-size: 44px;
-		line-height: 1;
-		margin-bottom: 48px;
-	}
+  @include media-rules(desktop) {
+    font-size: 44px;
+    line-height: 1;
+    margin-bottom: 48px;
+  }
 }
 
 .list {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
 
-	@include media-rules(tablet) {
-		overflow-y: scroll;
-		max-height: 320px;
-	}
-	
-	@include media-rules(desktop) {
-		max-height: 440px;
-	}
+  @include media-rules(tablet) {
+    overflow-y: scroll;
+    max-height: 320px;
+  }
+
+  @include media-rules(desktop) {
+    max-height: 440px;
+  }
 }
 
 .item {
-	width: calc(100% - 16px);
-	padding: 10px;
-	box-sizing: border-box;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
+  width: calc(100% - 16px);
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 
-	@include media-rules(tablet) {
-		width: calc(50% - 16px);
-		align-items: flex-start;
-		text-align: left;
-	}
+  @include media-rules(tablet) {
+    width: calc(50% - 16px);
+    align-items: flex-start;
+    text-align: left;
+  }
 }
 
 .message {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-family: 'Ermilov', sans-serif;
-	font-weight: 700;
-	font-size: 18px;
-	line-height: 1.66667;
-	color: $pine-depths;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Ermilov", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.66667;
+  color: $pine-depths;
 
-	@include media-rules(tablet) {
-		font-size: 20px;
-		line-height: 1.5;
-	}
+  @include media-rules(tablet) {
+    font-size: 20px;
+    line-height: 1.5;
+  }
 
-	@include media-rules(desktop) {
-		font-size: 28px;
-		line-height: 1.07143;
-	}
+  @include media-rules(desktop) {
+    font-size: 28px;
+    line-height: 1.07143;
+  }
 }
 
 .icon_attention {
-	background-color: $stroke;
-	fill: $stroke;
-	border: 6px solid $lilac-haze;
-	border-radius: 100%;
-	width: 56px;
-	height: 44px;
-	margin-right: 16px;
-	padding: 5px;
+  background-color: $stroke;
+  fill: $stroke;
+  border: 6px solid $lilac-haze;
+  border-radius: 100%;
+  width: 56px;
+  height: 44px;
+  margin-right: 16px;
+  padding: 5px;
 
-	@include media-rules(tablet) {
-		width: 44px;
-		padding: 5px;
-	}
+  @include media-rules(tablet) {
+    width: 44px;
+    padding: 5px;
+  }
 }
