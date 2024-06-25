@@ -15,6 +15,7 @@
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@esbuild/linux-x64": "^0.21.5",
     "@vitejs/plugin-react-swc": "^3.3.2",
     "antd": "^5.15.2",
     "ants": "^0.0.3-alpha",
@@ -36,7 +37,7 @@
     "react-router-dom": "^6.15.0",
     "react-router-hash-link": "^2.4.3",
     "react-select": "^5.8.0",
- "react-spinners": "^0.13.8",
+    "react-spinners": "^0.13.8",
     "react-transition-group": "^4.4.5",
     "swiper": "^11.0.7",
     "vite-plugin-svgr": "^3.2.0"

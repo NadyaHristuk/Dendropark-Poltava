@@ -1,0 +1,33 @@
+@import 'src/styles/colors';
+@import 'src/styles/mixins';
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0 22px;
+
+  @include media-rules(desktop) {
+    flex-direction: row;
+    gap: 15px;
+  }
+}
+
+.link {
+  display: inline-block;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  color: $dark;
+  padding: 5px 0;
+  @include transition(color);
+
+  &.active {
+    color: $green;
+  }
+
+  &:is(:hover, :focus) {
+    color: $green;
+  }
+}

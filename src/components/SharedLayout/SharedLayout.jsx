@@ -1,19 +1,19 @@
-import { useOutlet } from "react-router-dom";
-import { Suspense } from "react";
-import { SyncLoader } from "react-spinners";
-import Header1 from "../Header1";
-import Footer from "../Footer";
+import { useOutlet } from 'react-router-dom';
+import { Suspense } from 'react';
+import { SyncLoader } from 'react-spinners';
+import Header from '../Header';
+import Footer from '../Footer';
 
 export const Loader = () => {
   return (
     <div
       style={{
-        minHeight: "100dvh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        marginTop: "100px",
-        backgroundColor: "#e9eeee",
+        minHeight: '100dvh',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginTop: '100px',
+        backgroundColor: '#e9eeee',
       }}
     >
       <div></div>
@@ -22,17 +22,17 @@ export const Loader = () => {
 };
 
 export const SharedLayout = () => {
-  const outlet = useOutlet();
+  // const outlet = useOutlet();
 
   return (
     <>
-      <Header1 />
-      <main>
+      <Header />
+      {/* <main>
         <Suspense fallback={<Loader />}>
-          {outlet} {/* Тут рендериться компонент для активного маршруту */}
+          {outlet} 
         </Suspense>
-      </main>
-      <Footer />
+      </main> */}
+      {/* <Footer /> */}
     </>
   );
 };

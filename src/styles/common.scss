@@ -1,27 +1,26 @@
 @import 'src/styles/_colors.scss';
 @import 'src/styles/_breakpoints.scss';
-@import 'src/styles/fonts.scss';
-@import '../components/ModalWrapper/ModalWrapper.module.scss';
-@import "./react-select.scss";
+// @import 'src/styles/fonts.scss';
+// @import '../components/ModalWrapper/ModalWrapper.module.scss';
+// @import './react-select.scss';
 
 html {
-	box-sizing: border-box;
-	scroll-behavior: smooth;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
 *:before,
 *:after {
-	box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 body {
-	margin: 0;
-	padding: 0;
-	font-family: 'Innerspace', serif;
-	font-size: 16px;
-	line-height: 1.5;
-	background-color: $snowdrift;
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  background-color: $white;
 }
 
 h1,
@@ -31,69 +30,67 @@ h4,
 h5,
 h6,
 p {
-	margin: 0;
-	font-family: 'Ermilov', Arial, sans-serif;
+  margin: 0;
 }
 
 ol,
 ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 a {
-	color: #007bff;
-	text-decoration: none;
-	background-color: transparent;
+  //   color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
 
-	&:hover {
-		text-decoration: none;
-	}
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 img {
-	vertical-align: middle;
-	border-style: none;
+  vertical-align: middle;
+  border-style: none;
 }
 
 button {
-	border: none;
-	margin: 0;
-	padding: 0;
-	width: auto;
-	overflow: visible;
-	background: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
 
-	&:focus {
-		outline: none;
-	}
+  &:focus {
+    outline: none;
+  }
 }
 
 input,
 button,
 textarea,
 select {
-	font: inherit;
+  font: inherit;
 }
 
 [hidden] {
-	display: none;
+  display: none;
 }
 
 address {
-	font-style: normal;
+  font-style: normal;
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
-.os-scrollbar {
-	--os-track-bg: #e1f4ee;
-	--os-handle-bg: #45b288;
-	padding-left: 6px;
-	--os-padding-perpendicular: 0;
-	--os-size: 11px;
-}
-
+// .os-scrollbar {
+//   --os-track-bg: #e1f4ee;
+//   --os-handle-bg: #45b288;
+//   padding-left: 6px;
+//   --os-padding-perpendicular: 0;
+//   --os-size: 11px;
+// }

@@ -1,6 +1,6 @@
-@import "./breakpoints";
+@import './breakpoints';
 
-// $mobile: 375px;
+// $mobile: 320px;
 // $to-tablet: 767px;
 // $tablet: 768px;
 // $to-desktop: 1439px;
@@ -13,10 +13,6 @@
     }
   } @else if $screen == desktop {
     @media screen and (min-width: $desktop) {
-      @content;
-    }
-  } @else if $screen == vzaemodiaPage {
-    @media screen and (min-width: 460px) and (max-width: 960px) {
       @content;
     }
   }
